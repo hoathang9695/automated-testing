@@ -2303,7 +2303,7 @@ class banbe():
         logging.info(check_nguoila_riengtu)
         logging.info(check_nguoila_riengtu == "Không có bạn bè để hiển thị.")
         time.sleep(1.5)
-        print(123123)
+
         #Bạn bè
         login.login4(self, "truongvck333@gmail.com", "atgmj123456")
         driver.get("https://sn.emso.vn/user/111169896815147328")
