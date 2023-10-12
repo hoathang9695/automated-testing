@@ -1,0 +1,30 @@
+2023-10-12 Thursday 10:30:48 root:INFO:Trang cá nhân - Giới thiệu tổng quan - Mối quan hệ
+2023-10-12 Thursday 10:30:48 root:INFO:check font-end: Ly Thân started 2022-01-01
+2023-10-12 Thursday 10:30:48 root:INFO:False
+2023-10-12 Thursday 10:31:19 root:INFO:Trang cá nhân - Giới thiệu tổng quan - Mối quan hệ
+2023-10-12 Thursday 10:31:19 root:INFO:check font-end: Góa started 2022-01-01
+2023-10-12 Thursday 10:31:19 root:INFO:False
+2023-10-12 Thursday 10:32:13 root:INFO:Trang cá nhân - giới thiệu - công việc và học vấn - công việc - công ty - xem sự kiện trong đời 
+2023-10-12 Thursday 10:32:13 root:INFO:check font-end: Bắt đầu công việc mới tại Quán trà đá
+2023-10-12 Thursday 10:32:13 root:INFO:False
+2023-10-12 Thursday 10:32:13 root:INFO:Trang cá nhân - giới thiệu - công việc và học vấn - công việc - xem sự kiện trong đời
+2023-10-12 Thursday 10:32:13 root:INFO:check font-end: Thành phố làm việc - Hà Nội
+2023-10-12 Thursday 10:32:13 root:INFO:False
+2023-10-12 Thursday 10:32:16 root:INFO:check back-end: Trang cá nhân - Giới thiệu - Công việc và học vấn - Công việc - Xem sự kiện trong đời
+2023-10-12 Thursday 10:32:16 root:INFO:check back-end: Công ty - Quán trà đá
+2023-10-12 Thursday 10:32:16 root:INFO:False
+2023-10-12 Thursday 10:32:16 root:INFO:check back-end: Trang cá nhân - Giới thiệu - Công việc và học vấn - Công việc - Xem sự kiện trong đời
+2023-10-12 Thursday 10:32:16 root:INFO:check back-end: Công ty - Thành phố/Thị xã - Hà Nội
+2023-10-12 Thursday 10:32:16 root:INFO:False
+2023-10-12 Thursday 10:32:16 root:INFO:check back-end: Trang cá nhân - Giới thiệu - Công việc và học vấn - Công việc - Xem sự kiện trong đời
+2023-10-12 Thursday 10:32:16 root:INFO:check back-end: Công ty - Mô tả - Đang làm ở trà đá vỉa hè, ae qua ủng hộ
+2023-10-12 Thursday 10:32:16 root:INFO:False
+2023-10-12 Thursday 10:33:41 root:INFO:Trang cá nhân - Giới thiệu - Thông tin cơ bản - Các trang web và liên kết xã hội
+2023-10-12 Thursday 10:33:41 root:INFO:check font-end: Liên kết(nhập sai định dạng web) - message: URL You provided invalid URL
+2023-10-12 Thursday 10:33:41 root:INFO:False
+2023-10-12 Thursday 10:33:48 root:INFO:Trang cá nhân - Giới thiệu - Thông tin cơ bản - Các trang web và liên kết xã hội
+2023-10-12 Thursday 10:33:48 root:INFO:check font-end: Tiểu sử(Nhập quá 100 ký tự) - message: Description Không vượt quá 100 ký tự
+2023-10-12 Thursday 10:33:48 root:INFO:False
+2023-10-12 Thursday 10:34:12 root:INFO:Trang cá nhân - Giới thiệu - Gia đình và các mối quan hệ - Gia đình
+2023-10-12 Thursday 10:34:12 root:INFO:check font-end: Gia đình - Trạng thái/Thời gian - Hẹn hò started 2022-01-01
+2023-10-12 Thursday 10:34:12 root:INFO:False

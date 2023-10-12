@@ -1,0 +1,39 @@
+2023-10-11 Wednesday 17:32:08 root:INFO:Trang cá nhân - giới thiệu - công việc và học vấn - công việc - công ty - xem sự kiện trong đời 
+2023-10-11 Wednesday 17:32:08 root:INFO:check font-end: Bắt đầu công việc mới tại Quán trà đá
+2023-10-11 Wednesday 17:32:08 root:INFO:False
+2023-10-11 Wednesday 17:32:08 root:INFO:Trang cá nhân - giới thiệu - công việc và học vấn - công việc - xem sự kiện trong đời
+2023-10-11 Wednesday 17:32:08 root:INFO:check font-end: Thành phố làm việc - Hà Nội
+2023-10-11 Wednesday 17:32:08 root:INFO:False
+2023-10-11 Wednesday 17:32:10 root:INFO:check back-end: Trang cá nhân - Giới thiệu - Công việc và học vấn - Công việc - Xem sự kiện trong đời
+2023-10-11 Wednesday 17:32:10 root:INFO:check back-end: Công ty - Quán trà đá
+2023-10-11 Wednesday 17:32:10 root:INFO:False
+2023-10-11 Wednesday 17:32:10 root:INFO:check back-end: Trang cá nhân - Giới thiệu - Công việc và học vấn - Công việc - Xem sự kiện trong đời
+2023-10-11 Wednesday 17:32:10 root:INFO:check back-end: Công ty - Thành phố/Thị xã - Hà Nội
+2023-10-11 Wednesday 17:32:10 root:INFO:False
+2023-10-11 Wednesday 17:32:10 root:INFO:check back-end: Trang cá nhân - Giới thiệu - Công việc và học vấn - Công việc - Xem sự kiện trong đời
+2023-10-11 Wednesday 17:32:10 root:INFO:check back-end: Công ty - Mô tả - Đang làm ở trà đá vỉa hè, ae qua ủng hộ
+2023-10-11 Wednesday 17:32:10 root:INFO:False
+2023-10-11 Wednesday 17:32:21 root:INFO:Trang cá nhân - giới thiệu - công việc và học vấn - Trung học - tên trường - xem sự kiện trong đời 
+2023-10-11 Wednesday 17:32:21 root:INFO:check font-end: Bắt đầu học tại Trường THPT Đình Lập
+2023-10-11 Wednesday 17:32:21 root:INFO:False
+2023-10-11 Wednesday 17:32:21 root:INFO:Trang cá nhân - giới thiệu - công việc và học vấn - trung học - thời gian bắt đầu - xem sự kiện trong đời
+2023-10-11 Wednesday 17:32:21 root:INFO:check font-end: Ngày nhập học: 16 tháng 08, 2017
+2023-10-11 Wednesday 17:32:21 root:INFO:False
+2023-10-11 Wednesday 17:32:26 root:INFO:check back-end: Trang cá nhân - Giới thiệu - Công việc và học vấn - Trung học - Xem sự kiện trong đời
+2023-10-11 Wednesday 17:32:26 root:INFO:check back-end: Trung học - Tên Trung học - Trường THPT Đình Lập
+2023-10-11 Wednesday 17:32:26 root:INFO:False
+2023-10-11 Wednesday 17:32:26 root:INFO:check back-end: Trang cá nhân - Giới thiệu - Công việc và học vấn - Trung học - Xem sự kiện trong đời
+2023-10-11 Wednesday 17:32:26 root:INFO:check back-end: Trung học - Ngày bắt đầu - 16-08-2017
+2023-10-11 Wednesday 17:32:26 root:INFO:False
+2023-10-11 Wednesday 17:32:26 root:INFO:check back-end: Trang cá nhân - Giới thiệu - Công việc và học vấn - Trung học - Xem sự kiện trong đời
+2023-10-11 Wednesday 17:32:26 root:INFO:check back-end: Trung học - Ngày kết thúc - 08-06-2020
+2023-10-11 Wednesday 17:32:26 root:INFO:False
+2023-10-11 Wednesday 17:32:26 root:INFO:check back-end: Trang cá nhân - Giới thiệu - Công việc và học vấn - Trung học - Xem sự kiện trong đời
+2023-10-11 Wednesday 17:32:26 root:INFO:check back-end: Trung học - Mô tả - Đã tốt nghiệp THPT Đình Lập rùi
+2023-10-11 Wednesday 17:32:26 root:INFO:False
+2023-10-11 Wednesday 17:33:48 root:INFO:Trang cá nhân - Giới thiệu - Thông tin cơ bản - Các trang web và liên kết xã hội
+2023-10-11 Wednesday 17:33:48 root:INFO:check font-end: Liên kết(nhập sai định dạng web) - message: URL You provided invalid URL
+2023-10-11 Wednesday 17:33:48 root:INFO:False
+2023-10-11 Wednesday 17:33:55 root:INFO:Trang cá nhân - Giới thiệu - Thông tin cơ bản - Các trang web và liên kết xã hội
+2023-10-11 Wednesday 17:33:55 root:INFO:check font-end: Tiểu sử(Nhập quá 100 ký tự) - message: Description Không vượt quá 100 ký tự
+2023-10-11 Wednesday 17:33:55 root:INFO:False
