@@ -19,16 +19,16 @@ def dang_nhap(self):
 
 
 def trangcanhan(self):
-    funcion.thongtincanhan_anhdaidien(self)
-    funcion.thongtincanhan_anhbia(self)
-    funcion.gioithieu.gioithieu_tongquan(self)
-    funcion.gioithieu.congviec_vahocvan(self)
-    funcion.gioithieu.xemsukientrongdoi_congviecvahocvan(self)
-    funcion.gioithieu.trangcanhan_gioithieu_congviecvahocvan_addthem(self)
-    funcion.gioithieu.trangcanhan_gioithieu_thongtincoban(self)
-    funcion.gioithieu.trangcanhan_gioithieu_gd_va_mqh(self)
-    funcion.gioithieu.trangcanhan_gioithieu_sukientrongdoi(self)
-    funcion.gioithieu.trangcanhan_gioithieu_noitungsong(self)
-
-    funcion.banbe.banbe_tatcabanbe(self)
-    funcion.banbe.banbe_chinhsuaquyenriengtu(self)
+    # funcion.thongtincanhan_anhdaidien(self)
+    # funcion.thongtincanhan_anhbia(self)
+    # funcion.gioithieu.gioithieu_tongquan(self)
+    # funcion.gioithieu.congviec_vahocvan(self)
+    # funcion.gioithieu.xemsukientrongdoi_congviecvahocvan(self)
+    # funcion.gioithieu.trangcanhan_gioithieu_congviecvahocvan_addthem(self)
+    # funcion.gioithieu.trangcanhan_gioithieu_thongtincoban(self)
+    # funcion.gioithieu.trangcanhan_gioithieu_gd_va_mqh(self)
+    # funcion.gioithieu.trangcanhan_gioithieu_sukientrongdoi(self)
+    # funcion.gioithieu.trangcanhan_gioithieu_noitungsong(self)
+    #
+    # funcion.banbe.banbe_tatcabanbe(self)
+    funcion.anh_video.anh_video(self)

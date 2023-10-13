@@ -127,7 +127,7 @@ class gioithieu():
 
     @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def congviec_vahocvan(self):
-        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
+        action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.cong_viec_va_hoc_van.congviecvahocvan_congviec(self)
         action.checkdata_be.trangcanhan_gioithieu_cvvahocvan_congviec(self)
 
@@ -199,11 +199,16 @@ class gioithieu():
 
 
 class banbe():
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
+    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def banbe_tatcabanbe(self):
         action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
-        # action.banbe.tatcabanbe(self)
+        action.banbe.tatcabanbe(self)
         action.banbe.banbe_chinhsuaquyenriengtu(self)
 
 
 
+class anh_video():
+    def anh_video(self):
+        action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
+        action.anh_video.anh(self)
+        action.anh_video.video(self)

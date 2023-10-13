@@ -409,7 +409,7 @@ class anhbia():
         writeData(var.path_baocao, "Sheet1", 59, 2, "x")
     def anhbia_chinhsuavitri(self):
         driver.implicitly_wait(15)
-        # chỉnh sửa vị trí ảnh bìa
+        # chỉnh sửa vị tri ảnh bìa
         driver.find_element(By.XPATH, var.trangcanhan_iconchinhsua_anhbia).click()
         driver.find_element(By.XPATH, var.trangcanhan_anhbia_datlaivitri).click()
         time.sleep(1)
@@ -780,7 +780,7 @@ class checkdata_be():
                 logging.info((res['description']) == data['trangcanhan_gioithieu_thongtincoban']['tieusu'])
 
                 logging.info("check back-end: Trang cá nhân - Giới thiệu - Thông tin cơ bản - Thông tin cơ bản")
-                logging.info("check back-end: Giới tính - female")
+                logging.info("check back-end: Giới tinh - female")
                 logging.info((res['gender']) == "female")
 
                 logging.info("check back-end: Trang cá nhân - Giới thiệu - Thông tin cơ bản - Thông tin cơ bản")
@@ -1009,8 +1009,8 @@ class tongquan():
         check_gioithieu_songtai_dulieusai = driver.find_element(By.XPATH, var.trangcanhan_check_gioithieu_songtai_dulieusai1).text
         print(check_gioithieu_songtai_dulieusai)
         logging.info("Trang cá nhân - Giới thiệu tổng quan - Sống tại - nhập địa điểm không tồn tại")
-        logging.info("check font-end: Chúng tôi không thể nhận dạng vị trí bạn đã chỉ định.")
-        logging.info(check_gioithieu_songtai_dulieusai == "Chúng tôi không thể nhận dạng vị trí bạn đã chỉ định.")
+        logging.info("check font-end: Chúng tôi không thể nhận dạng vị tri bạn đã chỉ định.")
+        logging.info(check_gioithieu_songtai_dulieusai == "Chúng tôi không thể nhận dạng vị tri bạn đã chỉ định.")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_songtai_ok).click()
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_songtai_huy).click()
@@ -1032,8 +1032,8 @@ class tongquan():
         check_gioithieu_dentu_dulieusai = driver.find_element(By.XPATH, var.trangcanhan_check_gioithieu_dentu_dulieusai1).text
         print(check_gioithieu_dentu_dulieusai)
         logging.info("Trang cá nhân - Giới thiệu tổng quan - Đến từ - nhập địa điểm không tồn tại")
-        logging.info("check font-end: Chúng tôi không thể nhận dạng vị trí bạn đã chỉ định.")
-        logging.info(check_gioithieu_dentu_dulieusai == "Chúng tôi không thể nhận dạng vị trí bạn đã chỉ định.")
+        logging.info("check font-end: Chúng tôi không thể nhận dạng vị tri bạn đã chỉ định.")
+        logging.info(check_gioithieu_dentu_dulieusai == "Chúng tôi không thể nhận dạng vị tri bạn đã chỉ định.")
         time.sleep(1)
 
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_dentu_ok).click()
@@ -1089,7 +1089,7 @@ class tongquan():
         time.sleep(1)
         check_gioithieu_sodienthoai_ngan = driver.find_element(By.XPATH, var.trangcanhan_check_gioithieu_sodienthoai_ngan1).text
         print(check_gioithieu_sodienthoai_ngan)
-        logging.info("Trang cá nhân - Giới thiệu tổng quan - Số điện thoại ít hơn 10 ký tự")
+        logging.info("Trang cá nhân - Giới thiệu tổng quan - Số điện thoại it hơn 10 ký tự")
         logging.info("check font-end: Số điện thoại độ dài không đúng (phải là 10 ký tự)")
         logging.info(check_gioithieu_sodienthoai_ngan == "Số điện thoại độ dài không đúng (phải là 10 ký tự)")
         time.sleep(1)
@@ -1315,7 +1315,10 @@ class cong_viec_va_hoc_van():
         time.sleep(0.5)
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_trunghoc_luu).click()
         time.sleep(1)
+        driver.refresh()
+        time.sleep(2)
         writeData(var.path_baocao, "Sheet1", 73, 2, "x")
+
     def congviecvahocvan_addthem(self):
         driver.implicitly_wait(15)
         # driver.find_element(By.XPATH, var.trangcanhan).click()
@@ -1476,6 +1479,9 @@ class cong_viec_va_hoc_van():
         time.sleep(1)
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_trunghoc_xoa1).click()
         time.sleep(1)
+        driver.refresh()
+        time.sleep(2)
+
 
 
 
@@ -1536,8 +1542,8 @@ class xemkientrongdoi():
         check_daihoc_dahoctai_chuyennghanh = driver.find_element(By.XPATH, var.trangcanhan_xemsukientrongdoi_daihoc_dahoctai_chuyennghanh).text
         print(check_daihoc_dahoctai_chuyennghanh)
         logging.info("Trang cá nhân - giới thiệu - công việc và học vấn - đại học- đã học tại, chuyên nghành - xem sự kiện trong đời")
-        logging.info("check font-end: đã học tại, chuyên nghành - Đại học - Kỹ thuật máy tính")
-        logging.info(check_daihoc_dahoctai_chuyennghanh == "Đại học - Kỹ thuật máy tính")
+        logging.info("check font-end: đã học tại, chuyên nghành - Đại học - Kỹ thuật máy tinh")
+        logging.info(check_daihoc_dahoctai_chuyennghanh == "Đại học - Kỹ thuật máy tinh")
         writeData(var.path_baocao, "Sheet1", 78, 2, "x")
 
     def congviecvahocvan_trunghoc(self):
@@ -1644,7 +1650,7 @@ class thongtincoban():
         logging.info("check font-end: Tiểu sử - " + data['trangcanhan_gioithieu_thongtincoban']['tieusu'])
         logging.info(thongtincoban_tieusu == data['trangcanhan_gioithieu_thongtincoban']['tieusu'])
 
-        #Giới tính
+        #Giới tinh
         driver.find_element(By.XPATH, var.thongtincoban_icon_gioitinh).click()
         driver.find_element(By.XPATH, var.thongtincoban_gioitinh_chinhsua).click()
         driver.find_element(By.XPATH, var.thongtincoban_gioitinh_iconchongioitinh).click()
@@ -1654,7 +1660,7 @@ class thongtincoban():
         time.sleep(1)
         thongtincoban_gioitinh = driver.find_element(By.XPATH, var.thongtincoban_gioitinh_fe).text
         logging.info("Trang cá nhân - Giới thiệu - Thông tin cơ bản - Thông tin cơ bản")
-        logging.info("check font-end: Giới tính - female")
+        logging.info("check font-end: Giới tinh - female")
         logging.info(thongtincoban_gioitinh == "female")
 
         #Ngày sinh
@@ -1711,7 +1717,7 @@ class thongtincoban():
         driver.find_element(By.XPATH, var.thongtincoban_sdt_luu).click()
         time.sleep(1)
         check_thongtincoban_sodienthoai_ngan = driver.find_element(By.XPATH,var.trangcanhan_check_thongtincoban_sodienthoai_ngan1).text
-        logging.info("Trang cá nhân - Giới thiệu - Thông tin cơ bản - Thông tin liên hệ - Số điện thoại ít hơn 10 ký tự")
+        logging.info("Trang cá nhân - Giới thiệu - Thông tin cơ bản - Thông tin liên hệ - Số điện thoại it hơn 10 ký tự")
         logging.info("check font-end: Số điện thoại độ dài không đúng (phải là 10 ký tự)")
         logging.info(check_thongtincoban_sodienthoai_ngan == "Số điện thoại độ dài không đúng (phải là 10 ký tự)")
         time.sleep(0.5)
@@ -1806,7 +1812,7 @@ class thongtincoban():
         driver.find_element(By.XPATH, var.thongtincoban_tieusu_luu).click()
         time.sleep(1)
 
-        #Giới tính
+        #Giới tinh
         driver.find_element(By.XPATH, var.thongtincoban_icon_gioitinh).click()
         driver.find_element(By.XPATH, var.thongtincoban_gioitinh_chinhsua).click()
         driver.find_element(By.XPATH, var.thongtincoban_gioitinh_iconchongioitinh).click()
@@ -1815,7 +1821,7 @@ class thongtincoban():
         time.sleep(1)
         thongtincoban_gioitinh = driver.find_element(By.XPATH, var.thongtincoban_gioitinh_fe).text
         logging.info("Trang cá nhân - Giới thiệu - Thông tin cơ bản - Thông tin cơ bản")
-        logging.info("check font-end: Giới tính - male")
+        logging.info("check font-end: Giới tinh - male")
         logging.info(thongtincoban_gioitinh == "male")
 
         #Ngày sinh
@@ -1860,7 +1866,7 @@ class thongtincoban():
         driver.find_element(By.XPATH, var.thongtincoban_bietdanh_luu).click()
         time.sleep(1)
         driver.refresh()
-        time.sleep(1.5)
+        time.sleep(2)
 
 
 class giadinh_va_cacmoiquanhe():
@@ -2116,6 +2122,8 @@ class sukientrongdoi():
         driver.find_element(By.XPATH, var.sukientrongdoi_iconxoa_dulich).click()
         driver.find_element(By.XPATH, var.sukientrongdoi_xoa_dulich).click()
         time.sleep(2)
+        driver.refresh()
+        time.sleep(2)
 
 
 class noitungsong():
@@ -2168,7 +2176,8 @@ class noitungsong():
         logging.info("Trang cá nhân - Giới thiệu - Nơi từng sống - Đến từ")
         logging.info("check font-end: Đến từ - " + data['trangcanhan_noitungsong']['noitungsong_dentu'])
         logging.info(check_gioithieu_dentu == data['trangcanhan_noitungsong']['noitungsong_dentu'])
-
+        driver.refresh()
+        time.sleep(2)
 
 
 class banbe():
@@ -2193,7 +2202,7 @@ class banbe():
         driver.find_element(By.XPATH, var.trangcanhan_banbe_botheodoi).click()
         time.sleep(1)
         driver.find_element(By.XPATH, var.trangcanhan_banbe_botheodoi_xacnhan).click()
-        time.sleep(1)
+        time.sleep(2)
         driver.refresh()
         time.sleep(2)
         #theodoi
@@ -2201,7 +2210,7 @@ class banbe():
         driver.find_element(By.XPATH, var.trangcanhan_banbe_botheodoi).click()
         time.sleep(1)
         driver.find_element(By.XPATH, var.trangcanhan_banbe_botheodoi_xacnhan).click()
-        time.sleep(1)
+        time.sleep(2)
 
         #huỷ kết bạn
         driver.find_element(By.XPATH, var.trangcanhan_banbe_icon_manhcuong).click()
@@ -2266,8 +2275,6 @@ class banbe():
         time.sleep(1)
         login.login3(self, "truongvck33@gmail.com", "atgmj123456")
 
-
-
     def banbe_chinhsuaquyenriengtu(self):
         driver.implicitly_wait(15)
 
@@ -2276,10 +2283,11 @@ class banbe():
         time.sleep(1.5)
         driver.find_element(By.XPATH, var.trangcanhan_banbe).click()
         driver.find_element(By.XPATH, var.trangcanhan_banbe_iconchinhsuaquyen).click()
-        driver.find_element(By.XPATH, var.trangcanhan_chínhsuaquyenriengtu).click()
+        driver.find_element(By.XPATH, var.trangcanhan_chinhsuaquyenriengtu).click()
         time.sleep(1)
-        driver.find_element(By.XPATH, var.trangcanhan_chínhsuaquyenriengtu_icon_dsbb).click()
-        driver.find_element(By.XPATH, var.trangcanhan_chínhsuaquyenriengtu_dsbb_riengtu).click()
+        driver.find_element(By.XPATH, var.trangcanhan_chinhsuaquyenriengtu_icon_dsbb2).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trangcanhan_chinhsuaquyenriengtu_dsbb_riengtu1).click()
         time.sleep(2)
         driver.refresh()
         time.sleep(2)
@@ -2289,7 +2297,6 @@ class banbe():
         logging.info("Trang cá nhân - bạn bè - chỉnh sửa quyền riêng tư ")
         logging.info("check font-end: Danh sách bạn bè khi chỉnh quyền thành riêng tư có hiển thị không?")
         logging.info(check_banbe_quyenbanbe == "Ngọc Mai")
-
         #Người lạ
         login.login4(self, "truongvck222@gmail.com", "atgmj123456")
         driver.get("https://sn.emso.vn/user/111169896815147328")
@@ -2303,7 +2310,6 @@ class banbe():
         logging.info(check_nguoila_riengtu)
         logging.info(check_nguoila_riengtu == "Không có bạn bè để hiển thị.")
         time.sleep(1.5)
-
         #Bạn bè
         login.login4(self, "truongvck333@gmail.com", "atgmj123456")
         driver.get("https://sn.emso.vn/user/111169896815147328")
@@ -2317,15 +2323,18 @@ class banbe():
         logging.info(check_banbe_riengtu == "Không có bạn bè nào")
         time.sleep(1.5)
 
+
+
         #quyền bạn bè
         login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         time.sleep(1.5)
         driver.find_element(By.XPATH, var.trangcanhan_banbe).click()
         driver.find_element(By.XPATH, var.trangcanhan_banbe_iconchinhsuaquyen).click()
-        driver.find_element(By.XPATH, var.trangcanhan_chínhsuaquyenriengtu).click()
+        driver.find_element(By.XPATH, var.trangcanhan_chinhsuaquyenriengtu).click()
         time.sleep(1)
-        driver.find_element(By.XPATH, var.trangcanhan_chínhsuaquyenriengtu_icon_dsbb).click()
-        driver.find_element(By.XPATH, var.trangcanhan_chínhsuaquyenriengtu_dsbb_banbe).click()
+        driver.find_element(By.XPATH, var.trangcanhan_chinhsuaquyenriengtu_icon_dsbb2).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trangcanhan_chinhsuaquyenriengtu_dsbb_banbe2).click()
         time.sleep(2)
         driver.refresh()
         time.sleep(2)
@@ -2337,7 +2346,6 @@ class banbe():
         logging.info("check font-end: Danh sách bạn bè khi chỉnh quyền thành Bạn bè có hiển thị không")
         logging.info(check_banbe_riengtu != "Không có bạn bè nào")
         time.sleep(0.5)
-
         #người lạ
         login.login4(self, "truongvck222@gmail.com", "atgmj123456")
         driver.get("https://sn.emso.vn/user/111169896815147328")
@@ -2352,7 +2360,6 @@ class banbe():
         logging.info("check font-end: login bằng tài khoản khác(chưa kết bạn) và check  - Không hiển thị danh sách bạn bè.")
         logging.info(check_banbe_riengtu == "Không có bạn bè để hiển thị.")
         time.sleep(1.5)
-
         #Bạn bè
         login.login4(self, "truongvck333@gmail.com", "atgmj123456")
         driver.get("https://sn.emso.vn/user/111169896815147328")
@@ -2366,15 +2373,21 @@ class banbe():
         logging.info(check_banbe_quyenbanbe == "Ngọc Mai")
         time.sleep(1.5)
 
+
+
         # quyền công khai
         login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         time.sleep(1.5)
         driver.find_element(By.XPATH, var.trangcanhan_banbe).click()
         driver.find_element(By.XPATH, var.trangcanhan_banbe_iconchinhsuaquyen).click()
-        driver.find_element(By.XPATH, var.trangcanhan_chínhsuaquyenriengtu).click()
+        driver.find_element(By.XPATH, var.trangcanhan_chinhsuaquyenriengtu).click()
         time.sleep(1)
-        driver.find_element(By.XPATH, var.trangcanhan_chínhsuaquyenriengtu_icon_dsbb).click()
-        driver.find_element(By.XPATH, var.trangcanhan_chínhsuaquyenriengtu_dsbb_congkhai).click()
+        driver.find_element(By.XPATH, var.trangcanhan_chinhsuaquyenriengtu_icon_dsbb2).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trangcanhan_chinhsuaquyenriengtu_dsbb_congkhai3).click()
+
+        # driver.find_element(By.XPATH, var.trangcanhan_chinhsuaquyenriengtu_icon_dsbb).click()
+        # driver.find_element(By.XPATH, var.trangcanhan_chinhsuaquyenriengtu_dsbb_congkhai).click()
         time.sleep(2)
         driver.refresh()
         time.sleep(2)
@@ -2414,11 +2427,74 @@ class banbe():
         time.sleep(1.5)
 
 
+class anh_video:
+    def anh(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.trangcanhan_anh).click()
+        driver.execute_script("window.scrollBy(0,700)", "")
+        #ảnh
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trangcanhan_anh_xemanh).click()
+        time.sleep(3)
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_thich).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_binhluan).send_keys(data['trangcanhan_anh_video']['trangcanhan_anh_binhluan'])
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_binhluan).submit()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trangcanhan_anh_xemanh_x).click()
 
+        #album
+        driver.find_element(By.XPATH, var.trangcanhan_anh_album).click()
+        driver.find_element(By.XPATH, var.trangcanhan_anh_alum_taomoi).click()
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.trangcanhan_anh_album_ten).send_keys(data['trangcanhan_anh_video']['trangcanhan_anh_anh'])
+        driver.find_element(By.XPATH, var.trangcanhan_anh_album_mota).send_keys(data['trangcanhan_anh_video']['trangcanhan_anh_mota'])
+        driver.find_element(By.XPATH, var.trangcanhan_anh_album_tailen).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
+        time.sleep(2)
+        # driver.find_element(By.XPATH, var.trangcanhan_gioithieu_songtai_input).send_keys(data['trangcanhan_gioithieu_tongquan']['songtai'])
+        # wait = WebDriverWait(driver, 10)
+        # chon_hanoi = wait.until(EC.element_to_be_clickable((By.XPATH, var.trangcanhan_gioithieu_songtai_hanoi)))
+        # chon_hanoi.click()
+        driver.find_element(By.XPATH, var.trangcanhan_anh_album_anhtailen_chuthich).send_keys(data['trangcanhan_anh_video']['chuthich'])
+        driver.find_element(By.XPATH, var.trangcanhan_anh_album_dang).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.trangcanhan_anh_album_iconxoa).click()
+        driver.find_element(By.XPATH, var.trangcanhan_anh_album_xoa).click()
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_xoa).click()
+        time.sleep(1)
 
+    def video(self):
+        #video
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        driver.execute_script("window.scrollBy(0,300)", "")
+        driver.find_element(By.XPATH, var.trangcanhan_video).click()
+        driver.find_element(By.XPATH, var.trangcanhan_video_xem).click()
+        time.sleep(3)
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_thich).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_binhluan).send_keys(data['trangcanhan_anh_video']['trangcanhan_video_binhluan'])
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_binhluan).submit()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trangcanhan_video_xemvideo_x).click()
 
-
-
+        #khoanh khắc
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac).click()
+        driver.find_element(By.XPATH, var.trangcanhan_video_xem).click()
+        time.sleep(3)
+        # driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_like).click()
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_thich).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_binhluan).send_keys(data['trangcanhan_anh_video']['trangcanhan_video_binhluan1'])
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_binhluan).submit()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_x).click()
+        time.sleep(2)
 
 
 

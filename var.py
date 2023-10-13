@@ -40,6 +40,7 @@ trangcanhan_iconmayanh = "/html/body/div/div/div/main/div/div[2]/div/div[1]/div[
 capnhatanhdaidien_taianhlen = "/html/body/div[2]/div[3]/div/div/div[1]/div/div/div/div[2]/div/button[2]"
 capnhatanhdaidien_icon_taianhlen = "/html/body/div[2]/div[3]/div/div/div[2]/button"
 capnhatanhdaidien_mota = "/html/body/div[2]/div[3]/div/div[1]/div[2]/div[1]/div/input"
+sssssssssssssssssssssss= "/html/body/div[2]/div[3]/div/div[1]/div[2]/div[1]/div/input"
 capnhatanhdaidien_luu = "/html/body/div[2]/div[3]/div/div[2]/div[2]/button[2]"
 capnhatanhdaidien_chonanhdautien = "/html/body/div[2]/div[3]/div/div/div[2]/div/div/div/div[1]"
 capnhatanhdaidien_chonanhthu2 = "/html/body/div[2]/div[3]/div/div/div[2]/div/div/div[1]/div[2]/div/div"
@@ -271,7 +272,7 @@ thongtincoban_tieusu_qua100kytu ="//*[text()='Description Không vượt quá 10
 thongtincoban_tieusu_huy ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul[3]/div[2]/div[2]/button[1]"
 thongtincoban_tieusu_fe_dulieusai ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul[3]/div[1]/div/div/div/div[2]/input"
 
-#giới tính
+#giới tinh
 thongtincoban_icon_gioitinh = "/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul[3]/div[2]/li/div/div[2]"
 thongtincoban_gioitinh_chinhsua ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/div/div/li/p"
 thongtincoban_gioitinh_iconchongioitinh ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul[3]/div[2]/div/div/button"
@@ -427,26 +428,61 @@ trangcanhan_banbe_loimoi_huy = "//*[text()='Xóa']"
 check_banbe_tranquangtruong_tinhtrang ='/html/body/div/div/div/main/div/div[2]/div/div[1]/div[1]/div[2]/div/div[2]/div/button[1]'
 trangcanhan_banbe_guiloimoi ="/html/body/div/div/div/main/div/div[2]/div/div[1]/div[1]/div[2]/div/div[2]/div/button[1]"
 trangcanhan_banbe_iconchinhsuaquyen ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[1]/div/button"
-trangcanhan_chínhsuaquyenriengtu ='/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[1]/div/div[2]/div/div/div/div/span/p'
-trangcanhan_chínhsuaquyenriengtu_icon_dsbb ="/html/body/div[2]/div[3]/div/div/div[1]/button"
-trangcanhan_chínhsuaquyenriengtu_dsbb_riengtu ="/html/body/div[3]/div[3]/div/div/div/div[3]/div[2]/span"
+trangcanhan_chinhsuaquyenriengtu ='/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[1]/div/div[2]/div/div/div/div/span/p'
+trangcanhan_chinhsuaquyenriengtu_icon_dsbb ="/html/body/div[2]/div[3]/div/div/div[1]/button"
+trangcanhan_chinhsuaquyenriengtu_dsbb_riengtu ="/html/body/div[2]/div[3]/div/div/div/div[3]/div[2]/span"
 check_nguoila_riengtu1 ="//*[text()='Không có bạn bè để hiển thị.']"
-trangcanhan_chínhsuaquyenriengtu_dsbb_banbe ="/html/body/div[3]/div[3]/div/div/div/div[2]/div[2]/span"
+
+trangcanhan_chinhsuaquyenriengtu_dsbb_banbe ="/html/body/div[2]/div[3]/div/div/div/div[2]/div[2]/span"
 check_banbe_quyenbanbe1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[3]/div/div/div/div[3]/div/div[1]/div/div/a/div[2]"
 check_banbe_riengtu2 ="//*[text()='Không có bạn bè nào']"
 check_nguoila_riengtu3 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/p"
 check_banbe_riengtu3 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[3]/p"
-trangcanhan_chínhsuaquyenriengtu_dsbb_congkhai ="/html/body/div[3]/div[3]/div/div/div/div[1]/div[2]/span"
+trangcanhan_chinhsuaquyenriengtu_dsbb_congkhai ="/html/body/div[2]/div[3]/div/div/div/div[1]/div[2]/span"
 check_banbe_quyenbanbe ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[3]/div/div/div/div[1]/div/div[1]/div/div/a/div[2]"
 check_banbe_quyencongkhai ='/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/p'
-trangcanhan_chínhsuaquyenriengtu_x ="/html/body/div[2]/div[3]/div/h2/button"
+trangcanhan_chinhsuaquyenriengtu_x ="/html/body/div[2]/div[3]/div/h2/button"
 check_dsbb_quyenbanbe ="/html/body/div[1]/div/div/main/div/div[2]/div/div[2]/div/div/div/div[3]/p"
+trangcanhan_chinhsuaquyenriengtu_icon_dsbb1 ="/html/body/div[2]/div[3]/div/div/div[1]/button"
+trangcanhan_chinhsuaquyenriengtu_dsbb_congkhai1 ="/html/body/div[2]/div[3]/div/div/div/div[1]/div[2]/span"
+trangcanhan_chinhsuaquyenriengtu_dsbb_riengtu1 = "//*[@class='MuiModal-root MuiDialog-root css-5eviq2']//div[@class='MuiDialogContent-root MuiDialogContent-dividers css-1mu443t']/div/div[3]/div[2]/span"
+trangcanhan_chinhsuaquyenriengtu_icon_dsbb2 ="//*[@class='MuiModal-root MuiDialog-root css-126xj0f']/div[3]/div[1]/div[1]/div[1]/button[@class='MuiLoadingButton-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation MuiButtonBase-root css-10nbdru']"
+trangcanhan_chinhsuaquyenriengtu_dsbb_banbe2 = "//*[@class='MuiModal-root MuiDialog-root css-5eviq2']//div[@class='MuiDialogContent-root MuiDialogContent-dividers css-1mu443t']/div/div[2]/div[2]/span"
+trangcanhan_chinhsuaquyenriengtu_icon_dsbb3 ="/html/body/div[2]/div[3]/div/div/div[1]/button"
+trangcanhan_chinhsuaquyenriengtu_dsbb_banbe1 ="//*[@class='jss173 MuiBox-root css-0']/div[2]/span"
+trangcanhan_chinhsuaquyenriengtu_dsbb_congkhai3 ="//*[@class='MuiModal-root MuiDialog-root css-5eviq2']//div[@class='MuiDialogContent-root MuiDialogContent-dividers css-1mu443t']/div/div[1]/div[2]/span"
 
 
+#4 ảnh - video
 
+trangcanhan_anh ="/html/body/div/div/div/main/div/div[2]/div/div[1]/div[2]/div[1]/div/div/button[4]/button"
+trangcanhan_anh_xemanh ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[3]/div/div[1]/div/div[1]/div[1]/div[1]/div"
+trangcanhan_anh_xemanh_like ="//*[@class='MuiModal-root MuiDialog-root css-126xj0f']/div[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2][@class='scrollbar-container ps ps--active-y']/div[4]/div[1]/div[2]/div/div[@aria-owns='mouse-over-popper']/button[1]"
+trangcanhan_anh_xemanh_binhluan ="//*[@class='MuiModal-root MuiDialog-root css-126xj0f']/div[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/div[4]/div[2]/div/div[2]/form/div/div/textarea"
+trangcanhan_anh_xemanh_x ="//*[@class='MuiModal-root MuiDialog-root css-126xj0f']/div[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div/div/div/button[@aria-label='Nhấn ESC để đóng']"
+trangcanhan_anh_album ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[2]/div/div/div[2]/div/button[2]"
+trangcanhan_anh_alum_taomoi ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[3]/div/div/div/div[1]/div/div"
+trangcanhan_anh_album_ten ="/html/body/div/div/div/main/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div[3]/div[1]/div/div[2]/input"
+trangcanhan_anh_album_mota ="/html/body/div/div/div/main/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div[3]/div[2]/div/div[2]/textarea[1]"
+trangcanhan_anh_album_tailen ="/html/body/div/div/div/main/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div[3]/div[3]/button"
+trangcanhan_anh_album_anhtailen_chuthich ="/html/body/div/div/div/main/div/div[2]/div/div/div/div[2]/div[2]/div[3]/div/div/div[2]/div/div[2]/input"
+trangcanhan_anh_album_dang ="/html/body/div/div/div/main/div/div[2]/div/div/div/div[1]/div[3]/button"
+trangcanhan_anh_album_iconxoa ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[3]/div/div/div/div/div[2]/div[2]"
+trangcanhan_anh_album_xoa ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[3]/div/div[2]/div/li[2]/p"
+trangcanhan_anh_album_xoa_dongy ="/html/body/div[2]/div[3]/div/div[2]/button[2]"
 
-
-
-
+#video
+trangcanhan_video ="/html/body/div/div/div/main/div/div[2]/div/div[1]/div[2]/div[1]/div/div/button[5]/button"
+trangcanhan_video_xem ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div[3]/div/div[1]/div/div/div[1]/div[1]/img"
+trangcanhan_video_xemvideo_like ="//*[@class='MuiModal-root MuiDialog-root css-126xj0f']/div[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/div[4]/div[1]/div[2]/div/div[@aria-owns='mouse-over-popper']/button"
+trangcanhan_video_xemanh_binhluan = "//*[@class='MuiModal-root MuiDialog-root css-126xj0f']/div[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/div[4]/div[2]/div/div[2]/form/div/div/textarea"
+trangcanhan_video_xemvideo_x ="//*[@class='MuiModal-root MuiDialog-root css-126xj0f']/div[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div/div/div/button[@aria-label='Nhấn ESC để đóng']"
+trangcanhan_khoanhkhac ="/html/body/div[2]/div/div/main/div/div[2]/div/div[2]/div/div/div/div[2]/div/div/div[2]/div/button[2]"
+trangcanhan_khoanhkhac_xemvideo_like ="//*[@class='MuiModal-root MuiDialog-root css-126xj0f']/div[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/div[4]/div[1]/div[2]/div/button/span[2]"
+trangcanhan_khoanhkhac_xemvideo_binhluan ="//*[@class='MuiModal-root MuiDialog-root css-126xj0f']/div[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/div[4]/div[2]/div/div[2]/form/div/div/textarea"
+trangcanhan_khoanhkhac_xemvideo_x = "/html/body/div[3]/div[3]/div/div/div[1]/div[1]/button"
+trangcanhan_khoanhkhac_xemvideo_thich ="//*[text()='Thích']"
+trangcanhan_khoanhkhac_xemvideo_xoa = "//*[text()='Xóa']"
+trangcanhan_khoanhkhac_xemvideo_binhluan ="//*[@placeholder='Viết bình luận...']"
 
 
