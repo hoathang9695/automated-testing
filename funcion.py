@@ -194,7 +194,7 @@ class gioithieu():
 
     @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_noitungsong(self):
-        action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
+        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.noitungsong.noitungsong(self)
 
 
@@ -212,3 +212,9 @@ class anh_video():
         action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
         action.anh_video.anh(self)
         action.anh_video.video(self)
+
+
+class check_thongtin_trangcanhan():
+    def check_thongtin_trangcanhan(self):
+        action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
+        action.check_thongtin_trangcanhan.check_thongtin_trangcanhan(self)

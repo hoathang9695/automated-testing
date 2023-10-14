@@ -31,4 +31,5 @@ def trangcanhan(self):
     # funcion.gioithieu.trangcanhan_gioithieu_noitungsong(self)
     #
     # funcion.banbe.banbe_tatcabanbe(self)
-    funcion.anh_video.anh_video(self)
+    # funcion.anh_video.anh_video(self)
+    funcion.check_thongtin_trangcanhan.check_thongtin_trangcanhan(self)

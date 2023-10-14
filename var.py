@@ -486,3 +486,61 @@ trangcanhan_khoanhkhac_xemvideo_xoa = "//*[text()='Xóa']"
 trangcanhan_khoanhkhac_xemvideo_binhluan ="//*[@placeholder='Viết bình luận...']"
 
 
+
+
+#So sánh dữ liệu trang cá nhân
+congviec_chucvu1 ="//*[text()='Nhân Viên tại  Cafe+']"
+check_trangcanhan_congviec ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div[2]/div[1]/div/div/div[1]/div/ul/li[1]/div[2]/p"
+congviec_chucvu2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[1]"
+daihoc_truonghoc2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[2]"
+trunghoc_truonghoc2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[3]"
+dentu2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[4]"
+songtai2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[5]"
+moiquanhe_tinhtrang2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[6]"
+moiquanhe_nguoithan2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[6]"
+web2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[7]"
+lienket2 = "//*[@class='MuiBox-root css-ov1j19']/div/ul/li[8]"
+tieusu2 ="//*[@class='MuiBox-root css-ov1j19']/div/div[1]/p"
+
+
+tongquan_songtai1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[1]/li/div/div[1]/div[2]/p/span/span"
+tongquan_dentu1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[2]/li/div/div[1]/div[2]/p/span/span"
+tongquan_tinhtrang_mqh1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[3]/div[1]/div/div[2]/p[2]"
+tongquan_nguoithan_mqh1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[3]/div[1]/div/div[2]/p[1]"
+tongquan_sodienthoai1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[4]/li/div/div[1]/div[2]/p"
+tongquan_bietdanh1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[5]/li/div/div[1]/div[2]/p"
+bietdanh2 ="/html/body/div/div/div/main/div/div[2]/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/h4/span"
+trangcanhan_baiviet ="/html/body/div/div/div/main/div/div[2]/div/div[1]/div[2]/div[1]/div/div/button[1]/button"
+trangcanhan_gioithieu_congviecvahocvan ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[2]"
+cvvahocvan_cv_chucvu1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/ul[1]/ul/li/div/div[2]/span/div/p[1]"
+cvvahocvan_daihoc_truonghoc1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/ul[2]/ul/li/div/div[2]/span/div/p[1]/span"
+cvvahocvan_trunghoc_truonghoc1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/ul[3]/ul/li/div/div[2]/span/div/p[1]/span"
+trangcanhan_gioithieu_noitungsong ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[3]"
+noitungsong_songtai1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[1]/li/div/div[1]/div[2]/p/span/span"
+noitungsong_dentu1 ='/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[2]/li/div/div[1]/div[2]/p/span/span'
+trangcanhan_gioithieu_thongtincoban ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[4]"
+thongtincoban_sodienthoai1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul[1]/div[1]/li/div/div[1]/div[2]/p"
+thongtincoban_web1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul[2]/div[1]/li/div/div[1]/div[2]/span/p"
+thongtincoban_lienket1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul[2]/div[3]/li/div/div[1]/div/div/div/p"
+thongtincoban_tieusu1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul[3]/div[1]/li/div/div[1]/div[2]/p"
+thongtincoban_bietdanh1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul[3]/div[4]/li/div/div[1]/div[2]/p"
+trangcanhan_gioithieu_gdvacacmqh ='/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[5]'
+tongquan_gdvacacmqh_tingtrang_mqh1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul[1]/div/div[1]/div/div[2]/p[2]"
+tongquan_gdvacacmqh_nguoithan_mqh1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul[1]/div/div[1]/div/div[2]/p[1]"
+trangcanhan_gioithieu_sukientrongdoi ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[6]"
+tongquan_sukientrongdoi_trunghoc_tentruong1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/ul[1]/li/div[1]/div[2]/span/div/p[1]/span"
+tongquan_sukientrongdoi_daihoc_tentruong1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/ul[2]/li/div[1]/div[2]/span/div/p[1]/span"
+tongquan_sukientrongdoi_congviec_congty1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/ul[3]/li/div[1]/div[2]/span/div/p[1]/span"
+trangcanhan_chinhsuatrangcanhan ="/html/body/div/div/div/main/div/div[2]/div/div[1]/div[1]/div[2]/div/div[2]/div/button[2]"
+tieusu3 ="/html/body/div[2]/div[3]/div/div/div[6]/p"
+congviec_chucvu3 ="/html/body/div[2]/div[3]/div/div/div[8]/ul/li[1]/div[2]/span/div/p[1]"
+daihoc_truonghoc3 ="/html/body/div[2]/div[3]/div/div/div[8]/ul/li[2]/div[2]/span/div/p[1]"
+trunghoc_truonghoc3 ="/html/body/div[2]/div[3]/div/div/div[8]/ul/li[3]/div[2]/span/div/p[1]"
+songtai3 ="/html/body/div[2]/div[3]/div/div/div[8]/ul/li[4]/div[2]/span"
+dentu3 ="/html/body/div[2]/div[3]/div/div/div[8]/ul/li[5]/div[2]/span"
+moiquanhe_tinhtrang3 ="/html/body/div[2]/div[3]/div/div/div[8]/ul/li[6]/div[2]/span/div/p[1]"
+web3 ='/html/body/div[2]/div[3]/div/div/div[8]/ul/li[9]/div[2]/span/div/p[1]'
+lienket3= '/html/body/div[2]/div[3]/div/div/div[8]/ul/li[10]/div[2]/span/div/p[1]'
+sodienthoai3 ='/html/body/div[2]/div[3]/div/div/div[8]/ul/li[7]/div[2]/span/div/p[1]'
+bietdanh3 = '/html/body/div[2]/div[3]/div/div/div[8]/ul/li[8]/div[2]/span/div/p[1]'
+
