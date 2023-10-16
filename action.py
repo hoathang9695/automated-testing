@@ -2764,7 +2764,6 @@ class check_thongtin_trangcanhan():
 
 
 class trangchu():
-
     def taobaiviet(self, trangthai, mota, camxuc, hoatdong, tinhtrang):
         driver.implicitly_wait(15)
         time.sleep(1.5)
@@ -2811,7 +2810,12 @@ class trangchu():
         driver.find_element(By.XPATH, var.xong).click()
         time.sleep(0.5)
         driver.find_element(By.XPATH, var.dang).click()
-        time.sleep(10)
+        time.sleep(2)
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.messgae_taobaiviet1)))
+        print(element.text)
+        logging.info(element.text)
+        time.sleep(3)
         check_taobaiviet = driver.find_element(By.XPATH,var.check_taobaiviet1).text
         print(check_taobaiviet)
         logging.info("Trang chủ - Tạo bài viết ")
@@ -2819,6 +2823,43 @@ class trangchu():
         logging.info("check font-end: Bài viết đang để quyền " + tinhtrang)
         logging.info(check_taobaiviet == "Đây là bai viết "+ tinhtrang)
 
+    def taobaimoment(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.khoanhkhac).click()
+        driver.find_element(By.XPATH, var.khoanhkhac_nhapnoidung).send_keys(data['trangchu_taobaiviet']['khoanhkhac_noidung'])
+        driver.find_element(By.XPATH, var.khoanhkhac_tailenvideo).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/quangaygiongbao.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.khoanhkhac_dangbai).click()
+        time.sleep(30)
+
+
+    def camxuc_hoatdong(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.camxuc_hoatdong).click()
+        driver.find_element(By.XPATH, var.camxuc_xucdong).click()
+        time.sleep(1)
+        check_taobaiviet_camxuc = driver.find_element(By.XPATH,var.check_taobaiviet_camxuc1).text
+        logging.info("Trang chủ - Cảm xúc/Hoạt động")
+        logging.info("check font-end: đang cảm thấy xúc động ")
+        logging.info(check_taobaiviet_camxuc)
+        logging.info(check_taobaiviet_camxuc =="đang xúc động cảm thấy xúc động")
+        driver.find_element(By.XPATH, var.camxuc_hoatdong_x).click()
+
+        driver.find_element(By.XPATH, var.camxuc_hoatdong).click()
+        driver.find_element(By.XPATH, var.camxuc_hoatdong_hoatdong).click()
+        driver.find_element(By.XPATH, var.hoatdong_dangxem).click()
+        driver.find_element(By.XPATH, var.hoatdong_x).click()
+        time.sleep(1)
+        check_taobaiviet_hoatdong = driver.find_element(By.XPATH,var.check_taobaiviet_hoatdong1).text
+        logging.info("Trang chủ - Cảm xúc/Hoạt động")
+        logging.info("check font-end: đang xem")
+        logging.info(check_taobaiviet_hoatdong)
+        logging.info(check_taobaiviet_hoatdong == "đang xem")
+        driver.find_element(By.XPATH, var.camxuc_hoatdong_x).click()
 
 
 

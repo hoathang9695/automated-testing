@@ -551,6 +551,7 @@ trangcanhan_gioithieuhuy ="//*[text()='Hủy']"
 
 
 #II.Trang chủ
+#Tạo bài viết
 taobaiviet_anhvideo ="/html/body/div/div/div/main/div/div[2]/div/div[1]/div[2]/button[1]/div/p"
 taobaiviet_trangthai_icon ="/html/body/div[2]/div[3]/div/div[1]/div[2]/div[2]"
 taobaiviet_trangthai_congkhai ="//*[@class='MuiModal-root MuiDialog-root css-5eviq2']//div[@class='MuiDialogContent-root MuiDialogContent-dividers css-1mu443t']/div/div[2]/div[2]/span"
@@ -588,11 +589,18 @@ chinhsua1 ="/html/body/div[3]/div[3]/div/div[1]/div/div/div/div/div[1]/div[1]/bu
 hoatdong_x ="/html/body/div[2]/div[3]/div/h2/button"
 taobaiviet_camxuchoatdong_camxuc ="/html/body/div[2]/div[3]/div/div/div/div[1]/div/div/div/button[1]"
 check_taobaiviet1 ="/html/body/div/div/div/main/div/div[2]/div[1]/div[4]/div/div[1]/div[1]/div[2]/div[1]/div/div/div/p"
+# messgae_taobaiviet1 ="/html/body/div/div/div/div[6]/div/div[2]"
+messgae_taobaiviet1 ="//*[text()='Đăng bài viết thành công']"
 
-
-
-
-
-
-
-
+#Tạo bài moment
+khoanhkhac ="/html/body/div/div/div/main/div/div[2]/div/div[1]/div[2]/button[2]/div/p"
+khoanhkhac_nhapnoidung ="/html/body/div[2]/div[3]/div/div[1]/div/div[2]/div/div[1]/div[2]/div/textarea"
+khoanhkhac_tailenvideo ="/html/body/div[2]/div[3]/div/div[1]/div/div[1]/div/button"
+khoanhkhac_dangbai ="/html/body/div[2]/div[3]/div/div[2]/button[2]"
+camxuc_hoatdong ="/html/body/div/div/div/main/div/div[2]/div[1]/div[1]/div[2]/button[3]/div/p"
+camxuc_xucdong = "//*[text()='xúc động']"
+camxuc_hoatdong_x ="/html/body/div[2]/div[3]/div/h2/button"
+camxuc_hoatdong_hoatdong ="/html/body/div[2]/div[3]/div/div/div/div[1]/div/div/div/button[2]"
+hoatdong_dangxem = "//*[text()='đang xem']"
+check_taobaiviet_camxuc1 ="/html/body/div[2]/div[3]/div/div[1]/div[2]/div[1]/p/span"
+check_taobaiviet_hoatdong1= "/html/body/div[2]/div[3]/div/div[1]/div[2]/div[1]/p/span"

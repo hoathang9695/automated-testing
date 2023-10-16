@@ -224,6 +224,7 @@ def trangcanhan(self):
 
 
 def trangchu(self):
-    funcion.trangchu_taobaiviet.taobaiviet_congkhai(self)
+    funcion.trangchu.taobaiviet_khoangkhac(self)
+
 
 

@@ -220,9 +220,12 @@ class check_thongtin_trangcanhan():
         action.check_thongtin_trangcanhan.check_thongtin_trangcanhan(self)
 
 
-class trangchu_taobaiviet():
-    def taobaiviet_congkhai(self):
+class trangchu():
+    def taobaiviet_khoangkhac(self):
         action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
-        action.trangchu.taobaiviet_congkhai(self)
-        action.trangchu.taobaiviet_banbe(self)
-        action.trangchu.taobaiviet_riengtu(self)
+        # action.trangchu.taobaiviet_congkhai(self)
+        # action.trangchu.taobaiviet_banbe(self)
+        # action.trangchu.taobaiviet_riengtu(self)
+        # action.trangchu.taobaimoment(self)
+        action.trangchu.camxuc_hoatdong(self)
+
