@@ -130,8 +130,8 @@ trangcanhan_gioithieu_mqh_ngay_1 ="/html/body/div/div/div/main/div/div[2]/div/di
 
 trangcanhan_gioithieu_sodienthoai = "/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[4]/li/div/div[2]"
 trangcanhan_gioithieu_sodienthoai1= "/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[4]/li/div/div[2]/i"
-trangcanhan_gioithieu_sodienthoai_chinhsua = "/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/div/div/li/p"
-# trangcanhan_gioithieu_sodienthoai_chinhsua = "//*[text()='Chỉnh sửa thông tin']"
+# trangcanhan_gioithieu_sodienthoai_chinhsua = "/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/div/div/li/p"
+trangcanhan_gioithieu_sodienthoai_chinhsua = "//*[text()='Chỉnh sửa thông tin']"
 trangcanhan_gioithieu_sodienthoai_chinhsua2 = "/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[4]/li/div/div[2]"
 
 trangcanhan_gioithieu_sodienthoai_input = "/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[4]/div/div/div/div[2]/input"
@@ -494,8 +494,8 @@ check_trangcanhan_congviec ="/html/body/div/div/div/main/div/div[2]/div/div[2]/d
 congviec_chucvu2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[1]"
 daihoc_truonghoc2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[2]"
 trunghoc_truonghoc2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[3]"
-dentu2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[4]"
-songtai2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[5]"
+dentu2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[5]"
+songtai2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[4]"
 moiquanhe_tinhtrang2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[6]"
 moiquanhe_nguoithan2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[6]"
 web2 ="//*[@class='MuiBox-root css-ov1j19']/div/ul/li[7]"
@@ -543,4 +543,56 @@ web3 ='/html/body/div[2]/div[3]/div/div/div[8]/ul/li[9]/div[2]/span/div/p[1]'
 lienket3= '/html/body/div[2]/div[3]/div/div/div[8]/ul/li[10]/div[2]/span/div/p[1]'
 sodienthoai3 ='/html/body/div[2]/div[3]/div/div/div[8]/ul/li[7]/div[2]/span/div/p[1]'
 bietdanh3 = '/html/body/div[2]/div[3]/div/div/div[8]/ul/li[8]/div[2]/span/div/p[1]'
+sothich2 ="//*[@class='MuiChip-label MuiChip-labelMedium css-9iedg7']"
+sothich3 ="/html/body/div[2]/div[3]/div/div/div[10]/div/span"
+trangcanhan_gioithieuhuy ="//*[text()='Hủy']"
+
+
+
+
+#II.Trang chủ
+taobaiviet_anhvideo ="/html/body/div/div/div/main/div/div[2]/div/div[1]/div[2]/button[1]/div/p"
+taobaiviet_trangthai_icon ="/html/body/div[2]/div[3]/div/div[1]/div[2]/div[2]"
+taobaiviet_trangthai_congkhai ="//*[@class='MuiModal-root MuiDialog-root css-5eviq2']//div[@class='MuiDialogContent-root MuiDialogContent-dividers css-1mu443t']/div/div[2]/div[2]/span"
+taobaiviet_trangthai_banbe ="//*[@class='MuiModal-root MuiDialog-root css-5eviq2']//div[@class='MuiDialogContent-root MuiDialogContent-dividers css-1mu443t']/div/div[3]/div[2]/span"
+taobaiviet_trangthai_riengtu ="//*[@class='MuiModal-root MuiDialog-root css-5eviq2']//div[@class='MuiDialogContent-root MuiDialogContent-dividers css-1mu443t']/div/div[4]/div[2]/span"
+taobaiviet_mota ="/html/body/div[2]/div[3]/div/div[2]/div/div[1]/div[1]/div/div/textarea"
+taobaiviet_tailenanhvideo ="/html/body/div[2]/div[3]/div/div[2]/div/div[2]/div/div[1]/div[2]/div/div[1]"
+taobaiviet_camxuchoatdong ="/html/body/div[2]/div[3]/div/div[3]/div[2]/div[2]"
+taobaiviet_hoatdong ="/html/body/div[2]/div[3]/div/div/div/div[1]/div/div/div/button[2]"
+
+taobaiviet_camxuc_tuyet ="//*[text()='tuyệt']"
+taobaiviet_camxuc_yeu ="//*[text()='yếu']"
+taobaiviet_camxuc_vuive2 ="//*[text()='vui vẻ 2']"
+taobaiviet_hoatdong_dangxem ="//*[text()='đang xem']"
+taobaiviet_hoatdong_dangnghive ="//*[text()='đang nghĩ về']"
+taobaiviet_hoatdong_dangtim ="//*[text()='đang tìm']"
+taobaiviet_hoatdong_x = "/html/body/div[2]/div[3]/div/h2/button"
+taobaiviet_ganthenguoikhac ="/html/body/div[2]/div[3]/div/div[3]/div[2]/div[3]"
+taobaiviet_ngocmai ="/html/body/div[2]/div[3]/div/div[2]/div[2]/div[3]"
+xong ="//*[text()='Xong']"
+chinhsua = "//*[text()='Chỉnh sửa']"
+chinhsua_cat = "//*[text()='Cắt']"
+chinhsua_xoay = "//*[text()='Xoay']"
+chinhsua_chenvanvan = "//*[text()='Công cụ chèn văn bản']"
+chinhsua_nhapvanvan = "/html/body/div[3]/div[3]/div/div/div[2]/div[2]/div/div/input"
+chinhsua_luu ="//*[text()='Lưu']"
+chinhsua_xong ="//*[text()='Xong']"
+dang ="//*[text()='Đăng']"
+taobaiviet_anhvideo_chinhsua ="/html/body/div[2]/div[3]/div/div[2]/div/div[2]/div/div[1]/div[2]/div[1]/button[1]"
+themanhvideo ="/html/body/div[2]/div[3]/div/div[2]/div/div[2]/div/div[1]/div[2]/div[1]/button[2]"
+chinhsua_chuthich1 ="/html/body/div[3]/div[3]/div/div[1]/div/div/div[1]/div/div[3]/div/div/input"
+# chinhsua_chuthich2 = "/html/body/div[3]/div[3]/div/div[1]/div/div/div[2]/div/div[3]/div/div/input"
+chinhsua_chuthich2 = "/html/body/div[3]/div[3]/div/div[1]/div/div/div[2]/div/div[3]/div/div/input"
+chinhsua1 ="/html/body/div[3]/div[3]/div/div[1]/div/div/div/div/div[1]/div[1]/button/div/p"
+hoatdong_x ="/html/body/div[2]/div[3]/div/h2/button"
+taobaiviet_camxuchoatdong_camxuc ="/html/body/div[2]/div[3]/div/div/div/div[1]/div/div/div/button[1]"
+check_taobaiviet1 ="/html/body/div/div/div/main/div/div[2]/div[1]/div[4]/div/div[1]/div[1]/div[2]/div[1]/div/div/div/p"
+
+
+
+
+
+
+
 

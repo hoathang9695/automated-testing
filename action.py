@@ -26,6 +26,10 @@ from selenium.webdriver.chrome.options import Options
 import datetime as dt
 from seleniumwire import webdriver
 from seleniumwire.utils import decode
+
+# Options = webdriver.ChromeOptions()
+# driver = webdriver.Chrome(options=Options)
+
 driver = webdriver.Chrome(var.PATH)
 import pandas as pd
 import codecs
@@ -145,6 +149,8 @@ class login():
         driver.implicitly_wait(15)
         driver.get(var.url)
         driver.maximize_window()
+        # driver.set_window_size(400, 600)
+
         driver.find_element(By.XPATH, var.login_user).send_keys(user)
         driver.find_element(By.XPATH, var.login_password).send_keys(password)
         driver.find_element(By.XPATH, var.login_submit).click()
@@ -906,12 +912,9 @@ class tongquan():
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_dentu_input).click()
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_dentu_x).click()
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_dentu_input).send_keys(data['trangcanhan_gioithieu_tongquan']['dentu'])
-
-
         wait = WebDriverWait(driver, 10)
         dentu_langson = wait.until(EC.element_to_be_clickable((By.XPATH, var.trangcanhan_gioithieu_dentu_langson)))
         dentu_langson.click()
-
 
         # time.sleep(1)
         # driver.find_element(By.XPATH, var.trangcanhan_gioithieu_dentu_langson).click()
@@ -930,7 +933,6 @@ class tongquan():
         time.sleep(1)
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh_icon_chonmqh).click()
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh_lythan).click()
-
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh_nam).click()
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh_nam_2022).click()
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh_thang).click()
@@ -941,17 +943,23 @@ class tongquan():
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh_luu).click()
         time.sleep(1)
         writeData(var.path_baocao, "Sheet1", 64, 2, "x")
-        # driver.refresh()
-        # time.sleep(2)
-        # driver.execute_script("window.scrollBy(0,500)", "")
-        # check_gioithieu_mqh = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh3).text
-        check_gioithieu_mqh = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh1).text
-        logging.info("Trang cá nhân - Giới thiệu tổng quan - Mối quan hệ")
-        logging.info("check font-end: Ly Thân started 2022-01-01")
-        logging.info(check_gioithieu_mqh == "Ly Thân started 2022-01-01")
+        # check_gioithieu_mqh = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh1).text
+        # logging.info("Trang cá nhân - Giới thiệu tổng quan - Mối quan hệ")
+        # logging.info("check font-end: Ly Thân started 2022-01-01")
+        # logging.info(check_gioithieu_mqh == "Ly Thân started 2022-01-01")
+
+
 
         # Số điện thoại
-        driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai).click()
+        try:
+            check_gioithieu_mqh = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh1).text
+            logging.info("Trang cá nhân - Giới thiệu tổng quan - Mối quan hệ")
+            logging.info("check font-end: Ly Thân(Đang chờ) started 2022-01-01")
+            logging.info(check_gioithieu_mqh == "Ly Thân(Đang chờ) started 2022-01-01")
+            driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai).click()   #mqh_loi
+        except:
+            driver.find_element(By.XPATH, var.trangcanhan_gioithieuhuy).click()
+            driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai).click()
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai_chinhsua).click()
         time.sleep(1)
         sdt1 = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai_input)
@@ -1053,18 +1061,30 @@ class tongquan():
         time.sleep(1)
         writeData(var.path_baocao, "Sheet1", 68, 2, "x")
         driver.execute_script("window.scrollBy(0,500)", "")
-        driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh).click()
-        # check_gioithieu_mqh1 = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh4).text
+        # check_gioithieu_mqh1 = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh4).text         #mqh_loi
         check_gioithieu_mqh1 = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh2).text
         print(check_gioithieu_mqh1)
         logging.info("Trang cá nhân - Giới thiệu tổng quan - Mối quan hệ")
-        logging.info("check font-end: Góa started 2022-01-01")
-        logging.info(check_gioithieu_mqh1 == "Góa started 2022-01-01")
+        logging.info("check font-end: Góa(Đang chờ) started 2022-01-01")
+        logging.info(check_gioithieu_mqh1 == "Góa(Đang chờ) started 2022-01-01")
         time.sleep(1)
 
         # Số điện thoại1
+        # try:
+        #     check_gioithieu_mqh1 = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh2).text
+        #     print(check_gioithieu_mqh1)
+        #     logging.info("Trang cá nhân - Giới thiệu tổng quan - Mối quan hệ")
+        #     logging.info("check font-end: Góa started 2022-01-01")
+        #     logging.info(check_gioithieu_mqh1 == "Góa started 2022-01-01")
+        #     time.sleep(1)
+        #     driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai).click()
+        # except:
+        #     driver.find_element(By.XPATH, var.trangcanhan_gioithieuhuy).click()
+        # # driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai).click()
+        #     driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai_chinhsua2).click()
+        # driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai_chinhsua).click()
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai).click()
-        driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai_chinhsua2).click()
+        time.sleep(0.5)
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai_chinhsua).click()
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai_input).click()
         time.sleep(1)
@@ -1238,7 +1258,7 @@ class cong_viec_va_hoc_van():
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_daihoc_truonghoc_input).click()
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_daihoc_truonghoc_input_x).click()
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_daihoc_truonghoc_input).send_keys(data['trangcanhan_gioithieu_congviecvahocvan']['daihoc_truonghoc'])
-
+        time.sleep(1.5)
         wait = WebDriverWait(driver, 10)
         gioithieu_daihoc_truonghoc_dhbachkhoa = wait.until(EC.element_to_be_clickable((By.XPATH, var.trangcanhan_gioithieu_daihoc_truonghoc_dhbachkhoa)))
         gioithieu_daihoc_truonghoc_dhbachkhoa.click()
@@ -1893,22 +1913,38 @@ class giadinh_va_cacmoiquanhe():
         driver.find_element(By.XPATH, var.giadinhvamqh_luu).click()
         time.sleep(1)
 
-        mqh_ngocmai = driver.find_element(By.XPATH, var.giadinhvamqh_mqh_ngocmai1).text
-        logging.info("Trang cá nhân - Giới thiệu - Gia đình và các mối quan hệ - Mối quan hệ")
-        logging.info("check font-end: Người thân - " + data['trangcanhan_gd_va_mqh']['name'])
-        logging.info(mqh_ngocmai == data['trangcanhan_gd_va_mqh']['name'])
-
-        # mqh_trangthai_thoigian = driver.find_element(By.XPATH, var.giadinhvamqh_mqh_trangthai_thoigian4).text   #loi
-        mqh_trangthai_thoigian = driver.find_element(By.XPATH, var.giadinhvamqh_mqh_trangthai_thoigian1).text
-        logging.info("Trang cá nhân - Giới thiệu - Gia đình và các mối quan hệ - Gia đình")
-        logging.info("check font-end: Gia đình - Trạng thái/Thời gian - Hẹn hò started 2022-01-01" )
-        logging.info(mqh_trangthai_thoigian == "Hẹn hò started 2022-01-01")
+        # mqh_ngocmai = driver.find_element(By.XPATH, var.giadinhvamqh_mqh_ngocmai1).text
+        # logging.info("Trang cá nhân - Giới thiệu - Gia đình và các mối quan hệ - Mối quan hệ")
+        # logging.info("check font-end: Người thân - " + data['trangcanhan_gd_va_mqh']['name'])
+        # logging.info(mqh_ngocmai == data['trangcanhan_gd_va_mqh']['name'])
+        #
+        # # mqh_trangthai_thoigian = driver.find_element(By.XPATH, var.giadinhvamqh_mqh_trangthai_thoigian4).text   #mqh_loi
+        # mqh_trangthai_thoigian = driver.find_element(By.XPATH, var.giadinhvamqh_mqh_trangthai_thoigian1).text
+        # logging.info("Trang cá nhân - Giới thiệu - Gia đình và các mối quan hệ - Gia đình")
+        # logging.info("check font-end: Gia đình - Trạng thái/Thời gian - Hẹn hò started 2022-01-01" )
+        # logging.info(mqh_trangthai_thoigian == "Hẹn hò started 2022-01-01")
 
         #Gia đình
-        driver.find_element(By.XPATH, var.giadinhvamqh_icon_nguoithan).click()
-        driver.find_element(By.XPATH, var.giadinhvamqh_sdt_chinhsua).click()
+        try:
+            mqh_ngocmai = driver.find_element(By.XPATH, var.giadinhvamqh_mqh_ngocmai1).text
+            logging.info("Trang cá nhân - Giới thiệu - Gia đình và các mối quan hệ - Mối quan hệ")
+            logging.info("check font-end: Người thân - " + data['trangcanhan_gd_va_mqh']['name'])
+            logging.info(mqh_ngocmai == data['trangcanhan_gd_va_mqh']['name'])
+
+            # mqh_trangthai_thoigian = driver.find_element(By.XPATH, var.giadinhvamqh_mqh_trangthai_thoigian4).text   #loi
+            mqh_trangthai_thoigian = driver.find_element(By.XPATH, var.giadinhvamqh_mqh_trangthai_thoigian1).text
+            logging.info("Trang cá nhân - Giới thiệu - Gia đình và các mối quan hệ - Gia đình")
+            logging.info("check font-end: Gia đình - Trạng thái/Thời gian - Hẹn hò(Đang chờ) started 2022-01-01")
+            logging.info(mqh_trangthai_thoigian == "Hẹn hò(Đang chờ) started 2022-01-01")
+            driver.find_element(By.XPATH, var.giadinhvamqh_icon_nguoithan).click()
+            driver.find_element(By.XPATH, var.giadinhvamqh_sdt_chinhsua).click()
+        except:
+            driver.find_element(By.XPATH, var.trangcanhan_gioithieuhuy).click()
+            driver.find_element(By.XPATH, var.giadinhvamqh_icon_nguoithan).click()
+        # driver.find_element(By.XPATH, var.giadinhvamqh_icon_nguoithan).click()
+            driver.find_element(By.XPATH, var.giadinhvamqh_sdt_chinhsua).click()
         driver.find_element(By.XPATH, var.giadinhvamqh_nguoithan_input).click()
-        driver.find_element(By.XPATH, var.giadinhvamqh_nguoithan_input).click()
+        # driver.find_element(By.XPATH, var.giadinhvamqh_nguoithan_input).click()
         driver.find_element(By.XPATH, var.giadinhvamqh_nguoithan_input_x).click()
         driver.find_element(By.XPATH, var.giadinhvamqh_nguoithan_input).send_keys(data['trangcanhan_gd_va_mqh']['name1'])
 
@@ -2494,149 +2530,97 @@ class anh_video:
         driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_binhluan).submit()
         time.sleep(1)
         driver.find_element(By.XPATH, var.trangcanhan_khoanhkhac_xemvideo_x).click()
+        del driver.requests
         time.sleep(2)
-
 
 
 class check_thongtin_trangcanhan():
     def check_thongtin_trangcanhan(self):
         driver.implicitly_wait(15)
         time.sleep(1.5)
-
         #giới thiệu(tổng quan, cong việc, nơi sống...)
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu).click()
         tongquan_songtai1 = driver.find_element(By.XPATH, var.tongquan_songtai1).text
-        print(tongquan_songtai1)
         tongquan_dentu1 = driver.find_element(By.XPATH, var.tongquan_dentu1).text
-        print(tongquan_dentu1)
         tongquan_tinhtrang_mqh1 = driver.find_element(By.XPATH, var.tongquan_tinhtrang_mqh1).text
-        print(tongquan_tinhtrang_mqh1[0:6])
         tongquan_nguoithan_mqh1 = driver.find_element(By.XPATH, var.tongquan_nguoithan_mqh1).text
-        print(tongquan_nguoithan_mqh1)
         tongquan_sodienthoai1 = driver.find_element(By.XPATH, var.tongquan_sodienthoai1).text
-        print(tongquan_sodienthoai1)
         tongquan_bietdanh1 = driver.find_element(By.XPATH, var.tongquan_bietdanh1).text
-        print(tongquan_bietdanh1)
         time.sleep(0.5)
 
         #công việc và học vấn
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_congviecvahocvan).click()
         cvvahocvan_cv_chucvu1 = driver.find_element(By.XPATH, var.cvvahocvan_cv_chucvu1).text
-        print(cvvahocvan_cv_chucvu1[0:9])
         cvvahocvan_cv_congty1 = driver.find_element(By.XPATH, var.cvvahocvan_cv_chucvu1).text
-        print(cvvahocvan_cv_congty1[12::])
         cvvahocvan_daihoc_truonghoc1 = driver.find_element(By.XPATH, var.cvvahocvan_daihoc_truonghoc1).text
-        print(cvvahocvan_daihoc_truonghoc1[4::])
         cvvahocvan_trunghoc_truonghoc1 = driver.find_element(By.XPATH, var.cvvahocvan_trunghoc_truonghoc1).text
-        print(cvvahocvan_trunghoc_truonghoc1)
         time.sleep(0.5)
 
         # nơi từng sống
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_noitungsong).click()
         noitungsong_songtai1 = driver.find_element(By.XPATH, var.noitungsong_songtai1).text
-        print(noitungsong_songtai1)
         noitungsong_dentu1 = driver.find_element(By.XPATH, var.noitungsong_dentu1).text
-        print(noitungsong_dentu1)
         time.sleep(0.5)
 
         # thông tin cơ bản
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_thongtincoban).click()
         thongtincoban_sodienthoai1 = driver.find_element(By.XPATH, var.thongtincoban_sodienthoai1).text
-        print(thongtincoban_sodienthoai1)
         thongtincoban_web1 = driver.find_element(By.XPATH, var.thongtincoban_web1).text
-        print(thongtincoban_web1)
         thongtincoban_lienket1 = driver.find_element(By.XPATH, var.thongtincoban_lienket1).text
-        print(thongtincoban_lienket1)
         thongtincoban_tieusu1 = driver.find_element(By.XPATH, var.thongtincoban_tieusu1).text
-        print(thongtincoban_tieusu1)
         thongtincoban_bietdanh1 = driver.find_element(By.XPATH, var.thongtincoban_bietdanh1).text
-        print(thongtincoban_bietdanh1)
         time.sleep(0.5)
 
         # Gia đình và các mối quan hệ
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_gdvacacmqh).click()
         tongquan_gdvacacmqh_tingtrang_mqh1 = driver.find_element(By.XPATH, var.tongquan_gdvacacmqh_tingtrang_mqh1).text
-        print(tongquan_gdvacacmqh_tingtrang_mqh1[0:6])
         tongquan_gdvacacmqh_nguoithan_mqh1 = driver.find_element(By.XPATH, var.tongquan_gdvacacmqh_nguoithan_mqh1).text
-        print(tongquan_gdvacacmqh_nguoithan_mqh1)
         time.sleep(0.5)
 
         # Sự kiện trong đời
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sukientrongdoi).click()
         tongquan_sukientrongdoi_trunghoc_tentruong1 = driver.find_element(By.XPATH, var.tongquan_sukientrongdoi_trunghoc_tentruong1).text
-        print(tongquan_sukientrongdoi_trunghoc_tentruong1[4::])
         tongquan_sukientrongdoi_daihoc_tentruong1 = driver.find_element(By.XPATH, var.tongquan_sukientrongdoi_daihoc_tentruong1).text
-        print(tongquan_sukientrongdoi_daihoc_tentruong1[4::])
         tongquan_sukientrongdoi_congviec_congty1 = driver.find_element(By.XPATH, var.tongquan_sukientrongdoi_congviec_congty1).text
-        print(tongquan_sukientrongdoi_congviec_congty1[4::])
         time.sleep(0.5)
-
-
-
 
         # GIỚI THIỆU(trang cá nhân)
         driver.find_element(By.XPATH, var.trangcanhan_baiviet).click()
         bietdanh2 = driver.find_element(By.XPATH, var.bietdanh2).text   #
-        print(bietdanh2[1:13])
         tieusu2 = driver.find_element(By.XPATH, var.tieusu2).text   #Mãi chả xong zzz
-        print(tieusu2[::])
         congviec_chucvu2 = driver.find_element(By.XPATH, var.congviec_chucvu2).text  #Nhân Viên
-        print(congviec_chucvu2[0:9])
         congviec_congty2 = driver.find_element(By.XPATH, var.congviec_chucvu2).text     #Cafe+
-        print(congviec_congty2[14:19])
         daihoc_truonghoc2 = driver.find_element(By.XPATH, var.daihoc_truonghoc2).text       #Đại học bách khoa hà nội
-        print(daihoc_truonghoc2[13::])
         trunghoc_truonghoc2 = driver.find_element(By.XPATH, var.trunghoc_truonghoc2).text       #Trường THPT Phú Bình ( Phú Bình High School )
-        print(trunghoc_truonghoc2[8::])
         songtai2 = driver.find_element(By.XPATH, var.songtai2).text     #Lạng Sơn
-        print(songtai2[7::])
         dentu2 = driver.find_element(By.XPATH, var.dentu2).text     #Hưng Yên
-        print(dentu2[9::])
         moiquanhe_tinhtrang2 = driver.find_element(By.XPATH, var.moiquanhe_tinhtrang2).text     #Hẹn hò
-        print(moiquanhe_tinhtrang2[0:6])
         moiquanhe_nguoithan2 = driver.find_element(By.XPATH, var.moiquanhe_nguoithan2).text     #Ngọc Mai
-        print(moiquanhe_nguoithan2[17::])
         web2 = driver.find_element(By.XPATH, var.web2).text     #https://plusplus.vn/
-        print(web2[::])
         lienket2 = driver.find_element(By.XPATH, var.lienket2).text     #https://pypi.org/
-        print(lienket2[::])
+        sothich2 = driver.find_element(By.XPATH, var.sothich2).text
         time.sleep(0.5)
-
 
         # Chỉnh sửa trang cá nhân
         driver.find_element(By.XPATH, var.trangcanhan_chinhsuatrangcanhan).click()
         time.sleep(1)
         tieusu3 = driver.find_element(By.XPATH, var.tieusu3).text   #Mãi chả xong zzz
-        print(tieusu3[::])
         congviec_chucvu3 = driver.find_element(By.XPATH, var.congviec_chucvu3).text  #Nhân Viên
-        print(congviec_chucvu3[0:9])
         congviec_congty3 = driver.find_element(By.XPATH, var.congviec_chucvu3).text     #Cafe+
-        print(congviec_congty3[14:19])
         daihoc_truonghoc3 = driver.find_element(By.XPATH, var.daihoc_truonghoc3).text       #Đại học bách khoa hà nội
-        print(daihoc_truonghoc3[13::])
         trunghoc_truonghoc3 = driver.find_element(By.XPATH, var.trunghoc_truonghoc3).text       #Trường THPT Phú Bình ( Phú Bình High School )
-        print(trunghoc_truonghoc3[8::])
         songtai3 = driver.find_element(By.XPATH, var.songtai3).text     #Lạng Sơn
-        print(songtai3[7::])
         dentu3 = driver.find_element(By.XPATH, var.dentu3).text     #Hưng Yên
-        print(dentu3[9::])
         moiquanhe_tinhtrang3 = driver.find_element(By.XPATH, var.moiquanhe_tinhtrang3).text     #Hẹn hò
-        print(moiquanhe_tinhtrang3[0:6])
         moiquanhe_nguoithan3 = driver.find_element(By.XPATH, var.moiquanhe_tinhtrang3).text     #Ngọc Mai
-        print(moiquanhe_nguoithan3[17::])
-
-        sodienthoai3 = driver.find_element(By.XPATH, var.sodienthoai3).text     #Ngọc Mai
-        print(sodienthoai3)
-        bietdanh3 = driver.find_element(By.XPATH, var.bietdanh3).text     #Ngọc Mai
-        print(bietdanh3)
-
+        sodienthoai3 = driver.find_element(By.XPATH, var.sodienthoai3).text     #Số diẹn thoại
+        bietdanh3 = driver.find_element(By.XPATH, var.bietdanh3).text     #Bit danh
         web3 = driver.find_element(By.XPATH, var.web3).text     #https://plusplus.vn/
-        print(web3[::])
         lienket3 = driver.find_element(By.XPATH, var.lienket3).text     #https://pypi.org/
-        print(lienket3[::])
-        time.sleep(1)
-
-
+        sothich3 = driver.find_element(By.XPATH, var.sothich3).text
+        del driver.requests
+        driver.refresh()
+        time.sleep(2)
         for request in driver.requests:
             if request.url == "https://snapi.emso.asia/api/v1/accounts/111169896815147328/abouts":
                 data1 = sw_decode(request.response.body, request.response.headers.get('Content-Encoding', 'identity'))
@@ -2644,29 +2628,89 @@ class check_thongtin_trangcanhan():
                 res = json.loads(data1)
 
                 #tiểu sử
-                print(res['general_information']['description'])
-                #sống tại
-                print(res['general_information']['place_live']['title'])
-                #đến từ
-                print(res['general_information']['hometown']['title'])
-                #Mối quan hệ
-                print(res['account_relationship']['relationship_category']['name'])
-                print(res['account_relationship']['partner']['display_name'])
-                #Số điện thoại
-                print(res['general_information']['phone_number'])
-                #biêt danh
-                print(res['general_information']['other_name'])
-                #web
-                print(res['general_information']['account_web_link'][0]['url'])
-                #lien kết
-                print(res['general_information']['account_social'][0]['text'])
-
                 logging.info("check back-end, font-end trường: Trang cá nhân - Tiểu sử ")
                 logging.info("respone: " + res['general_information']['description'])
                 logging.info("Giới thiêu - thông tin cơ bản: " + thongtincoban_tieusu1)
                 logging.info("Giới thiệu - Trang cá nhân: " + tieusu2)
                 logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + tieusu3)
                 logging.info(res['general_information']['description'] == thongtincoban_tieusu1 == tieusu2 == tieusu3)
+
+                #sống tại
+                logging.info("check back-end, font-end trường: Trang cá nhân - Sống tai ")
+                logging.info("respone: " + res['general_information']['place_live']['title'])
+                logging.info("Giới thiêu - Tổng quan: " + tongquan_songtai1)
+                logging.info("Giới thiêu - Nơi từng sống: " + noitungsong_songtai1)
+                logging.info("Giới thiệu - Trang cá nhân: " + songtai2[9::])
+                logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + songtai3[7::])
+                logging.info(res['general_information']['place_live']['title'] == tongquan_songtai1 == noitungsong_songtai1 == songtai2[9::] == songtai3[7::])
+
+                #đến từ
+                logging.info("check back-end, font-end trường: Trang cá nhân - Đến từ ")
+                logging.info("respone: " + res['general_information']['hometown']['title'])
+                logging.info("Giới thiêu - Tổng quan: " + tongquan_dentu1)
+                logging.info("Giới thiêu - Nơi từng sống: " + noitungsong_dentu1)
+                logging.info("Giới thiệu - Trang cá nhân: " + dentu2[7::])
+                logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + dentu3[9::])
+                logging.info(res['general_information']['hometown']['title'] == tongquan_dentu1 == noitungsong_dentu1 == dentu2[7::] == dentu3[9::])
+
+                #Mối quan hệ
+                #tình trạng
+                logging.info("check back-end, font-end trường: Trang cá nhân - Mối quan hệ - Tình trạng ")
+                logging.info("respone: " + res['account_relationship']['relationship_category']['name'])
+                logging.info("Giới thiêu - Tổng quan: " + tongquan_tinhtrang_mqh1[0:6])
+                logging.info("Giới thiêu - Gia đình và các mối quan hệ: " + tongquan_gdvacacmqh_tingtrang_mqh1[0:6])
+                logging.info("Giới thiệu - Trang cá nhân: " + moiquanhe_tinhtrang2[0:6])
+                logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + moiquanhe_tinhtrang3[0:6])
+                logging.info(res['account_relationship']['relationship_category']['name'] == tongquan_tinhtrang_mqh1[0:6] == tongquan_gdvacacmqh_tingtrang_mqh1[0:6] == moiquanhe_tinhtrang2[0:6] == moiquanhe_tinhtrang3[0:6])
+
+                #Người thân
+                logging.info("check back-end, font-end trường: Trang cá nhân - Mối quan hệ - Người thân ")
+                logging.info("respone: " + res['account_relationship']['partner']['display_name'])
+                logging.info("Giới thiêu - Tổng quan: " + tongquan_nguoithan_mqh1)
+                logging.info("Giới thiêu - Gia đình và các mối quan hệ: " + tongquan_gdvacacmqh_nguoithan_mqh1)
+                logging.info("Giới thiệu - Trang cá nhân: " + moiquanhe_nguoithan2[17::])
+                logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + moiquanhe_nguoithan3[17::])
+                logging.info(res['account_relationship']['partner']['display_name'] == tongquan_nguoithan_mqh1 == tongquan_gdvacacmqh_nguoithan_mqh1 == moiquanhe_nguoithan2[17::] == moiquanhe_nguoithan3[17::])
+
+                #Số điện thoại
+                logging.info("check back-end, font-end trường: Trang cá nhân - Số điện thoai ")
+                logging.info("respone: " + res['general_information']['phone_number'])
+                logging.info("Giới thiêu - Tổng quan: " + tongquan_sodienthoai1)
+                logging.info("Giới thiệu - Thông tin cơ bản: " + thongtincoban_sodienthoai1)
+                logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + sodienthoai3)
+                logging.info(res['general_information']['phone_number'] == tongquan_sodienthoai1 == thongtincoban_sodienthoai1 == sodienthoai3)
+
+                #biêt danh
+                logging.info("check back-end, font-end trường: Trang cá nhân - Biệt danh ")
+                logging.info("respone: " + res['general_information']['other_name'])
+                logging.info("Giới thiêu - Tổng quan: " + tongquan_bietdanh1)
+                logging.info("Giới thiêu - Thông tin cơ bản: " + thongtincoban_bietdanh1)
+                logging.info("Giới thiệu - Trang cá nhân: " + bietdanh2[1:13])
+                logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + bietdanh3)
+                logging.info(res['general_information']['other_name'] == tongquan_bietdanh1 == thongtincoban_bietdanh1 == bietdanh2[1:13] == bietdanh3)
+
+                #web
+                logging.info("check back-end, font-end trường: Trang cá nhân - Web ")
+                logging.info("respone: " + res['general_information']['account_web_link'][0]['url'])
+                logging.info("Giới thiêu - thông tin cơ bản: " + thongtincoban_web1)
+                logging.info("Giới thiệu - Trang cá nhân: " + web2[::])
+                logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + web3[::])
+                logging.info(res['general_information']['account_web_link'][0]['url'] == web2[::] == thongtincoban_web1 == web3[::])
+
+                #lien kết
+                logging.info("check back-end, font-end trường: Trang cá nhân - Liên kết ")
+                logging.info("respone: " + res['general_information']['account_social'][0]['text'])
+                logging.info("Giới thiêu - thông tin cơ bản: " + thongtincoban_lienket1)
+                logging.info("Giới thiệu - Trang cá nhân: " + lienket2[::])
+                logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + lienket3[::])
+                logging.info(res['general_information']['account_social'][0]['text'] == thongtincoban_lienket1 == lienket2[::] == lienket3[::])
+
+                #Sở thích
+                logging.info("check back-end, font-end trường: Trang cá nhân - Sở thích ")
+                logging.info("respone: " + res['hobbies'][0]['text'])
+                logging.info("Giới thiệu - Trang cá nhân: " + sothich2)
+                logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + sothich3)
+                logging.info(res['hobbies'][0]['text'] == sothich2 == sothich3)
 
                 break
             else:
@@ -2679,17 +2723,15 @@ class check_thongtin_trangcanhan():
                 data1 = data1.decode("utf8")
                 res = json.loads(data1)
                 #công viêc - công ty
-                print(res[0]['life_event']['company'])
                 logging.info("check back-end, font-end trường: Trang cá nhân - Công ty ")
                 logging.info("respone: " + res[0]['life_event']['company'])
                 logging.info("Giới thiêu - công việc và học vấn: " + cvvahocvan_cv_congty1[12::])
+                logging.info("Giới thiêu - Sự kiên trong đời: " + tongquan_sukientrongdoi_congviec_congty1[4::])
                 logging.info("Giới thiệu - Trang cá nhân: " + congviec_congty2[14:19])
                 logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + congviec_congty3[14:19])
-                logging.info(res[0]['life_event']['company'] == cvvahocvan_cv_congty1[12::] == congviec_congty2[14:19] == congviec_congty3[14:19])
-
+                logging.info(res[0]['life_event']['company'] == cvvahocvan_cv_congty1[12::] == tongquan_sukientrongdoi_congviec_congty1[4::] == congviec_congty2[14:19] == congviec_congty3[14:19])
 
                 #công viêc - chức vu
-                print(res[0]['life_event']['position'])
                 logging.info("check back-end, font-end trường: Trang cá nhân - Chức vụ ")
                 logging.info("respone: " + res[0]['life_event']['position'])
                 logging.info("Giới thiêu - công việc và học vấn: " + cvvahocvan_cv_chucvu1[0:9])
@@ -2697,27 +2739,23 @@ class check_thongtin_trangcanhan():
                 logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + congviec_chucvu3[0:9])
                 logging.info(res[0]['life_event']['position'] == cvvahocvan_cv_chucvu1[0:9] == congviec_chucvu2[0:9] == congviec_chucvu3[0:9])
 
-
                 #đai hoc
-                print(res[1]['life_event']['company'])
                 logging.info("check back-end, font-end trường: Trang cá nhân - Trường đại học ")
                 logging.info("respone: " + res[1]['life_event']['company'])
                 logging.info("Giới thiêu - công việc và học vấn: " + cvvahocvan_daihoc_truonghoc1[4::])
+                logging.info("Giới thiêu - Sự kiên trong đời: " + tongquan_sukientrongdoi_daihoc_tentruong1[4::])
                 logging.info("Giới thiệu - Trang cá nhân: " + daihoc_truonghoc2[13::])
                 logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + daihoc_truonghoc3[13::])
-                logging.info(res[1]['life_event']['company'] == cvvahocvan_daihoc_truonghoc1[4::] == daihoc_truonghoc2[13::] == daihoc_truonghoc3[13::])
-
+                logging.info(res[1]['life_event']['company'] == cvvahocvan_daihoc_truonghoc1[4::] == tongquan_sukientrongdoi_daihoc_tentruong1[4::] == daihoc_truonghoc2[13::] == daihoc_truonghoc3[13::])
 
                 #trung hoc
-                print(res[2]['life_event']['company'])
-
                 logging.info("check back-end, font-end trường: Trang cá nhân - Trường trung học ")
                 logging.info("respone: " + res[2]['life_event']['company'])
                 logging.info("Giới thiêu - công việc và học vấn: " + cvvahocvan_trunghoc_truonghoc1)
+                logging.info("Giới thiêu - Sự kiện trong đời: " + tongquan_sukientrongdoi_trunghoc_tentruong1[4::])
                 logging.info("Giới thiệu - Trang cá nhân: " + trunghoc_truonghoc2[8::])
                 logging.info("Giới thiệu - Chỉnh sửa trang cá nhân: " + trunghoc_truonghoc3[12::])
-                logging.info(res[2]['life_event']['company'] == cvvahocvan_trunghoc_truonghoc1 == trunghoc_truonghoc2[8::] == trunghoc_truonghoc3[12::])
-
+                logging.info(res[2]['life_event']['company'] == cvvahocvan_trunghoc_truonghoc1 == tongquan_sukientrongdoi_trunghoc_tentruong1[4::] == trunghoc_truonghoc2[8::] == trunghoc_truonghoc3[12::])
 
                 break
             else:
@@ -2725,5 +2763,72 @@ class check_thongtin_trangcanhan():
                 # print("không có  response api life events")
 
 
+class trangchu():
 
+    def taobaiviet(self, trangthai, mota, camxuc, hoatdong, tinhtrang):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.taobaiviet_anhvideo).click()
+        driver.find_element(By.XPATH, var.taobaiviet_trangthai_icon).click()
+        # driver.find_element(By.XPATH, var.taobaiviet_trangthai_riengtu).click()
+        driver.find_element(By.XPATH, trangthai).click()
+        driver.find_element(By.XPATH, var.taobaiviet_mota).send_keys(mota)
+        driver.find_element(By.XPATH, var.taobaiviet_tailenanhvideo).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.chinhsua).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.chinhsua1).click()
+        driver.find_element(By.XPATH, var.chinhsua_cat).click()
+        driver.find_element(By.XPATH, var.chinhsua_xoay).click()
+        driver.find_element(By.XPATH, var.chinhsua_chenvanvan).click()
+        driver.find_element(By.XPATH, var.chinhsua_nhapvanvan).send_keys(data['trangchu_taobaiviet']['chinhsua_nhapvanvan'])
+        driver.find_element(By.XPATH, var.chinhsua_luu).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.themanhvideo).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien1.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.chinhsua).click()
+        driver.find_element(By.XPATH, var.chinhsua_chuthich1).send_keys(data['trangchu_taobaiviet']['chinhsua_chuthich1'])
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.chinhsua_chuthich2).click()
+        driver.find_element(By.XPATH, var.chinhsua_chuthich2).send_keys(data['trangchu_taobaiviet']['chinhsua_chuthich2'])
+        driver.find_element(By.XPATH, var.chinhsua_xong).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.taobaiviet_camxuchoatdong).click()
+        driver.find_element(By.XPATH, var.taobaiviet_camxuchoatdong_camxuc).click()
+        driver.find_element(By.XPATH, camxuc).click()
+        driver.find_element(By.XPATH, var.taobaiviet_camxuchoatdong).click()
+        driver.find_element(By.XPATH, var.taobaiviet_hoatdong).click()
+        driver.find_element(By.XPATH, hoatdong).click()
+        driver.find_element(By.XPATH, var.hoatdong_x).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.taobaiviet_ganthenguoikhac).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.taobaiviet_ngocmai).click()
+        driver.find_element(By.XPATH, var.xong).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.dang).click()
+        time.sleep(10)
+        check_taobaiviet = driver.find_element(By.XPATH,var.check_taobaiviet1).text
+        print(check_taobaiviet)
+        logging.info("Trang chủ - Tạo bài viết ")
+        logging.info("Tạo bài viết - Mô tả:  Đây là bai viết "+ tinhtrang)
+        logging.info("check font-end: Bài viết đang để quyền " + tinhtrang)
+        logging.info(check_taobaiviet == "Đây là bai viết "+ tinhtrang)
+
+
+
+
+
+    def taobaiviet_congkhai(self):
+        trangchu.taobaiviet(self, var.taobaiviet_trangthai_congkhai, "Đây là bai viết công khai", var.taobaiviet_camxuc_tuyet, var.taobaiviet_hoatdong_dangxem, "công khai" )
+
+    def taobaiviet_banbe(self):
+        trangchu.taobaiviet(self, var.taobaiviet_trangthai_banbe, "Đây là bai viết bạn bè", var.taobaiviet_camxuc_yeu, var.taobaiviet_hoatdong_dangnghive, "bạn bè" )
+
+    def taobaiviet_riengtu(self):
+        trangchu.taobaiviet(self, var.taobaiviet_trangthai_riengtu, "Đây là bai viết riêng tư", var.taobaiviet_camxuc_vuive2, var.taobaiviet_hoatdong_dangtim, "riêng tư" )
 

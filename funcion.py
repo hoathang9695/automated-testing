@@ -116,7 +116,7 @@ def thongtincanhan_anhbia(self):
 
 
 class gioithieu():
-    @retry(tries=3, delay=2, backoff=1, jitter=5, )
+    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def gioithieu_tongquan(self):
         action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
 
@@ -125,9 +125,9 @@ class gioithieu():
 
         action.tongquan.tongquan_dulieusai(self)
 
-    @retry(tries=3, delay=2, backoff=1, jitter=5, )
+    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def congviec_vahocvan(self):
-        action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
+        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.cong_viec_va_hoc_van.congviecvahocvan_congviec(self)
         action.checkdata_be.trangcanhan_gioithieu_cvvahocvan_congviec(self)
 
@@ -218,3 +218,11 @@ class check_thongtin_trangcanhan():
     def check_thongtin_trangcanhan(self):
         action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
         action.check_thongtin_trangcanhan.check_thongtin_trangcanhan(self)
+
+
+class trangchu_taobaiviet():
+    def taobaiviet_congkhai(self):
+        action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+        action.trangchu.taobaiviet_congkhai(self)
+        action.trangchu.taobaiviet_banbe(self)
+        action.trangchu.taobaiviet_riengtu(self)
