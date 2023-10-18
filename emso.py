@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 import var
 from selenium import webdriver
 import time
+import action
 import threaded
 import decode
 from seleniumwire.utils import decode as sw_decode
@@ -28,13 +29,13 @@ from seleniumwire.utils import decode as sw_decode
 
 
 
-
-with open('emso.log','rb') as f:
-    for ln in f:
-        decoded=False
-        data1 = ln.decode("utf-8")
-        if data1 != "@":
-            print("aaaa")
+#
+# with open('emso.log','rb') as f:
+#     for ln in f:
+#         decoded=False
+#         data1 = ln.decode("utf-8")
+#         if data1 != "@":
+#             print("aaaa")
 
 
         # print(data1)
@@ -62,19 +63,20 @@ with open('emso.log','rb') as f:
 
 def dang_nhap(self):
     funcion.login.khong_thanh_cong_tk_emso1(self)
-    # funcion.login.khong_thanh_cong_tk_emso2(self)
-    # funcion.login.thanh_cong_tk_emso(self)
-    # funcion.login.chon_tk_dang_nhap_gan_day_khong_nhap_pass(self)
-    # funcion.login.chon_tk_dang_nhap_gan_day_nhap_sai_pass(self)
-    # funcion.login.chon_tk_dang_nhap_gan_day_chua_luu_mk(self)
-    # funcion.login.chon_tk_dang_nhap_gan_day_da_luu_mk(self)
-    #
-    # funcion.login.thanh_cong_tk_google1(self)
+    funcion.login.khong_thanh_cong_tk_emso2(self)
+    funcion.login.thanh_cong_tk_emso(self)
+    funcion.login.chon_tk_dang_nhap_gan_day_khong_nhap_pass(self)
+    funcion.login.chon_tk_dang_nhap_gan_day_nhap_sai_pass(self)
+    funcion.login.chon_tk_dang_nhap_gan_day_chua_luu_mk(self)
+    funcion.login.chon_tk_dang_nhap_gan_day_da_luu_mk(self)
+
+    funcion.login.thanh_cong_tk_google1(self)
     # funcion.login.thanh_cong_tk_google2(self) #để chạy cuối, đang lỗi
 
 
 
 def trangcanhan(self):
+    action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
     funcion.thongtincanhan_anhdaidien(self)
     funcion.thongtincanhan_anhbia(self)
     funcion.gioithieu.gioithieu_tongquan(self)
@@ -91,8 +93,11 @@ def trangcanhan(self):
 
 
 def trangchu(self):
-    # funcion.trangchu.taobaiviet_khoangkhac(self)
+    action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+    funcion.trangchu.taobaiviet_khoangkhac(self)
     funcion.trangchu.menu(self)
+    funcion.trangchu.tinnhanmoi(self)
+    funcion.trangchu.chat(self)
 
 
 

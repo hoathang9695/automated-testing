@@ -136,10 +136,16 @@
     "chinhsua_chuthich2": "Đây là chú thích 2",
     "khoanhkhac_noidung": "Test khoảng khắc"
   },
-    "trangchu_menu": {
+  "trangchu_menu": {
     "timkiem": "Bạn bè",
     "chinhsua_chuthich1": "Đây là chú thích 1",
     "chinhsua_chuthich2": "Đây là chú thích 2",
+    "khoanhkhac_noidung": "Test khoảng khắc"
+  },
+  "trangchu_tinnhan": {
+    "tinnhanmoi_den": "Ngọc Mai",
+    "tinnhanmoi_meo": "Meo",
+    "tinnhanmoi_input": "Anh Đánh Rơi Người Yêu Này",
     "khoanhkhac_noidung": "Test khoảng khắc"
   }
 }

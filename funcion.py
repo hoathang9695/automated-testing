@@ -95,7 +95,7 @@ class login():
 
 # @retry(tries=3, delay=2, backoff=1, jitter=5, )
 def thongtincanhan_anhdaidien(self):
-    action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
+    # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
     action.anhdaidien.anhdaidien_themmoi(self)
     action.checkdata_be.trangcanhan_thongtincanhan_anhdaidien_themmoi(self)
 
@@ -106,7 +106,7 @@ def thongtincanhan_anhdaidien(self):
 
 # @retry(tries=3, delay=2, backoff=1, jitter=5, )
 def thongtincanhan_anhbia(self):
-    action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
+    # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
     action.anhbia.anhbia_tailen(self)
     action.checkdata_be.trangcanhan_thongtincanhan_anhbia_tailen(self)
     action.anhbia.anhbia_thayanh(self)
@@ -118,7 +118,7 @@ def thongtincanhan_anhbia(self):
 class gioithieu():
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def gioithieu_tongquan(self):
-        action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
+        # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
 
         action.tongquan.tongquan(self)
         action.checkdata_be.trangcanhan_gioithieu_tongquan(self)
@@ -165,13 +165,13 @@ class gioithieu():
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_gd_va_mqh(self):
-        action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
+        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.giadinh_va_cacmoiquanhe.gd_va_mqh_taikhoan1(self)
         action.checkdata_be.trangcanhan_gioithieu_giadinh_va_cacmqh(self)
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_sukientrongdoi(self):
-        action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
+        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.sukientrongdoi.sukientrongdoi_xem(self)
 
         action.sukientrongdoi.sukientrongdoi_themmoisukien_check(self)
@@ -190,7 +190,6 @@ class gioithieu():
 
         action.sukientrongdoi.sukientrongdoi_themmoisukien(self)
         action.checkdata_be.trangcanhan_gioithieu_sukientrongdoi(self)
-        action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.sukientrongdoi.sukientrongdoi_themmoisukien_chinhsua_xoa(self)
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
@@ -202,7 +201,7 @@ class gioithieu():
 class banbe():
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def banbe_tatcabanbe(self):
-        action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
+        # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
         action.banbe.tatcabanbe(self)
         action.banbe.banbe_chinhsuaquyenriengtu(self)
 
@@ -210,20 +209,20 @@ class banbe():
 
 class anh_video():
     def anh_video(self):
-        action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
+        # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
         action.anh_video.anh(self)
         action.anh_video.video(self)
 
 
 class check_thongtin_trangcanhan():
     def check_thongtin_trangcanhan(self):
-        action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
+        # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
         action.check_thongtin_trangcanhan.check_thongtin_trangcanhan(self)
 
 
 class trangchu():
     def taobaiviet_khoangkhac(self):
-        action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+        # action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
         action.trangchu.taobaiviet_congkhai(self)
         action.trangchu.taobaiviet_banbe(self)
         action.trangchu.taobaiviet_riengtu(self)
@@ -231,7 +230,14 @@ class trangchu():
         action.trangchu.camxuc_hoatdong(self)
 
     def menu(self):
-        action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+        # action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
         action.trangchu.menu(self)
         action.trangchu.menu_tao(self)
 
+    def tinnhanmoi(self):
+        # action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+        action.trangchu.tinnhanmoi(self)
+
+
+    def chat(self):
+        action.trangchu.chat(self)
