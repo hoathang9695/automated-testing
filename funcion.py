@@ -238,6 +238,8 @@ class trangchu():
         # action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
         action.trangchu.tinnhanmoi(self)
 
-
     def chat(self):
         action.trangchu.chat(self)
+
+    def chat_xemtatca(self):
+        action.trangchu.chat_xemtatca(self)

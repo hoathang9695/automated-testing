@@ -88,7 +88,7 @@ def trangcanhan(self):
     funcion.gioithieu.trangcanhan_gioithieu_sukientrongdoi(self)
     funcion.gioithieu.trangcanhan_gioithieu_noitungsong(self)
     funcion.banbe.banbe_tatcabanbe(self)
-    # funcion.anh_video.anh_video(self)
+    ## funcion.anh_video.anh_video(self)
     funcion.check_thongtin_trangcanhan.check_thongtin_trangcanhan(self)
 
 
@@ -98,6 +98,7 @@ def trangchu(self):
     funcion.trangchu.menu(self)
     funcion.trangchu.tinnhanmoi(self)
     funcion.trangchu.chat(self)
+    funcion.trangchu.chat_xemtatca(self)            #đang bị lỗi, dừng lại phân hệ
 
 
 
