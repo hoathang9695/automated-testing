@@ -24,20 +24,20 @@
     "chucvu": "Nhân Viên",
     "thanhpho": "Hà Nội",
     "mota": "Đang làm ở trà đá vỉa hè, ae qua ủng hộ",
-    "ngaybatdau": "03-08-2021",
-    "ngayketthuc": "11-04-2022",
+    "ngaybatdau": "03-10-2021",
+    "ngayketthuc": "11-10-2022",
     "ngaybatdau_validate": "03-08-2023",
     "ngayketthuc_validate": "11-04-2022",
     "daihoc_truonghoc": "Đại học bách khoa hà nội",
-    "daihoc_ngaybatdau": "16-11-2019",
-    "daihoc_ngayketthuc": "08-04-2023",
+    "daihoc_ngaybatdau": "16-10-2019",
+    "daihoc_ngayketthuc": "08-10-2023",
     "daihoc_mota": "Cuối cùng cũng tốt nghiệp, tạ ơn trời đất",
     "daihoc_chuyennghanh1": "Kỹ thuật máy tính",
     "daihoc_bangcap": "Kỹ sư máy tính",
     "trunghoc_truonghoc": "Trường THPT Đình Lập",
     "trunghochoc_mota": "Đã tốt nghiệp THPT Đình Lập rùi",
-    "trunghoc_ngaybatdau": "16-08-2017",
-    "trunghoc_ngayketthuc": "08-06-2020"
+    "trunghoc_ngaybatdau": "13-10-2017",
+    "trunghoc_ngayketthuc": "24-10-2020"
   },
     "trangcanhan_gioithieu_congviecvahocvan_addthem": {
     "congty": "Cafe+",
@@ -154,6 +154,11 @@
     "input2": "alo alo 123",
     "timkiem_huenguyen": "hue nguyen",
     "traloi": "nghe rõ trả lời",
+    "traloi1": "nghe rõ trả lời1"
+  },
+  "trangchu_banthan": {
+    "masothue": "8156184644",
+    "tenchudoanhnghiep": "Thân Thị Ngọc Mai",
     "traloi1": "nghe rõ trả lời1"
   }
 }

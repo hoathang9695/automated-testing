@@ -201,13 +201,14 @@ class gioithieu():
 class banbe():
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def banbe_tatcabanbe(self):
-        # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
+        action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
         action.banbe.tatcabanbe(self)
         action.banbe.banbe_chinhsuaquyenriengtu(self)
 
 
 
 class anh_video():
+    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def anh_video(self):
         # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
         action.anh_video.anh(self)
@@ -215,12 +216,14 @@ class anh_video():
 
 
 class check_thongtin_trangcanhan():
+    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def check_thongtin_trangcanhan(self):
         # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
         action.check_thongtin_trangcanhan.check_thongtin_trangcanhan(self)
 
 
 class trangchu():
+    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def taobaiviet_khoangkhac(self):
         # action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
         action.trangchu.taobaiviet_congkhai(self)
@@ -229,17 +232,36 @@ class trangchu():
         action.trangchu.taobaimoment(self)
         action.trangchu.camxuc_hoatdong(self)
 
+    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def menu(self):
         # action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
         action.trangchu.menu(self)
         action.trangchu.menu_tao(self)
 
+    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def tinnhanmoi(self):
         # action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
         action.trangchu.tinnhanmoi(self)
 
+    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def chat(self):
         action.trangchu.chat(self)
 
+    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def chat_xemtatca(self):
         action.trangchu.chat_xemtatca(self)
+
+    def caidatcanhan_chuyentaikhoan(self):
+        action.trangchu.caidatcanhan_chuyentaikhoan((self))
+
+    def canhan_caidatvaquyenriengtu(self):
+        action.trangchu.caidatvaquyenriengtu_chung(self)
+        action.trangchu.caidatvaquyenriengtu_baomatvadangnhap(self)
+        action.trangchu.caidatvaquyenriengtu_thongtinbantrenemso(self)
+        action.trangchu.caidatvaquyenriengtu_trangcanhanvaganthe(self)
+        action.trangchu.caidatvaquyenriengtu_baivietcongkhai(self)
+        action.trangchu.caidatvaquyenriengtu_chan(self)
+        action.trangchu.caidatvaquyenriengtu_batkiemtien(self)
+
+    def trogiupvahotro(self):
+        action.trangchu.trogiupvahotro_sudungemso(self)
