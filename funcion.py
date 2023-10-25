@@ -265,3 +265,16 @@ class trangchu():
 
     def trogiupvahotro(self):
         action.trangchu.trogiupvahotro_sudungemso(self)
+
+    def caidatcanhan_manhinh(self):
+        action.trangchu.caidatcanhan_manhinh(self)
+
+    def caidatcanhan_donggopykien(self):
+        action.trangchu.caidatcanhan_donggopykien(self)
+
+    def caidatcanhan_dangxuat(self):
+        action.trangchu.caidatcanhan_dangxuat(self)
+
+    def trangchu_timkiem(self):
+        action.trangchu.trangchu_timkiem(self)
+

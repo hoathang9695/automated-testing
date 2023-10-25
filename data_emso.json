@@ -25,7 +25,7 @@
     "thanhpho": "Hà Nội",
     "mota": "Đang làm ở trà đá vỉa hè, ae qua ủng hộ",
     "ngaybatdau": "03-10-2021",
-    "ngayketthuc": "11-10-2022",
+    "ngayketthuc": "09-10-2022",
     "ngaybatdau_validate": "03-08-2023",
     "ngayketthuc_validate": "11-04-2022",
     "daihoc_truonghoc": "Đại học bách khoa hà nội",
@@ -159,6 +159,15 @@
   "trangchu_banthan": {
     "masothue": "8156184644",
     "tenchudoanhnghiep": "Thân Thị Ngọc Mai",
+    "traloi1": "nghe rõ trả lời1"
+  },
+  "trangchu_donggopykien": {
+    "chitiet": "Trường test đóng góp ý kiến",
+    "chitiet_daxayraloi": "Trường test đã xảy ra lỗi",
+    "traloi1": "nghe rõ trả lời1"
+  },
+  "trangchu_timkkiem": {
+    "timkiem": "nam",
     "traloi1": "nghe rõ trả lời1"
   }
 }

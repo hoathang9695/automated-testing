@@ -1,6 +1,6 @@
 PATH ="C:/Users/Admin/PycharmProjects/pythonProject/chromedriver.exe"
 path_baocao = "C:/Users/Admin/PycharmProjects/pythonProject/baocao_emso.xlsx"
-
+linkvideo ="C:/Users/Admin/PycharmProjects/pythonProject/linkvideo.xlsx"
 
 
 
@@ -380,7 +380,7 @@ sukientrongdoi ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/d
 taosukienrieng1 ="/html/body/div[2]/div[3]/div/div/div/div[5]/div[1]/p"
 sukientrongdoi_iconthemmoi ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div/div/div/div[2]/ul/div[3]/i"
 taosukientrongdoi_x ="/html/body/div[2]/div[3]/div/h2/button"
-taosukienrieng_tailenfile ="/html/body/div[2]/div[3]/div/div[1]/div[1]/div/button/div/p"
+taosukienrieng_tailenfile ="//*[text()='Thêm ảnh/video']"
 taosukienrieng_input = "/html/body/div[2]/div[3]/div/div[1]/div[3]/div[1]/div[2]/input"
 
 #Nhà cửa và đời sống
@@ -389,7 +389,7 @@ nhacuavadoisong_nhaptieude ="/html/body/div[2]/div[3]/div/div/div[1]/h6"
 nhacuavadoisong_tieude_input ="/html/body/div[2]/div[3]/div/div[1]/div[3]/div[1]/div[2]/input"
 nhacuavadoisong_chondiachi_input ="/html/body/div[2]/div[3]/div/div[1]/div[3]/div[2]/div/div/input"
 nhacuavadoisong_chondiachi_thainguyen ="//*[text()='Thái Nguyên']"
-nhacuavadoisong_tailenfile ="/html/body/div[2]/div[3]/div/div[1]/div[1]/div/button/div/p"
+nhacuavadoisong_tailenfile ="//*[text()='Thêm ảnh/video']"
 nhacuavadoisong_thoigian = "/html/body/div[2]/div[3]/div/div[1]/div[3]/div[4]/div/button"
 nhungnoitoidasong ="/html/body/div[2]/div[3]/div/div/div[2]/div[2]/h6"
 chuyenchoo ="/html/body/div[2]/div[3]/div/div/div[2]/div[3]/h6"
@@ -595,7 +595,7 @@ taobaiviet_trangthai_congkhai ="//*[@class='MuiModal-root MuiDialog-root css-5ev
 taobaiviet_trangthai_banbe ="//*[@class='MuiModal-root MuiDialog-root css-5eviq2']//div[@class='MuiDialogContent-root MuiDialogContent-dividers css-1mu443t']/div/div[3]/div[2]/span"
 taobaiviet_trangthai_riengtu ="//*[@class='MuiModal-root MuiDialog-root css-5eviq2']//div[@class='MuiDialogContent-root MuiDialogContent-dividers css-1mu443t']/div/div[4]/div[2]/span"
 taobaiviet_mota ="/html/body/div[2]/div[3]/div/div[2]/div/div[1]/div[1]/div/div/textarea"
-taobaiviet_tailenanhvideo ="/html/body/div[2]/div[3]/div/div[2]/div/div[2]/div/div[1]/div[2]/div/div[1]"
+taobaiviet_tailenanhvideo ="//*[text()='Thêm ảnh/video']"
 taobaiviet_camxuchoatdong ="/html/body/div[2]/div[3]/div/div[3]/div[2]/div[2]"
 taobaiviet_hoatdong ="/html/body/div[2]/div[3]/div/div/div/div[1]/div/div/div/button[2]"
 
@@ -622,7 +622,7 @@ themanhvideo ="/html/body/div[2]/div[3]/div/div[2]/div/div[2]/div/div[1]/div[2]/
 chinhsua_chuthich1 ="/html/body/div[3]/div[3]/div/div[1]/div/div/div[1]/div/div[3]/div/div/input"
 # chinhsua_chuthich2 = "/html/body/div[2]/div[3]/div/div[1]/div/div/div[2]/div/div[3]/div/div/input"
 chinhsua_chuthich2 = "/html/body/div[3]/div[3]/div/div[1]/div/div/div[2]/div/div[3]/div/div/input"
-chinhsua1 ="/html/body/div[3]/div[3]/div/div[1]/div/div/div/div/div[1]/div[1]/button/div/p"
+chinhsua1 ="//*[@class='MuiTypography-root MuiTypography-body1 css-g1any1']"
 hoatdong_x ="/html/body/div[2]/div[3]/div/h2/button"
 taobaiviet_camxuchoatdong_camxuc ="/html/body/div[2]/div[3]/div/div/div/div[1]/div/div/div/button[1]"
 check_taobaiviet1 ="//*[@class='MuiTypography-root MuiTypography-body1 css-1h7o2la']"
@@ -706,18 +706,18 @@ trangchu_tinnhanmoi_icondaucong_guiamthanh = "//*[text()='Gửi clip âm thanh']
 trangchu_tinnhanmoi_icondaucong_guiamthanh_x ="/html/body/div/div/div/div[2]/div/div[3]/div/div/div[2]/button[1]"
 trangchu_tinnhanmoi_icondaucong_guiamthanh_ghiam ="/html/body/div/div/div/div[2]/div/div[3]/div/div/div[2]/div/div[1]/button"
 trangchu_tinnhanmoi_icondaucong_guiamthanh_gui ="/html/body/div/div/div/div[2]/div/div[3]/div/div/div[2]/button[2]"
-trangchu_tinnhanmoi_icontailenfile ="/html/body/div/div/div/div[2]/div/div[3]/div/div/button[2]"
-trangchu_tinnhanmoi_icongif ='/html/body/div/div/div/div[2]/div/div[4]/div/div/button[3]'
-trangchu_tinnhanmoi_icongif_input ="/html/body/div/div/div/div[2]/div/div[4]/div/div[2]/div/div/div[1]/div/div/input"
-trangchu_tinnhanmoi_icongif_anh1 ="/html/body/div/div/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div/div/img[2]"
-trangchu_tinnhanmoi_nhandan ="/html/body/div/div/div/div[2]/div/div[4]/div/div/button[4]"
-trangchu_tinnhanmoi_nhandan_1 ="/html/body/div/div/div/div[2]/div/div[4]/div/div[2]/div/div/div/div[1]/div[1]/div/div[2]/div/button[2]"
-trangchu_tinnhanmoi_nhandan_1_loving ="/html/body/div/div/div/div[2]/div/div[4]/div/div[2]/div/div/div/div[3]/div[1]/div[2]/p"
-trangchu_tinnhanmoi_nhandan_2 ='/html/body/div/div/div/div[2]/div/div[4]/div/div[2]/div/div/div/div[1]/div[1]/div/div[2]/div/button[3]'
-trangchu_tinnhanmoi_nhandan_3 ='/html/body/div/div/div/div[2]/div/div[4]/div/div[2]/div/div/div/div[1]/div[1]/div/div[2]/div/button[4]'
-trangchu_tinnhanmoi_nhandan_3_chonnhandan ='/html/body/div/div/div/div[2]/div/div[4]/div/div[2]/div/div/div/div[2]/div[1]/div[1]'
-trangchu_tinnhanmoi_input ="/html/body/div/div/div/div[2]/div/div[4]/div/div/div/div[1]/div/textarea[1]"
-trangchu_tinnhanmoi_bieutuongcamxuc ="/html/body/div/div/div/div[2]/div/div[4]/div/div/div/div[2]/button"
+trangchu_tinnhanmoi_icontailenfile ="/html/body/div/div/div/div[2]/div/div[4]/div/div/button[2]"
+trangchu_tinnhanmoi_icongif ='/html/body/div/div/div/div[2]/div/div[5]/div/div/button[3]'
+trangchu_tinnhanmoi_icongif_input ="//*[@placeholder='Tìm kiếm']"
+trangchu_tinnhanmoi_icongif_anh1 ="/html/body/div/div/div/div[2]/div/div[5]/div/div[2]/div/div/div[2]/div/div/img[4]"
+trangchu_tinnhanmoi_nhandan ="/html/body/div/div/div/div[2]/div[1]/div[5]/div/div/button[4]"
+trangchu_tinnhanmoi_nhandan_1 ="/html/body/div/div/div/div[2]/div/div[5]/div/div[2]/div/div/div/div[1]/div[1]/div/div[2]/div/button[2]"
+trangchu_tinnhanmoi_nhandan_1_loving ="/html/body/div/div/div/div[2]/div/div[5]/div/div[2]/div/div/div/div[3]/div[1]/div[2]/p"
+trangchu_tinnhanmoi_nhandan_2 ='/html/body/div/div/div/div[2]/div/div[5]/div/div[2]/div/div/div/div[1]/div[1]/div/div[2]/div/button[3]'
+trangchu_tinnhanmoi_nhandan_3 ='/html/body/div/div/div/div[2]/div/div[5]/div/div[2]/div/div/div/div[1]/div[1]/div/div[2]/div/button[4]'
+trangchu_tinnhanmoi_nhandan_3_chonnhandan ='/html/body/div/div/div/div[2]/div/div[5]/div/div[2]/div/div/div/div[2]/div[1]/div[1]'
+trangchu_tinnhanmoi_input ="/html/body/div/div/div/div[2]/div/div[5]/div/div/div/div[1]/div/textarea[1]"
+trangchu_tinnhanmoi_bieutuongcamxuc ="/html/body/div/div/div/div[2]/div/div[5]/div/div/div/div[2]/button"
 trangchu_tinnhanmoi_bieutuongcamxuc_chon ="/html/body/div[2]/aside/div[2]/ul/li[2]/div[2]/button[10]"
 
 trangchu_tinnhanmoi_bieutuongcamxuc_page1 ="/html/body/div[2]/aside/div[1]/div/button[2]"
@@ -730,7 +730,7 @@ trangchu_tinnhanmoi_bieutuongcamxuc_page7 ="/html/body/div[2]/aside/div[1]/div/b
 trangchu_tinnhanmoi_bieutuongcamxuc_page8 ="/html/body/div[2]/aside/div[1]/div/button[9]"
 trangchu_tinnhanmoi_bieutuongcamxuc_lichsu ="/html/body/div[2]/aside/div[1]/div/button[1]"
 
-trangchu_tinnhanmoi_like ="/html/body/div/div/div/div[2]/div/div[4]/div/div/button[2]"
+trangchu_tinnhanmoi_like ="/html/body/div/div/div/div[2]/div/div[5]/div/div/button[2]"
 trangchu_chat_tuychon ="//*[@aria-label='Tùy chọn']"
 check_trangchu_chat_tuychon ="/html/body/div/div/div/div[1]/div/header/div/div/div[2]/div/div[2]/div/div[1]/div/div[1]/div/div/div[1]/div/div/p"
 trangchu_chat_tuychon_amthanhgoiden_tat ="//*[text()='Âm thanh cuộc gọi đến: đang tắt']"
@@ -754,7 +754,7 @@ trangchu_emsochat ="//*[text()='Xem tất cả trong Chat']"
 emsochat_goi ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div[1]/li/div[2]/button[1]"
 emsochat_video ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div[1]/li/div[2]/button[2]"
 emsochat_caidathopthoai ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div[1]/li/div[2]/button[3]"
-emsochat_caidathopthoai_trangcanhan = "/html/body/div[1]/div/div/main/div/div[2]/div/div[2]/div[2]/div[3]/div[1]/button"
+emsochat_caidathopthoai_trangcanhan = "//*[text()='Trang cá nhân']"
 icon_xemtatca_emso ="/html/body/div/div/div/div[1]/div/header/div/div/div[3]/div/div[2]/div/div[1]/div/div[2]/button"
 emsochat_icontatthongbao ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div[2]/div[3]/div[2]/button"
 emsochat_icontimkiem ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div[2]/div[3]/div[3]/button"
@@ -783,7 +783,7 @@ emsochat_traloi ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div[4]/d
 check_traloitinnhan1 ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div[3]/div/ul/div[1]/div/div[2]/div/li/div/div[2]/div/div[1]"
 emsochat_input_iconbaytocamxuc ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div/div[3]/div/ul/div[1]/div/div[2]/div/li/div/div[2]/div/div[3]/div/div[2]/div/div/span"
 chat_hover2 ="//*[@aria-label='Bày tỏ cảm xúc']"
-icon_yeuthich ="/html/body/div[4]/div/div/div/div/div[2]"
+icon_yeuthich ="/html/body/div[3]/div/div/div/div/div[2]"
 trangthaihoatdong ="/html/body/div/div/div/main/div/div[2]/div/div[2]/div[2]/div[3]/div[2]/p"
 emsochat_thongtinvedoanchat ="//*[text()='Thông tin về đoạn chat']"
 emsochat_xemtinnhandaghim ="//*[text()='Xem tin nhắn đã ghim']"
@@ -916,7 +916,8 @@ check_chung_ten1 ="/html/body/div/div/div/main/div/div[2]/div/div/div/div/div/ta
 check_chung_tennguoidung1 ="/html/body/div/div/div/main/div/div[2]/div/div/div/div/div/table/tbody/tr[1]/td/div/div/div[2]/div/p"
 check_chung_sodienthoai1 ="/html/body/div/div/div/main/div/div[2]/div/div/div/div/div/table/tbody/tr[2]/td/div/div/div[1]/div/p"
 check_chung_xacnhandanhtinh1 ="/html/body/div/div/div/main/div/div[2]/div/div/div/h5"
-check_chung_lienhe1 = "/html/body/div[2]/div[3]/div/div[1]/p"
+# check_chung_lienhe1 = "/html/body/div[2]/div[3]/div/div[1]/p"
+tinhangdangphattrien = "//*[text()='Tính năng đang phát triển.Vui lòng thử lại sau!!']"
 check_baomatvadangnhap_doimatkhau1 ="/html/body/div/div/div/main/div/div[2]/div/div/div/div[1]/div/nav/li[1]/div/div[1]/div[1]/p"
 check_baomatvadangnhap_luuthongtindangnhap1 ="/html/body/div[2]/div[3]/div/div[1]/p"
 check_baomatvadangnhap_xacthuc1 ="/html/body/div[2]/div[3]/div/div[1]/p"
@@ -1134,6 +1135,57 @@ dieukhoanvachinhsachrieng_khonggianhoctap_3 ="/html/body/div/div/div/main/div/di
 dieukhoanvachinhsachrieng_khonggianthuongmai ="/html/body/div/div/div/main/div/div[1]/div[2]/div[2]/div/div/div/ul/div[6]/div[2]/div/div/div/div/div[5]/div[1]/div[1]/div/div"
 dieukhoanvachinhsachrieng_khonggianthuongmai_1 ="/html/body/div/div/div/main/div/div[1]/div[2]/div[2]/div/div/div/ul/div[6]/div[2]/div/div/div/div/div[5]/div[2]/div/div/div/div/div[1]/div"
 dieukhoanvachinhsachrieng_khonggianthuongmai_2 ="/html/body/div/div/div/main/div/div[1]/div[2]/div[2]/div/div/div/ul/div[6]/div[2]/div/div/div/div/div[5]/div[2]/div/div/div/div/div[2]/div"
+
+#Màn hình
+caidatcanhan_manhinh ="//*[text()='Màn hình']"
+caidatcanhan_manhinh_bat ="/html/body/div/div/div/div[1]/div/header/div/div[2]/div/div/div[2]/div[2]/div/div/label[2]/span/input"
+caidatcanhan_manhinhtudong ="/html/body/div/div/div/div[1]/div/header/div/div[2]/div/div/div[2]/div[2]/div/div/label[3]/span[1]/input"
+caidatcanhan_manhinh_tat ="/html/body/div/div/div/div[1]/div/header/div/div[2]/div/div/div[2]/div[2]/div/div/label[1]/span/input"
+caidatcanhan_manhinh_iconquaylai ="/html/body/div/div/div/div[1]/div/header/div/div[2]/div/div/div[1]/button"
+caidatcanhan_donggopykien ="//*[text()='Đóng góp ý kiến']"
+
+check_chedomanhinh1 ='/html/body/div/div/div/div[1]/div/header/div/div[2]/div/div/div[1]/p'
+donggopykien_chungtaycaithienemso = "//*[text()='Chung tay cải thiện EMSO']"
+chungtaycaithienemso_chonsanpham ='/html/body/div[2]/div[3]/div/div[2]/div/div[1]/div/div'
+chungtaycaithienemso_chonsanpham_choigame ="//*[text()='Chơi game']"
+chungtaycaithienemso_chitiet ="/html/body/div[2]/div[3]/div/div[2]/div/div[2]/textarea[1]"
+chungtaycaithienemso_tailenfile ="/html/body/div[2]/div[3]/div/div[2]/div/div[3]/input"
+donggopykien_chungtaycaithienemso_buttongui ="//*[text()='Gửi']"
+chungtaycaithienemso_huy = "//*[text()='Huỷ']"
+chungtaycaithienemso_chonsanpham_chatdongdong = "//*[text()='Chat trong cộng đồng']"
+donggopykien_daxayraloi ="//*[text()='Đã xảy ra lỗi']"
+caidatcanhan_donggopykien_x ="//*[@class='fa-duotone fa-circle-xmark']"
+chungtaycaithienemso_chonsanpha1 ="/html/body/div[2]/div[3]/div/div[2]/div/div[1]/div/div"
+caidatcanhan_dangxuat ="//*[text()='Đăng xuất']"
+check_dangxuat ="/html/body/div/div/div/div[1]/div/div[2]/div/div/div[3]/button"
+trangchu_timkiem ="//*[@placeholder='Tìm kiếm trên EMSO']"
+check_ketquatimkiem1 ="//*[text()='Kết quả tìm kiếm']"
+check_timkiem_tatca1 ="//*[text()='Duy Nam ']"
+trangchu_timkiem_moinguoi ="//*[@class='MuiGrid-root MuiGrid-container MuiGrid-item jss5 css-1ul47bz']/div/div[2]/div[1]/ul/div[2]"
+trangchu_timkiem_baiviet ="//*[@class='MuiGrid-root MuiGrid-container MuiGrid-item jss5 css-1ul47bz']/div/div[2]/div[1]/ul/div[3]"
+trangchu_timkiem_nhom ="//*[@class='MuiGrid-root MuiGrid-container MuiGrid-item jss5 css-1ul47bz']/div/div[2]/div[1]/ul/div[4]"
+trangchu_timkiem_trang= "//*[@class='MuiGrid-root MuiGrid-container MuiGrid-item jss5 css-1ul47bz']/div/div[2]/div[1]/ul/div[5]"
+trangchu_timkiem_sukien ="//*[@class='MuiGrid-root MuiGrid-container MuiGrid-item jss5 css-1ul47bz']/div/div[2]/div[1]/ul/div[6]"
+trangchu_timkiem_goivon = "//*[@class='MuiGrid-root MuiGrid-container MuiGrid-item jss5 css-1ul47bz']/div/div[2]/div[1]/ul/div[7]"
+trangchu_timkiem_tuyendung ="//*[@class='MuiGrid-root MuiGrid-container MuiGrid-item jss5 css-1ul47bz']/div/div[2]/div[1]/ul/div[8]"
+trangchu_timkiem_khoahoc ="//*[@class='MuiGrid-root MuiGrid-container MuiGrid-item jss5 css-1ul47bz']/div/div[2]/div[1]/ul/div[9]"
+trangchu_timkiem_sanpham = "//*[@class='MuiGrid-root MuiGrid-container MuiGrid-item jss5 css-1ul47bz']/div/div[2]/div[1]/ul/div[10]"
+check_timkiem_moinguoi = "//*[text()='Duy Nam ']"
+check_timkiem_baiviet1 ="//*[text()='Năm nay chắc phát tài lắm']"
+check_timkiem_nhom1 ="//*[text()='nam test']"
+check_timkiem_trang1 = "//*[text()='THỜI TRANG NAM']"
+check_timkiem_sukien1 = "//*[text()='Offline Fan Harry Potter 20 năm']"
+check_timkiem_goivon1 ="//*[text()='nam test tìm kiếm']"
+check_timkiem_tuyendung1="//*[text()='tuyển nam']"
+check_timkiem_khoahoc1 = "//*[text()='học nam ']"
+check_timkiem_sanpham1 = "//*[text()='Áo polo nam']"
+trangchu_timkiem_nam = "//*[text()='Tìm kiếm ']"
+trangchu_timkiem1  = "//*[@placeholder='Tìm kiếm trên EMSO ']"
+
+
+
+
+
 
 
 
