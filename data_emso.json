@@ -169,5 +169,19 @@
   "trangchu_timkkiem": {
     "timkiem": "nam",
     "traloi1": "nghe rõ trả lời1"
+  },
+  "khoanhkhac": {
+    "binhluan": "alo alo 123",
+    "mota": "Test hoy",
+    "tranquangtruong": "Trần Quang Trường",
+    "chiaselennhom": "nam test",
+    "mota1": "nutri boost",
+    "chiaselentrang": "Trường test bản tin",
+    "chiaselentrangcanhanbanbe": "Trần Quang Trường",
+    "mota2": "nutri caffee",
+    "noidung1": "aaaaaw",
+    "noidung2": "aaaaaw1",
+    "noidung3": "Test chia sẻ lên bảng tin",
+    "mota3": "đi mua xoài đi"
   }
 }

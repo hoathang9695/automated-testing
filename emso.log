@@ -1,0 +1,492 @@
+2023-10-27 Friday 22:48:27 root:INFO:đây là info
+2023-10-27 Friday 22:48:27 root:WARNING:đây là warning
+2023-10-27 Friday 22:48:27 root:ERROR:đây là error
+2023-10-27 Friday 22:48:27 root:CRITICAL:đây là critical
+2023-10-27 Friday 22:48:28 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/login
+2023-10-27 Friday 22:48:28 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/login 200 
+2023-10-27 Friday 22:48:28 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/assets/fontawesome/css/all.css
+2023-10-27 Friday 22:48:28 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/css/14.d47ca17f.chunk.css
+2023-10-27 Friday 22:48:28 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/js/main.dffae156.chunk.js
+2023-10-27 Friday 22:48:28 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/css/main.90e4e91d.chunk.css
+2023-10-27 Friday 22:48:28 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/js/14.804ff754.chunk.js
+2023-10-27 Friday 22:48:28 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/css/14.d47ca17f.chunk.css 200 
+2023-10-27 Friday 22:48:28 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/css/main.90e4e91d.chunk.css 200 
+2023-10-27 Friday 22:48:28 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/assets/fontawesome/css/all.css 200 
+2023-10-27 Friday 22:48:29 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
+2023-10-27 Friday 22:48:29 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js 302 
+2023-10-27 Friday 22:48:29 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.css
+2023-10-27 Friday 22:48:29 seleniumwire.handler:INFO:Capturing request: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap
+2023-10-27 Friday 22:48:29 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs/dist/css/grapes.min.css
+2023-10-27 Friday 22:48:29 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.polyfilled.js
+2023-10-27 Friday 22:48:29 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/js/main.dffae156.chunk.js 200 
+2023-10-27 Friday 22:48:29 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.css 200 
+2023-10-27 Friday 22:48:29 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer@3.3.0/dist/model-viewer.min.js
+2023-10-27 Friday 22:48:30 seleniumwire.handler:INFO:Capturing response: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap 200 
+2023-10-27 Friday 22:48:30 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs/dist/css/grapes.min.css 302 
+2023-10-27 Friday 22:48:30 seleniumwire.server:INFO:127.0.0.1:59113: ProtocolException("Error in HTTP connection: Http2ZombieException('Connection or stream already dead: 1698421710.026353, False')")
+2023-10-27 Friday 22:48:30 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.polyfilled.js 200 
+2023-10-27 Friday 22:48:30 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs@0.21.7/dist/css/grapes.min.css
+2023-10-27 Friday 22:48:30 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer@3.3.0/dist/model-viewer.min.js 200 
+2023-10-27 Friday 22:48:30 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs@0.21.7/dist/css/grapes.min.css 200 
+2023-10-27 Friday 22:48:30 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/js/14.804ff754.chunk.js 200 
+2023-10-27 Friday 22:48:30 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/gsi/client
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/media/logoFull.b1da0db0.png
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/assets/fontawesome/webfonts/fa-brands-400.woff2
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/gsi/client 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/media/logoFull.b1da0db0.png 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/assets/fontawesome/webfonts/fa-brands-400.woff2 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/favicon.svg
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/favicon.svg 200 
+2023-10-27 Friday 22:48:31 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIgCXljdxAs971MEgUNeG8SGRIFDc5BTHohn2_A1LJmIDA=?alt=proto
+2023-10-27 Friday 22:48:32 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIgCXljdxAs971MEgUNeG8SGRIFDc5BTHohn2_A1LJmIDA=?alt=proto 200 
+2023-10-27 Friday 22:48:32 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/oauth/token
+2023-10-27 Friday 22:48:32 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/oauth/token 200 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/me
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/me 200 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/ 200 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs/dist/css/grapes.min.css
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/css/14.d47ca17f.chunk.css
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.css
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/assets/fontawesome/css/all.css
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/css/main.90e4e91d.chunk.css
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js 302 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs/dist/css/grapes.min.css 302 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.css 200 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing response: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap 200 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/css/14.d47ca17f.chunk.css 200 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer@3.3.0/dist/model-viewer.min.js
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs@0.21.7/dist/css/grapes.min.css
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs@0.21.7/dist/css/grapes.min.css 200 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/css/main.90e4e91d.chunk.css 200 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/assets/fontawesome/css/all.css 200 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer@3.3.0/dist/model-viewer.min.js 200 
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/gsi/client
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/media/logoEmso.831a9179.png
+2023-10-27 Friday 22:48:33 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/me
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/gsi/client 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/media/logoEmso.831a9179.png 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/pages?limit=10
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/account_settings
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/report_categories
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/me 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/account_settings 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/pages?limit=10 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/js/46.764c3c96.chunk.js
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/report_categories 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/account_settings
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/account_settings 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/media/Noti.5ec382a2.svg
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/media/LogoEmso.79893ace.svg
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/assets/fontawesome/webfonts/fa-regular-400.woff2
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/assets/fontawesome/webfonts/fa-solid-900.woff2
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/media/LogoEmso.79893ace.svg 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/media/Noti.5ec382a2.svg 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/report_categories
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/js/46.764c3c96.chunk.js 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/markers?timeline[]=notifications
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/report_categories 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/markers?timeline[]=notifications 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIZCRHCFpSSYfI5EgUN-QXmiyFJ7szH-JcdKg==?alt=proto
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/notifications?limit=20
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIZCRHCFpSSYfI5EgUN-QXmiyFJ7szH-JcdKg==?alt=proto 200 
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/accounts/111169896815147328/friendships?limit=9
+2023-10-27 Friday 22:48:34 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/accounts/111169896815147328/friendships?limit=9 200 
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: wss://comment-ws.emso.vn/api/v1/streaming?access_token=bf_6O6wGAzH0p-SU9pYqy8FqAcQC_qnUP52sxDA-XNA
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/top_projects?limit=2
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://comment-ws.emso.vn/api/v1/streaming?access_token=bf_6O6wGAzH0p-SU9pYqy8FqAcQC_qnUP52sxDA-XNA 101 Switching Protocols
+2023-10-27 Friday 22:48:35 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:59134 and comment-ws.emso.vn:443
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/accounts/111169896815147328/friendships?limit=20
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/page_invitation_follows?limit=1
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/assets/fontawesome/webfonts/fa-regular-400.woff2 200 
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/assets/fontawesome/webfonts/fa-solid-900.woff2 200 
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/friendship_requests?limit=1
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/event_invitations
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/friendship_requests?limit=1 200 
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/group_invitations
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/event_invitations 200 
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/group_invitations 200 
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/page_invitations
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/notifications?limit=20 200 
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/page_invitations 200 
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/accounts/111169896815147328/friendships?limit=20 200 
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/page_invitation_follows?limit=1 200 
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/event_invitation_hosts
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/event_invitation_hosts 200 
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/uploads/menu/IconMenu.png
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/uploads/menu/IconMenu.png 200 OK
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/images/frame/y%C3%AAu%20th%C6%B0%C6%A1ng%20vi%E1%BB%87t%20nam.png
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/images/frame/y%C3%AAu%20th%C6%B0%C6%A1ng%20vi%E1%BB%87t%20nam.png 200 OK
+2023-10-27 Friday 22:48:35 root:INFO:Đăng nhập bằng tài khoản google - Đăng nhập thành công - tài khoản đã có sẵn và đã được đồng bộ
+2023-10-27 Friday 22:48:35 root:INFO:True
+2023-10-27 Friday 22:48:35 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/111/307/632/502/588/684/original/7d663524d9c0af6b.jpeg
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/avatars/original/missing.png
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/top_projects?limit=2 200 
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/111/185/611/106/466/746/original/22f2a2367ce10b10.jpeg
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/111/300/240/228/732/814/original/9a1873abace89744.jpeg
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/110/054/802/147/086/625/small/f2662413af65685e.jpg
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/avatars/original/missing.png 200 
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/110/779/389/397/782/017/small/4f317caa21b84325.jpg
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing request: https://notification-api.emso.vn/v1/widgets/session/initialize
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/111/300/240/228/732/814/original/9a1873abace89744.jpeg 200 
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/111/307/632/502/588/684/original/7d663524d9c0af6b.jpeg 200 
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/111/185/611/106/466/746/original/22f2a2367ce10b10.jpeg 200 
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/110/779/389/397/782/017/small/4f317caa21b84325.jpg 200 
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing response: https://notification-api.emso.vn/v1/widgets/session/initialize 201 
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/110/054/802/147/086/625/small/f2662413af65685e.jpg 200 
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing request: https://notification-api.emso.vn/v1/widgets/notifications/unseen
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing request: wss://dev-chat.emso.vn/websocket
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/websocket 101 Switching Protocols
+2023-10-27 Friday 22:48:36 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:59144 and dev-chat.emso.vn:443
+2023-10-27 Friday 22:48:36 seleniumwire.handler:INFO:Capturing response: https://notification-api.emso.vn/v1/widgets/notifications/unseen 200 
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: https://notification-api.emso.vn/v1/widgets/notifications/unseen
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing response: https://notification-api.emso.vn/v1/widgets/notifications/unseen 200 
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: https://media.emso.vn/sn/menuglobal.png
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/subscriptions%3Aget
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111169896815147328
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/groups.listAll?limit=3
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/groups.listAll?limit=3 200 OK
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/me
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/subscriptions%3Aget 200 OK
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing response: https://media.emso.vn/sn/menuglobal.png 200 
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.presence?idsCustom=111213890014178773,111210279225266568,111169900882891225
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/me 200 OK
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.presence?idsCustom=111213890014178773,111210279225266568,111169900882891225 200 OK
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget 200 OK
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/js/6.3549b5af.chunk.js
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/js/2.105c03fd.chunk.js
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/subscriptions%3Aget
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/subscriptions%3Aget 200 OK
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/js/6.3549b5af.chunk.js 200 
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/js/2.105c03fd.chunk.js 200 
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111169896815147328 401 Unauthorized
+2023-10-27 Friday 22:48:37 seleniumwire.handler:INFO:Capturing request: wss://notification-ws.emso.vn/socket.io/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFiYzMxOTRhNmNjZjQ3NTIzZDAwNTYiLCJvcmdhbml6YXRpb25JZCI6IjYzMzcxZWZhZTFjYTVkMzkxZTIxNGZiMiIsImVudmlyb25tZW50SWQiOiI2MzM3MWVmYWUxY2E1ZDM5MWUyMTRmYjgiLCJzdWJzY3JpYmVySWQiOiIxMTExNjk4OTY4MTUxNDczMjgiLCJvcmdhbml6YXRpb25BZG1pbklkIjoiNjMzNzFlZjZlMWNhNWQzOTFlMjE0ZmE5IiwiaWF0IjoxNjk4NDIxNzE2LCJleHAiOjE2OTk3MTc3MTYsImF1ZCI6IndpZGdldF91c2VyIiwiaXNzIjoibm92dV9hcGkifQ.M9AZ-OIBH5f8SSkYn2LydpHgneLw-4S0ugjG4zLYKkA&EIO=3&transport=websocket
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing response: https://notification-ws.emso.vn/socket.io/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFiYzMxOTRhNmNjZjQ3NTIzZDAwNTYiLCJvcmdhbml6YXRpb25JZCI6IjYzMzcxZWZhZTFjYTVkMzkxZTIxNGZiMiIsImVudmlyb25tZW50SWQiOiI2MzM3MWVmYWUxY2E1ZDM5MWUyMTRmYjgiLCJzdWJzY3JpYmVySWQiOiIxMTExNjk4OTY4MTUxNDczMjgiLCJvcmdhbml6YXRpb25BZG1pbklkIjoiNjMzNzFlZjZlMWNhNWQzOTFlMjE0ZmE5IiwiaWF0IjoxNjk4NDIxNzE2LCJleHAiOjE2OTk3MTc3MTYsImF1ZCI6IndpZGdldF91c2VyIiwiaXNzIjoibm92dV9hcGkifQ.M9AZ-OIBH5f8SSkYn2LydpHgneLw-4S0ugjG4zLYKkA&EIO=3&transport=websocket 101 Switching Protocols
+2023-10-27 Friday 22:48:38 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:59164 and notification-ws.emso.vn:443
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/media/ImageVideo.86b29db6.svg
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/media/ImageVideo.86b29db6.svg 200 
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/media/moment.93313878.svg
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/assets/fontawesome/webfonts/fa-light-300.woff2
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/timelines/home?exclude_replies=true&limit=3
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/media/moment.93313878.svg 200 
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/timelines/home?exclude_replies=true&limit=3 200 
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/assets/fontawesome/webfonts/fa-light-300.woff2 200 
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/timelines/home?exclude_replies=true&limit=3
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/111/030/720/221/970/623/original/37006040f2cc213f.jpeg
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/111/030/720/221/970/623/original/37006040f2cc213f.jpeg 200 
+2023-10-27 Friday 22:48:38 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/111/191/928/643/690/232/original/c726e4c6b53fb176.jpeg
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/111/191/928/643/690/232/original/c726e4c6b53fb176.jpeg 200 
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/timelines/home?exclude_replies=true&limit=3 200 
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/avatar/truongvck333
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/avatar/truongvck333 302 Found
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/avatar/truongvck33
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/timelines/home?exclude_replies=true&limit=3
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/avatar/truongvck33 302 Found
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/avatar/undefined
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/avatar/undefined 200 OK
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/avatar/nguyenhue608196
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/avatar/nguyenhue608196 302 Found
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/timelines/home?exclude_replies=true&limit=3 200 
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/timelines/home?max_id=111210173674114705&exclude_replies=true&limit=3
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/111/210/173/667/829/087/small/6dd8a1aa63529328.png
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/111/210/173/667/829/087/small/6dd8a1aa63529328.png 200 
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw 200 
+2023-10-27 Friday 22:48:39 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/109/402/597/453/701/840/original/71cf8215f295dca3.jpeg
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/timelines/home?max_id=111210173674114705&exclude_replies=true&limit=3 200 
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/109/402/597/453/701/840/original/71cf8215f295dca3.jpeg 200 
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/110/869/873/304/062/633/original/3de6b796380efd70.jpeg
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/111/210/006/764/000/477/original/965fdcb2606c0371.jpg
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/111/205/577/743/847/422/small/fcab7a81976955c7.png
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/system/media_attachments/files/111/205/580/386/384/534/original/5f9791a75ebeb11c.png
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/110/869/873/304/062/633/original/3de6b796380efd70.jpeg 200 
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/avatars/111169900882891225?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154839Z&X-Amz-Expires=120&X-Amz-Signature=fb793e4bced8ca004d08c6e83abbc4e0ac37858f0ac18a29dd4215c33b679ec0&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22truongvck333%22
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/avatars/111169900882891225?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154839Z&X-Amz-Expires=120&X-Amz-Signature=fb793e4bced8ca004d08c6e83abbc4e0ac37858f0ac18a29dd4215c33b679ec0&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22truongvck333%22 200 OK
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/avatars/111169896815147328?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154839Z&X-Amz-Expires=120&X-Amz-Signature=d7e8088c847aa691d94e5af2176836ad908cf332cbc9d3e84275dec1895e3b68&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22truongvck33%22
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/avatars/111169896815147328?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154839Z&X-Amz-Expires=120&X-Amz-Signature=d7e8088c847aa691d94e5af2176836ad908cf332cbc9d3e84275dec1895e3b68&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22truongvck33%22 200 OK
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/avatars/111213890014178773?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154839Z&X-Amz-Expires=120&X-Amz-Signature=062da5c25328aaa970416544569eb24a126d5aa64309f91b6c57bfbe1b93e842&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22nguyenhue608196%22
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/avatars/111213890014178773?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154839Z&X-Amz-Expires=120&X-Amz-Signature=062da5c25328aaa970416544569eb24a126d5aa64309f91b6c57bfbe1b93e842&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22nguyenhue608196%22 200 OK
+2023-10-27 Friday 22:48:40 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/111/205/577/743/847/422/small/fcab7a81976955c7.png 200 
+2023-10-27 Friday 22:48:41 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/111/210/006/764/000/477/original/965fdcb2606c0371.jpg 200 
+2023-10-27 Friday 22:48:41 seleniumwire.handler:INFO:Capturing request: https://trial103.easyedu.vn/sites/default/files/easyschool/upload/2022/06/que_quan1.mp4
+2023-10-27 Friday 22:48:41 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+2023-10-27 Friday 22:48:41 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1697470715&target=OPTIMIZATION_TARGET_PAGE_ENTITIES
+2023-10-27 Friday 22:48:41 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIgCYsZhTB2drkCEgUN-QXmixIFDSIbo9whEl9EpkbUIIg=?alt=proto
+2023-10-27 Friday 22:48:41 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/avatar/truongvck22
+2023-10-27 Friday 22:48:41 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/avatar/testeremso
+2023-10-27 Friday 22:48:41 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIgCYsZhTB2drkCEgUN-QXmixIFDSIbo9whEl9EpkbUIIg=?alt=proto 200 
+2023-10-27 Friday 22:48:41 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+2023-10-27 Friday 22:48:41 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1697470715&target=OPTIMIZATION_TARGET_PAGE_ENTITIES
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/avatar/testeremso 302 Found
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/avatar/truongvck22 302 Found
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/me
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/system/media_attachments/files/111/205/580/386/384/534/original/5f9791a75ebeb11c.png 200 
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111102715144755874
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/avatars/111102715144755874?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154841Z&X-Amz-Expires=120&X-Amz-Signature=c64a559742c5854c91572736e76b8fd8404fda6a7c2a4e31d32037f5889c1d4b&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22testeremso%22
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/avatars/111210279225266568?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154841Z&X-Amz-Expires=120&X-Amz-Signature=a404993ce60d3572ac9c6434c576059cde0882de980ce9844e7beaf4b47ffe41&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22truongvck22%22
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111169900882891225
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/avatars/111102715144755874?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154841Z&X-Amz-Expires=120&X-Amz-Signature=c64a559742c5854c91572736e76b8fd8404fda6a7c2a4e31d32037f5889c1d4b&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22testeremso%22 200 OK
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/me 200 OK
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=nCW9TJNsAPWqj7QzP
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=bwzuoqXMkqh5BofxK
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/avatars/111210279225266568?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154841Z&X-Amz-Expires=120&X-Amz-Signature=a404993ce60d3572ac9c6434c576059cde0882de980ce9844e7beaf4b47ffe41&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22truongvck22%22 200 OK
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=GsndQNWg8CcBdsymi
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111102715144755874 200 OK
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://trial103.easyedu.vn/sites/default/files/easyschool/upload/2022/06/que_quan1.mp4 206 
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111213890014178773
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111169900882891225 200 OK
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION 200 
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=nCW9TJNsAPWqj7QzP 200 OK
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=bwzuoqXMkqh5BofxK 200 OK
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=GsndQNWg8CcBdsymi 200 OK
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=E9FFQ4vKyvnPHshKd
+2023-10-27 Friday 22:48:42 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111210279225266568
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111213890014178773 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/getListNewPendingMessages
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=E9FFQ4vKyvnPHshKd 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111210279225266568 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/getListNewPendingMessages 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://sn.emso.vn/static/js/43.5903c441.chunk.js
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1696258946&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://sn.emso.vn/static/js/43.5903c441.chunk.js 200 
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111169900882891225
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION 200 
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111169900882891225 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/readMessages
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111213890014178773
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=GsndQNWg8CcBdsymi
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=nCW9TJNsAPWqj7QzP
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111102715144755874
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/readMessages 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCRhLAIN0o3h2EgUN-QXmixIFDb9JQF4SBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/accounts/111169900882891225
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://snapi.emso.asia/api/v1/accounts/111169900882891225/abouts
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCRhLAIN0o3h2EgUN-QXmixIFDb9JQF4SBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=GsndQNWg8CcBdsymi 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111213890014178773 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=bwzuoqXMkqh5BofxK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/accounts/111169900882891225 200 
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111102715144755874 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=nCW9TJNsAPWqj7QzP 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=E9FFQ4vKyvnPHshKd
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111210279225266568
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/getListNewPendingMessages
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111169900882891225
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://snapi.emso.asia/api/v1/accounts/111169900882891225/abouts 200 
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=bwzuoqXMkqh5BofxK 200 OK
+2023-10-27 Friday 22:48:43 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=E9FFQ4vKyvnPHshKd 200 OK
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111210279225266568 200 OK
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/file-upload/bAg3LkQbyiWh6MWe6/anhdaidien1.jpg
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111169900882891225 200 OK
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/getListNewPendingMessages 200 OK
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/file-upload/bAg3LkQbyiWh6MWe6/anhdaidien1.jpg 302 Found
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/uploads/111169896815147328111169900882891225/111169896815147328/bAg3LkQbyiWh6MWe6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154843Z&X-Amz-Expires=120&X-Amz-Signature=3b38bf1c22db05bdec470c43cbdf33f33da6723ec7b3f68959b24d7ffc43c527&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22thumb-anhdaidien1.jpg%22
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCfyOXrpgyV-GEgUN-QXmixIFDULKiLwSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/uploads/111169896815147328111169900882891225/111169896815147328/bAg3LkQbyiWh6MWe6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154843Z&X-Amz-Expires=120&X-Amz-Signature=3b38bf1c22db05bdec470c43cbdf33f33da6723ec7b3f68959b24d7ffc43c527&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22thumb-anhdaidien1.jpg%22 200 OK
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/file-upload/YoHv34smt7GeEcW9y/filename.mp3
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/file-upload/5Z9zNsxbgpJLnNGai/filename.mp3
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/file-upload/5Z9zNsxbgpJLnNGai/filename.mp3 302 Found
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/file-upload/YoHv34smt7GeEcW9y/filename.mp3 302 Found
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCfyOXrpgyV-GEgUN-QXmixIFDULKiLwSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/uploads/111169896815147328111169900882891225/111169896815147328/5Z9zNsxbgpJLnNGai?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154844Z&X-Amz-Expires=120&X-Amz-Signature=7917ad196d2c0c966c3129103c051915f67d9896c12c323f47239f9782c68314&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22filename.mp3%22
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/uploads/111169896815147328111169900882891225/111169896815147328/YoHv34smt7GeEcW9y?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154844Z&X-Amz-Expires=120&X-Amz-Signature=2a0e635f275dff0a4d0d3256d58b0e1d08b4e1cb4d70bf4a9d03484139a0e7d3&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22filename.mp3%22
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/uploads/111169896815147328111169900882891225/111169896815147328/YoHv34smt7GeEcW9y?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154844Z&X-Amz-Expires=120&X-Amz-Signature=2a0e635f275dff0a4d0d3256d58b0e1d08b4e1cb4d70bf4a9d03484139a0e7d3&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22filename.mp3%22 416 Requested Range Not Satisfiable
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCbQUZMoQ45SoEgUN-QXmixIFDbiK8RMSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/nrwM2dWkWZpw8H3Rc/uploads/111169896815147328111169900882891225/111169896815147328/5Z9zNsxbgpJLnNGai?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20231027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231027T154844Z&X-Amz-Expires=120&X-Amz-Signature=7917ad196d2c0c966c3129103c051915f67d9896c12c323f47239f9782c68314&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22filename.mp3%22 416 Requested Range Not Satisfiable
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/readMessages
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/readMessages 200 OK
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCbQUZMoQ45SoEgUN-QXmixIFDbiK8RMSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1696258946&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS 200 
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY
+2023-10-27 Friday 22:48:44 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCRyj0QJHC237EgUN-QXmixIFDcjT4jASBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing request: https://sdk.mojitok.im/emoticons%2Forigin%2Fd779282d8e_GEf8qAAx1D.gif
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCRyj0QJHC237EgUN-QXmixIFDcjT4jASBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.sendMessage
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCdlV_IVEw91xEgUN-QXmixIFDb7InwcSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.sendMessage 200 OK
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing response: https://sdk.mojitok.im/emoticons%2Forigin%2Fd779282d8e_GEf8qAAx1D.gif 200 
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCdlV_IVEw91xEgUN-QXmixIFDb7InwcSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=kbNHCqQerLr6W2Y8x
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing request: https://media2.giphy.com/media/K1tgb1IUeBOgw/giphy.gif?cid=44613b38zxi20qaee7bd8c5kmi00zf8ia2lrszhd7uuufi8i&ep=v1_gifs_search&rid=giphy.gif&ct=g
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=kbNHCqQerLr6W2Y8x 200 OK
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=kbNHCqQerLr6W2Y8x
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=kbNHCqQerLr6W2Y8x 200 OK
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:48:45 seleniumwire.server:INFO:127.0.0.1:59134: Ping Received from server
+  -> 
+2023-10-27 Friday 22:48:45 seleniumwire.server:INFO:127.0.0.1:59134: Pong Received from client
+  -> 
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:48:45 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:48:46 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCYqeKK85rGZ2EgUN-QXmixIFDQd1z3MSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:46 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCYqeKK85rGZ2EgUN-QXmixIFDQd1z3MSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:46 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCdAqmksfG8QhEgUN-QXmixIFDXzDAkESBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:46 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCdAqmksfG8QhEgUN-QXmixIFDXzDAkESBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:46 seleniumwire.handler:INFO:Capturing response: https://media2.giphy.com/media/K1tgb1IUeBOgw/giphy.gif?cid=44613b38zxi20qaee7bd8c5kmi00zf8ia2lrszhd7uuufi8i&ep=v1_gifs_search&rid=giphy.gif&ct=g 200 
+2023-10-27 Friday 22:48:48 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY 200 
+2023-10-27 Friday 22:48:48 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1696258936&target=OPTIMIZATION_TARGET_GEOLOCATION_PERMISSION_PREDICTIONS
+2023-10-27 Friday 22:48:49 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1696258936&target=OPTIMIZATION_TARGET_GEOLOCATION_PERMISSION_PREDICTIONS 200 
+2023-10-27 Friday 22:48:49 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1696863778&target=OPTIMIZATION_TARGET_CLIENT_SIDE_PHISHING
+2023-10-27 Friday 22:48:50 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/deleteMessage
+2023-10-27 Friday 22:48:50 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/deleteMessage 200 OK
+2023-10-27 Friday 22:48:50 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=F8vfRYhwwXyXfWEGM
+2023-10-27 Friday 22:48:50 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=F8vfRYhwwXyXfWEGM 200 OK
+2023-10-27 Friday 22:48:51 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCdqOPDYla_q0EgUN-QXmixIFDUau9NASBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:51 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCdqOPDYla_q0EgUN-QXmixIFDUau9NASBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:51 root:INFO:Trang cá nhân - Chat - Xoá tin nhắn
+2023-10-27 Friday 22:48:51 root:INFO:check font-end: message - Đã xóa tin nhắn thành công.
+2023-10-27 Friday 22:48:51 root:INFO:True
+2023-10-27 Friday 22:48:51 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/readMessages
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/readMessages 200 OK
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCcJlal5K8Gy5EgUN-QXmixIFDXYwz9kSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.sendMessage
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.sendMessage 200 OK
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCcJlal5K8Gy5EgUN-QXmixIFDXYwz9kSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCZ7_efFn-8WXEgUN-QXmixIFDTRAW9ASBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCZ7_efFn-8WXEgUN-QXmixIFDTRAW9ASBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7 200 OK
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7 200 OK
+2023-10-27 Friday 22:48:52 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:48:53 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCSos0pFAoClCEgUN-QXmixIFDViStoQSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:53 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:48:53 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCSos0pFAoClCEgUN-QXmixIFDViStoQSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:53 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:48:53 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCZY-D8WoU24eEgUN-QXmixIFDVhLsToSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:53 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCZY-D8WoU24eEgUN-QXmixIFDVhLsToSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:53 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCYsHOrUWNrT7EgUN-QXmixIFDVBwyPUSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:53 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCYsHOrUWNrT7EgUN-QXmixIFDVBwyPUSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:53 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCVn4eaqDHwmTEgUN-QXmixIFDZOar1gSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:53 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCVn4eaqDHwmTEgUN-QXmixIFDZOar1gSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:55 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1696863778&target=OPTIMIZATION_TARGET_CLIENT_SIDE_PHISHING 200 
+2023-10-27 Friday 22:48:55 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/readMessages
+2023-10-27 Friday 22:48:55 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/readMessages 200 OK
+2023-10-27 Friday 22:48:56 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:48:56 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.update
+2023-10-27 Friday 22:48:56 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:48:56 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCZTwDaEdj264EgUN-QXmixIFDYp5Lt4SBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:56 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.update 200 OK
+2023-10-27 Friday 22:48:56 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCZTwDaEdj264EgUN-QXmixIFDYp5Lt4SBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:56 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCff30xDrwoNhEgUN-QXmixIFDRcJiQ4SBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:57 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCff30xDrwoNhEgUN-QXmixIFDRcJiQ4SBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:57 root:INFO:Trang cá nhân - Chat - Sửa tin nhắn
+2023-10-27 Friday 22:48:57 root:INFO:check font-end: Sửa tin nhắn - alo alo 123
+2023-10-27 Friday 22:48:57 root:INFO:True
+2023-10-27 Friday 22:48:57 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCbQCIbLrMsiYEgUN-QXmixIFDVJu5DsSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:48:57 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCbQCIbLrMsiYEgUN-QXmixIFDVJu5DsSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:48:57 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/groups.listAll?limit=5
+2023-10-27 Friday 22:48:57 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/groups.listAll?limit=5 200 OK
+2023-10-27 Friday 22:48:58 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBI1CdxuDiENP_Z0EgUN-QXmixIFDVJu5DsSBQ2rKqwvEgUNBu27_xIFDfP33ZghI-2k7TnNKCA=?alt=proto
+2023-10-27 Friday 22:48:58 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBI1CdxuDiENP_Z0EgUN-QXmixIFDVJu5DsSBQ2rKqwvEgUNBu27_xIFDfP33ZghI-2k7TnNKCA=?alt=proto 200 
+2023-10-27 Friday 22:48:58 root:INFO:Trang cá nhân - Chat - Chuyển tiếp tin nhắn
+2023-10-27 Friday 22:48:58 root:INFO:check font-end: đang ở popup - Chuyển tiếp 
+2023-10-27 Friday 22:48:58 root:INFO:True
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing request: https://media.emso.vn/sn/wow.svg
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing request: https://media.emso.vn/sn/yay.svg
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing request: https://media.emso.vn/sn/love19.svg
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing request: https://media.emso.vn/sn/likechuan.svg
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing request: https://media.emso.vn/sn/haha13.svg
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing request: https://media.emso.vn/sn/ANGRY.svg
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing response: https://media.emso.vn/sn/wow.svg 200 
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing response: https://media.emso.vn/sn/haha13.svg 200 
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing response: https://media.emso.vn/sn/likechuan.svg 200 
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing response: https://media.emso.vn/sn/love19.svg 200 
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing response: https://media.emso.vn/sn/yay.svg 200 
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing response: https://media.emso.vn/sn/ANGRY.svg 200 
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.autocomplete?selector=%7B%22term%22:%22hue+nguyen%22%7D
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.autocomplete?selector=%7B%22term%22:%22hue+nguyen%22%7D 200 OK
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/channels.list?name=hue+nguyen
+2023-10-27 Friday 22:48:59 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/channels.list?name=hue+nguyen 200 OK
+2023-10-27 Friday 22:49:01 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBI1CQ-8JmcqmpqCEgUN-QXmixIFDcem7m0SBQ2rKqwvEgUNBu27_xIFDfP33ZghI-2k7TnNKCA=?alt=proto
+2023-10-27 Friday 22:49:01 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBI1CQ-8JmcqmpqCEgUN-QXmixIFDcem7m0SBQ2rKqwvEgUNBu27_xIFDfP33ZghI-2k7TnNKCA=?alt=proto 200 
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getRoomRoles
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getRoomRoles 200 OK
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.sendMessage
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.sendMessage 200 OK
+2023-10-27 Friday 22:49:03 root:INFO:Trang cá nhân - Chat - Chuyển tiếp tin nhắn
+2023-10-27 Friday 22:49:03 root:INFO:check font-end: tình trạng - Đã gửi 
+2023-10-27 Friday 22:49:03 root:INFO:True
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/getMessages
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=AsG64Hn2q7gecj8ro
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111213890014178773
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/users.info?userId=111169900882891225
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBI1CUhv8p5LxKu_EgUN-QXmixIFDXkZQjESBQ2rKqwvEgUNBu27_xIFDfP33ZghI-2k7TnNKCA=?alt=proto
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBI1CUhv8p5LxKu_EgUN-QXmixIFDXkZQjESBQ2rKqwvEgUNBu27_xIFDfP33ZghI-2k7TnNKCA=?alt=proto 200 
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=AsG64Hn2q7gecj8ro 200 OK
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7 200 OK
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/getMessages 200 OK
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111213890014178773 200 OK
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/users.info?userId=111169900882891225 200 OK
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCRlfJ-hpR34xEgUN-QXmixIFDQAjG7sSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:49:03 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCRlfJ-hpR34xEgUN-QXmixIFDQAjG7sSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:49:04 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCQ7zrbs-oz8WEgUN-QXmixIFDfW5XywSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:49:04 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCQ7zrbs-oz8WEgUN-QXmixIFDfW5XywSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:49:05 root:INFO:Trang cá nhân - Chat - Ghim tin nhắn
+2023-10-27 Friday 22:49:05 root:INFO:check font-end: Ghim
+2023-10-27 Friday 22:49:05 root:INFO:Ghim
+2023-10-27 Friday 22:49:05 root:INFO:True
+2023-10-27 Friday 22:49:05 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/pinMessage
+2023-10-27 Friday 22:49:06 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/pinMessage 200 OK
+2023-10-27 Friday 22:49:06 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=mRPuvXPtYQht8zYKp
+2023-10-27 Friday 22:49:06 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=mRPuvXPtYQht8zYKp 200 OK
+2023-10-27 Friday 22:49:06 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7
+2023-10-27 Friday 22:49:06 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7 200 OK
+2023-10-27 Friday 22:49:06 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCcuLkWBtNSX3EgUN-QXmixIFDdy2gYgSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:49:07 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCcuLkWBtNSX3EgUN-QXmixIFDdy2gYgSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:49:08 root:INFO:Trang cá nhân - Chat - Bỏ Ghim tin nhắn
+2023-10-27 Friday 22:49:08 root:INFO:check font-end: Bỏ ghim 
+2023-10-27 Friday 22:49:08 root:INFO:True
+2023-10-27 Friday 22:49:08 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/unPinMessage
+2023-10-27 Friday 22:49:08 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/unPinMessage 200 OK
+2023-10-27 Friday 22:49:08 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=vzvujZH296tRFmtCo
+2023-10-27 Friday 22:49:08 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=vzvujZH296tRFmtCo 200 OK
+2023-10-27 Friday 22:49:09 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7
+2023-10-27 Friday 22:49:09 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7 200 OK
+2023-10-27 Friday 22:49:09 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCfd_zUli7TO-EgUN-QXmixIFDTrkmKUSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:49:09 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCfd_zUli7TO-EgUN-QXmixIFDTrkmKUSBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 
+2023-10-27 Friday 22:49:11 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/method.call/pinMessage
+2023-10-27 Friday 22:49:11 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/method.call/pinMessage 200 OK
+2023-10-27 Friday 22:49:11 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=LCKu8gBJGykCLYXtT
+2023-10-27 Friday 22:49:11 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=LCKu8gBJGykCLYXtT 200 OK
+2023-10-27 Friday 22:49:11 seleniumwire.handler:INFO:Capturing request: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7
+2023-10-27 Friday 22:49:11 seleniumwire.handler:INFO:Capturing response: https://dev-chat.emso.vn/api/v1/chat.getMessageReadReceipts?messageId=sJb8mhcAceeyaPri7 200 OK
+2023-10-27 Friday 22:49:11 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1697470715&target=OPTIMIZATION_TARGET_PAGE_ENTITIES
+2023-10-27 Friday 22:49:12 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCWIEu_TPfnPGEgUN-QXmixIFDY77Wh8SBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto
+2023-10-27 Friday 22:49:12 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTE4LjAuNTk5My45MBIuCWIEu_TPfnPGEgUN-QXmixIFDY77Wh8SBQ2rKqwvEgUNBu27_yFAS6pss0svPA==?alt=proto 200 

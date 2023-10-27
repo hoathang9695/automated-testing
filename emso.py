@@ -89,7 +89,7 @@ def trangcanhan(self):
     funcion.gioithieu.trangcanhan_gioithieu_noitungsong(self)
     funcion.anh_video.anh_video(self)
     funcion.check_thongtin_trangcanhan.check_thongtin_trangcanhan(self)
-    # funcion.banbe.banbe_tatcabanbe(self)
+    funcion.banbe.banbe_tatcabanbe(self)
 
 
 def trangchu(self):
@@ -98,16 +98,19 @@ def trangchu(self):
     # funcion.trangchu.menu(self)
     # funcion.trangchu.tinnhanmoi(self)
     # funcion.trangchu.chat(self)
-    # funcion.trangchu.chat_xemtatca(self)
+    funcion.trangchu.chat_xemtatca(self)
     # funcion.trangchu.caidatcanhan_chuyentaikhoan(self)
     # funcion.trangchu.canhan_caidatvaquyenriengtu(self)
     # funcion.trangchu.trogiupvahotro(self)
     # funcion.trangchu.caidatcanhan_manhinh(self)
     # funcion.trangchu.caidatcanhan_donggopykien(self)
     # funcion.trangchu.caidatcanhan_dangxuat(self)
-    funcion.trangchu.trangchu_timkiem(self)
+    # funcion.trangchu.trangchu_timkiem(self)
 
 
 
+def khoanhkhac(self):
+    action.login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+    funcion.khoanhkhac.danhchoban(self)
 
 

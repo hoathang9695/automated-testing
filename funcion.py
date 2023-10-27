@@ -201,7 +201,7 @@ class gioithieu():
 class banbe():
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def banbe_tatcabanbe(self):
-        action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
+        # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
         action.banbe.tatcabanbe(self)
         action.banbe.banbe_chinhsuaquyenriengtu(self)
 
@@ -278,3 +278,7 @@ class trangchu():
     def trangchu_timkiem(self):
         action.trangchu.trangchu_timkiem(self)
 
+
+class khoanhkhac():
+    def danhchoban(self):
+        action.khoanhkhac.danhchoban(self)
