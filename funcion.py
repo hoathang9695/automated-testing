@@ -282,3 +282,27 @@ class trangchu():
 class khoanhkhac():
     def danhchoban(self):
         action.khoanhkhac.danhchoban(self)
+    def tructiep(self):
+        action.khoanhkhac.tructiep(self)
+
+    def taokhoanhkhac(self):
+        action.khoanhkhac.taokhoanhkhac(self)
+
+    def taikhoan_duocdexuat(self):
+        action.khoanhkhac.taikhoan_duocdexuat(self)
+
+    def taikhoan_dangtheodoi(self):
+        action.khoanhkhac.taikhoan_dangtheodoi(self)
+
+    def khoanhkhac_timkiem(self):
+        action.khoanhkhac.khoanhkhac_timkiem(self)
+
+
+class watch():
+    def timkiem(self):
+        action.watch.timkiem(self)
+
+    def trangchu(self):
+        action.watch.trangchu(self)
+
+

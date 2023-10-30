@@ -177,11 +177,20 @@
     "chiaselennhom": "nam test",
     "mota1": "nutri boost",
     "chiaselentrang": "Trường test bản tin",
-    "chiaselentrangcanhanbanbe": "Trần Quang Trường",
+    "chiaselentrangcanhanbanbe": "Mạnh Cường",
     "mota2": "nutri caffee",
     "noidung1": "aaaaaw",
     "noidung2": "aaaaaw1",
     "noidung3": "Test chia sẻ lên bảng tin",
-    "mota3": "đi mua xoài đi"
+    "mota3": "đi mua xoài đi",
+    "taokhoanhkhac": "Test tạo khoảnh khắc",
+    "timkiem": "Huấn"
+  },
+  "watch": {
+    "timkiem": "Bên người khác em có hạnh phúc hơn?",
+    "mota": "Test watch hoy",
+    "mota1": "Test watch trang chủ",
+    "mota2": "Test watch phản hồi",
+    "tranquangtruong": "Trần Quang Trường"
   }
 }
