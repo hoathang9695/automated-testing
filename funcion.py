@@ -305,4 +305,8 @@ class watch():
     def trangchu(self):
         action.watch.trangchu(self)
 
+    def chuongtrinh(self):
+        action.watch.chuongtrinh(self)
 
+    def videodaluu(self):
+        action.watch.videodaluu(self)
