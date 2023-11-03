@@ -93,33 +93,41 @@ def trangcanhan(self):
 
 def trangchu(self):
     action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
-    # funcion.trangchu.taobaiviet_khoangkhac(self)
-    # funcion.trangchu.menu(self)
+    funcion.trangchu.taobaiviet_khoangkhac(self)
+    funcion.trangchu.menu(self)
+    funcion.trangchu.caidatcanhan_chuyentaikhoan(self)
+    funcion.trangchu.canhan_caidatvaquyenriengtu(self)
+    funcion.trangchu.trogiupvahotro(self)
+    funcion.trangchu.caidatcanhan_manhinh(self)
+    funcion.trangchu.caidatcanhan_donggopykien(self)
+    funcion.trangchu.caidatcanhan_dangxuat(self)
+    funcion.trangchu.trangchu_timkiem(self)
+
+def chat(self):
+    action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
     # funcion.trangchu.tinnhanmoi(self)
     # funcion.trangchu.chat(self)
-    funcion.trangchu.chat_xemtatca(self)        #lỗi phâfn chủ đề
-    # funcion.trangchu.caidatcanhan_chuyentaikhoan(self)
-    # funcion.trangchu.canhan_caidatvaquyenriengtu(self)
-    # funcion.trangchu.trogiupvahotro(self)
-    # funcion.trangchu.caidatcanhan_manhinh(self)
-    # funcion.trangchu.caidatcanhan_donggopykien(self)
-    # funcion.trangchu.caidatcanhan_dangxuat(self)
-    # funcion.trangchu.trangchu_timkiem(self)
+    # funcion.trangchu.chat_xemtatca(self)
+
+    funcion.trangchu.taonhom(self)
+    funcion.trangchu.thongtindoanchat_nhom(self)
+
 
 
 def khoanhkhac(self):
     action.login.login4(self, "truongvck333@gmail.com", "atgmj123456")
     funcion.khoanhkhac.danhchoban(self)
-    # funcion.khoanhkhac.tructiep(self)
-    # funcion.khoanhkhac.taokhoanhkhac(self)
-    # funcion.khoanhkhac.taikhoan_duocdexuat(self)
-    # funcion.khoanhkhac.taikhoan_dangtheodoi(self)
-    # funcion.khoanhkhac.khoanhkhac_timkiem(self)
+    funcion.khoanhkhac.tructiep(self)
+    funcion.khoanhkhac.taokhoanhkhac(self)
+    funcion.khoanhkhac.taikhoan_duocdexuat(self)
+    funcion.khoanhkhac.taikhoan_dangtheodoi(self)
+    funcion.khoanhkhac.khoanhkhac_timkiem(self)
 
 
 def watch(self):
     action.login.login4(self, "truongvck333@gmail.com", "atgmj123456")
-    # funcion.watch.timkiem(self)
-    # funcion.watch.trangchu(self)
-    # funcion.watch.chuongtrinh(self)
+    funcion.watch.timkiem(self)
+    funcion.watch.trangchu(self)
+    funcion.watch.chuongtrinh(self)
     funcion.watch.videodaluu(self)
+    funcion.watch.dangtheodoi(self)

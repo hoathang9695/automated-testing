@@ -30,7 +30,7 @@ data['trangcanhan_sukientrongdoi']['taosukienrieng']
 
 
 //*[@class='']/div[@class='']/span[@class='']
-
+//*[@class='app']/div/main/div/div[2]/div
 
 
 
@@ -61,3 +61,12 @@ except NoSuchElementException:
     logging.info("check font-end: Có trở lại trang Video đã lưu không")
     logging.info("False")
     time.sleep(2)
+
+#check màu
+element1 = driver.find_element(By.XPATH, var.check_color_mautennhom)
+color = element1.value_of_css_property("color")
+logging.info("Chat - Nhóm - Cài đặt nhóm")
+logging.info("check font-end: Đánh dấu là chưa đọc")
+logging.info(color)
+logging.info(color == "rgba(53, 120, 229, 1)")
+print(color)

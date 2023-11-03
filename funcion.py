@@ -251,6 +251,15 @@ class trangchu():
     def chat_xemtatca(self):
         action.trangchu.chat_xemtatca(self)
 
+
+    def taonhom(self):
+        action.trangchu.taonhom(self)
+
+
+    def thongtindoanchat_nhom(self):
+        action.trangchu.thongtindoanchat_nhom(self)
+
+
     def caidatcanhan_chuyentaikhoan(self):
         action.trangchu.caidatcanhan_chuyentaikhoan((self))
 
@@ -310,3 +319,10 @@ class watch():
 
     def videodaluu(self):
         action.watch.videodaluu(self)
+
+    def dangtheodoi(self):
+        action.watch.dangtheodoi(self)
+
+
+
+
