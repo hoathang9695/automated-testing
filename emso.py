@@ -105,9 +105,9 @@ def trangchu(self):
 
 def chat(self):
     action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
-    # funcion.trangchu.tinnhanmoi(self)
-    # funcion.trangchu.chat(self)
-    # funcion.trangchu.chat_xemtatca(self)
+    funcion.trangchu.tinnhanmoi(self)
+    funcion.trangchu.chat(self)
+    funcion.trangchu.chat_xemtatca(self)
 
     funcion.trangchu.taonhom(self)
     funcion.trangchu.thongtindoanchat_nhom(self)
@@ -116,7 +116,7 @@ def chat(self):
 
 def khoanhkhac(self):
     action.login.login4(self, "truongvck333@gmail.com", "atgmj123456")
-    funcion.khoanhkhac.danhchoban(self)
+    # funcion.khoanhkhac.danhchoban(self)       #ko có nút chia sẻ
     funcion.khoanhkhac.tructiep(self)
     funcion.khoanhkhac.taokhoanhkhac(self)
     funcion.khoanhkhac.taikhoan_duocdexuat(self)
@@ -131,3 +131,19 @@ def watch(self):
     funcion.watch.chuongtrinh(self)
     funcion.watch.videodaluu(self)
     funcion.watch.dangtheodoi(self)
+
+
+def trang(self):
+    action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+    funcion.trang.timkiem_trangcuaban(self)
+    funcion.trang.khampha(self)
+    funcion.trang.trangdathich(self)
+    funcion.trang.trangdathich_dau3cham(self)
+    funcion.trang.loimoi(self)
+    funcion.trang.taotrangmoi(self)
+    action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+    funcion.trang.trang_gioithieu(self)
+    funcion.trang.anh(self)
+    funcion.trang.music(self)
+    funcion.trang.video(self)
+    # action.login.login4(self, "emsomanager@gmail.com ", "Neko10121311")

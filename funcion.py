@@ -324,5 +324,32 @@ class watch():
         action.watch.dangtheodoi(self)
 
 
+class trang():
+    def timkiem_trangcuaban(self):
+        action.trang.timkiem_trangcuaban(self)
+    def khampha(self):
+        action.trang.khampha(self)
+    def trangdathich(self):
+        action.trang.trangdathich(self)
+    def trangdathich_dau3cham(self):
+        action.trang.trangdathich_dau3cham(self)
+    def loimoi(self):
+        action.trang.loimoi(self)
+    def taotrangmoi(self):
+        action.trang.taotrangmoi_banhang(self)
+        action.trang.taotrangmoi_bankhoahoc(self)
+        action.trang.taotrangmoi_trangnoidung(self)
 
+    def trang_gioithieu(self):
+        action.trang.trang_gioithieu(self)
+        action.trang.trang_gioithieu_dulieusai(self)
+
+    def anh(self):
+        action.trang.anh(self)
+
+    def music(self):
+        action.trang.music(self)
+
+    def video(self):
+        action.trang.video(self)
 
