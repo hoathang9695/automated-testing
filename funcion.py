@@ -353,3 +353,5 @@ class trang():
     def video(self):
         action.trang.video(self)
 
+    def xemthem(self):
+        action.trang.xemthem(self)

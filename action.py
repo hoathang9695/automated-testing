@@ -7732,14 +7732,13 @@ class trang():
         time.sleep(2)
 
 
-    def cuahang(self):              #Tài khoản test
+    def cuahang(self):
         driver.implicitly_wait(15)
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.icon_trang)
         driver.execute_script("arguments[0].click();", button)
         time.sleep(1)
         #Trang của bạn
-        #A12
         driver.find_element(By.XPATH, var.trang_trangcuaban).click()
         driver.find_element(By.XPATH, var.trang_trangcuaban_truongtest).click()
         time.sleep(2)
@@ -7758,6 +7757,127 @@ class trang():
             logging.info("False")
 
 
+    def xemthem(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.icon_trang)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        #Trang của bạn
+        driver.find_element(By.XPATH, var.trang_trangcuaban).click()
+        driver.find_element(By.XPATH, var.trang_trangcuaban_truongtest).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.trang_xemthem).click()
+        driver.execute_script("window.scrollBy(0,400)", "")
+
+        #Sự kiện
+        driver.find_element(By.XPATH, var.trang_xemthem_sukien).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trang_xemthem_sukien_taosukienmoi).click()
+        time.sleep(2)
+        trang.taomoisukien(self, data['trang']['tensukien_congkhai'], "Công khai")
 
 
+    def taomoisukien(self, tensukien, quyen):
+        #Tên sự kiên
+        driver.find_element(By.XPATH, var.taosukien_tensukien).send_keys(tensukien)
+        #Ngày bắt đầu
+        driver.find_element(By.XPATH, var.taosukien_iconngaybatdau).click()
+        driver.find_element(By.XPATH, var.taosukien_ngaybatdau_iconchonnam).click()
+        driver.find_element(By.XPATH, var.taosukien_ngaybatdau_chonnam_2024).click()
+        driver.find_element(By.XPATH, var.taosukien_ngaybatdau_chonngay_20).click()
+        #Giờ bắt đầu
+        driver.find_element(By.XPATH, var.taosukien_giobatdau_input).send_keys(data['trang']['sukien_giobatdau'])
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.giobatdau0800)))
+        element.click()
+        #Ngày kết thúc
+        driver.find_element(By.XPATH, var.taosukien_ngayvagioketthuc).click()
+        driver.find_element(By.XPATH, var.taosukien_iconngayketthuc).click()
+        driver.find_element(By.XPATH, var.taosukien_ngayketthuc_iconchonnam).click()
+        driver.find_element(By.XPATH, var.taosukien_ngayketthuc_chonnam_2024).click()
+        driver.find_element(By.XPATH, var.taosukien_ngayketthuc_chonngay_25).click()
+        #Giờ Kết thúc
+        driver.find_element(By.XPATH, var.taosukien_gioketthuc_input).send_keys(data['trang']['sukien_gioketthuc'])
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.gioketthuc1530)))
+        element.click()
+        #Quyền sự kiện
+        driver.find_element(By.XPATH, var.taosukien_quyensukien_input).send_keys(quyen)
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.congkhai)))
+        element.click()
+        #Hạng mục
+        driver.find_element(By.XPATH, var.taosukien_hangmuc_input).send_keys("Game")
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.hangmuc_chon)))
+        element.click()
+        #Vị trí
+        button = driver.find_element(By.XPATH, var.sukien_iconvitri)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trang_gioithieu_nhapvitri_chonvitricuaban).send_keys(data['trang']['vitri'])
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.trangcanhan_gioithieu_songtai_hanoi)))
+        element.click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.luu).click()
+        time.sleep(1)
+        cuon = driver.find_element(By.XPATH, var.anhbia)
+        driver.execute_script("arguments[0].scrollIntoView();", cuon)
+        #Mô tả
+        driver.find_element(By.XPATH, var.sukien_mota).send_keys(data['trang']['sukien_mota'])
+        #Ảnh bìa
+        button = driver.find_element(By.XPATH, var.sukien_tailenanhbia)
+        driver.execute_script("arguments[0].click();", button)
+        # driver.find_element(By.XPATH, var.sukien_tailenanhbia).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/tft.exe")
+        time.sleep(1)
+        #Người đồng tổ chức
+        driver.find_element(By.XPATH, var.sukien_nguoidongtochuc_input).send_keys(data['trang']['sukien_ngocmai'])
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.ngocmai)))
+        element.click()
+        #Đăng sự kiện
+        # driver.find_element(By.XPATH, var.sukien_dangsukien).click()        #Lỗi 500 không đăng đc ảnh
+        time.sleep(2)
+
+        #Check xem trước sự kiện
+        check_xemtruocsukien_thoigian = driver.find_element(By.XPATH,var.check_xemtruocsukien_thoigian1).text
+        print(check_xemtruocsukien_thoigian)
+        logging.info("Sự kiện - Tạo mới sự kiện")
+        logging.info("check font-end: Thời gian - 08:00 Thứ tư, 20 tháng 11, 2024 - 15:30 Thứ hai, 25 tháng 11, 2024")
+        logging.info(check_xemtruocsukien_thoigian == "08:00 Thứ tư, 20 tháng 11, 2024 - 15:30 Thứ hai, 25 tháng 11, 2024")
+
+
+        check_xemtruocsukien_tensukien = driver.find_element(By.XPATH,var.check_xemtruocsukien_tensukien1).text
+        print(check_xemtruocsukien_tensukien)
+        logging.info("Sự kiện - Tạo mới sự kiện")
+        logging.info("check font-end: Tên sự kiện - "+ tensukien)
+        logging.info(check_xemtruocsukien_tensukien == tensukien)
+
+        check_xemtruocsukien_quyen = driver.find_element(By.XPATH,var.check_xemtruocsukien_quyen1).text
+        if quyen == "Công khai":
+            print(check_xemtruocsukien_quyen)
+            logging.info("Sự kiện - Tạo mới sự kiện")
+            logging.info("check font-end: Quyền của sự kiện - "+ quyen)
+            logging.info(check_xemtruocsukien_quyen)
+            logging.info(check_xemtruocsukien_quyen == "Công khai - Tất cả mọi người")
+
+        if quyen == "Riêng tư":
+            print(check_xemtruocsukien_quyen)
+            logging.info("Sự kiện - Tạo mới sự kiện")
+            logging.info("check font-end: Quyền của sự kiện - "+ quyen)
+            logging.info(check_xemtruocsukien_quyen)
+            logging.info(check_xemtruocsukien_quyen == "Riêng tư - Chỉ những người được mời")
+
+        if quyen == "Bạn bè":
+            print(check_xemtruocsukien_quyen)
+            logging.info("Sự kiện - Tạo mới sự kiện")
+            logging.info("check font-end: Quyền của sự kiện - "+ quyen)
+            logging.info(check_xemtruocsukien_quyen)
+            logging.info(check_xemtruocsukien_quyen == "Bạn bè - Bạn bè của bạn")
+
+        time.sleep(2)
 

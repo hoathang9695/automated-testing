@@ -2,12 +2,12 @@ import emso
 
 
 # emso.dang_nhap(self="")
-emso.trangcanhan(self="")
+# emso.trangcanhan(self="")
 # emso.trangchu(self="")
 # emso.chat(self="")
 # emso.khoanhkhac(self="")
 # emso.watch(self="")
-# emso.trang(self="")
+emso.trang(self="")
 
 
 
