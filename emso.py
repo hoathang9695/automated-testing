@@ -116,9 +116,9 @@ def chat(self):
 
 def khoanhkhac(self):
     action.login.login4(self, "truongvck333@gmail.com", "atgmj123456")
-    # funcion.khoanhkhac.danhchoban(self)       #ko có nút chia sẻ
+    funcion.khoanhkhac.danhchoban(self)
     funcion.khoanhkhac.tructiep(self)
-    funcion.khoanhkhac.taokhoanhkhac(self)
+    # funcion.khoanhkhac.taokhoanhkhac(self)    #Tạo lâu quá 1p
     funcion.khoanhkhac.taikhoan_duocdexuat(self)
     funcion.khoanhkhac.taikhoan_dangtheodoi(self)
     funcion.khoanhkhac.khoanhkhac_timkiem(self)
@@ -136,7 +136,7 @@ def watch(self):
 def trang(self):
     action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")       #    # action.login.login4(self, "emsomanager@gmail.com ", "Neko10121311")
     # funcion.trang.timkiem_trangcuaban(self)
-    # funcion.trang.khampha(self)
+    # # funcion.trang.khampha(self)
     # funcion.trang.trangdathich(self)
     # funcion.trang.trangdathich_dau3cham(self)
     # funcion.trang.loimoi(self)
