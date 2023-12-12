@@ -7,7 +7,9 @@ import emso
 # emso.chat(self="")
 # emso.khoanhkhac(self="")
 # emso.watch(self="")
-emso.trang(self="")
+# emso.trang(self="")
+emso.nhom(self="")
+
 
 
 

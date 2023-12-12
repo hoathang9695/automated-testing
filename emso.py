@@ -1,4 +1,3 @@
-import threading
 import numpy
 import self
 import json
@@ -15,52 +14,6 @@ from seleniumwire.utils import decode as sw_decode
 
 
 
-# file_name = 'emso.text'
-# with open(file_name, 'r', encoding='utf-8') as f:
-#     data = json.load(f, strict = False)
-#     converted_file = data.decode('utf-8')
-#     print(converted_file)
-
-
-
-
-
-
-
-
-
-#
-# with open('emso.log','rb') as f:
-#     for ln in f:
-#         decoded=False
-#         data1 = ln.decode("utf-8")
-#         if data1 != "@":
-#             print("aaaa")
-
-
-        # print(data1)
-
-
-
-
-# with open('emso.log','rb') as f:
-#     for ln in f:
-#         decoded=False
-#         line=''
-#         # print(ln)
-#         # for cp in ('cp1252', 'cp850','utf-8','utf8'):
-#         #     try:
-#         #         line = ln.decode(cp)
-#         #         decoded=True
-#         #         break
-#         #     except UnicodeDecodeError:
-#         #         pass
-#         data1 = ln.decode("utf-8")
-
-
-
-
-
 def dang_nhap(self):
     funcion.login.khong_thanh_cong_tk_emso1(self)
     funcion.login.khong_thanh_cong_tk_emso2(self)
@@ -71,7 +24,7 @@ def dang_nhap(self):
     funcion.login.chon_tk_dang_nhap_gan_day_da_luu_mk(self)
 
     funcion.login.thanh_cong_tk_google1(self)
-    # funcion.login.thanh_cong_tk_google2(self) #để chạy cuối, đang lỗi
+    funcion.login.thanh_cong_tk_google2(self) #để chạy cuối, đang lỗi
 
 
 def trangcanhan(self):
@@ -88,6 +41,7 @@ def trangcanhan(self):
     funcion.gioithieu.trangcanhan_gioithieu_noitungsong(self)
     funcion.anh_video.anh_video(self)
     funcion.check_thongtin_trangcanhan.check_thongtin_trangcanhan(self)
+    funcion.check_thongtin_trangcanhan.phandangchuy(self)
     funcion.banbe.banbe_tatcabanbe(self)
 
 
@@ -116,9 +70,9 @@ def chat(self):
 
 def khoanhkhac(self):
     action.login.login4(self, "truongvck333@gmail.com", "atgmj123456")
-    funcion.khoanhkhac.danhchoban(self)
-    funcion.khoanhkhac.tructiep(self)
-    # funcion.khoanhkhac.taokhoanhkhac(self)    #Tạo lâu quá 1p
+    funcion.khoanhkhac.dangtheodoi(self)      #lỗi load chia sẻ
+    # funcion.khoanhkhac.tructiep(self) #khoong co phien live
+    funcion.khoanhkhac.taokhoanhkhac(self)
     funcion.khoanhkhac.taikhoan_duocdexuat(self)
     funcion.khoanhkhac.taikhoan_dangtheodoi(self)
     funcion.khoanhkhac.khoanhkhac_timkiem(self)
@@ -134,16 +88,55 @@ def watch(self):
 
 
 def trang(self):
-    action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")       #    # action.login.login4(self, "emsomanager@gmail.com ", "Neko10121311")
+    action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
     # funcion.trang.timkiem_trangcuaban(self)
-    # # funcion.trang.khampha(self)
+    # funcion.trang.khampha(self)
     # funcion.trang.trangdathich(self)
     # funcion.trang.trangdathich_dau3cham(self)
     # funcion.trang.loimoi(self)
     # funcion.trang.taotrangmoi(self)
-    # action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
     # funcion.trang.trang_gioithieu(self)
     # funcion.trang.anh(self)
     # funcion.trang.music(self)
     # funcion.trang.video(self)
-    funcion.trang.xemthem(self)
+    # funcion.trang.xemthem(self)
+    funcion.trang.cuahang(self)     #chưa tải lên sản phẩm
+    funcion.trang.cacnutkhac(self)
+    funcion.trang.themnuthanhdong(self)
+    funcion.trang.anhdaidien_anhbia(self)
+    funcion.trang.taobaiviet(self)
+    funcion.trang.hopthu(self)
+    funcion.trang.thongbao(self)
+    # funcion.trang.chatluongtrang(self)        #Bỏ module này
+    funcion.trang.baivietdalenlich(self)
+    funcion.trang.chinhsuathongtintrang(self)
+    funcion.trang.caidat(self)
+
+
+def nhom(self):
+    action.login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+    # funcion.nhom.timkiem(self)
+    # funcion.nhom.bangtincuaban(self)
+    # funcion.nhom.khampha(self)
+    # funcion.nhom.moithamgianhom(self)
+    # funcion.nhom.taonhommoi(self)
+    # funcion.nhom.nhombanquanly(self)
+    # funcion.nhom.nhombanthamgia(self)
+    # funcion.nhom.thaoluan(self)
+    # funcion.nhom.thanhvien(self)
+    # funcion.nhom.filephuongtien(self)
+    # funcion.nhom.yeucaulamthanhvien(self)
+    funcion.nhom.baivietdalenlich(self)
+
+
+
+
+
+
+
+
+
+
+
+
+

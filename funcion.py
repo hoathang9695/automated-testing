@@ -95,7 +95,6 @@ class login():
 
 # @retry(tries=3, delay=2, backoff=1, jitter=5, )
 def thongtincanhan_anhdaidien(self):
-    # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
     action.anhdaidien.anhdaidien_themmoi(self)
     action.checkdata_be.trangcanhan_thongtincanhan_anhdaidien_themmoi(self)
 
@@ -106,7 +105,6 @@ def thongtincanhan_anhdaidien(self):
 
 # @retry(tries=3, delay=2, backoff=1, jitter=5, )
 def thongtincanhan_anhbia(self):
-    # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
     action.anhbia.anhbia_tailen(self)
     action.checkdata_be.trangcanhan_thongtincanhan_anhbia_tailen(self)
     action.anhbia.anhbia_thayanh(self)
@@ -118,8 +116,6 @@ def thongtincanhan_anhbia(self):
 class gioithieu():
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def gioithieu_tongquan(self):
-        # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
-
         action.tongquan.tongquan(self)
         action.checkdata_be.trangcanhan_gioithieu_tongquan(self)
 
@@ -127,7 +123,6 @@ class gioithieu():
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def congviec_vahocvan(self):
-        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.cong_viec_va_hoc_van.congviecvahocvan_congviec(self)
         action.checkdata_be.trangcanhan_gioithieu_cvvahocvan_congviec(self)
 
@@ -139,7 +134,6 @@ class gioithieu():
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def xemsukientrongdoi_congviecvahocvan(self):
-        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
 
         action.xemkientrongdoi.congviecvahocvan_congviec(self)
         action.checkdata_be.trangcanhan_gioithieu_cvvahocvan_xemsukientrongdoi_congviec(self)
@@ -152,12 +146,10 @@ class gioithieu():
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_congviecvahocvan_addthem(self):
-        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.cong_viec_va_hoc_van.congviecvahocvan_addthem(self)
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_thongtincoban(self):
-        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.thongtincoban.thongtincoban(self)
         action.checkdata_be.trangcanhan_gioithieu_thongtincoban(self)
 
@@ -165,13 +157,11 @@ class gioithieu():
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_gd_va_mqh(self):
-        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.giadinh_va_cacmoiquanhe.gd_va_mqh_taikhoan1(self)
         action.checkdata_be.trangcanhan_gioithieu_giadinh_va_cacmqh(self)
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_sukientrongdoi(self):
-        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.sukientrongdoi.sukientrongdoi_xem(self)
 
         action.sukientrongdoi.sukientrongdoi_themmoisukien_check(self)
@@ -194,15 +184,13 @@ class gioithieu():
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_noitungsong(self):
-        # action.login.login3(self, "truongvck33@gmail.com", "atgmj123456")
         action.noitungsong.noitungsong(self)
 
 
 class banbe():
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def banbe_tatcabanbe(self):
-        # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
-        action.banbe.tatcabanbe(self)
+        # action.banbe.tatcabanbe(self)
         action.banbe.banbe_chinhsuaquyenriengtu(self)
 
 
@@ -210,7 +198,6 @@ class banbe():
 class anh_video():
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def anh_video(self):
-        # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
         action.anh_video.anh(self)
         action.anh_video.video(self)
 
@@ -218,29 +205,27 @@ class anh_video():
 class check_thongtin_trangcanhan():
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def check_thongtin_trangcanhan(self):
-        # action.login.login3(self,"truongvck33@gmail.com", "atgmj123456")
         action.check_thongtin_trangcanhan.check_thongtin_trangcanhan(self)
+    def phandangchuy(self):
+        action.check_thongtin_trangcanhan.phandangchuy(self)
 
 
 class trangchu():
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def taobaiviet_khoangkhac(self):
-        # action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
         action.trangchu.taobaiviet_congkhai(self)
         action.trangchu.taobaiviet_banbe(self)
         action.trangchu.taobaiviet_riengtu(self)
         action.trangchu.taobaimoment(self)
-        action.trangchu.camxuc_hoatdong(self)
+        # action.trangchu.camxuc_hoatdong(self)       #Mất icon xúc động
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def menu(self):
-        # action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
         action.trangchu.menu(self)
         action.trangchu.menu_tao(self)
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def tinnhanmoi(self):
-        # action.login.login4(self, "truongvck33@gmail.com", "atgmj123456")
         action.trangchu.tinnhanmoi(self)
 
     # @retry(tries=3, delay=2, backoff=1, jitter=5, )
@@ -289,8 +274,8 @@ class trangchu():
 
 
 class khoanhkhac():
-    def danhchoban(self):
-        action.khoanhkhac.danhchoban(self)
+    def dangtheodoi(self):
+        action.khoanhkhac.dangtheodoi(self)
     def tructiep(self):
         action.khoanhkhac.tructiep(self)
 
@@ -332,10 +317,12 @@ class trang():
     def trangdathich(self):
         action.trang.trangdathich(self)
     def trangdathich_dau3cham(self):
+        action.login.login4(self, "truongvck333@gmail.com", "atgmj123456")
         action.trang.trangdathich_dau3cham(self)
     def loimoi(self):
         action.trang.loimoi(self)
     def taotrangmoi(self):
+        action.login.login4(self, "truongvck333@gmail.com", "atgmj123456")
         action.trang.taotrangmoi_banhang(self)
         action.trang.taotrangmoi_bankhoahoc(self)
         action.trang.taotrangmoi_trangnoidung(self)
@@ -355,3 +342,85 @@ class trang():
 
     def xemthem(self):
         action.trang.xemthem(self)
+
+    def cuahang(self):
+        action.trang.cuahang(self)
+
+    def cacnutkhac(self):
+        action.trang.cacnutkhac(self)
+
+    def themnuthanhdong(self):
+        action.trang.themnuthanhdong(self)
+
+    def anhdaidien_anhbia(self):
+        action.trang.anhdaidien_anhbia(self)
+
+    def taobaiviet(self):
+        action.trang.taobaiviet(self)
+
+    def hopthu(self):
+        action.trang.hopthu(self)
+
+    def thongbao(self):
+        action.trang.thongbao(self)
+
+    def chatluongtrang(self):
+        action.trang.chatluongtrang(self)
+
+    def baivietdalenlich(self):
+        action.trang.baivietdalenlich(self)
+
+    def chinhsuathongtintrang(self):
+        action.trang.chinhsuathongtintrang(self)
+
+    def caidat(self):
+        action.trang.caidat_chung(self)
+        action.trang.caidat_thongbao(self)
+        action.trang.caidat_vaitrotrentrang(self)
+        action.trang.caidat_chutaikhoantrang(self)
+        action.trang.caidat_nguoivatrangkhac(self)
+        action.trang.caidat_nhatkyhoatdong(self)
+        action.trang.caidat_caidathopthu(self)
+
+
+class nhom:
+    def timkiem(self):
+        action.nhom.timkiem(self)
+    def bangtincuaban(self):
+        action.nhom.bangtincuaban(self)
+    def khampha(self):
+        action.nhom.khampha(self)
+    def moithamgianhom(self):
+        action.nhom.moithamgianhom(self)
+
+    def taonhommoi(self):
+        action.nhom.taonhommoi(self, "Nhóm công khai", "Test tạo nhóm công khai", var.congkhai)
+        action.nhom.taonhommoi(self, "Nhóm riêng tư", "Test tạo nhóm riêng tư", var.riengtu)
+
+    def nhombanquanly(self):
+        action.nhom.nhombanquanly(self)
+
+    def nhombanthamgia(self):
+        action.nhom.nhombanthamgia(self)
+
+    def thaoluan(self):
+        action.nhom.thaoluan(self)
+
+    def thanhvien(self):
+        action.nhom.thanhvien(self)
+
+    def filephuongtien(self):
+        action.nhom.filephuongtien(self)
+        action.nhom.anh(self)
+        action.nhom.video(self)
+        action.nhom.khoanhkhac(self)
+        action.nhom.album(self)
+
+    def yeucaulamthanhvien(self):
+        action.nhom.yeucaulamthanhvien(self)
+
+
+    def baivietdalenlich(self):
+        action.nhom.baivietdalenlich(self)
+
+
