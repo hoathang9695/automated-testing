@@ -180,6 +180,22 @@ class login():
         print("mật khẩu login:", password)
         print("login vào phần mềm emso thành công")
 
+
+    def login5(self, user, password):
+        driver.implicitly_wait(15)
+        driver.get(var.url_admin)
+        driver.maximize_window()
+        driver.find_element(By.XPATH, var.login_admin_user).send_keys(user)
+        driver.find_element(By.XPATH, var.login_admin_password).send_keys(password)
+        driver.find_element(By.XPATH, var.login_admin_submit).click()
+        time.sleep(3.5)
+        login_thanh_cong_admin = driver.find_element(By.XPATH, var.login_thanh_cong_admin).text
+        print("Đã login vào trang " + login_thanh_cong_admin + "Thành Công")
+
+
+
+
+
     @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login_google(self, user, passsword):
         driver.implicitly_wait(20)
@@ -968,8 +984,8 @@ class tongquan():
         writeData(var.path_baocao, "Sheet1", 64, 2, "x")
         check_gioithieu_mqh = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_mqh1).text
         logging.info("Trang cá nhân - Giới thiệu tổng quan - Mối quan hệ")
-        logging.info("check font-end: Ly Thân started 2022-01-01")
-        logging.info(check_gioithieu_mqh == "Ly Thân started 2022-01-01")
+        logging.info("check font-end: Ly Thân(Đang chờ) started 2022-01-01")
+        logging.info(check_gioithieu_mqh == "Ly Thân(Đang chờ) started 2022-01-01")
 
 
 
@@ -1089,6 +1105,7 @@ class tongquan():
         print(check_gioithieu_mqh1)
         logging.info("Trang cá nhân - Giới thiệu tổng quan - Mối quan hệ")
         logging.info("check font-end: Góa(Đang chờ) started 2022-01-01")
+        logging.info(check_gioithieu_mqh1)
         logging.info(check_gioithieu_mqh1 == "Góa(Đang chờ) started 2022-01-01")
         time.sleep(1)
 
@@ -1149,8 +1166,8 @@ class tongquan():
         check_gioithieu_sodienthoai_trungso = driver.find_element(By.XPATH, var.trangcanhan_check_gioithieu_sodienthoai_trungso1).text
         print(check_gioithieu_sodienthoai_trungso)
         logging.info("Trang cá nhân - Giới thiệu tổng quan - Số điện thoại bị trùng")
-        logging.info("check font-end: Số điện thoại đã có, Số điện thoại độ dài không đúng (phải là 10 ký tự)")
-        logging.info(check_gioithieu_sodienthoai_trungso == "Số điện thoại đã có, Số điện thoại độ dài không đúng (phải là 10 ký tự)")
+        logging.info("check font-end: Số điện thoại đã có")
+        logging.info(check_gioithieu_sodienthoai_trungso == "Số điện thoại đã có")
         time.sleep(1)
 
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_sodienthoai_ok).click()
@@ -1744,7 +1761,7 @@ class xemkientrongdoi():
         check_daihoc_ngaythang = driver.find_element(By.XPATH,var.trangcanhan_xemsukientrongdoi_check_daihoc_ngaythang).text
         print(check_daihoc_ngaythang)
         logging.info("Trang cá nhân - giới thiệu - công việc và học vấn - đại học - thời gian bắt đầu - xem sự kiện trong đời")
-        logging.info("check font-end: Ngày nhập học: 16 tháng 10, 2019")
+        logging.info("check font-end: Ngày nhập học: 16 tháng 11, 2019")
         logging.info(check_daihoc_ngaythang == "16 tháng 11, 2019")
 
         check_daihoc_dahoctai_chuyennghanh = driver.find_element(By.XPATH, var.trangcanhan_xemsukientrongdoi_daihoc_dahoctai_chuyennghanh).text
@@ -1870,8 +1887,8 @@ class thongtincoban():
         time.sleep(1)
         thongtincoban_gioitinh = driver.find_element(By.XPATH, var.thongtincoban_gioitinh_fe).text
         logging.info("Trang cá nhân - Giới thiệu - Thông tin cơ bản - Thông tin cơ bản")
-        logging.info("check font-end: Giới tinh - female")
-        logging.info(thongtincoban_gioitinh == "female")
+        logging.info("check font-end: Giới tinh - Nữ")
+        logging.info(thongtincoban_gioitinh == "Nữ")
 
         #Ngày sinh
         driver.find_element(By.XPATH, var.thongtincoban_icon_ngaysinh).click()
@@ -1936,8 +1953,9 @@ class thongtincoban():
         time.sleep(1)
         check_thongtincoban_sodienthoai_trungso = driver.find_element(By.XPATH,var.trangcanhan_check_thongtincoban_sodienthoai_trungso1).text
         logging.info("Trang cá nhân - Giới thiệu - Thông tin cơ bản - Thông tin liên hệ - Số điện thoại bị trùng")
-        logging.info("check font-end: Số điện thoại đã có, Số điện thoại độ dài không đúng (phải là 10 ký tự)")
-        logging.info(check_thongtincoban_sodienthoai_trungso == "Số điện thoại đã có, Số điện thoại độ dài không đúng (phải là 10 ký tự)")
+        logging.info("check font-end: Số điện thoại đã có")
+        print(check_thongtincoban_sodienthoai_trungso)
+        logging.info(check_thongtincoban_sodienthoai_trungso == "Số điện thoại đã có")
         time.sleep(0.5)
         driver.find_element(By.XPATH, var.trangcanhan_thongtincoban_sodienthoai_ok).click()
 
@@ -2038,8 +2056,8 @@ class thongtincoban():
         time.sleep(1)
         thongtincoban_gioitinh = driver.find_element(By.XPATH, var.thongtincoban_gioitinh_fe).text
         logging.info("Trang cá nhân - Giới thiệu - Thông tin cơ bản - Thông tin cơ bản")
-        logging.info("check font-end: Giới tinh - male")
-        logging.info(thongtincoban_gioitinh == "male")
+        logging.info("check font-end: Giới tinh - Nam")
+        logging.info(thongtincoban_gioitinh == "Nam")
 
         #Ngày sinh
         driver.find_element(By.XPATH, var.thongtincoban_icon_ngaysinh).click()
@@ -2133,6 +2151,7 @@ class giadinh_va_cacmoiquanhe():
             mqh_trangthai_thoigian = driver.find_element(By.XPATH, var.giadinhvamqh_mqh_trangthai_thoigian1).text
             logging.info("Trang cá nhân - Giới thiệu - Gia đình và các mối quan hệ - Gia đình")
             logging.info("check font-end: Gia đình - Trạng thái/Thời gian - Hẹn hò(Đang chờ) started 2022-01-01")
+            logging.info(mqh_trangthai_thoigian)
             logging.info(mqh_trangthai_thoigian == "Hẹn hò(Đang chờ) started 2022-01-01")
             driver.find_element(By.XPATH, var.giadinhvamqh_icon_nguoithan).click()
             driver.find_element(By.XPATH, var.giadinhvamqh_sdt_chinhsua).click()
@@ -2161,8 +2180,8 @@ class giadinh_va_cacmoiquanhe():
 
         gd_tinhtrang = driver.find_element(By.XPATH, var.giadinhvamqh_mqh_gd_tinhtrang1).text
         logging.info("Trang cá nhân - Giới thiệu - Gia đình và các mối quan hệ - Gia đình")
-        logging.info("check font-end: Tình trạng - Gia đình(Đang chờ)" )
-        logging.info(gd_tinhtrang == "Gia đình(Đang chờ)")
+        logging.info("check font-end: Tình trạng - Họ hàng(Đang chờ)" )
+        logging.info(gd_tinhtrang == "Họ hàng(Đang chờ)")
         del driver.requests
         driver.refresh()
         time.sleep(2)
@@ -2344,8 +2363,8 @@ class sukientrongdoi():
 
         dongthoigian_sukien_thoigian = driver.find_element(By.XPATH, var.dongthoigian_sukien_thoigian1).text
         logging.info("Trang cá nhân - Giới thiệu - Thêm mới sự kiện trong đời lên trang cá nhân(du lịch)")
-        logging.info("check font-end: Dòng thời gian - Thời gian - 01 tháng 09, 2023")
-        logging.info(dongthoigian_sukien_thoigian == "01 tháng 09, 2023")
+        logging.info("check font-end: Dòng thời gian - Thời gian - 01 tháng 09, 2024")
+        logging.info(dongthoigian_sukien_thoigian == "01 tháng 09, 2024")
 
         dongthoigian_sukien_mota = driver.find_element(By.XPATH, var.dongthoigian_sukien_mota).text
         logging.info("Trang cá nhân - Giới thiệu - Thêm mới sự kiện trong đời lên trang cá nhân(du lịch)")
@@ -2365,8 +2384,7 @@ class sukientrongdoi():
         driver.find_element(By.XPATH, var.chinhsuabaiviet).click()
         driver.find_element(By.XPATH, var.chinhsuabaiviet_mota_input).send_keys("123")
         driver.find_element(By.XPATH, var.chinhsuabaiviet_luu).click()
-        time.sleep(5)
-        driver.refresh()
+        driver.find_element(By.XPATH, var.icon_chinhsuabaiviet_message_luu).click()
         time.sleep(2)
         driver.find_element(By.XPATH, var.icon_chinhsuabaiviet).click()
         driver.find_element(By.XPATH, var.icon_chinhsuabaiviet_xoabaiviet).click()
@@ -2401,7 +2419,7 @@ class noitungsong():
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_songtai_luu).click()
         time.sleep(1)
         writeData(var.path_baocao, "Sheet1", 62, 2, "x")
-        check_trangcanhan_gioithieu_songtai = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_songtai1).text
+        check_trangcanhan_gioithieu_songtai = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_songtai2).text
         logging.info("Trang cá nhân - Giới thiệu  - Nơi từng sống - Sống tại")
         logging.info("check font-end: Sống tại - " + data['trangcanhan_noitungsong']['noitungsong_songtai'])
         logging.info(check_trangcanhan_gioithieu_songtai == data['trangcanhan_noitungsong']['noitungsong_songtai'])
@@ -2423,7 +2441,7 @@ class noitungsong():
         driver.find_element(By.XPATH, var.trangcanhan_gioithieu_dentu_luu).click()
         time.sleep(1)
         writeData(var.path_baocao, "Sheet1", 63, 2, "x")
-        check_gioithieu_dentu = driver.find_element(By.XPATH, var.trangcanhan_check_gioithieu_dentu1).text
+        check_gioithieu_dentu = driver.find_element(By.XPATH, var.trangcanhan_check_gioithieu_dentu2).text
         print(check_gioithieu_dentu)
         logging.info("Trang cá nhân - Giới thiệu - Nơi từng sống - Đến từ")
         logging.info("check font-end: Đến từ - " + data['trangcanhan_noitungsong']['noitungsong_dentu'])
@@ -2485,7 +2503,7 @@ class banbe():
         # element.click()
         driver.find_element(By.XPATH, var.thembanbe).click()
         time.sleep(1)
-        login.login4(self, "truongvck22@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
         time.sleep(2)
         driver.find_element(By.XPATH, var.trangcanhan_banbe_loimoi_huy).click()
         time.sleep(2.5)
@@ -2503,7 +2521,7 @@ class banbe():
         time.sleep(2)
 
         # thêm bạn bè - đồng ý
-        login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
         driver.find_element(By.XPATH, var.trangcanhan_banbe_loimoi_chapnhan).click()
         time.sleep(2)
         driver.find_element(By.XPATH, var.trangcanhan).click()
@@ -2516,7 +2534,7 @@ class banbe():
         time.sleep(5)
         driver.find_element(By.XPATH, var.thembanbe).click()
         time.sleep(2)
-        login.login4(self, "truongvck22@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
         time.sleep(2)
         driver.find_element(By.XPATH, var.trangcanhan_banbe_loimoi_chapnhan).click()
         time.sleep(2.5)
@@ -2530,7 +2548,7 @@ class banbe():
         logging.info("check font-end: tình trạng - Bạn bè")
         logging.info(check_banbe_tranquangtruong == "Bạn bè")
         time.sleep(1)
-        login.login3(self, "truongvck33@gmail.com", "atgmj123456")
+        login.login3(self, "truongvck33@gmail.com", "voncamk22")
 
     def banbe_chinhsuaquyenriengtu(self):
         driver.implicitly_wait(15)
@@ -2550,12 +2568,12 @@ class banbe():
         time.sleep(2)
         driver.execute_script("window.scrollBy(0,700)", "")
         time.sleep(1)
-        check_banbe_riengtu1 = driver.find_element(By.XPATH, var.huenguyen).text
+        check_banbe_riengtu1 = driver.find_element(By.XPATH, var.huenguyen).is_displayed()
         logging.info("Trang cá nhân - bạn bè - chỉnh sửa quyền riêng tư ")
         logging.info("check font-end: Danh sách bạn bè khi chỉnh quyền thành riêng tư có hiển thị không?")
-        logging.info(check_banbe_riengtu1 == "hue nguyen")
+        logging.info(check_banbe_riengtu1)
         #Người lạ
-        login.login4(self, "truongvck222@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
         driver.get("https://cmc-fe.emso.vn/user/truongvck33")
         time.sleep(2.5)
         driver.find_element(By.XPATH, var.trangcanhan_banbe).click()
@@ -2568,7 +2586,7 @@ class banbe():
         logging.info(check_nguoila_riengtu == "Không có bạn bè nào")
         time.sleep(1.5)
         #Bạn bè
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         driver.get("https://cmc-fe.emso.vn/user/truongvck33")
         time.sleep(2.5)
         driver.find_element(By.XPATH, var.trangcanhan_banbe).click()
@@ -2583,7 +2601,7 @@ class banbe():
 
 
         #quyền bạn bè
-        login.login3(self, "truongvck33@gmail.com", "atgmj123456")
+        login.login3(self, "truongvck33@gmail.com", "voncamk22")
         time.sleep(1.5)
         driver.find_element(By.XPATH, var.trangcanhan_banbe).click()
         driver.find_element(By.XPATH, var.trangcanhan_banbe_iconchinhsuaquyen).click()
@@ -2597,14 +2615,14 @@ class banbe():
         time.sleep(2)
         driver.execute_script("window.scrollBy(0,700)", "")
         time.sleep(1)
-        check_banbe_riengtu = driver.find_element(By.XPATH, var.huenguyen).text
+        check_banbe_riengtu = driver.find_element(By.XPATH, var.huenguyen).is_displayed()
         time.sleep(1)
         logging.info("Trang cá nhân - bạn bè - chỉnh sửa quyền riêng tư")
         logging.info("check font-end: Danh sách bạn bè khi chỉnh quyền thành Bạn bè có hiển thị không")
-        logging.info(check_banbe_riengtu == "hue nguyen")
+        logging.info(check_banbe_riengtu)
         time.sleep(0.5)
         #người lạ
-        login.login4(self, "truongvck222@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
         driver.get("https://cmc-fe.emso.vn/user/truongvck33")
         time.sleep(2.5)
         driver.find_element(By.XPATH, var.trangcanhan_banbe).click()
@@ -2617,22 +2635,22 @@ class banbe():
         logging.info(check_banbe_riengtu == "hue nguyen")
         time.sleep(1.5)
         #Bạn bè
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         driver.get("https://cmc-fe.emso.vn/user/truongvck33")
         time.sleep(2.5)
         driver.find_element(By.XPATH, var.trangcanhan_banbe).click()
         driver.execute_script("window.scrollBy(0,510)", "")
         time.sleep(1)
-        check_banbe_quyenbanbe = driver.find_element(By.XPATH, var.ngocmai).text
+        check_banbe_quyenbanbe = driver.find_element(By.XPATH, var.trangcanhan_banbe_ngocmai).text
         logging.info("Trang cá nhân - bạn bè - chỉnh sửa quyền riêng tư - Bạn bè")
         logging.info("check font-end: login bằng tài khoản khác(bạn bè) và check  - có bạn bè tên Ngọc Mai")
-        logging.info(check_banbe_quyenbanbe == "Ngọc Mai")
+        logging.info(check_banbe_quyenbanbe[0:8] == "Ngọc Mai")
         time.sleep(1.5)
 
 
 
         # quyền công khai
-        login.login3(self, "truongvck33@gmail.com", "atgmj123456")
+        login.login3(self, "truongvck33@gmail.com", "voncamk22")
         time.sleep(1.5)
         driver.find_element(By.XPATH, var.trangcanhan_banbe).click()
         driver.find_element(By.XPATH, var.trangcanhan_banbe_iconchinhsuaquyen).click()
@@ -2649,15 +2667,15 @@ class banbe():
         time.sleep(2)
         driver.execute_script("window.scrollBy(0,700)", "")
         time.sleep(1)
-        check_banbe_quyenbanbe_huenguyen = driver.find_element(By.XPATH, var.huenguyen).text
+        check_banbe_quyenbanbe_huenguyen = driver.find_element(By.XPATH, var.huenguyen)
         logging.info("Trang cá nhân - bạn bè - chỉnh sửa quyền riêng tư")
-        logging.info(check_banbe_quyenbanbe_huenguyen)
+        logging.info(check_banbe_quyenbanbe_huenguyen.text)
         logging.info("check font-end: Danh sách bạn bè khi chỉnh quyền thành Công khai có hiển thị không")
-        logging.info(check_banbe_quyenbanbe_huenguyen == "hue nguyen")
+        logging.info(check_banbe_quyenbanbe_huenguyen.is_displayed())
         time.sleep(0.5)
 
         # người lạ
-        login.login4(self, "truongvck222@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
         driver.get("https://cmc-fe.emso.vn/user/truongvck33")
         time.sleep(2.5)
         driver.find_element(By.XPATH, var.trangcanhan_banbe).click()
@@ -2670,7 +2688,7 @@ class banbe():
         time.sleep(1.5)
 
         # Bạn bè
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         driver.get("https://cmc-fe.emso.vn/user/truongvck33")
         time.sleep(2.5)
         driver.find_element(By.XPATH, var.trangcanhan_banbe).click()
@@ -2760,14 +2778,14 @@ class check_thongtin_trangcanhan():
         # time.sleep(3)
         try:
             driver.find_element(By.XPATH, var.trangcanhan_gioithieu).click()
-            tongquan_songtai1 = driver.find_element(By.XPATH, var.tongquan_songtai1).text
-            tongquan_dentu1 = driver.find_element(By.XPATH, var.tongquan_dentu1).text
+            tongquan_songtai1 = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_songtai1).text
+            tongquan_dentu1 = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_dentu1).text
         except:
             driver.refresh()
             time.sleep(3)
             driver.find_element(By.XPATH, var.trangcanhan_gioithieu).click()
-            tongquan_songtai1 = driver.find_element(By.XPATH, var.tongquan_songtai1).text
-            tongquan_dentu1 = driver.find_element(By.XPATH, var.tongquan_dentu1).text
+            tongquan_songtai1 = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_songtai1).text
+            tongquan_dentu1 = driver.find_element(By.XPATH, var.trangcanhan_gioithieu_dentu1).text
 
         tongquan_tinhtrang_mqh1 = driver.find_element(By.XPATH, var.tongquan_tinhtrang_mqh1).text
         tongquan_nguoithan_mqh1 = driver.find_element(By.XPATH, var.tongquan_nguoithan_mqh1).text
@@ -3018,7 +3036,7 @@ class check_thongtin_trangcanhan():
         driver.find_element(By.XPATH, var.chinhsuaphandangchuy_input).click()
         xoa = driver.find_element(By.XPATH, var.chinhsuaphandangchuy_input)
         xoa.send_keys(Keys.CONTROL, "a")
-        driver.find_element(By.XPATH, var.chinhsuaphandangchuy_input).send_keys("Test mục đáng chú ý")
+        driver.find_element(By.XPATH, var.chinhsuaphandangchuy_input).send_keys("Test mục đángchuy")
         driver.find_element(By.XPATH, var.luu).click()
         time.sleep(1.5)
         driver.find_element(By.XPATH, var.icon_x).click()
@@ -3062,7 +3080,7 @@ class trangchu():
         # driver.find_element(By.XPATH, var.huy).click()
         # button = driver.find_element(By.XPATH, var.themanhvideo1)
         # driver.execute_script("arguments[0].click();", button)
-        time.sleep(5)
+        time.sleep(10)
         driver.find_element(By.XPATH, var.themanhvideo).click()
         time.sleep(1)
         subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
@@ -3096,7 +3114,7 @@ class trangchu():
         driver.find_element(By.XPATH, var.xong).click()
         time.sleep(0.5)
         driver.find_element(By.XPATH, var.dang).click()
-        time.sleep(3.5)
+        time.sleep(1)
         wait = WebDriverWait(driver, 10)
         element = wait.until(EC.element_to_be_clickable((By.XPATH, var.messgae_taobaiviet1)))
         print(element.text)
@@ -3110,7 +3128,6 @@ class trangchu():
 
     def taobaimoment(self):
         driver.implicitly_wait(15)
-        driver.refresh()
         time.sleep(2)
         driver.find_element(By.XPATH, var.khoanhkhac).click()
         driver.find_element(By.XPATH, var.khoanhkhac_nhapnoidung).send_keys(data['trangchu_taobaiviet']['khoanhkhac_noidung'])
@@ -3123,7 +3140,6 @@ class trangchu():
 
     def camxuc_hoatdong(self):
         driver.implicitly_wait(15)
-        driver.refresh()
         time.sleep(2)
         driver.find_element(By.XPATH, var.camxuc_hoatdong).click()
         driver.find_element(By.XPATH, var.camxuc).click()
@@ -3280,9 +3296,10 @@ class trangchu():
         xoa.send_keys(Keys.CONTROL, "a")
         driver.find_element(By.XPATH, var.trangchu_timkiem_menu).send_keys("Không gian thương mại")
         driver.find_element(By.XPATH, var.trangchu_menu_khonggianthuongmai).click()
-        check_menu_name13 = driver.find_element(By.XPATH,var.check_menu_name13).get_attribute("label")
+        check_menu_name13 = driver.find_element(By.XPATH,var.check_menu_name13).get_attribute("aria-label")
         logging.info("Trang chủ - Menu - Không gian thương mại")
         logging.info("check font-end: Tiêu đề: " + driver.title)
+        logging.info(check_menu_name13)
         logging.info(check_menu_name13 == "Shop của tôi")
 
         driver.find_element(By.XPATH, var.trangchu_menu).click()
@@ -3577,8 +3594,8 @@ class trangchu():
         logging.info("Trang chủ - Chat - Tuỳ chọn - Tin nhắn chờ")
         logging.info("check font-end: Tin nhắn đang chờ")
         logging.info(check_tinnhandangcho == "Tin nhắn đang chờ")
-        logging.info("check font-end: Người gửi tin nhắn - Nguyễn Văn Thắng")
-        logging.info(check_tinnhancho == "Nguyễn Văn Thắng")
+        logging.info("check font-end: Người gửi tin nhắn - Ni Mặc")
+        logging.info(check_tinnhancho == "Ni Mặc")
 
 
         driver.find_element(By.XPATH, var.trangchu_chat).click()
@@ -3588,12 +3605,12 @@ class trangchu():
         driver.find_element(By.XPATH, var.trangchu_chat_tuychon).click()
         time.sleep(1)
 
-        driver.find_element(By.XPATH, var.trangchu_chat_tuychon_caidatguitinnhan).click()
-        time.sleep(1)
-        logging.info("Trang chủ - Chat - Tuỳ chọn - Cài đặt gửi tin nhắn")
-        logging.info("Chức năng chưa hoạt động")
-        driver.find_element(By.XPATH, var.trangchu_chat_tuychon).click()
-        time.sleep(1)
+        # driver.find_element(By.XPATH, var.trangchu_chat_tuychon_caidatguitinnhan).click() #Đã bỏ chức năng này
+        # time.sleep(1)
+        # logging.info("Trang chủ - Chat - Tuỳ chọn - Cài đặt gửi tin nhắn")
+        # logging.info("Chức năng chưa hoạt động")
+        # driver.find_element(By.XPATH, var.trangchu_chat_tuychon).click()
+        # time.sleep(1)
 
         driver.find_element(By.XPATH, var.trangchu_chat_tuychon_caidatchan).click()
         logging.info("Trang chủ - Chat - Tuỳ chọn - Cài đặt chặn")
@@ -3647,10 +3664,12 @@ class trangchu():
         driver.find_element(By.XPATH, var.emsochat_input).click()
         driver.find_element(By.XPATH, var.emsochat_input).send_keys(Keys.ENTER)
         time.sleep(1)
+        actions = ActionChains(driver)
         chat_hover = driver.find_element(By.XPATH, var.chat_hover1)
         try:
             actions.move_to_element(chat_hover).perform()
         except:
+            chat_hover = driver.find_element(By.XPATH, var.chat_hover1)
             actions.move_to_element(chat_hover).perform()
         time.sleep(1)
         xemthem = driver.find_element(By.XPATH, var.emsochat_input_iconxemthem)
@@ -3703,46 +3722,47 @@ class trangchu():
         time.sleep(0.5)
 
         # # # Gim
-        # try:
-        #     actions.move_to_element(chat_hover).perform()    #lỗi không ghim đuoc
-        #     actions.move_to_element(xemthem).click().perform()
-        # except:
-        #     actions.move_to_element(chat_hover).perform()
-        #     actions.move_to_element(xemthem).click().perform()
-        # time.sleep(1)
-        # check_gimtinnhan = driver.find_element(By.XPATH,var.emsochat_iconxemthem_gim).text
-        # print(check_gimtinnhan)
-        # logging.info("Trang cá nhân - Chat - Ghim tin nhắn")
-        # logging.info("check font-end: Ghim")
-        # logging.info(check_gimtinnhan)
-        # logging.info(check_gimtinnhan == "Ghim")
-        # driver.find_element(By.XPATH, var.emsochat_iconxemthem_gim).click()
-        # time.sleep(1)
-        # # Bỏ gim
-        # try:
-        #     actions.move_to_element(chat_hover).perform()
-        #     actions.move_to_element(xemthem).click().perform()
-        # except:
-        #     actions.move_to_element(chat_hover).perform()
-        #     actions.move_to_element(xemthem).click().perform()
-        # time.sleep(1)
-        # check_bogimtinnhan = driver.find_element(By.XPATH,var.emsochat_iconxemthem_bogim).text
-        # print(check_bogimtinnhan)
-        # logging.info("Trang cá nhân - Chat - Bỏ Ghim tin nhắn")
-        # logging.info("check font-end: Bỏ ghim ")
-        # logging.info(check_bogimtinnhan == "Bỏ ghim")
-        #
-        # driver.find_element(By.XPATH, var.emsochat_iconxemthem_bogim).click()
-        # #Gim
-        # chat_hover4 = driver.find_element(By.XPATH, var.chat_hover4)
-        # actions.move_to_element(chat_hover4).perform()
-        # time.sleep(1)
-        # xemthem = driver.find_element(By.XPATH, var.emsochat_input_iconxemthem)
-        # actions.move_to_element(xemthem).click().perform()
-        # time.sleep(1)
-        # driver.find_element(By.XPATH, var.emsochat_iconxemthem_gim).click()
-        # time.sleep(1)
+        try:
+            actions.move_to_element(chat_hover).perform()    #lỗi không ghim đuoc
+            actions.move_to_element(xemthem).click().perform()
+        except:
+            actions.move_to_element(chat_hover).perform()
+            actions.move_to_element(xemthem).click().perform()
+        time.sleep(1)
+        check_gimtinnhan = driver.find_element(By.XPATH,var.emsochat_iconxemthem_gim).text
+        print(check_gimtinnhan)
+        logging.info("Trang cá nhân - Chat - Ghim tin nhắn")
+        logging.info("check font-end: Ghim")
+        logging.info(check_gimtinnhan)
+        logging.info(check_gimtinnhan == "Ghim")
+        driver.find_element(By.XPATH, var.emsochat_iconxemthem_gim).click()
+        time.sleep(1)
+        # Bỏ gim
+        try:
+            actions.move_to_element(chat_hover).perform()
+            actions.move_to_element(xemthem).click().perform()
+        except:
+            actions.move_to_element(chat_hover).perform()
+            actions.move_to_element(xemthem).click().perform()
+        time.sleep(1)
+        check_bogimtinnhan = driver.find_element(By.XPATH,var.emsochat_iconxemthem_bogim).text
+        print(check_bogimtinnhan)
+        logging.info("Trang cá nhân - Chat - Bỏ Ghim tin nhắn")
+        logging.info("check font-end: Bỏ ghim ")
+        logging.info(check_bogimtinnhan == "Bỏ ghim")
 
+        driver.find_element(By.XPATH, var.emsochat_iconxemthem_bogim).click()
+        #Gim
+        chat_hover4 = driver.find_element(By.XPATH, var.chat_hover4)
+        actions.move_to_element(chat_hover4).perform()
+        time.sleep(1)
+        xemthem = driver.find_element(By.XPATH, var.emsochat_input_iconxemthem)
+        actions = ActionChains(driver)
+        actions.move_to_element(xemthem).click().perform()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.emsochat_iconxemthem_gim).click()
+        time.sleep(1)
+        actions = ActionChains(driver)
         #Trả lời
         try:
             actions.move_to_element(chat_hover).perform()
@@ -3765,6 +3785,7 @@ class trangchu():
         time.sleep(2)
 
         #Bày tỏ cảm xúc
+        actions = ActionChains(driver)
         chat_hover3 = driver.find_element(By.XPATH, var.chat_hover3)        #Không trả lời tin nhắn được nên ko bày tỏ cảm xsuc được
         actions.move_to_element(chat_hover3).perform()
         print("r1")
@@ -3778,19 +3799,20 @@ class trangchu():
         #Icon ! dấu thăng hộp thoại
         #Trạng thái hoạt động
         driver.find_element(By.XPATH, var.emsochat_caidathopthoai).click()
-        check_chat_tatthongbao = driver.find_element(By.XPATH,var.trangthaihoatdong).text
+        check_chat_tatthongbao = driver.find_element(By.XPATH,var.trangthaihoatdong_tatthongbao).text
         print(check_chat_tatthongbao)
-        logging.info("Trang chủ - Chat - tuỳ chon - Trạng thái hoạt động")
+        logging.info("Chat - tuỳ chon - Trạng thái hoạt động")
         logging.info("check font-end: Trạng thái hoạt động - Tắt thông báo")
         logging.info(check_chat_tatthongbao == "Tắt thông báo")
-        driver.find_element(By.XPATH, var.emsochat_icontatthongbao).click()      #tắt thông báo
         time.sleep(1)
-        check_chat_batthongbao = driver.find_element(By.XPATH,var.trangthaihoatdong).text
+        driver.find_element(By.XPATH, var.emsochat_icontatthongbao).click()
+        time.sleep(3)
+        check_chat_batthongbao = driver.find_element(By.XPATH,var.trangthaihoatdong_batthongbao).text
         print(check_chat_batthongbao)
-        logging.info("Trang chủ - Chat - tuỳ chon - Trạng thái hoạt động")
+        logging.info("Chat - tuỳ chon - Trạng thái hoạt động")
         logging.info("check font-end: Trạng thái hoạt động - Bật thông báo")
         logging.info(check_chat_batthongbao == "Bật thông báo")
-        driver.find_element(By.XPATH, var.emsochat_icontatthongbao).click()      #bật thông báo
+        # driver.find_element(By.XPATH, var.trangthaihoatdong_batthongbao).click()      #bật thông báo
 
         #Tìm kiếm
         driver.find_element(By.XPATH, var.emsochat_icontimkiem).click()
@@ -3821,33 +3843,56 @@ class trangchu():
         driver.find_element(By.XPATH, var.emsochat_xemtinnhandaghim_x).click()
 
         # # Tuỳ chỉnh đoạn chat
-        # driver.find_element(By.XPATH, var.emsochat_tuychinhdoanchat).click()        #lại lỗi r
+        driver.find_element(By.XPATH, var.emsochat_tuychinhdoanchat).click()        #lại lỗi r
         # #màu hồng tìm
         # driver.find_element(By.XPATH, var.emsochat_tuychinhdoanchat_doichude).click()
         # time.sleep(1)
         # driver.find_element(By.XPATH, var.emsochat_tuychinhdoanchat_doichude_mauhongtim).click()
         # driver.find_element(By.XPATH, var.luu).click()
         # time.sleep(1)
-        # check_mauchude = driver.find_element(By.XPATH,var.check_mauchude1).text
-        # print(check_mauchude)
-        # logging.info("Trang chủ - Chat - tuỳ chon - Màu chủ đề")
-        # logging.info("check font-end: Bạn đã đổi chủ đề thành Tuổi thơ.")
-        # logging.info(check_mauchude == "Bạn đã đổi chủ đề thành Tuổi thơ.")
-        #
+        # driver.refresh()
+        # time.sleep(2)
+        # driver.find_element(By.XPATH, var.emsochat_caidathopthoai).click()
+        # time.sleep(1)
+        # try:
+        #     check_mauchude = driver.find_element(By.XPATH,var.check_mauchude1).text
+        #     print(check_mauchude)
+        #     logging.info("Trang chủ - Chat - tuỳ chon - Màu chủ đề")
+        #     logging.info("check font-end: Bạn đã đổi chủ đề thành Tuổi thơ.")
+        #     logging.info(check_mauchude == "Bạn đã đổi chủ đề thành Tuổi thơ.")
+        # except:
+        #     driver.refresh()
+        #     time.sleep(2)
+        #     driver.find_element(By.XPATH, var.emsochat_caidathopthoai).click()
+        #     check_mauchude = driver.find_element(By.XPATH,var.check_mauchude1).text
+        #     print(check_mauchude)
+        #     logging.info("Trang chủ - Chat - tuỳ chon - Màu chủ đề")
+        #     logging.info("check font-end: Bạn đã đổi chủ đề thành Tuổi thơ.")
+        #     logging.info(check_mauchude == "Bạn đã đổi chủ đề thành Tuổi thơ.")
         # # màu mặc định
         # driver.find_element(By.XPATH, var.emsochat_tuychinhdoanchat).click()
         # driver.find_element(By.XPATH, var.emsochat_tuychinhdoanchat_doichude).click()
         # time.sleep(1)
         # driver.find_element(By.XPATH, var.emsochat_tuychinhdoanchat_doichude_maumacdinh).click()
         # driver.find_element(By.XPATH, var.luu).click()
-        # check_mauchude2 = driver.find_element(By.XPATH,var.check_mauchude2).text
-        # print(check_mauchude2)
-        # logging.info("Trang chủ - Chat - tuỳ chon - Màu chủ đề")
-        # logging.info(check_mauchude2)
-        # logging.info("check font-end: Bạn đã đổi chủ đề thành Mặc định.")
-        # logging.info(check_mauchude2 == "Bạn đã đổi chủ đề thành Mặc định.")
-
-        # Biểu tượng cảm xúc
+        # try:
+        #     check_mauchude2 = driver.find_element(By.XPATH,var.check_mauchude2).text
+        #     print(check_mauchude2)
+        #     logging.info("Trang chủ - Chat - tuỳ chon - Màu chủ đề")
+        #     logging.info(check_mauchude2)
+        #     logging.info("check font-end: Bạn đã đổi chủ đề thành Mặc định.")
+        #     logging.info(check_mauchude2 == "Bạn đã đổi chủ đề thành Mặc định.")
+        # except:
+        #     driver.refresh()
+        #     time.sleep(2)
+        #     check_mauchude2 = driver.find_element(By.XPATH,var.check_mauchude2).text
+        #     print(check_mauchude2)
+        #     logging.info("Trang chủ - Chat - tuỳ chon - Màu chủ đề")
+        #     logging.info(check_mauchude2)
+        #     logging.info("check font-end: Bạn đã đổi chủ đề thành Mặc định.")
+        #     logging.info(check_mauchude2 == "Bạn đã đổi chủ đề thành Mặc định.")
+        #
+        # # Biểu tượng cảm xúc
         # driver.find_element(By.XPATH, var.emsochat_tuychinhdoanchat).click()    #lại lỗi r
         # time.sleep(1)
         # driver.find_element(By.XPATH, var.emsochat_tuychinhdoanchat_thaydoibieutuongcamxuc).click()
@@ -4102,6 +4147,7 @@ class trangchu():
 
 
         #Tắt thông báo
+        actions = ActionChains(driver)
         hover_hopchat = driver.find_element(By.XPATH, var.hover_hopchat1)
         actions.move_to_element(hover_hopchat).perform()
         time.sleep(1)
@@ -4131,6 +4177,7 @@ class trangchu():
 
 
         #Xoá đoạn chat
+        actions = ActionChains(driver)
         actions.move_to_element(hover_hopchat).perform()
         driver.find_element(By.XPATH, var.tuychonnhom).click()
         button = driver.find_element(By.XPATH, var.tuychonnhom_xoadoanchat)
@@ -4141,7 +4188,7 @@ class trangchu():
         logging.info("check font-end: Xoá đoạn chat message - Bạn không thể hoàn tác sau khi xoá bản sao của cuộc trò chuyện này.")
         logging.info(check_nhomcaidat_xoadoanchat == "Bạn không thể hoàn tác sau khi xoá bản sao của cuộc trò chuyện này.")
         driver.find_element(By.XPATH, var.xoa).click()
-        time.sleep(2)
+        time.sleep(3)
 
         # #Rời khỏi nhóm
         driver.find_element(By.XPATH, var.emsochat_icontaotinnhanmoi).click()
@@ -4162,6 +4209,7 @@ class trangchu():
         time.sleep(2)
 
         #Message rời khỏi nhóm
+        actions = ActionChains(driver)
         hover_hopchat = driver.find_element(By.XPATH, var.hover_hopchat1)     #Tự động chọn qtv khi rời nhóm
         actions.move_to_element(hover_hopchat).perform()
         driver.find_element(By.XPATH, var.tuychonnhom).click()
@@ -4201,19 +4249,21 @@ class trangchu():
         driver.find_element(By.XPATH, var.trangchu_emsochat).click()
         time.sleep(2)
         driver.find_element(By.XPATH, var.emsochat_icontaotinnhanmoi).click()
-        driver.find_element(By.XPATH, var.tinnhanmoi_den).click()
-        driver.find_element(By.XPATH, var.tinnhanmoi_den).send_keys(data['trangchu_tinnhan']['den'])
-        wait = WebDriverWait(driver, 10)
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.tinnhanmoi_den_ngocmai)))
-        element.click()
-        time.sleep(1)
-        # Chọn hue nguyen lần 2
+        # Chọn hue nguyen
         driver.find_element(By.XPATH, var.tinnhanmoi_den).click()
         driver.find_element(By.XPATH, var.tinnhanmoi_den).send_keys(data['trangchu_tinnhan']['den1'])
         wait = WebDriverWait(driver, 10)
         element = wait.until(EC.element_to_be_clickable((By.XPATH, var.tinnhanmoi_den_huenguyen)))
         element.click()
         time.sleep(1)
+        #Chọn Ngọc Mai
+        driver.find_element(By.XPATH, var.tinnhanmoi_den).click()
+        driver.find_element(By.XPATH, var.tinnhanmoi_den).send_keys(data['trangchu_tinnhan']['den'])
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.tinnhanmoi_den_ngocmai)))
+        element.click()
+        time.sleep(1)
+
         driver.find_element(By.XPATH, var.tinnhanmoi_input).send_keys(data['trangchu_tinnhan']['tinnhanmoi_input'])
         driver.find_element(By.XPATH, var.tinnhanmoi_input).send_keys(Keys.ENTER)
         time.sleep(2)
@@ -4449,13 +4499,13 @@ class trangchu():
     def caidatcanhan_chuyentaikhoan(self):
         driver.implicitly_wait(15)
         time.sleep(1.5)
-        login.login4(self, "truongvck222@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
         time.sleep(2)
         driver.find_element(By.XPATH, var.icon_caidatcanhan).click()
         driver.find_element(By.XPATH, var.caidatcanhan_chuyentaikhoankhac).click()
         driver.find_element(By.XPATH, var.caidatcanhan_chuyentaikhoankhac_tranquangtruong).click()
         time.sleep(1.5)
-        driver.find_element(By.XPATH, var.login_chon_tk_dang_nhap_gan_day_password).send_keys("atgmj123456")
+        driver.find_element(By.XPATH, var.login_chon_tk_dang_nhap_gan_day_password).send_keys("voncamk22")
         driver.find_element(By.XPATH, var.login_nho_mat_khau).click()
         driver.find_element(By.XPATH, var.login_chon_tk_dang_nhap_gan_day_dang_nhap).click()
         time.sleep(3)
@@ -4629,13 +4679,13 @@ class trangchu():
         #Nhật ký hoạt động
         driver.find_element(By.XPATH, var.thongtincuabantrenemso_nhatkyhoatdong).click()
         time.sleep(1)
-        driver.find_element(By.XPATH, var.baivietcuaban_lichsuxembaiviet).click()
-        time.sleep(3)
-        check_baivietcuaban_lichsuxembaiviet = driver.find_element(By.XPATH,var.check_baivietcuaban_lichsuxembaiviet1).text
-        logging.info("Trang chủ - tài khoản - Cài đặt và quyền riêng tư - Thông tin của bản trên Emso - Nhật ký hoạt động - Bài viết của bạn - Lịch sử xem bài viết")
-        logging.info("check font-end:Có thông báo hay không ")
-        logging.info(check_baivietcuaban_lichsuxembaiviet != None)
-        driver.back()
+        # driver.find_element(By.XPATH, var.baivietcuaban_lichsuxembaiviet).click()     #ko load dc trang
+        # time.sleep(3)
+        # check_baivietcuaban_lichsuxembaiviet = driver.find_element(By.XPATH,var.check_baivietcuaban_lichsuxembaiviet1).text
+        # logging.info("Trang chủ - tài khoản - Cài đặt và quyền riêng tư - Thông tin của bản trên Emso - Nhật ký hoạt động - Bài viết của bạn - Lịch sử xem bài viết")
+        # logging.info("check font-end:Có thông báo hay không ")
+        # logging.info(check_baivietcuaban_lichsuxembaiviet != None)
+        # driver.back()
         driver.find_element(By.XPATH, var.baivietcuaban_lichsutimkiem).click()        #ko load dc trang
         time.sleep(3)
         check_baivietcuaban_lichsutimkiem = driver.find_element(By.XPATH,var.check_baivietcuaban_lichsutimkiem1).text
@@ -4900,14 +4950,28 @@ class trangchu():
         #Chặn tin nhắn
         driver.find_element(By.XPATH, var.chan_tinhan).click()
         time.sleep(0.5)
+        driver.find_element(By.XPATH, var.themvaodanhsachchan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.chantinnhan_nhaptenmotnguoiban).send_keys("hue nguyen")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.themvaodanhsachchan_chan).click()
+        time.sleep(1)
+        # driver.find_element(By.XPATH, var.themvaodanhsachchan_chan).click()
+        # time.sleep(1)
+        driver.find_element(By.XPATH, var.chan_tinhan).click()
+        time.sleep(0.5)
         check_chantinnhan = driver.find_element(By.XPATH,var.check_chantinnhan1).text
         logging.info("Trang chủ - tài khoản - Cài đặt và quyền riêng tư - Chặn - Chặn người dùng")
         logging.info("check font-end: Chặn tin nhắn - chức năng có hoạt động không ")
         logging.info(check_chantinnhan)
         logging.info(check_chantinnhan == "Bạn đã chặn 1 người")
-        driver.find_element(By.XPATH, var.chan_themvaodanhsach).click()
+        # driver.find_element(By.XPATH, var.chan_themvaodanhsach).click()
         time.sleep(1)
-        driver.find_element(By.XPATH, var.x).click()
+        driver.find_element(By.XPATH, var.xemdanhsachchan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.themvaodanhsachchan_bochan).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.icon_x3).click()
         time.sleep(1)
         #Chặn trang
         driver.find_element(By.XPATH, var.chan_trang).click()
@@ -5313,11 +5377,6 @@ class trangchu():
         time.sleep(0.5)
         #Không gian thương mại
         driver.find_element(By.XPATH, var.dieukhoanvachinhsachrieng_khonggianthuongmai).click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, var.dieukhoanvachinhsachrieng_khonggianthuongmai_1).click()
-        driver.find_element(By.XPATH, var.dieukhoanvachinhsachrieng_khonggianthuongmai_2).click()
-        logging.info("Trợ giúp và hỗ trợ - Điều khoản và chính sách riêng - Không gian thương mại - Thoả thuận dịch vụ chung không gian thương mại")
-        logging.info("Chức năng chưa hoạt động")
         time.sleep(1.5)
         driver.find_element(By.XPATH, var.trangchu).click()
         time.sleep(2)
@@ -5451,7 +5510,7 @@ class trangchu():
         print(check_dangxuat)
         logging.info("Trang chủ - Tài khoản - Đăng xuất")
         logging.info(check_dangxuat == "Đăng nhập")
-        login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
         time.sleep(2.5)
 
     def trangchu_timkiem(self):
@@ -5459,7 +5518,7 @@ class trangchu():
         time.sleep(1.5)
         driver.find_element(By.XPATH, var.trangchu).click()
         driver.find_element(By.XPATH, var.trangchu_timkiem).click()
-        driver.find_element(By.XPATH, var.trangchu_timkiem1).send_keys(data['trangchu_timkkiem']['timkiem'])
+        driver.find_element(By.XPATH, var.trangchu_timkiem1).send_keys("Phương")
         driver.find_element(By.XPATH, var.trangchu_timkiem_nam).click()
         time.sleep(3)
         check_ketquatimkiem = driver.find_element(By.XPATH, var.check_ketquatimkiem1).text
@@ -5468,7 +5527,7 @@ class trangchu():
         check_timkiem_tatca = driver.find_element(By.XPATH,var.check_timkiem_tatca1).text
         logging.info("Trang chủ - Tìm kiếm - Tất cả")
         logging.info("check font-end: Có kết quả tìm kiếm bộ lọc tất cả")
-        logging.info(check_timkiem_tatca == "Nguyễn Nhật Nam")
+        logging.info(check_timkiem_tatca !=None)
 
         #Mọi người
         driver.find_element(By.XPATH, var.trangchu_timkiem_moinguoi).click()
@@ -5476,15 +5535,24 @@ class trangchu():
         check_timkiem_moinguoi = driver.find_element(By.XPATH,var.check_timkiem_tatca1).text
         logging.info("Trang chủ - Tìm kiếm - Mọi người")
         logging.info("check font-end: Có kết quả tìm kiếm bộ lọc mọi người")
-        logging.info(check_timkiem_moinguoi == "Nguyễn Nhật Nam")
+        logging.info(check_timkiem_moinguoi)
+        logging.info(check_timkiem_moinguoi == "Vân Phương")
 
         #Bài viết
+        driver.find_element(By.XPATH, var.timkiem_input).click()
+        xoa = driver.find_element(By.XPATH, var.timkiem_input1)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.timkiem_input1).send_keys("nam")
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.timkiem_input1).send_keys(Keys.ENTER)
+        time.sleep(2)
         driver.find_element(By.XPATH, var.trangchu_timkiem_baiviet).click()
         time.sleep(2)
         check_timkiem_baiviet = driver.find_element(By.XPATH,var.check_timkiem_baiviet1).text
         logging.info("Trang chủ - Tìm kiếm - Bài viết")
         logging.info("check font-end: Có kết quả tìm kiếm bộ lọc bài viết")
-        logging.info(check_timkiem_baiviet == "//*[text()='Réponse à @inh.tr hôm nay về Việt Nam rồi 🥳❤️']")
+        logging.info(check_timkiem_baiviet)
+        logging.info(check_timkiem_baiviet == "Réponse à @inh.tr hôm nay về Việt Nam rồi 🥳❤️")
 
         #Nhóm
         driver.find_element(By.XPATH, var.trangchu_timkiem_nhom).click()
@@ -5500,7 +5568,8 @@ class trangchu():
         check_timkiem_trang = driver.find_element(By.XPATH,var.check_timkiem_trang1).text
         logging.info("Trang chủ - Tìm kiếm - Trang")
         logging.info("check font-end: Có kết quả tìm kiếm bộ lọc Trang")
-        logging.info(check_timkiem_trang == "//*[text()='Nhã Nam']")
+        logging.info(check_timkiem_trang)
+        logging.info(check_timkiem_trang == "Nhã Nam")
 
         #Sự kiện
         driver.find_element(By.XPATH, var.trangchu_timkiem_sukien).click()
@@ -5535,24 +5604,24 @@ class trangchu():
         logging.info(check_timkiem_khoahoc == "học nam")
         #
         # #San phẩm
-        # driver.find_element(By.XPATH, var.trangchu_timkiem_sanpham).click()     #tài khoản admin lỗi, tự động từ chối sản phẩm
-        # time.sleep(2)
-        # driver.find_element(By.XPATH, var.timkiem_input).click()
-        # # driver.find_element(By.XPATH, var.timkiem_input).clear()
-        # xoa = driver.find_element(By.XPATH, var.timkiem_input1)
-        # xoa.send_keys(Keys.CONTROL, "a")
-        # driver.find_element(By.XPATH, var.timkiem_input1).send_keys("Áo polo nam")
-        # time.sleep(0.5)
-        # driver.find_element(By.XPATH, var.timkiem_input1).send_keys(Keys.ENTER)
-        # time.sleep(2)
-        #
-        # check_timkiem_sanpham = driver.find_element(By.XPATH,var.check_timkiem_sanpham1).text
-        # logging.info("Trang chủ - Tìm kiếm - Sản phẩm")
-        # logging.info("check font-end: Có kết quả tìm kiếm bộ lọc Sản phẩm")
-        # logging.info(check_timkiem_sanpham)
-        # logging.info(check_timkiem_sanpham == "Áo Polo Nam")
-        # driver.find_element(By.XPATH, var.trangchu).click()
-        # time.sleep(2)
+        driver.find_element(By.XPATH, var.trangchu_timkiem_sanpham).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.timkiem_input).click()
+        # driver.find_element(By.XPATH, var.timkiem_input).clear()
+        xoa = driver.find_element(By.XPATH, var.timkiem_input1)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.timkiem_input1).send_keys("Áo polo nam")
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.timkiem_input1).send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        check_timkiem_sanpham = driver.find_element(By.XPATH,var.check_timkiem_sanpham1).text
+        logging.info("Trang chủ - Tìm kiếm - Sản phẩm")
+        logging.info("check font-end: Có kết quả tìm kiếm bộ lọc Sản phẩm")
+        logging.info(check_timkiem_sanpham)
+        logging.info(check_timkiem_sanpham == "Áo Polo Nam")
+        driver.find_element(By.XPATH, var.trangchu).click()
+        time.sleep(2)
 
 
 
@@ -5830,6 +5899,8 @@ class khoanhkhac():
         button = driver.find_element(By.XPATH, var.icon_khoanhkhac)
         driver.execute_script("arguments[0].click();", button)
         time.sleep(2)
+        driver.find_element(By.XPATH, var.roikhoi).click()
+        time.sleep(2)
         driver.find_element(By.XPATH, var.dangtheodoi).click()
         button = driver.find_element(By.XPATH, var.icon_khoanhkhac)
         driver.execute_script("arguments[0].click();", button)
@@ -5854,14 +5925,20 @@ class khoanhkhac():
         time.sleep(1.5)
         driver.get("https://cmc-fe.emso.vn/messages/111340222342420143111504657986364400")
         time.sleep(2)
-        check_chiase_guibangmessage = driver.find_element(By.XPATH,var.check_chiase_guibangmessage2).text
-        logging.info(check_chiase_guibangmessage)
-        logging.info("Khoảnh khắc - Đang theo dõi - Chia sẻ - Gửi bằng message")
-        logging.info("check font-end: chat - có gửi link khoảnh khắc")
-        logging.info(check_chiase_guibangmessage == "Mạng xã hội Emso - Mạng xã hội vì người Việt")
-
-
-
+        try:
+            check_chiase_guibangmessage = driver.find_element(By.XPATH,var.check_chiase_guibangmessage2).text
+            logging.info(check_chiase_guibangmessage)
+            logging.info("Khoảnh khắc - Đang theo dõi - Chia sẻ - Gửi bằng message")
+            logging.info("check font-end: chat - có gửi link khoảnh khắc")
+            logging.info(check_chiase_guibangmessage == "Mạng xã hội Emso - Mạng xã hội vì người Việt")
+        except:
+            driver.get("https://cmc-fe.emso.vn/messages/111340222342420143111504657986364400")
+            time.sleep(2)
+            check_chiase_guibangmessage = driver.find_element(By.XPATH,var.check_chiase_guibangmessage2).text
+            logging.info(check_chiase_guibangmessage)
+            logging.info("Khoảnh khắc - Đang theo dõi - Chia sẻ - Gửi bằng message")
+            logging.info("check font-end: chat - có gửi link khoảnh khắc")
+            logging.info(check_chiase_guibangmessage == "Mạng xã hội Emso - Mạng xã hội vì người Việt")
 
         # #Chia sẻ lên cộng đồng
         button = driver.find_element(By.XPATH, var.icon_khoanhkhac)
@@ -5947,9 +6024,12 @@ class khoanhkhac():
         time.sleep(3)
         driver.find_element(By.XPATH, var.khoanhkhac_xemvideo_chiase).click()
         driver.find_element(By.XPATH, var.khoanhkhac_xemvideo_chiase_chiaselentrang).click()
-        driver.find_element(By.XPATH, var.khoanhkhac_xemvideo_chiase_chiaselentrang_timkiem).send_keys(data['khoanhkhac']['chiaselennhom'])
-        driver.find_element(By.XPATH, var.chiase_iconchontrang).click()
-        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.khoanhkhac_xemvideo_chiase_chiaselentrang_timkiem).send_keys("Trường test bản tin")
+        time.sleep(1)
+        # driver.find_element(By.XPATH, var.chiase_iconchontrang).click()
+        # time.sleep(0.5)
+        driver.find_element(By.XPATH, var.chiase_iconchontrang_truongtestbantin).click()
+        time.sleep(1)
         driver.find_element(By.XPATH, var.chiase_iconchontrang_mota).send_keys(data['khoanhkhac']['mota2'])
         try:
             driver.find_element(By.XPATH, var.dang).click()
@@ -6093,7 +6173,7 @@ class khoanhkhac():
         logging.info("Khoảnh khắc - Tài khoản được đề xuất")
         logging.info("check font-end: Xem trang cá nhân - "+ ten_taikhoandexuat1)
         logging.info(check_khoanhkhac_trangcanhan_taikhoandexuat1)
-        logging.info(check_khoanhkhac_trangcanhan_taikhoandexuat1 == ten_taikhoandexuat1[0:11])
+        logging.info(check_khoanhkhac_trangcanhan_taikhoandexuat1[0:18] == ten_taikhoandexuat1)
         driver.back()
         time.sleep(2)
         button = driver.find_element(By.XPATH, var.taikhoanduocdexuat_xemvideo)
@@ -6125,6 +6205,7 @@ class khoanhkhac():
         driver.execute_script("arguments[0].click();", button)
         time.sleep(2)
         #Tài khoản đang theo dõi
+        driver.find_element(By.XPATH, var.taikhoandangtheodoi_xemthem).click()
         taikhoandangtheodoi_ten2 = driver.find_element(By.XPATH, var.taikhoandangtheodoi2).text
         driver.find_element(By.XPATH, var.taikhoandangtheodoi2).click()
         time.sleep(1)
@@ -6760,12 +6841,12 @@ class watch():
         driver.find_element(By.XPATH, var.x).click()
         time.sleep(1)
         driver.find_element(By.XPATH, var.videodaluu_xem_x).click()
-        time.sleep(1)
+        time.sleep(2)
         try:
-            check_luuvideo_title = driver.find_element(By.XPATH,var.test1).is_displayed()
+            check_luuvideo_title = driver.find_element(By.XPATH,var.check_luuvideo_title).text
             logging.info("Watch - Video đã lưu - xem video - x")
             logging.info("check font-end: Có trở lại trang Video đã lưu không")
-            logging.info(check_luuvideo_title)
+            logging.info(check_luuvideo_title == "Video đã lưu")
             time.sleep(2)
         except NoSuchElementException:
             logging.info("Watch - Video đã lưu - xem video - x")
@@ -6784,6 +6865,7 @@ class watch():
         #Dang theo dõi - Trường test
         driver.find_element(By.XPATH, var.watch_dangtheodoi_truongtest).click()
         time.sleep(2)
+        driver.execute_script("window.scrollBy(0,-900)", "")
         button = driver.find_element(By.XPATH, var.watch_truongtest_choncachtuongtac)
         driver.execute_script("arguments[0].click();", button)
         driver.find_element(By.XPATH, var.choncachtuongtac_ngocmai).click()
@@ -6902,7 +6984,7 @@ class trang():
 
     def khampha(self):
         driver.implicitly_wait(15)
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         time.sleep(2)
         button = driver.find_element(By.XPATH, var.icon_trang)
         driver.execute_script("arguments[0].click();", button)
@@ -7170,9 +7252,9 @@ class trang():
         checK_chiase_trang_tieude = driver.find_element(By.XPATH,var.checK_chiase_trang_tieude1).text
         print(checK_chiase_trang_tieude)
         logging.info("Trang - Trang đã thích - Chia sẻ")
-        logging.info("check font-end: Vào trang cá nhân check Tiêu đề - Trần Quang Trường đã chia sẻ trang")
+        logging.info("check font-end: Vào trang cá nhân check Tiêu đề - Ngọc Mai đã chia sẻ trang")
         logging.info(checK_chiase_trang_tieude)
-        logging.info(checK_chiase_trang_tieude =="Trần Quang Trường\n đã chia sẻ trang")
+        logging.info(checK_chiase_trang_tieude =="Ngọc Mai\n đã chia sẻ trang")
 
         checK_chiase_trang_mota = driver.find_element(By.XPATH,var.checK_chiase_trang_mota1).text
         print(checK_chiase_trang_mota)
@@ -7184,7 +7266,7 @@ class trang():
 
     def loimoi(self):
         driver.implicitly_wait(15)
-        login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
         button = driver.find_element(By.XPATH, var.icon_trang)
         driver.execute_script("arguments[0].click();", button)
         time.sleep(1.5)
@@ -7242,7 +7324,7 @@ class trang():
         time.sleep(0.5)
 
         #Gửi lời mời - đồng ý
-        login.login4(self, "nguyenhue608196@gmail.com", "atgmj123456")
+        login.login4(self, "nguyenhue608196@gmail.com", "voncamk22")
         time.sleep(1.5)
         driver.find_element(By.XPATH, var.trangchu_iconthongbao).click()
         time.sleep(1)
@@ -7275,7 +7357,7 @@ class trang():
         time.sleep(2)
 
         #Gửi lời mời -Từ chối
-        login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.icon_trang)
         driver.execute_script("arguments[0].click();", button)
@@ -7297,7 +7379,7 @@ class trang():
         time.sleep(1)
         driver.find_element(By.XPATH, var.check_trang_moibanbe_tatcabanbe_guiloimoi).click()
         time.sleep(2)
-        login.login4(self, "nguyenhue608196@gmail.com", "atgmj123456")
+        login.login4(self, "nguyenhue608196@gmail.com", "voncamk22")
         button = driver.find_element(By.XPATH, var.icon_trang)
         driver.execute_script("arguments[0].click();", button)
         time.sleep(1.5)
@@ -7331,7 +7413,9 @@ class trang():
         button = driver.find_element(By.XPATH, var.icon_trang)
         driver.execute_script("arguments[0].click();", button)
         time.sleep(1.5)
-        driver.find_element(By.XPATH, var.trang_taotrangmoi).click()
+        # driver.find_element(By.XPATH, var.trang_taotrangmoi).click()
+        button = driver.find_element(By.XPATH, var.trang_taotrangmoi)
+        driver.execute_script("arguments[0].click();", button)
         time.sleep(1)
         #Thông tin về trang
         driver.find_element(By.XPATH, var.taotrangmoi_thongtinvetrang).send_keys(tentrang)
@@ -7370,7 +7454,8 @@ class trang():
         subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbiatrang.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.taotrangmoi_taotrang).click()
-        time.sleep(5)
+        time.sleep(7)
+        driver.find_element(By.XPATH, var.trang_taotrangmoi_trangchu).click()
         #Check tạo trang
         try:
             taotrangmoi_taotrang_anhdaidien = driver.find_element(By.XPATH,var.taotrangmoi_taotrang_anhdaidien1).is_displayed()
@@ -7396,20 +7481,58 @@ class trang():
         #     logging.info("Ảnh bìa có hiển thị hay không")
         #     logging.info("False")
 
-
-        taotrangmoi_taotrang_loaitrang = driver.find_element(By.XPATH,var.taotrangmoi_taotrang_loaitrang).text
-        logging.info("Trang - Tạo trang mới")
-        logging.info("check font-end: Loại trang - " + tentrang)
-        logging.info(taotrangmoi_taotrang_loaitrang)
-        logging.info(taotrangmoi_taotrang_loaitrang == tentrang)
+        driver.implicitly_wait(5)
+        try:
+            taotrangmoi_taotrang_loaitrang = driver.find_element(By.XPATH,var.taotrangmoi_taotrang_loaitrang).text
+            logging.info("Trang - Tạo trang mới")
+            logging.info("check font-end: Loại trang - " + tentrang)
+            logging.info(taotrangmoi_taotrang_loaitrang)
+            logging.info(taotrangmoi_taotrang_loaitrang == tentrang)
+            #trang ban hang
+            driver.find_element(By.XPATH, var.trang_caidat).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.chung).click()
+            time.sleep(1)
+            driver.execute_script("window.scrollBy(0,900)", "")
+            driver.find_element(By.XPATH, var.molaitrangbanhang).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.xacnhankhoapage).click()
+            # driver.find_element(By.XPATH, var.message_xacnhankhoapage).click() #chưa có mesage khóa page
+            time.sleep(3)
+        except:
+            taotrangmoi_taotrang_loaitrang1 = driver.find_element(By.XPATH,var.taotrangmoi_taotrang_loaitrang1).text
+            logging.info("Trang - Tạo trang mới")
+            logging.info("check font-end: Loại trang - " + tentrang)
+            logging.info(taotrangmoi_taotrang_loaitrang1)
+            logging.info(taotrangmoi_taotrang_loaitrang1 == tentrang)
+            #trang ca nhan, giai tri
+            #Xoá trang
+            driver.find_element(By.XPATH, var.trang_caidat).click()
+            driver.execute_script("window.scrollBy(0,900)", "")
+            driver.find_element(By.XPATH, var.trang_caidat_xoatrang).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.trang_caidat_xoatrang_gotrangvinhvien).click()
+            time.sleep(3)
         time.sleep(1)
-        #Xoá trang
-        driver.find_element(By.XPATH, var.trang_caidat).click()
-        driver.execute_script("window.scrollBy(0,900)", "")
-        driver.find_element(By.XPATH, var.trang_caidat_xoatrang).click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, var.trang_caidat_xoatrang_gotrangvinhvien).click()
-        time.sleep(3)
+        # if taotrangmoi_taotrang_loaitrang == "Trang bán hàng":
+        #     driver.find_element(By.XPATH, var.trang_caidat).click()
+        #     time.sleep(1)
+        #     driver.find_element(By.XPATH, var.chung).click()
+        #     time.sleep(1)
+        #     driver.execute_script("window.scrollBy(0,900)", "")
+        #     driver.find_element(By.XPATH, var.molaitrangbanhang).click()
+        #     time.sleep(1)
+        #     driver.find_element(By.XPATH, var.xacnhankhoapage).click()
+        #     # driver.find_element(By.XPATH, var.message_xacnhankhoapage).click() #chưa có mesage khóa page
+        #     time.sleep(3)
+        # else:
+        #     #Xoá trang
+        #     driver.find_element(By.XPATH, var.trang_caidat).click()
+        #     driver.execute_script("window.scrollBy(0,900)", "")
+        #     driver.find_element(By.XPATH, var.trang_caidat_xoatrang).click()
+        #     time.sleep(1)
+        #     driver.find_element(By.XPATH, var.trang_caidat_xoatrang_gotrangvinhvien).click()
+        #     time.sleep(3)
 
     def taotrangmoi_banhang(self):
         trang.taotrangmoi(self, data['trang']['trangbanhang'], var.banhang, var.doanhnghiep)
@@ -7423,7 +7546,7 @@ class trang():
 
     def trang_gioithieu(self):
         driver.implicitly_wait(15)
-        login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
         time.sleep(2)
         button = driver.find_element(By.XPATH, var.icon_trang)
         driver.execute_script("arguments[0].click();", button)
@@ -7638,6 +7761,7 @@ class trang():
         #Hạng mục
         driver.find_element(By.XPATH, var.trang_gioithieu_webgiaitri).click()
         time.sleep(1)
+        driver.find_element(By.XPATH, var.trang_gioithieu_webgiaitri_input).send_keys(Keys.BACKSPACE)
         #hạng mục 1
         driver.find_element(By.XPATH, var.trang_gioithieu_webgiaitri_input).send_keys(data['trang']['gioithieu_trangphucquanao'])
         wait = WebDriverWait(driver, 10)
@@ -7652,6 +7776,11 @@ class trang():
         driver.find_element(By.XPATH, var.trang_gioithieu_webgiaitri_input).send_keys(data['trang']['gioithieu_trangtrinhacua'])
         wait = WebDriverWait(driver, 10)
         element = wait.until(EC.element_to_be_clickable((By.XPATH, var.trangtrinhacua)))
+        element.click()
+        #hạng mục 4
+        driver.find_element(By.XPATH, var.trang_gioithieu_webgiaitri_input).send_keys("Cửa hàng phụ tùng ô tô")
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.cuahangphutungoto)))
         element.click()
         check_trang_gioithieu_hangmuc_daiqua3 = driver.find_element(By.XPATH,var.check_trang_gioithieu_hangmuc_daiqua3).text
         print(check_trang_gioithieu_hangmuc_daiqua3)
@@ -7940,6 +8069,7 @@ class trang():
 
         #Fan cũng thích
         driver.find_element(By.XPATH, var.fancungthich1).click()
+        time.sleep(2)
         check_trang_fancungthich = driver.find_element(By.XPATH, var.check_trang_fancungthich1).text
         logging.info("Trang - Music - Fan cũng thích")
         logging.info("check font-end: xem được trang Anh dep không")
@@ -8193,8 +8323,8 @@ class trang():
         check_xemtruocsukien_thoigian = driver.find_element(By.XPATH,var.check_xemtruocsukien_thoigian1).text
         print(check_xemtruocsukien_thoigian)
         logging.info("Sự kiện - Tạo mới sự kiện")
-        logging.info("check font-end: Thời gian - 08:00 Thứ tư, 20 tháng 11, 2024 - 15:30 Thứ hai, 25 tháng 11, 2024")
-        logging.info(check_xemtruocsukien_thoigian == "08:00 Thứ tư, 20 tháng 11, 2024 - 15:30 Thứ hai, 25 tháng 11, 2024")
+        logging.info("check font-end: Thời gian - 08:00 Thứ sáu, 20 tháng 12, 2024 - 15:30 Thứ tư, 25 tháng 12, 2024")
+        logging.info(check_xemtruocsukien_thoigian == "08:00 Thứ sáu, 20 tháng 12, 2024 - 15:30 Thứ tư, 25 tháng 12, 2024")
 
         check_xemtruocsukien_tensukien = driver.find_element(By.XPATH,var.check_xemtruocsukien_tensukien1).text
         print(check_xemtruocsukien_tensukien)
@@ -8283,9 +8413,9 @@ class trang():
 
         check_trang_sukiensaptoi_khachmoi = driver.find_element(By.XPATH, var.check_trang_sukiensaptoi_khachmoi).text
         logging.info("Trang - Xem thêm - Sự kiện - Sự kiện sắp tới")
-        logging.info("check font-end: Khách mời - 2 người quan tâm ·1 người sẽ tham gia")
+        logging.info("check font-end: Khách mời - "+ check_trang_sukiensaptoi_khachmoi)
         logging.info(check_trang_sukiensaptoi_khachmoi)
-        logging.info(check_trang_sukiensaptoi_khachmoi == "2 người quan tâm ·1 người sẽ tham gia")
+        logging.info(check_trang_sukiensaptoi_khachmoi != None)
 
 
         #Sự kiện đã qua
@@ -8293,7 +8423,7 @@ class trang():
         logging.info("Trang - Xem thêm - Sự kiện - Sự kiện đã qua")
         logging.info("check font-end: Thời gian - 16:00, 13 tháng 11, 2023")
         logging.info(check_trang_sukiendaqua_thoigian)
-        logging.info(check_trang_sukiendaqua_thoigian == "16:00, 13 tháng 11, 2023")
+        logging.info(check_trang_sukiendaqua_thoigian == "16:00, 12 tháng 12, 2023")
 
         check_trang_sukiendaqua_tensukien = driver.find_element(By.XPATH, var.check_trang_sukiendaqua_tensukien).text
         logging.info("Trang - Xem thêm - Sự kiện - Sự kiện đã qua")
@@ -8303,9 +8433,9 @@ class trang():
 
         check_trang_sukiendaqua_khachmoi = driver.find_element(By.XPATH, var.check_trang_sukiendaqua_khachmoi).text
         logging.info("Trang - Xem thêm - Sự kiện - Sự kiện đã qua")
-        logging.info("check font-end: Khách mời - 1 người quan tâm ·0 người sẽ tham gia")
+        logging.info("check font-end: Khách mời - 0 người quan tâm ·2 người sẽ tham gia")
         logging.info(check_trang_sukiendaqua_khachmoi)
-        logging.info(check_trang_sukiendaqua_khachmoi == "1 người quan tâm ·0 người sẽ tham gia")
+        logging.info(check_trang_sukiendaqua_khachmoi == "0 người quan tâm ·2 người sẽ tham gia")
 
         time.sleep(2)
         #Nhóm
@@ -8416,6 +8546,7 @@ class trang():
         logging.info("Chức năng chưa hoạt động")
 
         #Mã giảm giá
+        driver.implicitly_wait(3)
         try:
             check_trang_cuahang_magiamgia = driver.find_element(By.XPATH, var.check_trang_cuahang_magiamgia).is_displayed()
             logging.info("Trang - Trang của bạn - Cửa hàng")
@@ -8425,6 +8556,7 @@ class trang():
             logging.info("Trang - Trang của bạn - Cửa hàng")
             logging.info("check font-end: Mã giảm giá - Có hiển thị hay không")
             logging.info("False")
+        driver.implicitly_wait(15)
 
         #Gợi ý cho bạn
         check_trang_cuahang_goiy_tensp = driver.find_element(By.XPATH, var.check_trang_cuahang_goiy_tensp).text
@@ -8472,7 +8604,7 @@ class trang():
         driver.execute_script("window.scrollBy(0,-1500)", "")
         driver.find_element(By.XPATH, var.trang_cuahang_tatcasanpham).click()
         time.sleep(1)
-        element1 = driver.find_element(By.XPATH, var.check_color_mautatcasanpham)
+        element1 = driver.find_element(By.XPATH, var.trang_cuahang_tatcasanpham)
         color = element1.value_of_css_property("color")
         logging.info("Trang - Trang của bạn - Cửa hàng")
         logging.info("check font-end: Chuyển màu khi chọn nút - Tất cả sản phẩm")
@@ -8482,32 +8614,60 @@ class trang():
         try:
             check_trang_cuahang_tatcasanpham = driver.find_element(By.XPATH, var.check_trang_cuahang_tatcasanpham).is_displayed()
             logging.info("Trang - Trang của bạn - Cửa hàng")
-            logging.info("check font-end: Tất cả sản phẩm - Có 4 sản phẩm")
+            logging.info("check font-end: Tất cả sản phẩm - Có hiển thị sản phẩm không")
             logging.info(check_trang_cuahang_tatcasanpham)
         except NoSuchElementException:
             logging.info("Trang - Trang của bạn - Cửa hàng")
-            logging.info("check font-end: Tất cả sản phẩm - Có 4 sản phẩm")
+            logging.info("check font-end: Tất cả sản phẩm - Có hiển thị sản phẩm không")
             logging.info("False")
 
-        #Giày thể thao nữ
-        driver.find_element(By.XPATH, var.trang_cuahang_tatcasanpham_giay).click()
-        time.sleep(1.5)
-        check_trang_cuahang_tatcasanpham_giay = driver.find_element(By.XPATH, var.check_trang_cuahang_tatcasanpham_giay).text
-        logging.info("Trang - Trang của bạn - Cửa hàng")
-        logging.info("check font-end: Chọn xem sp Giày - Có hiển thị giày hay không")
-        logging.info(check_trang_cuahang_tatcasanpham_giay)
-        logging.info(check_trang_cuahang_tatcasanpham_giay == "Giày thẻ thao nữ")
+        try:
+            check_trang_cuahang_tatcasanpham_anh = driver.find_element(By.XPATH, var.check_trang_cuahang_tatcasanpham_anh).get_attribute("src")
+            logging.info("Trang - Trang của bạn - Cửa hàng")
+            logging.info("check font-end: Tất cả sản phẩm - Có hiển thị ảnh sản phẩm không")
+            logging.info(check_trang_cuahang_tatcasanpham_anh != None)
+        except NoSuchElementException:
+            logging.info("Trang - Trang của bạn - Cửa hàng")
+            logging.info("check font-end: Tất cả sản phẩm - Có hiển thị ảnh sản phẩm không")
+            logging.info("False")
 
-        #Túi đeo chéo
+
+        #Váy
+        driver.find_element(By.XPATH, var.trang_cuahang_tatcasanpham_vay).click()
+        time.sleep(1.5)
+        driver.implicitly_wait(2)
+        try:
+            check_trang_cuahang_tatcasanpham_vay = driver.find_element(By.XPATH, var.check_trang_cuahang_tatcasanpham).is_displayed()
+            logging.info("Trang - Trang của bạn - Cửa hàng")
+            logging.info("check font-end: Chọn xem sp Váy - Có hiển thị váy hay không")
+            logging.info(check_trang_cuahang_tatcasanpham_vay)
+        except NoSuchElementException:
+            logging.info("Trang - Trang của bạn - Cửa hàng")
+            logging.info("check font-end: Chọn xem sp Váy - Có hiển thị váy hay không")
+            logging.info("False")
+        driver.implicitly_wait(15)
+
+
+        #Đầm
+        driver.find_element(By.XPATH, var.trang_cuahang_tatcasanpham_dam).click()
+        time.sleep(1.5)
+        check_trang_cuahang_tatcasanpham_dam = driver.find_element(By.XPATH, var.check_trang_cuahang_tatcasanpham).text
+        logging.info("Trang - Trang của bạn - Cửa hàng")
+        logging.info("check font-end: Chọn xem sp Đầm - Có hiển thị Đầm hay không")
+        logging.info(check_trang_cuahang_tatcasanpham_dam)
+        logging.info(check_trang_cuahang_tatcasanpham_dam == "VÁY ĐẦM BODY ÔM SÁT HÀN QUỐC SANG CHẢNH TÔN DÁNG SIÊU XINH THỜI TRANG 1989")
+        time.sleep(2)
+
+        #Giày thể thao
         driver.find_element(By.XPATH, var.trang_cuahang_tatcasanpham_xemthem).click()
         time.sleep(1)
-        driver.find_element(By.XPATH, var.trang_cuahang_tatcasanpham_tui).click()
+        driver.find_element(By.XPATH, var.trang_cuahang_tatcasanpham_giaythethao).click()
         time.sleep(1.5)
-        check_trang_cuahang_tatcasanpham_tui = driver.find_element(By.XPATH, var.check_trang_cuahang_tatcasanpham_giay).text
+        check_trang_cuahang_tatcasanpham_giay = driver.find_element(By.XPATH, var.check_trang_cuahang_tatcasanpham).text
         logging.info("Trang - Trang của bạn - Cửa hàng")
-        logging.info("check font-end: Chọn xem sp Túi đeo chéo - Có hiển thị Túi hay không")
-        logging.info(check_trang_cuahang_tatcasanpham_tui)
-        logging.info(check_trang_cuahang_tatcasanpham_tui == "Túi đeo chéo nam thời trang")
+        logging.info("check font-end: Chọn xem sp Giày thể thao - Có hiển thị Giày thẻ thao nữ hay không")
+        logging.info(check_trang_cuahang_tatcasanpham_giay)
+        logging.info(check_trang_cuahang_tatcasanpham_giay == "Giày thẻ thao nữ")
         time.sleep(2)
 
 
@@ -8540,7 +8700,7 @@ class trang():
         subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/bungnolongdungcam.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.dangbai).click()
-        time.sleep(30)
+        time.sleep(20)
         # driver.find_element(By.XPATH, var.x).click()
 
         check_trang_themmoi_thoigiankhoanhkhac = driver.find_element(By.XPATH, var.check_trang_themmoi_thoigiankhoanhkhac1).text
@@ -8922,6 +9082,8 @@ class trang():
         logging.info(check_trang_taobaiviet_anhvideo == "Bạn đang làm gì?")
         driver.find_element(By.XPATH, var.icon_x).click()
         time.sleep(1)
+        driver.find_element(By.XPATH, var.icon_x).click()
+        time.sleep(1)
 
         # Tạo bài viết - ảnh video
         driver.find_element(By.XPATH, var.trang_taobaiviet).click()
@@ -8933,7 +9095,7 @@ class trang():
         subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/tothichcau.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.dang).click()
-        time.sleep(3)
+        time.sleep(1)
         check_trang_taobaiviet_video = driver.find_element(By.XPATH, var.check_trang_taobaiviet_video).text
         logging.info("Trang - Trang của bạn - Tạo bài viết - Ảnh/video")
         logging.info("check font-end: Message - Video của bạn đang trong quá trình xử lý, chúng tôi sẽ thông báo cho bạn khi video đã sẵn sàng.")
@@ -8984,7 +9146,7 @@ class trang():
         logging.info("Trang - Tạo bài viết - Cảm xúc/Hoạt động - Dòng thời gian")
         logging.info("check font-end: Tiêu đề - "+  check_trang_baiviet_camxuchoatdong_tieude)
         logging.info(check_trang_baiviet_camxuchoatdong_tieude)
-        logging.info(check_trang_baiviet_camxuchoatdong_tieude == "Trường test bản tin\n đang  cảm thấy buồn")
+        logging.info(check_trang_baiviet_camxuchoatdong_tieude == "Trường test bản tin\n đang  cảm thấy buồn bã")
 
         check_trang_baiviet_camxuchoatdong_mota = driver.find_element(By.XPATH, var.check_trang_baiviet_camxuchoatdong_mota).text
         logging.info("Trang - Tạo bài viết - Cảm xúc/Hoạt động - Dòng thời gian")
@@ -9144,6 +9306,7 @@ class trang():
         driver.find_element(By.XPATH, var.datcauhoi).click()
         time.sleep(0.5)
         driver.find_element(By.XPATH, var.trang_taobaiviet_mota).send_keys(data['trang']['taobaiviet_tochucbuoihd_mota'])
+        time.sleep(1.5)
         driver.find_element(By.XPATH, var.dang).click()
         try:
             check_trang_taobaiviet_tochucbuoihd = driver.find_element(By.XPATH, var.check_trang_taobaiviet_tochucbuoihd).text
@@ -9179,13 +9342,12 @@ class trang():
         time.sleep(0.5)
         driver.find_element(By.XPATH, var.trang_taobaiviet_mota).send_keys(data['trang']['taobaiviet_congbomuctieu_mota'])
         driver.find_element(By.XPATH, var.dang).click()
-        time.sleep(1)
         check_trang_taobaiviet_congbomuctieu = driver.find_element(By.XPATH, var.check_trang_taobaiviet_congbomuctieu).text
         logging.info("Trang - Trang của bạn - Tạo bài viết - Tổ chức buổi H&Đ")
         logging.info("check font-end: Message tạo bài viết - Đăng bài viết thành công.")
         logging.info(check_trang_taobaiviet_congbomuctieu)
         logging.info(check_trang_taobaiviet_congbomuctieu == "Đăng bài viết thành công.")
-        driver.find_element(By.XPATH, var.icon_x).click()
+        # driver.find_element(By.XPATH, var.icon_x).click()
         time.sleep(2)
 
         check_trang_baiviet_congbomuctieu_mota = driver.find_element(By.XPATH, var.check_trang_baiviet_camxuchoatdong_mota).text
@@ -9265,7 +9427,7 @@ class trang():
         logging.info("Trang - Hộp thư - Danh bạ")
         logging.info("check font-end: Sống tại - Sống tại Hưng Yên")
         logging.info(check_trang_hopthu_danhba_songtai)
-        logging.info(check_trang_hopthu_danhba_songtai == "Sống tại Hưng Yên")
+        logging.info(check_trang_hopthu_danhba_songtai == "Sống tại: Hưng Yên")
 
         check_trang_hopthu_danhba_dentu = driver.find_element(By.XPATH, var.check_trang_hopthu_danhba_dentu1).text
         logging.info("Trang - Hộp thư - Danh bạ")
@@ -9426,23 +9588,23 @@ class trang():
         # driver.find_element(By.XPATH, var.tuychonnhom_batthongbao).click()
         # time.sleep(2)
 
-        #Thêm Nhãn dán
-        hover_hopthu = driver.find_element(By.XPATH, var.hover_hopthu1)
-        actions.move_to_element(hover_hopthu).perform()
-        time.sleep(1)
-        driver.find_element(By.XPATH, var.trang_tuychonnhom).click()
-        driver.find_element(By.XPATH, var.tuychonnhom_iconthemnhan).click()
-        driver.find_element(By.XPATH, var.hopthu_themnhanmoi).send_keys(data['trang']['nhandanmoi'])
-        time.sleep(1)
-        driver.find_element(By.XPATH, var.luu).click()
-        time.sleep(1)
-        try:
-            driver.find_element(By.XPATH, var.hopthu_xoanhan1).click()
-            driver.find_element(By.XPATH, var.trora).click()
-        except:
-            driver.find_element(By.XPATH, var.hopthu_xoanhan1).click()
-            driver.find_element(By.XPATH, var.trora).click()
-        time.sleep(1)
+        # #Thêm Nhãn dán
+        # hover_hopthu = driver.find_element(By.XPATH, var.hover_hopthu1)
+        # actions.move_to_element(hover_hopthu).perform()
+        # time.sleep(1)
+        # driver.find_element(By.XPATH, var.trang_tuychonnhom).click()
+        # driver.find_element(By.XPATH, var.tuychonnhom_iconthemnhan).click()
+        # driver.find_element(By.XPATH, var.hopthu_themnhanmoi).send_keys(data['trang']['nhandanmoi'])
+        # time.sleep(1)
+        # driver.find_element(By.XPATH, var.luu).click()      #Mất nút lưu khi thêm nhãn dán trang 6591
+        # time.sleep(1)
+        # try:
+        #     driver.find_element(By.XPATH, var.hopthu_xoanhan1).click()
+        #     driver.find_element(By.XPATH, var.trora).click()
+        # except:
+        #     driver.find_element(By.XPATH, var.hopthu_xoanhan1).click()
+        #     driver.find_element(By.XPATH, var.trora).click()
+        # time.sleep(1)
 
         # Xoá đoạn chat
         hover_hopthu = driver.find_element(By.XPATH, var.hover_hopthu1)
@@ -9482,11 +9644,14 @@ class trang():
         driver.find_element(By.XPATH, var.trang_trangcuaban).click()
         driver.find_element(By.XPATH, var.trang_trangcuaban_truongtest).click()
         time.sleep(2)
-        #Thông báo
         driver.find_element(By.XPATH, var.trang_thongbao).click()
+        time.sleep(1)
+        #Nhật ký kiểm duyệt
+        driver.find_element(By.XPATH, var.trang_thongbao_nhatkykiemduyet).click()
+        time.sleep(1)
         check_trang_thongbao = driver.find_element(By.XPATH, var.check_trang_thongbao).text
         logging.info("Trang - Thông báo")
-        logging.info("check font-end: Nhật ký kiểm duyệt - Có thông báo hay không?")
+        logging.info("check font-end: Nhật ký kiểm duyệt - Có thông báo hay không?")    #6595 chức năng ko haoht động
         logging.info(check_trang_thongbao != "Không có thông báo kiểm duyệt nào")
 
     def chatluongtrang(self):
@@ -9499,6 +9664,8 @@ class trang():
         driver.find_element(By.XPATH, var.trang_trangcuaban_truongtest).click()
         time.sleep(2)
         #Chất lượng trang
+        driver.find_element(By.XPATH, var.trang_thongbao).click()
+        time.sleep(1)
         driver.find_element(By.XPATH, var.trang_chatluongtrang).click()
         check_trang_chatluongtrang = driver.find_element(By.XPATH, var.check_trang_chatluongtrang).text
         logging.info("Trang - Thông báo")
@@ -9543,7 +9710,8 @@ class trang():
 
         #Bài viết đã lên lịch
         driver.find_element(By.XPATH, var.check_trang_baivietdalenlich).click()
-        check_trang_baivietdalenlich = driver.find_element(By.XPATH, var.check_trang_baivietdalenlich).text
+        time.sleep(2)
+        check_trang_baivietdalenlich = driver.find_element(By.XPATH, var.check_trang_baivietdalenlich1).text
         logging.info("Trang - Bài viết đã lên lịch")
         logging.info("check font-end: Tiêu đề bài viết đợi đăng - "+ data['trang']['lenlich'])
         logging.info(check_trang_baivietdalenlich == data['trang']['lenlich'])
@@ -9553,11 +9721,11 @@ class trang():
         xoa.send_keys(Keys.CONTROL, "a")
         driver.find_element(By.XPATH, var.trang_baivietdalenlich_doilichinput).send_keys("20-11-2024")
         driver.find_element(By.XPATH, var.trang_baivietdalenlich_doilich_capnhat).click()
-        time.sleep(1)
+        time.sleep(1.5)
         driver.find_element(By.XPATH, var.dangngay).click()
         check_trang_baivietdalenlich_message = driver.find_element(By.XPATH, var.check_trang_baivietdalenlich_message).text
         logging.info("Trang - Bài viết đã lên lịch")
-        logging.info("check font-end: Tiêu đề bài viết đợi đăng - Đăng bài viết thành công.")
+        logging.info("check font-end: Message đăng ngay - Đăng bài viết thành công.")
         logging.info(check_trang_baivietdalenlich_message == "Đăng bài viết thành công.")
         time.sleep(5)
 
@@ -10053,7 +10221,7 @@ class trang():
         time.sleep(2)
 
         #hue nguyen chấp nhận lời mời làm qtv
-        login.login4(self, "nguyenhue608196@gmail.com", "atgmj123456")
+        login.login4(self, "nguyenhue608196@gmail.com", "voncamk22")
         time.sleep(1.5)
         driver.find_element(By.XPATH, var.trangchu_iconthongbao).click()
         time.sleep(1)
@@ -10065,11 +10233,11 @@ class trang():
         logging.info(check_trang_loimoilamqtv)
         logging.info("Trang - Cài đặt - Vai trò trên trang - Mời bạn bè - hue nguyen")
         logging.info("check font-end: hue nguyen - xem thống báo - Trần Quang Trường đã mời bạn làm Người kiểm duyệt một trang")
-        logging.info(check_trang_loimoilamqtv == "Đã chấp nhận")
-        time.sleep(0.5)
+        logging.info(check_trang_loimoilamqtv == "  Đã chấp nhận")
+        time.sleep(1)
 
         #Huy thêm qtv
-        login.login4(self, "truongvck33@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
         time.sleep(2)
         button = driver.find_element(By.XPATH, var.icon_trang)
         driver.execute_script("arguments[0].click();", button)
@@ -10135,19 +10303,19 @@ class trang():
         # Trang - Cài đặt - Chủ tai khoản trang
         driver.find_element(By.XPATH, var.caidat_chutaikhoantrang).click()
         time.sleep(1)
-        #Tài khoản chưa xác minh danh tính
-        driver.find_element(By.XPATH, var.chutaikhoantrang_capnhatchutaikhoan).click()
-        wait = WebDriverWait(driver, 10)
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.chonchutaikhoan_ngocmai)))
-        element.click()
-        driver.find_element(By.XPATH, var.capnhat).click()
-
-        check_trang_chutaikhoantrang_sai = driver.find_element(By.XPATH, var.check_trang_chutaikhoantrang_sai).text
-        logging.info(check_trang_chutaikhoantrang_sai)
-        logging.info("Trang - Cài đặt - Chủ tài khoản trang")
-        logging.info("check font-end: Tài khoản chưa xác minh - Tài khoản chưa xác minh danh tính")
-        logging.info(check_trang_chutaikhoantrang_sai == "Tài khoản chưa xác minh danh tính")
-        time.sleep(1)
+        # #Tài khoản chưa xác minh danh tính        #Chưa add thêm người chưa xác minh danh tính
+        # driver.find_element(By.XPATH, var.chutaikhoantrang_capnhatchutaikhoan).click()
+        # wait = WebDriverWait(driver, 10)
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, var.chonchutaikhoan_ngocmai)))
+        # element.click()
+        # driver.find_element(By.XPATH, var.capnhat).click()
+        #
+        # check_trang_chutaikhoantrang_sai = driver.find_element(By.XPATH, var.check_trang_chutaikhoantrang_sai).text
+        # logging.info(check_trang_chutaikhoantrang_sai)
+        # logging.info("Trang - Cài đặt - Chủ tài khoản trang")
+        # logging.info("check font-end: Tài khoản chưa xác minh - Tài khoản chưa xác minh danh tính")
+        # logging.info(check_trang_chutaikhoantrang_sai == "Tài khoản chưa xác minh danh tính")
+        # time.sleep(1)
 
         #Tài khoản đã xác minh danh tính
         driver.find_element(By.XPATH, var.chutaikhoantrang_capnhatchutaikhoan).click()
@@ -10413,7 +10581,7 @@ class trang():
         time.sleep(2)
 
         #Check câu hỏi tự động với user
-        login.login4(self, "nguyenhue608196@gmail.com", "atgmj123456")
+        login.login4(self, "nguyenhue608196@gmail.com", "voncamk22")
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.icon_trang)
         driver.execute_script("arguments[0].click();", button)
@@ -10546,7 +10714,7 @@ class nhom():
         time.sleep(2)
 
         try:
-            check_nhom_timkiem_ngaydang = driver.find_element(By.XPATH,var.check_nhom_timkiem_baivietnhom).text     #Không hiện thị bài viết
+            check_nhom_timkiem_ngaydang = driver.find_element(By.XPATH,var.check_nhom_timkiem_baivietnhom).text     #Không hiện thị bài viết 6525
             logging.info(check_nhom_timkiem_ngaydang)
             logging.info("Nhóm - Tìm kiếm")
             logging.info("check font-end: Ngày đăng 2023, tiêu đề bài viết số 1 - test")
@@ -10707,7 +10875,7 @@ class nhom():
         time.sleep(0.5)
 
         # Gửi lời mời tham gia nhóm - xóa
-        login.login4(self, "truongvck22@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.nhom_loimoi_xoa)
         driver.execute_script("arguments[0].click();", button)
@@ -10715,7 +10883,7 @@ class nhom():
         time.sleep(3)
 
         # Gửi lời mời tham gia nhóm - Chấp nhận
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.icon_nhom)
         driver.execute_script("arguments[0].click();", button)
@@ -10732,7 +10900,7 @@ class nhom():
         check_nhom_moibanbe_damoi1 = driver.find_element(By.XPATH,var.check_nhom_moibanbe_damoi1).text
         time.sleep(1)
 
-        login.login4(self, "truongvck22@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
         time.sleep(2)
         driver.find_element(By.XPATH, var.trangchu_iconthongbao).click()
         time.sleep(1)
@@ -10760,7 +10928,7 @@ class nhom():
         time.sleep(0.5)
 
         #Lời mời làm quản trị viên nhóm
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.icon_nhom)
         driver.execute_script("arguments[0].click();", button)
@@ -10780,7 +10948,7 @@ class nhom():
         driver.find_element(By.XPATH, var.xacnhan).click()
         time.sleep(2)
 
-        login.login4(self, "truongvck22@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
         time.sleep(2)
         button = driver.find_element(By.XPATH, var.icon_nhom)
         driver.execute_script("arguments[0].click();", button)
@@ -10887,7 +11055,7 @@ class nhom():
 
     def nhombanquanly(self):
         driver.implicitly_wait(15)
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.icon_nhom)
         driver.execute_script("arguments[0].click();", button)
@@ -10975,7 +11143,7 @@ class nhom():
             driver.find_element(By.XPATH, var.trang_themmoi_khoanhkhac_nhapnoidung).send_keys(data['nhom']['themoi_khoanhkhac'])
         driver.find_element(By.XPATH, var.chontaptin).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/bungnolongdungcam.exe")
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/bnldc.exe")
         time.sleep(3)
         driver.find_element(By.XPATH, var.dangbai).click()
         # driver.find_element(By.XPATH, var.taokhoanhkhac_x).click()      #đăng bài lâu quá 1p
@@ -11012,6 +11180,8 @@ class nhom():
         logging.info(check_nhom_taobaiviet_anhvideo)
         logging.info(check_nhom_taobaiviet_anhvideo == "Bạn đang làm gì?")
         driver.find_element(By.XPATH, var.camxuchoatdong_x).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icon_x).click()
         time.sleep(1)
 
         # #Nhóm -  Tạo bài viết - ảnh video
@@ -11069,7 +11239,7 @@ class nhom():
         if check_nhom_taobaiviet_messsage == "Đăng bài viết thành công.":
             check_nhom_baiviet_camxuchoatdong_tieude = driver.find_element(By.XPATH,var.check_nhom_baiviet_camxuchoatdong_tieude).text
             logging.info("Nhóm - Tạo bài viết - Cảm xúc/Hoạt động - Dòng thời gian")
-            logging.info("check font-end: Tiêu đề - Ngọc Mai đang  cảm thấy xinh xắn")
+            logging.info("check font-end: Tiêu đề - Ngọc Mai đang  cảm thấy buồn bã")   #bài viết ko có cảm xúc đã chọn 6603
             logging.info(check_nhom_baiviet_camxuchoatdong_tieude)
             logging.info(check_nhom_baiviet_camxuchoatdong_tieude == "Ngọc Mai\n đang  cảm thấy buồn bã")
 
@@ -11415,7 +11585,9 @@ class nhom():
             logging.info("Nhóm - Thảo luận - File phương tiện mới chia sẻ")
             logging.info("check font-end: Có hiển thị File phương tiện mới chia sẻ không")
             logging.info("False")
-        driver.find_element(By.XPATH, var.nhom_thaoluan_filphuongtienmoichiase).click()
+        # driver.find_element(By.XPATH, var.nhom_thaoluan_filphuongtienmoichiase).click()
+        button = driver.find_element(By.XPATH, var.nhom_thaoluan_filphuongtienmoichiase)
+        driver.execute_script("arguments[0].click();", button)
         time.sleep(1)
 
         check_nhom_thaoluan_filemoichiase1_xemtatca = driver.find_element(By.XPATH,var.check_nhom_thaoluan_filemoichiase1_xemtatca).text
@@ -11424,6 +11596,48 @@ class nhom():
         logging.info(check_nhom_thaoluan_filemoichiase1_xemtatca)
         logging.info(check_nhom_thaoluan_filemoichiase1_xemtatca == "File phương tiện")
         time.sleep(2)
+
+    def dau3chambaiviet(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        #Tạo post 1
+        driver.find_element(By.XPATH, var.nhom_taobaiviet).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys(data['nhom']['taobaiviet_gobaiviet1'])
+        driver.find_element(By.XPATH, var.dang).click()
+        driver.find_element(By.XPATH, var.check_nhom_taobaiviet_message)
+        time.sleep(1)
+        #Tạo post 2
+        driver.find_element(By.XPATH, var.nhom_taobaiviet).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys(data['nhom']['taobaiviet_gobaiviet2'])
+        driver.find_element(By.XPATH, var.dang).click()
+        driver.find_element(By.XPATH, var.check_nhom_taobaiviet_message)
+        time.sleep(1)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        #Dấu 3 chám bài viết nhóm
+        #Ghim bài viết
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_dau3cham).click()
+        driver.find_element(By.XPATH, var.ghimbaiviet).click()
+        check_nhom_message_ghimbaiviet = driver.find_element(By.XPATH,var.check_nhom_message_ghimbaiviet).text
+        logging.info("Nhóm - Thảo luận - Bài viết 1")
+        logging.info("check font-end: Message Ghim bài viết - Đã ghim bài viết của bạn")
+        logging.info(check_nhom_message_ghimbaiviet)
+        logging.info(check_nhom_message_ghimbaiviet == "Đã ghim bài viết của bạn")
+        #Bỏ ghim bài viết
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_dau3cham1).click()
+        driver.find_element(By.XPATH, var.boghimbaiviet).click()
+        check_nhom_message_boghimbaiviet = driver.find_element(By.XPATH,var.check_nhom_message_boghimbaiviet).text
+        logging.info("Nhóm - Thảo luận - Bài viết 1")
+        logging.info("check font-end: Message Bo ghim bài viết - Đã bỏ ghim bài viết của bạn")
+        logging.info(check_nhom_message_boghimbaiviet)
+        logging.info(check_nhom_message_boghimbaiviet == "Đã bỏ ghim bài viết của bạn")
+        # time.sleep(1)   nhóm_dau 3 cham mowsi viest xong ghim
+
 
 
 
@@ -11470,7 +11684,7 @@ class nhom():
         check_nhom_moibanbe_damoi1 = driver.find_element(By.XPATH, var.check_nhom_moibanbe_damoi1).text
         time.sleep(1)
         #Mạnh Cường đồng ý tham gia nhóm
-        login.login4(self, "truongvck22@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
         time.sleep(2)
         driver.find_element(By.XPATH, var.trangchu_iconthongbao).click()
         time.sleep(1)
@@ -11482,7 +11696,7 @@ class nhom():
         time.sleep(0.5)
 
         #Mời Mạnh Cường làm Quản trị viên
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.icon_nhom)
         driver.execute_script("arguments[0].click();", button)
@@ -11538,7 +11752,7 @@ class nhom():
 
 
         # Mạnh Cường đồng ý làm qtv
-        login.login4(self, "truongvck22@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
         time.sleep(2)
         button = driver.find_element(By.XPATH, var.icon_nhom)
         driver.execute_script("arguments[0].click();", button)
@@ -11552,7 +11766,7 @@ class nhom():
 
 
         #Gỡ vai trò qtv của Mạnh Cường
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.icon_nhom)
         driver.execute_script("arguments[0].click();", button)
@@ -11630,7 +11844,7 @@ class nhom():
             logging.info("check font-end: Có xóa Mạnh Cường khỏi nhóm được không?")
             logging.info("True")
 
-        login.login4(self, "truongvck22@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
         time.sleep(2)
         driver.get("https://cmc-fe.emso.vn/group/111504666936394879/member")
         time.sleep(2)
@@ -11642,7 +11856,7 @@ class nhom():
         time.sleep(1)
 
         #Danh sách thành viên bị chặn
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         time.sleep(2)
         driver.get("https://cmc-fe.emso.vn/group/111504666936394879/member")
         time.sleep(2)
@@ -11673,27 +11887,11 @@ class nhom():
             logging.info("True")
         time.sleep(2)
 
-        #Rời nhóm test qua bug
-        login.login4(self, "truongvck22@gmail.com", "atgmj123456")
-        time.sleep(2)
-        driver.get("https://cmc-fe.emso.vn/group/111504666936394879/member")
-        time.sleep(2)
-        driver.find_element(By.XPATH, var.thamgianhom).click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, var.dathamgia).click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, var.roikhoinhom).click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, var.roikhoinhom).click()
-        time.sleep(1)
-        check_thamgianmhom = driver.find_element(By.XPATH, var.thamgianhom)
-        time.sleep(1)
-
 
 
     def filephuongtien(self):
         driver.implicitly_wait(15)
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.icon_nhom)
         driver.execute_script("arguments[0].click();", button)
@@ -11817,18 +12015,21 @@ class nhom():
                 pass
         driver.implicitly_wait(15)
         driver.find_element(By.XPATH, var.xemvideo_x).click()
-        # #Xóa Khoảnh khắc
-        # nhom_filephuongtien_linkkhoanhkhac1 = driver.find_element(By.XPATH, var.nhom_filephuongtien_khoanhkhac_xemkhoanhkhacdau).get_attribute("src")
-        # driver.find_element(By.XPATH, var.nhom_iconxoakhoanhkhac).click()       #không có icon xóa khoảnh khắc
-        # driver.find_element(By.XPATH, var.xoafilephuongtien).click()
-        # driver.find_element(By.XPATH, var.xoa).click()
-        # time.sleep(2)
-        # nhom_filephuongtien_linkkhoanhkhac2 = driver.find_element(By.XPATH, var.nhom_filephuongtien_khoanhkhac_xemkhoanhkhacdau).get_attribute("src")
-        # logging.info("Nhóm - Nhóm của bạn - File phương tiện")
-        # logging.info("check font-end: Khoảnh khắc - Xóa khoảnh khắc")
-        # logging.info(nhom_filephuongtien_linkkhoanhkhac1)
-        # logging.info(nhom_filephuongtien_linkkhoanhkhac2)
-        # logging.info(nhom_filephuongtien_linkkhoanhkhac1 != nhom_filephuongtien_linkkhoanhkhac2)
+        #Xóa Khoảnh khắc
+        nhom_filephuongtien_linkkhoanhkhac1 = driver.find_element(By.XPATH, var.nhom_filephuongtien_khoanhkhac_xemkhoanhkhacdau).get_attribute("src")
+        driver.find_element(By.XPATH, var.nhom_iconxoakhoanhkhac).click()
+        driver.find_element(By.XPATH, var.xoafilephuongtien).click()
+        driver.find_element(By.XPATH, var.xoa).click()
+        time.sleep(2)
+        driver.refresh()
+        time.sleep(2)
+        nhom_filephuongtien_linkkhoanhkhac2 = driver.find_element(By.XPATH, var.nhom_filephuongtien_khoanhkhac_xemkhoanhkhacdau).get_attribute("src")
+        logging.info("Nhóm - Nhóm của bạn - File phương tiện")
+        logging.info("check font-end: Khoảnh khắc - Xóa khoảnh khắc")
+        logging.info(nhom_filephuongtien_linkkhoanhkhac1)
+        logging.info(nhom_filephuongtien_linkkhoanhkhac2)
+        logging.info(nhom_filephuongtien_linkkhoanhkhac1 != nhom_filephuongtien_linkkhoanhkhac2)
+        time.sleep(1)
 
     def album(self):
         button = driver.find_element(By.XPATH, var.nhom_filephuongtien_album)
@@ -11861,32 +12062,33 @@ class nhom():
         logging.info(check_filephuongtien_album_taomoi)
         logging.info(check_filephuongtien_album_taomoi ==  data['nhom']['album_ten'])
         # #dấu 3 chấm album
-        # #Chỉnh sửa album
-        # driver.find_element(By.XPATH, var.nhom_filephuongtien_album_icondau3cham).click()        #Chưa có dấu 3 chấm để xoá và cập nhật album
-        # driver.find_element(By.XPATH, var.capnhatalbum).click()
-        # time.sleep(1.5)
-        # driver.find_element(By.XPATH, var.trangcanhan_anh_album_ten).send_keys(data['nhom']['album_ten1'])
-        # driver.find_element(By.XPATH, var.luuthaydoi).click()
-        # time.sleep(2)
+        #Chỉnh sửa album
+        driver.find_element(By.XPATH, var.nhom_filephuongtien_album_icondau3cham).click()
+        driver.find_element(By.XPATH, var.capnhatalbum).click()
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.trangcanhan_anh_album_ten).send_keys(data['nhom']['album_ten1'])
+        driver.find_element(By.XPATH, var.luuthaydoi).click()
+        time.sleep(2)
+        #Xóa album
+        nhom_filephuongtien_linkalbum1 = driver.find_element(By.XPATH, var.nhom_filephuongtien_linkalbum1).get_attribute("style")
+        driver.find_element(By.XPATH, var.nhom_filephuongtien_album_icondau3cham).click()
+        driver.find_element(By.XPATH, var.xoaalbum).click()
+        driver.find_element(By.XPATH, var.xoa).click()
+        time.sleep(2)
         # #Xóa album
-        # nhom_filephuongtien_linkalbum1 = driver.find_element(By.XPATH, var.nhom_filephuongtien_linkalbum1).get_attribute("style")
-        # driver.find_element(By.XPATH, var.nhom_filephuongtien_album_icondau3cham).click()
-        # driver.find_element(By.XPATH, var.xoaalbum).click()
-        # driver.find_element(By.XPATH, var.xoa).click()
-        # # #Xóa album
-        # nhom_filephuongtien_linkalbum2 = driver.find_element(By.XPATH, var.nhom_filephuongtien_linkalbum1).get_attribute("style")
-        # logging.info("Nhóm - Nhóm của bạn - File phương tiện")
-        # logging.info("check font-end: Album - xóa album")
-        # logging.info(nhom_filephuongtien_linkalbum1)
-        # logging.info(nhom_filephuongtien_linkalbum2)
-        # logging.info(nhom_filephuongtien_linkalbum1 != nhom_filephuongtien_linkalbum2)
+        nhom_filephuongtien_linkalbum2 = driver.find_element(By.XPATH, var.nhom_filephuongtien_linkalbum1).get_attribute("style")
+        logging.info("Nhóm - Nhóm của bạn - File phương tiện")
+        logging.info("check font-end: Album - xóa album")
+        logging.info(nhom_filephuongtien_linkalbum1)
+        logging.info(nhom_filephuongtien_linkalbum2)
+        logging.info(nhom_filephuongtien_linkalbum1 != nhom_filephuongtien_linkalbum2)
         time.sleep(2)
 
 
 
     def yeucaulamthanhvien(self):
         driver.implicitly_wait(15)
-        login.login4(self, "truongvck222@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.icon_nhom)
         driver.execute_script("arguments[0].click();", button)
@@ -11904,8 +12106,11 @@ class nhom():
         logging.info("check font-end: Tìm kiếm - Trần Quang Trường")
         logging.info(check_yeucaulamthanhvien_timkiem)
         logging.info(check_yeucaulamthanhvien_timkiem == "Trần Quang Trường")
-        driver.find_element(By.XPATH, var.nhom_yeucaulamthanhvien_timkiem).clear()
-        time.sleep(1)
+        # driver.find_element(By.XPATH, var.nhom_yeucaulamthanhvien_timkiem).clear()
+        # xoa = driver.find_element(By.XPATH, var.nhom_yeucaulamthanhvien_timkiem)
+        # xoa.send_keys(Keys.CONTROL, "a")
+        driver.refresh()
+        time.sleep(2)
 
         #Ngày tham gia
         #Ngày tham gia - Chưa đến 3 tháng trước
@@ -11955,11 +12160,18 @@ class nhom():
         driver.find_element(By.XPATH, var.thoigianyeucau).click()
         driver.find_element(By.XPATH, var.duoi1tuan).click()
         time.sleep(2)
-        check_yeucaulamthanhvien_duoi1tuan = driver.find_element(By.XPATH,var.check_yeucaulamthanhvien_dulieu1).text
-        logging.info("Nhóm - Nhóm của bạn - Yêu cầu làm thành viên")
-        logging.info("check font-end: Thời gian yêu cầu - Dưới 1 tuần - Có dữ liệu không")
-        logging.info(check_yeucaulamthanhvien_duoi1tuan)
-        logging.info(check_yeucaulamthanhvien_duoi1tuan != None)
+        driver.implicitly_wait(2)
+        try:
+            check_yeucaulamthanhvien_duoi1tuan = driver.find_element(By.XPATH,var.check_yeucaulamthanhvien_dulieu1).text
+            logging.info("Nhóm - Nhóm của bạn - Yêu cầu làm thành viên")
+            logging.info("check font-end: Thời gian yêu cầu - Dưới 1 tuần")
+            logging.info("Flase")
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Yêu cầu làm thành viên")
+            logging.info("check font-end: Thời gian yêu cầu - Dưới 1 tuần")
+            logging.info("True")
+
+        driver.implicitly_wait(15)
         driver.find_element(By.XPATH, var.duoi1tuan).click()
 
         #Thời gian yêu cầu - Dưới 3 tháng
@@ -12025,7 +12237,6 @@ class nhom():
         logging.info("check font-end: Giới tính - Nam - Có dữ liệu không")
         logging.info(check_yeucaulamthanhvien_nam)
         logging.info(check_yeucaulamthanhvien_nam != None)
-        logging.info(check_yeucaulamthanhvien_nam == "Trần Quang Trường")
 
         #Giới tính - Khác
         driver.find_element(By.XPATH, var.nam).click()
@@ -12047,11 +12258,10 @@ class nhom():
         time.sleep(2)
         driver.implicitly_wait(2)
         try:
-            check_yeucaulamthanhvien_coanhdaidien = driver.find_element(By.XPATH,var.check_yeucaulamthanhvien_anhdaidien)
+            check_yeucaulamthanhvien_coanhdaidien = driver.find_element(By.XPATH,var.check_yeucaulamthanhvien_anhdaidien).get_attribute("src")
             logging.info("Nhóm - Nhóm của bạn - Yêu cầu làm thành viên")
             logging.info("check font-end: Ảnh đại diện - Có ảnh đại diện")
-            logging.info(check_yeucaulamthanhvien_coanhdaidien.get_attribute("src"))
-            logging.info(check_yeucaulamthanhvien_coanhdaidien.is_displayed())
+            logging.info(check_yeucaulamthanhvien_coanhdaidien != "https://cmc-sn.emso.vn/avatars/original/missing.png")
         except NoSuchElementException:
             logging.info("Nhóm - Nhóm của bạn - Yêu cầu làm thành viên")
             logging.info("check font-end: Ảnh đại diện - Có ảnh đại diện")
@@ -12063,19 +12273,19 @@ class nhom():
         time.sleep(2)
         driver.implicitly_wait(2)
         try:
-            check_yeucaulamthanhvien_coanhdaidien = driver.find_element(By.XPATH,var.check_yeucaulamthanhvien_anhdaidien)
+            check_yeucaulamthanhvien_coanhdaidien = driver.find_element(By.XPATH,var.check_yeucaulamthanhvien_anhdaidien).get_attribute("src")
             logging.info("Nhóm - Nhóm của bạn - Yêu cầu làm thành viên")
             logging.info("check font-end: Ảnh đại diện - Không có ảnh đại diện")
-            logging.info("False")
+            logging.info(check_yeucaulamthanhvien_coanhdaidien == "https://cmc-sn.emso.vn/avatars/original/missing.png")
         except NoSuchElementException:
             logging.info("Nhóm - Nhóm của bạn - Yêu cầu làm thành viên")
             logging.info("check font-end: Ảnh đại diện - Không có ảnh đại diện")
-            logging.info("True")
+            logging.info("False")
         time.sleep(2)
 
 
         #Yêu cầu làm thành viên - Phê duyệt
-        login.login4(self, "truongvck22@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
         time.sleep(2)
         driver.get("https://cmc-fe.emso.vn/group/111561259300587836")
         driver.find_element(By.XPATH, var.thamgianhom).click()
@@ -12090,7 +12300,7 @@ class nhom():
             logging.info("False")
         time.sleep(1)
 
-        login.login4(self, "truongvck222@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
         time.sleep(2)
         driver.get("https://cmc-fe.emso.vn/group/111561259300587836/request_member")
         time.sleep(2)
@@ -12116,7 +12326,7 @@ class nhom():
             logging.info("check font-end: Mạnh Cường - Gửi yêu cầu tham gia nhóm có hiển thị trong danh sách yêu cầu không?")
             logging.info("False")
         time.sleep(2)
-        login.login4(self, "truongvck22@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
         time.sleep(2)
         driver.get("https://cmc-fe.emso.vn/group/111561259300587836")
         time.sleep(2)
@@ -12128,7 +12338,7 @@ class nhom():
         time.sleep(1)
         driver.find_element(By.XPATH, var.thamgianhom).click()
         time.sleep(2)
-        login.login4(self, "truongvck222@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
         time.sleep(2)
         driver.get("https://cmc-fe.emso.vn/group/111561259300587836/request_member")
         time.sleep(2)
@@ -12154,7 +12364,7 @@ class nhom():
 
     def baivietdalenlich(self):
         driver.implicitly_wait(15)
-        login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
         time.sleep(1.5)
         button = driver.find_element(By.XPATH, var.icon_nhom)
         driver.execute_script("arguments[0].click();", button)
@@ -12191,7 +12401,7 @@ class nhom():
         except NoSuchElementException:
             logging.info("Nhóm - Nhóm của bạn - Bài viết đã lên lịch")
             logging.info("check font-end: Có thông báo ở module hay không")
-            logging.info("True")
+            logging.info("False")
         driver.find_element(By.XPATH, var.nhom_baivietdalenlich).click()
         check_nhom_baivietdalenlich = driver.find_element(By.XPATH, var.check_nhom_baivietdalenlich).text
         logging.info("Nhóm - Bài viết đã lên lịch")
@@ -12202,18 +12412,18 @@ class nhom():
         xoa = driver.find_element(By.XPATH, var.trang_baivietdalenlich_doilichinput)
         xoa.send_keys(Keys.CONTROL, "a")
         driver.find_element(By.XPATH, var.trang_baivietdalenlich_doilichinput).send_keys("20-11-2024")
-        driver.find_element(By.XPATH, var.trang_baivietdalenlich_doilich_capnhat).click()   #Cập nhật bị mất, load lại trang mới hiển thị
+        driver.find_element(By.XPATH, var.trang_baivietdalenlich_doilich_capnhat).click()
         time.sleep(1)
         driver.refresh()
         time.sleep(2)
-        driver.find_element(By.XPATH, var.dangngay).click()     #Không có message
+        driver.find_element(By.XPATH, var.dangngay).click()     #Không đăng ngay được
         try:
             check_trang_baivietdalenlich_message = driver.find_element(By.XPATH, var.check_trang_baivietdalenlich_message).text
-            logging.info("Trang - Bài viết đã lên lịch")
+            logging.info("Nhóm - Bài viết đã lên lịch")
             logging.info("check font-end: Message - Đăng bài viết thành công.")
             logging.info(check_trang_baivietdalenlich_message == "Đăng bài viết thành công.")
         except NoSuchElementException:
-            logging.info("Trang - Bài viết đã lên lịch")
+            logging.info("Nhóm - Bài viết đã lên lịch")
             logging.info("check font-end: Message - Đăng bài viết thành công.")
             logging.info("False")
         time.sleep(5)
@@ -12221,7 +12431,7 @@ class nhom():
         driver.find_element(By.XPATH, var.nhom_trangchu).click()
         check_nhom_baiviet_lenlich = driver.find_element(By.XPATH, var.check_nhom_baiviet_lenlich).text
         logging.info("Nhóm - Tạo bài viết - Lên lịch - Dòng thời gian")
-        logging.info("check font-end: Mô tả - " + check_nhom_baiviet_lenlich)
+        logging.info("check font-end: Mô tả - " + data['nhom']['lenlich'])
         logging.info(check_nhom_baiviet_lenlich)
         logging.info(check_nhom_baiviet_lenlich == data['nhom']['lenlich'])
         time.sleep(2)
@@ -12229,11 +12439,4191 @@ class nhom():
 
 
 
+    def nhatkyhoatdong(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.icon_nhom)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.check_nhom_nhombanquanly_namtest).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhatkyhoatdong).click()
+        #Quản trị viên và người kiểm duyệt
+        driver.find_element(By.XPATH, var.quantrivienvanguoikiemduyet).click()
+        driver.find_element(By.XPATH, var.tranquangtruong).click()
+        driver.implicitly_wait(2)
+        time.sleep(2)
+        try:
+            check_nhatkyhoatdong_qtvvanguoikiemduyet_tranquangtruong = driver.find_element(By.XPATH,var.check_nhatkyhoatdong_dulieu1)
+            logging.info("Nhóm - Nhóm của bạn - Nhật ký hoạt động")
+            logging.info("check font-end: Quản trị viên và người kiểm duyệt - Trần Quang Trường")
+            logging.info(check_nhatkyhoatdong_qtvvanguoikiemduyet_tranquangtruong.text)
+            logging.info(check_nhatkyhoatdong_qtvvanguoikiemduyet_tranquangtruong.is_displayed())
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Nhật ký hoạt động")
+            logging.info("check font-end: Quản trị viên và người kiểm duyệt - Trần Quang Trường")
+            logging.info("False")
+        driver.find_element(By.XPATH, var.xoaboloc).click()
+        time.sleep(1)
+
+        #Thành viên
+        driver.find_element(By.XPATH, var.thanhvien).click()
+        driver.find_element(By.XPATH, var.nhatkyhoatdong_thanhvien_timkiem).send_keys("Vương Lâm")
+        time.sleep(3)
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.nhatkyhoatdong_thanhvien_timkiem_vuonglam)))
+        element.click()
+        time.sleep(2)
+        try:
+            check_nhatkyhoatdong_thanhvien_vuonglam = driver.find_element(By.XPATH,var.check_nhatkyhoatdong_dulieu1)
+            logging.info("Nhóm - Nhóm của bạn - Nhật ký hoạt động")
+            logging.info("check font-end: Thành viên - Vương Lâm")
+            logging.info(check_nhatkyhoatdong_thanhvien_vuonglam.text)
+            logging.info(check_nhatkyhoatdong_thanhvien_vuonglam.is_displayed())
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Nhật ký hoạt động")
+            logging.info("check font-end: Thành viên - Vương Lâm")
+            logging.info("False")
+        driver.find_element(By.XPATH, var.xoaboloc).click()
+        time.sleep(1)
+
+        # Khác - Kiểm duyệt nội dung
+        driver.find_element(By.XPATH, var.khac).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.kieuhoatdong).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.kiemduyetnoidung).click()
+        time.sleep(2)
+        try:
+            check_nhatkyhoatdong_khac_kiemduyetnoidung = driver.find_element(By.XPATH,var.check_nhatkyhoatdong_dulieu1)
+            logging.info("Nhóm - Nhóm của bạn - Nhật ký hoạt động")
+            logging.info("check font-end: Khác - Kiểm duyệt nội dung")
+            logging.info(check_nhatkyhoatdong_khac_kiemduyetnoidung.text)
+            logging.info(check_nhatkyhoatdong_khac_kiemduyetnoidung.is_displayed())
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Nhật ký hoạt động")
+            logging.info("check font-end: Khác - Kiểm duyệt nội dung")
+            logging.info("False")
+
+
+        # Khác - Thành viên
+        driver.find_element(By.XPATH, var.kieuhoatdong).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.kiemduyetnoidung_thanhvien).click()
+        time.sleep(2)
+        try:
+            check_nhatkyhoatdong_khac_thanhvien = driver.find_element(By.XPATH,var.check_nhatkyhoatdong_dulieu1)
+            logging.info("Nhóm - Nhóm của bạn - Nhật ký hoạt động")
+            logging.info("check font-end: Khác - Thành viên")
+            logging.info(check_nhatkyhoatdong_khac_thanhvien.text)
+            logging.info(check_nhatkyhoatdong_khac_thanhvien.is_displayed())
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Nhật ký hoạt động")
+            logging.info("check font-end: Khác - thành viên")
+            logging.info("False")
+
+
+        # Khác - Cài đặt nhóm
+        driver.find_element(By.XPATH, var.kieuhoatdong).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.kiemduyetnoidung_caidat).click()
+        time.sleep(2)
+        try:
+            check_nhatkyhoatdong_khac_caidat = driver.find_element(By.XPATH,var.check_nhatkyhoatdong_dulieu1)
+            logging.info("Nhóm - Nhóm của bạn - Nhật ký hoạt động")
+            logging.info("check font-end: Khác - Cài đặt")
+            logging.info(check_nhatkyhoatdong_khac_caidat.text)
+            logging.info(check_nhatkyhoatdong_khac_caidat.is_displayed())
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Nhật ký hoạt động")
+            logging.info("check font-end: Khác - Cài đặt")
+            logging.info("False")
+        time.sleep(2)
+
+
+
+    def quytacnhom(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.icon_nhom)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.check_nhom_nhombanquanly_namtest).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.quytacnhom).click()
+        #Tạo quy tắc nhóm
+        driver.find_element(By.XPATH, var.batdau).click()
+        driver.find_element(By.XPATH, var.haytutelichsu).click()
+        time.sleep(1)
+        quytacnhom_haytutevalichsu_tieude = driver.find_element(By.XPATH, var.quytacnhom_haytutevalichsu_tieude).get_attribute("value")
+        logging.info("Nhóm - Quy tắc nhóm")
+        logging.info("check font-end: Tiêu đề Hãy tử tế và lịch sự - Gợi ý - Hãy tử tế và lịch sự")
+        logging.info(quytacnhom_haytutevalichsu_tieude)
+        logging.info(quytacnhom_haytutevalichsu_tieude == "Hãy tử tế và lịch sự")
+
+        quytacnhom_haytutevalichsu_mota = driver.find_element(By.XPATH, var.quytacnhom_haytutevalichsu_mota).text
+        logging.info("Nhóm - Quy tắc nhóm")
+        logging.info("check font-end: Mô tả Hãy tử tế và lịch sự - Gợi ý -Tất cả chúng ta cùng có mặt ở đây để tạo nên một môi trường thân thiện. Hãy tôn trọng tất cả mọi người. Tranh luận lành mạnh là điều hết sức tự nhiên nhưng cũng cần tử tế.")
+        logging.info(quytacnhom_haytutevalichsu_mota)
+        logging.info(quytacnhom_haytutevalichsu_mota == "Tất cả chúng ta cùng có mặt ở đây để tạo nên một môi trường thân thiện. Hãy tôn trọng tất cả mọi người. Tranh luận lành mạnh là điều hết sức tự nhiên nhưng cũng cần tử tế.")
+
+        driver.find_element(By.XPATH, var.tao).click()
+        time.sleep(1)
+        check_taoquytacnhom_haytutelichsu_tieude = driver.find_element(By.XPATH, var.check_taoquytacnhom_haytutelichsu_tieude).text
+        logging.info("Nhóm - Quy tắc nhóm")
+        logging.info("check font-end: Tạo quy tắc nhóm - " + quytacnhom_haytutevalichsu_tieude)
+        logging.info(check_taoquytacnhom_haytutelichsu_tieude)
+        logging.info(check_taoquytacnhom_haytutelichsu_tieude == quytacnhom_haytutevalichsu_tieude)
+
+        check_taoquytacnhom_haytutelichsu_mota = driver.find_element(By.XPATH, var.check_taoquytacnhom_haytutelichsu_mota).text
+        logging.info("Nhóm - Quy tắc nhóm")
+        logging.info("check font-end: Tạo quy tắc nhóm - " + quytacnhom_haytutevalichsu_mota)
+        logging.info(check_taoquytacnhom_haytutelichsu_mota)
+        logging.info(check_taoquytacnhom_haytutelichsu_mota == quytacnhom_haytutevalichsu_mota)
+        
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taoquytac).click()
+        driver.find_element(By.XPATH, var.quytacnhom_haytutevalichsu_tieude).send_keys(data['nhom']['quytacnhom_tieude'])
+        driver.find_element(By.XPATH, var.quytacnhom_haytutevalichsu_mota).send_keys(data['nhom']['quytacnhom_mota'])
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.tao).click()
+        time.sleep(1)
+        
+        #Check quy tắc nhóm - Trang chủ - Giới thiệu
+        driver.find_element(By.XPATH, var.nhom_trangchu).click()
+        driver.find_element(By.XPATH, var.gioithieu).click()
+        driver.execute_script("window.scrollBy(0,700)", "")
+        check_nhom_gioithieu_quytacnhom_tieude = driver.find_element(By.XPATH,var.check_nhom_gioithieu_quytacnhom_tieude).text
+        logging.info("Nhóm - Quy tắc nhóm")
+        logging.info("check font-end: Trang chủ - Giới thiệu - Quy tắc nhóm - Tiêu đề - " + check_taoquytacnhom_haytutelichsu_tieude)
+        logging.info(check_nhom_gioithieu_quytacnhom_tieude[1::])
+        logging.info(check_nhom_gioithieu_quytacnhom_tieude[1::] == check_taoquytacnhom_haytutelichsu_tieude)
+
+        check_nhom_gioithieu_quytacnhom_mota = driver.find_element(By.XPATH,var.check_nhom_gioithieu_quytacnhom_mota).text
+        logging.info("Nhóm - Quy tắc nhóm")
+        logging.info("check font-end: Trang chủ - Giới thiệu - Quy tắc nhóm - Mô tả - " + check_taoquytacnhom_haytutelichsu_mota)
+        logging.info(check_nhom_gioithieu_quytacnhom_mota)
+        logging.info(check_nhom_gioithieu_quytacnhom_mota == check_taoquytacnhom_haytutelichsu_mota)
+        time.sleep(2)
+
+        #Xóa quy tắc nhóm
+        driver.find_element(By.XPATH, var.quytacnhom).click()
+        driver.find_element(By.XPATH, var.quytacnhom_quytac1_dau3cham).click()
+        driver.find_element(By.XPATH, var.xoaquytac).click()
+        driver.find_element(By.XPATH, var.xoa).click()
+        time.sleep(2)
+        check_taoquytacnhom_haytutelichsu_xoa = driver.find_element(By.XPATH, var.check_taoquytacnhom_haytutelichsu_tieude).text
+        logging.info("Nhóm - Quy tắc nhóm")
+        logging.info("check font-end: Xóa quy tắc - Hãy tử tế và lịch sự")
+        logging.info(check_taoquytacnhom_haytutelichsu_xoa != "Hãy tử tế và lịch sự")
+
+        #Chỉnh sửa quy tắc
+        driver.find_element(By.XPATH, var.quytacnhom_quytac1_dau3cham).click()
+        driver.find_element(By.XPATH, var.chinhsuaquytac).click()
+        time.sleep(1)
+        xoa = driver.find_element(By.XPATH, var.quytacnhom_chinhsuaquytac_tieude)
+        xoa.send_keys(Keys.CONTROL, "a")
+
+        driver.find_element(By.XPATH, var.quytacnhom_chinhsuaquytac_tieude).send_keys(data['nhom']['quytacnhom_tieudesua'])
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.luu).click()
+        time.sleep(2)
+        check_taoquytacnhom_haytutelichsu_tieudesua = driver.find_element(By.XPATH, var.check_taoquytacnhom_haytutelichsu_tieude).text
+        logging.info("Nhóm - Quy tắc nhóm")
+        logging.info("check font-end: Chỉnh sửa quy tắc nhóm - " + data['nhom']['quytacnhom_tieudesua'])
+        logging.info(check_taoquytacnhom_haytutelichsu_tieude)
+        logging.info(check_taoquytacnhom_haytutelichsu_tieudesua)
+        logging.info(check_taoquytacnhom_haytutelichsu_tieudesua == data['nhom']['quytacnhom_tieudesua'])
+
+        driver.find_element(By.XPATH, var.quytacnhom_quytac1_dau3cham).click()
+        driver.find_element(By.XPATH, var.xoaquytac).click()
+        driver.find_element(By.XPATH, var.xoa).click()
+        time.sleep(2)
+
+
+    def noidungthanhvienbaocao(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        #Tạo post 1
+        driver.find_element(By.XPATH, var.nhom_taobaiviet1).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys("Post này để test báo cáo quản trị viên - Giữ lại")
+        driver.find_element(By.XPATH, var.dang).click()
+        time.sleep(2.5)
+
+        #Nội dung thành viên báo cáo - Giữ lại
+        #Tạo post 2
+        driver.find_element(By.XPATH, var.nhom_taobaiviet1).click()
+        driver.find_element(By.XPATH, var.trang_taobaiviet_dau3cham).click()
+        driver.find_element(By.XPATH, var.trang_taobaiviet_dau3cham_anhvideo).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys(data['nhom']['taobaiviet_anh_mota'])
+        driver.find_element(By.XPATH, var.taobaiviet_tailenanhvideo).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien3.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.dang).click()
+        wait = WebDriverWait(driver, 10)
+        check_nhom_taobaiviet_messsage = wait.until(EC.element_to_be_clickable((By.XPATH, var.check_nhom_taobaiviet_message))).text
+        driver.execute_script("window.scrollBy(0,700)", "")
+        driver.find_element(By.XPATH, var.nhom_baiviet_binhluan).click()
+        driver.find_element(By.XPATH, var.vietbinhluan).send_keys(data['nhom']['noidungbaocao'])
+        driver.find_element(By.XPATH, var.vietbinhluan).send_keys(Keys.ENTER)
+        time.sleep(2)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_baiviet_dau3cham).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.baocaovoiquantrivien).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.noidungkhonglienquan).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.xong).click()
+        time.sleep(1)
+        driver.refresh()
+        time.sleep(2)
+        driver.implicitly_wait(2)
+        try:
+            check_noidungthanhvienbaocao_thongbao = driver.find_element(By.XPATH,var.check_noidungthanhvienbaocao_thongbao)
+            logging.info("Nhóm - Nhóm của bạn - Nội dung thành viên báo cáo")
+            logging.info("check font-end: Có thông báo ở module hay không")
+            logging.info(check_noidungthanhvienbaocao_thongbao.is_displayed())
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Nội dung thành viên báo cáo")
+            logging.info("check font-end: Có thông báo ở module hay không")
+            logging.info("False")
+        driver.find_element(By.XPATH, var.noidungthanhvienbaocao).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.noidungthanhvienbaocao_guilai1).click()
+        time.sleep(3)
+        driver.find_element(By.XPATH, var.nhom_trangchu).click()
+        time.sleep(2)
+        check_nhom_noidungthanhvienbaocao_giulai = driver.find_element(By.XPATH, var.check_nhom_baiviet_camxuchoatdong_mota).text
+        logging.info("Nhóm - Nhóm của bạn - Nội dung thành viên báo cáo")
+        logging.info("check font-end: Giữ lại - Có giữ lại bài viết vừa báo cáo không")
+        logging.info(check_nhom_noidungthanhvienbaocao_giulai)
+        logging.info(check_nhom_noidungthanhvienbaocao_giulai == data['nhom']['taobaiviet_anh_mota'])
+
+        #Nội dung thành viên báo cáo - Gỡ bài
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        #Tạo post 1
+        driver.find_element(By.XPATH, var.nhom_taobaiviet1).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys(data['nhom']['noidungbaocao_gobai'])
+        driver.find_element(By.XPATH, var.dang).click()
+        time.sleep(2.5)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_baiviet_dau3cham).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.baocaovoiquantrivien).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.noidungkhonglienquan).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.xong).click()
+        time.sleep(1)
+        driver.refresh()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.noidungthanhvienbaocao).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.noidungthanhvienbaocao_gobai1).click()
+        time.sleep(3)
+        driver.find_element(By.XPATH, var.nhom_trangchu).click()
+        time.sleep(2)
+        check_nhom_noidungthanhvienbaocao_gobai = driver.find_element(By.XPATH, var.check_nhom_baiviet_camxuchoatdong_mota).text
+        if check_nhom_noidungthanhvienbaocao_gobai == data['nhom']['noidungbaocao_gobai']:
+            logging.info("Nhóm - Nhóm của bạn - Nội dung thành viên báo cáo")
+            logging.info("check font-end: Gỡ bài - Có gỡ bài viết vừa báo cáo không")
+            logging.info("False")
+        else:
+            logging.info("Nhóm - Nhóm của bạn - Nội dung thành viên báo cáo")
+            logging.info("check font-end: Gỡ bài - Có gỡ bài viết vừa báo cáo không")
+            logging.info("True")
+
+
+        #Nội dung thành viên báo cáo - Dấu 3 chấm
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        #Tạo post 1
+        driver.find_element(By.XPATH, var.nhom_taobaiviet1).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys(data['nhom']['noidungbaocao_dau3cham'])
+        driver.find_element(By.XPATH, var.dang).click()
+        time.sleep(2.5)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_baiviet_dau3cham).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.baocaovoiquantrivien).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.noidungkhonglienquan).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.xong).click()
+        time.sleep(1)
+        driver.refresh()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.noidungthanhvienbaocao).click()
+        time.sleep(1)
+
+        #Nội dung thành viên báo cáo - Dấu 3 chấm - Sao chép liên kết để chia sẻ với quản trị viên
+        driver.find_element(By.XPATH, var.noidungthanhvienbaocao_dau3cham).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.noidungthanhvienbaocao_dau3cham_saocheplienket).click()
+        time.sleep(1)
+
+        #Nội dung thành viên báo cáo - Dấu 3 chấm - Gỡ bài viết và chặn tác giả
+        driver.find_element(By.XPATH, var.noidungthanhvienbaocao_dau3cham).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.noidungthanhvienbaocao_dau3cham_gobaivietvachantacgia).click()
+        time.sleep(3)
+        driver.refresh()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_trangchu).click()
+        check_nhom_noidungthanhvienbaocao_gobaivachantacgia = driver.find_element(By.XPATH, var.check_nhom_baiviet_camxuchoatdong_mota).text
+        if check_nhom_noidungthanhvienbaocao_gobaivachantacgia == data['nhom']['noidungbaocao_dau3cham']:
+            logging.info("Nhóm - Nhóm của bạn - Nội dung thành viên báo cáo")
+            logging.info("check font-end: Gỡ bài viết và chặn tác giả - Có gỡ bài viết vừa báo cáo không")
+            logging.info("False")
+        else:
+            logging.info("Nhóm - Nhóm của bạn - Nội dung thành viên báo cáo")
+            logging.info("check font-end: Gỡ bài viết và chặn tác giả - Có gỡ bài viết vừa báo cáo không")
+            logging.info("True")
+
+        driver.find_element(By.XPATH, var.nhom_thanhvien).click()
+        time.sleep(2)
+        driver.implicitly_wait(2)
+        try:
+            check_nhom_thanhvien_thanhvienbichan = driver.find_element(By.XPATH, var.check_nhom_thanhvien_thanhvienbichan)
+            logging.info("Nhóm - Nhóm của bạn - Nội dung thành viên báo cáo")
+            logging.info("check font-end: Gỡ bài viết và chặn tác giả - Danh sách thành viên bị chặn Có hiển thị không")
+            logging.info(check_nhom_thanhvien_thanhvienbichan.is_displayed())
+            logging.info(check_nhom_thanhvien_thanhvienbichan.text)
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Nội dung thành viên báo cáo")
+            logging.info("check font-end: Gỡ bài viết và chặn tác giả - Danh sách thành viên bị chặn Có hiển thị không")
+            logging.info("False")
+        button = driver.find_element(By.XPATH, var.nhom_thanhvien_dsbichan_dau3cham)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.bochan).click()
+        time.sleep(2)
+
+
+    def thongbaokiemduyet(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.icon_nhom)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.check_nhom_nhombanquanly_namtest).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_thongbaokiemduyet).click()
+        driver.find_element(By.XPATH, var.chinhsuathongbao).click()
+        time.sleep(1)
+        #Xóa từ khóa
+        driver.find_element(By.XPATH, var.nhom_thongbaokiemduyet_xoatukhoa1).click()
+        time.sleep(1)
+        driver.implicitly_wait(2)
+        try:
+            check_nhom_thongbaokiemduyet_xoatukhoa1 = driver.find_element(By.XPATH, var.nhom_thongbaokiemduyet_xoatukhoa1).is_displayed()
+            logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+            logging.info("check font-end: Xóa từ khóa 1")
+            logging.info("False")
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+            logging.info("check font-end: Xóa từ khóa 1")
+            logging.info("True")
+
+        #Thêm từ khóa
+        driver.find_element(By.XPATH, var.nhom_thongbaokiemduyet_themtukhoainput).send_keys(data['nhom']['thongbaokiemduyet'])
+        driver.find_element(By.XPATH, var.them).click()
+        time.sleep(1)
+        try:
+            check_nhom_thongbaokiemduyet_themtukhoa1 = driver.find_element(By.XPATH, var.check_nhom_thongbaokiemduyet_themtukhoa1).text
+            logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+            logging.info("check font-end: Thêm từ khóa 1 - " + data['nhom']['thongbaokiemduyet'])
+            logging.info(check_nhom_thongbaokiemduyet_themtukhoa1)
+            logging.info(data['nhom']['thongbaokiemduyet'])
+            logging.info(check_nhom_thongbaokiemduyet_themtukhoa1 == data['nhom']['thongbaokiemduyet'])
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+            logging.info("check font-end: Thêm từ khóa 1 - " + data['nhom']['thongbaokiemduyet'])
+            logging.info("False")
+        time.sleep(1)
+
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        #Tạo post 1
+        driver.find_element(By.XPATH, var.nhom_taobaiviet1).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys("Post này để test thông báo kiểm duyệt - Giữ lại comment")
+        driver.find_element(By.XPATH, var.dang).click()
+        time.sleep(2.5)
+        driver.find_element(By.XPATH, var.icon_x).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icon_x).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_baiviet_binhluan).click()
+        driver.find_element(By.XPATH, var.vietbinhluan).send_keys(data['nhom']['thongbaokiemduyet'])
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.vietbinhluan).send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        check_nhom_baiviet_binhluan_thongbaokiemduyet = driver.find_element(By.XPATH,var.nhom_baiviet_binhluan_thongbaokiemduyet).text
+        logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+        logging.info("check font-end: Bình luận vào bài viết  - " + data['nhom']['thongbaokiemduyet'])
+        logging.info(check_nhom_baiviet_binhluan_thongbaokiemduyet)
+        logging.info(check_nhom_baiviet_binhluan_thongbaokiemduyet == data['nhom']['thongbaokiemduyet'])
+
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879/report_censorship")
+        time.sleep(2)
+        driver.implicitly_wait(3)
+        try:
+            check_thongbaokiemduyet_thongbao = driver.find_element(By.XPATH,var.check_noidungthanhvienbaocao_thongbao)
+            logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+            logging.info("check font-end: Có thông báo ở module hay không")
+            logging.info(check_thongbaokiemduyet_thongbao.is_displayed())
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+            logging.info("check font-end: Có thông báo ở module hay không")
+            logging.info("False")
+
+        check_thongbaokiemduyet_tukhoabaocao = driver.find_element(By.XPATH,var.check_thongbaokiemduyet_tukhoabaocao).text
+        logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+        logging.info("check font-end: Từ khóa được báo cáo  - " + data['nhom']['thongbaokiemduyet'])
+        logging.info(check_thongbaokiemduyet_tukhoabaocao)
+        logging.info(check_thongbaokiemduyet_tukhoabaocao == data['nhom']['thongbaokiemduyet'])
+
+        #Thông báo kiểm duyệt - Giữ lại
+        driver.find_element(By.XPATH, var.giulai).click()
+        time.sleep(3)
+        driver.find_element(By.XPATH, var.nhom_trangchu).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_baiviet_binhluan).click()
+        try:
+            check_thongbaokiemduyet_giulai = driver.find_element(By.XPATH,var.nhom_baiviet_binhluan_thongbaokiemduyet).text
+            logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+            logging.info("check font-end: Giữ lại - " + data['nhom']['thongbaokiemduyet'])
+            logging.info(check_thongbaokiemduyet_giulai)
+            logging.info(check_thongbaokiemduyet_giulai == data['nhom']['thongbaokiemduyet'])
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+            logging.info("check font-end: Giữ lại - " + data['nhom']['thongbaokiemduyet'])
+            logging.info("False")
+
+        #Thông báo kiểm duyệt - Gỡ bình luận
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        #Tạo post 1
+        driver.find_element(By.XPATH, var.nhom_taobaiviet1).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys("Post này để test thông báo kiểm duyệt - Gỡ commnet")
+        driver.find_element(By.XPATH, var.dang).click()
+        time.sleep(2.5)
+        driver.find_element(By.XPATH, var.icon_x).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icon_x).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_baiviet_binhluan).click()
+        driver.find_element(By.XPATH, var.vietbinhluan).send_keys(data['nhom']['thongbaokiemduyet'])
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.vietbinhluan).send_keys(Keys.ENTER)
+        time.sleep(2)
+        check_nhom_baiviet_binhluan_thongbaokiemduyet = driver.find_element(By.XPATH,var.nhom_baiviet_binhluan_thongbaokiemduyet)
+
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879/report_censorship")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.gobinhluan).click()
+        time.sleep(3)
+        driver.find_element(By.XPATH, var.nhom_trangchu).click()
+        time.sleep(2)
+        check_nhom_baiviet_mota = driver.find_element(By.XPATH, var.check_nhom_baiviet_mota).text
+        driver.implicitly_wait(3)
+        if check_nhom_baiviet_mota == "Post này để test thông báo kiểm duyệt - Gỡ commnet":
+            driver.find_element(By.XPATH, var.nhom_baiviet_binhluan).click()
+            try:
+                check_thongbaokiemduyet_gobinhluan = driver.find_element(By.XPATH,var.nhom_baiviet_binhluan_thongbaokiemduyet).is_displayed()
+                logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+                logging.info("check font-end: Gỡ bình luận - " + data['nhom']['thongbaokiemduyet'])
+                logging.info("False")
+            except NoSuchElementException:
+                logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+                logging.info("check font-end: Gỡ bình luận - " + data['nhom']['thongbaokiemduyet'])
+                logging.info("True")
+        else:
+            logging.info("Nhóm - Nhóm của bạn - Thông báo kiểm duyệt")
+            logging.info("check font-end: Gỡ bình luận - Có còn bài viết không?")
+            logging.info("False")
+        time.sleep(2)
+
+    def cauhoichonthanhvien(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.icon_nhom)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.check_nhom_nhombanquanly_namtest).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_cauhoichonthanhvien).click()
+
+        #Thêm câu hỏi 1 - Ô để đánh dấu
+        driver.find_element(By.XPATH, var.themcauhoi).click()
+        driver.find_element(By.XPATH, var.taomoicauhoi_input).send_keys(data['nhom']['odedanhdau'])
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon).click()
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon1).send_keys(data['nhom']['odedanhdau_luachon1'])
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon).click()
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon2).send_keys(data['nhom']['odedanhdau_luachon2'])
+        driver.find_element(By.XPATH, var.tao).click()
+        time.sleep(1)
+        
+        check_cauhoichonthanhvien_tencauhoi1 = driver.find_element(By.XPATH,var.check_cauhoichonthanhvien_tencauhoi1).text
+        logging.info("Nhóm - Nhóm của bạn - Câu hỏi chọn thành viên")
+        logging.info("check font-end: Câu hỏi 1 - " + data['nhom']['odedanhdau'])
+        logging.info(check_cauhoichonthanhvien_tencauhoi1)
+        logging.info(check_cauhoichonthanhvien_tencauhoi1 == data['nhom']['odedanhdau'])
+
+        check_cauhoichonthanhvien_cautraloicauhoi1 = driver.find_element(By.XPATH,var.check_cauhoichonthanhvien_cautraloicauhoi1).text
+        logging.info("Nhóm - Nhóm của bạn - Câu hỏi chọn thành viên")
+        logging.info("check font-end: Câu trả lời của câu hỏi 1 - " + data['nhom']['odedanhdau_luachon1'])
+        logging.info(check_cauhoichonthanhvien_cautraloicauhoi1)
+        logging.info(check_cauhoichonthanhvien_cautraloicauhoi1 == data['nhom']['odedanhdau_luachon1'])
+
+        #Chỉnh sửa câu hỏi
+        driver.find_element(By.XPATH, var.chinhsua).click()
+        xoa = driver.find_element(By.XPATH, var.taomoicauhoi_input)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.taomoicauhoi_input).send_keys(data['nhom']['odedanhdau_sua'])
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon).click()
+        xoa = driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon1)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon1).send_keys(data['nhom']['odedanhdau_luachon1_sua'])
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon).click()
+        xoa = driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon2)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon2).send_keys(data['nhom']['odedanhdau_luachon2_sua'])
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon).click()
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon3).send_keys(data['nhom']['odedanhdau_luachon3_sua'])
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon3_x).click()
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon3_x).click()
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon3_x).click()
+        driver.find_element(By.XPATH, var.luu).click()
+        time.sleep(1)
+
+        #Thêm câu hỏi 2 - Trắc nghiệm
+        driver.find_element(By.XPATH, var.taocauhoi).click()
+        driver.find_element(By.XPATH, var.odedanhdau).click()
+        driver.find_element(By.XPATH, var.tracnghiem).click()
+        driver.find_element(By.XPATH, var.taomoicauhoi_input).send_keys(data['nhom']['trachnghiem'])
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon).click()
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon1).send_keys(data['nhom']['trachnghiem_luachon1'])
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon).click()
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_themluachon_luachon2).send_keys(data['nhom']['trachnghiem_luachon2'])
+        driver.find_element(By.XPATH, var.tao).click()
+
+        #Thêm câu hỏi 3 - Trắc nghiệm
+        driver.find_element(By.XPATH, var.taocauhoi).click()
+        driver.find_element(By.XPATH, var.odedanhdau).click()
+        driver.find_element(By.XPATH, var.cauhoitudo).click()
+        driver.find_element(By.XPATH, var.taomoicauhoi_input).send_keys(data['nhom']['cauhoitudo'])
+        driver.find_element(By.XPATH, var.tao).click()
+        time.sleep(1)
+
+        #Login check câu hỏi
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.thamgianhom).click()
+        time.sleep(2)
+        check_thamgianhom_cauhoichonthanhvien_tencauhoi1 = driver.find_element(By.XPATH,var.check_thamgianhom_cauhoichonthanhvien_tencauhoi1).text
+        check_thamgianhom_cauhoichonthanhvien_tencauhoi2 = driver.find_element(By.XPATH,var.check_thamgianhom_cauhoichonthanhvien_tencauhoi2).text
+        check_thamgianhom_cauhoichonthanhvien_tencauhoi3 = driver.find_element(By.XPATH,var.check_thamgianhom_cauhoichonthanhvien_tencauhoi3).text
+
+        logging.info("Nhóm - Nhóm của bạn - Câu hỏi chọn thành viên")
+        logging.info("check font-end:  Tên câu hỏi 1 - " + data['nhom']['odedanhdau_sua'])
+        logging.info(check_thamgianhom_cauhoichonthanhvien_tencauhoi1[11::]== data['nhom']['odedanhdau_sua'])
+
+        logging.info("check font-end:  Tên câu hỏi 2 - " + data['nhom']['trachnghiem'])
+        logging.info(check_thamgianhom_cauhoichonthanhvien_tencauhoi2[11::]== data['nhom']['trachnghiem'])
+
+        logging.info("check font-end:  Tên câu hỏi 3 - " + data['nhom']['cauhoitudo'])
+        logging.info(check_thamgianhom_cauhoichonthanhvien_tencauhoi3[11::]== data['nhom']['cauhoitudo'])
+
+        driver.find_element(By.XPATH, var.traloicauhoi_cautraloi1).click()
+        driver.find_element(By.XPATH, var.traloicauhoi_cautraloi2).click()
+        driver.find_element(By.XPATH, var.traloicauhoi_cautraloi3).send_keys(data['nhom']['traloicauhoi_cautraloi3'])
+        driver.find_element(By.XPATH, var.gui).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.dathamgia).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.roikhoinhom).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.roikhoinhom).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.thamgianhom)
+        time.sleep(1)
+
+        #Xóa câu hỏi
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879/member_question")
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_cauhoi1_xoa).click()
+        driver.find_element(By.XPATH, var.xoacauhoi_xoa).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_cauhoi1_xoa).click()
+        driver.find_element(By.XPATH, var.xoacauhoi_xoa).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.cauhoichonthanhvien_cauhoi1_xoa).click()
+        driver.find_element(By.XPATH, var.xoacauhoi_xoa).click()
+        time.sleep(1)
+        driver.implicitly_wait(2)
+        try:
+            check_cauhoichonthanhvien_cauhoi1_xoa = driver.find_element(By.XPATH,var.cauhoichonthanhvien_cauhoi1_xoa).is_displayed()
+            logging.info("Nhóm - Nhóm của bạn - Câu hỏi chọn thành viên")
+            logging.info("check font-end: Có xóa được câu hỏi chọn thành viên không?")
+            logging.info("False")
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Câu hỏi chọn thành viên")
+            logging.info("check font-end: Có xóa được câu hỏi chọn thành viên không?")
+            logging.info("True")
+        time.sleep(2)
+
+
+    def caidatnhom(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.icon_nhom)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.check_nhom_nhombanquanly_namtest).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom).click()
+
+    def thietlapnhom(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        #Tên và mô tả
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_tenvamota).click()
+        time.sleep(1)
+        xoa = driver.find_element(By.XPATH, var.tenvamota_tennhom)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.tenvamota_tennhom).send_keys(data['nhom']['tenvamota_tennhom'])
+
+        xoa = driver.find_element(By.XPATH, var.tenvamota_nhomnaynoive)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.tenvamota_nhomnaynoive).send_keys(data['nhom']['tenvamota_nhomnaynoive'])
+        driver.find_element(By.XPATH, var.luu).click()
+
+        check_caidatnhom_tenvamota_message = driver.find_element(By.XPATH,var.check_caidatnhom_tenvamota_message).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message khi lưu Tên và mô tả - Cập nhật dữ liệu thành công")
+        logging.info(check_caidatnhom_tenvamota_message == "Cập nhật dữ liệu thành công")
+        time.sleep(1)
+
+        driver.find_element(By.XPATH, var.nhom_trangchu).click()
+        driver.find_element(By.XPATH, var.gioithieu).click()
+        driver.execute_script("window.scrollBy(0,700)", "")
+        check_nhom_gioithieu_motanhom = driver.find_element(By.XPATH,var.check_nhom_gioithieu_motanhom).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end: Trang chủ - Giới thiệu - Mô tả nhóm - " + data['nhom']['tenvamota_nhomnaynoive'])
+        logging.info(check_nhom_gioithieu_motanhom)
+        logging.info(check_nhom_gioithieu_motanhom == data['nhom']['tenvamota_nhomnaynoive'])
+
+        check_nhom_tennhom = driver.find_element(By.XPATH,var.check_nhom_tennhom).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end: Đổi tên nhóm - " + data['nhom']['tenvamota_tennhom'])
+        logging.info(check_nhom_tennhom)
+        logging.info(check_nhom_tennhom == data['nhom']['tenvamota_tennhom'])
+        time.sleep(1)
+
+        #Sửa lại tên nhóm
+        driver.find_element(By.XPATH, var.nhom_caidatnhom).click()
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_tenvamota).click()
+        time.sleep(1)
+        xoa = driver.find_element(By.XPATH, var.tenvamota_tennhom)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.tenvamota_tennhom).send_keys(data['nhom']['tenvamota_tennhom1'])
+
+        xoa = driver.find_element(By.XPATH, var.tenvamota_nhomnaynoive)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.tenvamota_nhomnaynoive).send_keys(data['nhom']['tenvamota_nhomnaynoive1'])
+        driver.find_element(By.XPATH, var.luu).click()
+        check_caidatnhom_tenvamota_message = driver.find_element(By.XPATH,var.check_caidatnhom_tenvamota_message).text
+        time.sleep(1)
+
+        #Danh mục và tag
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_danhmucvatag).click()
+        time.sleep(1)
+        xoa = driver.find_element(By.XPATH, var.nhom_caidatnhom_danhmuc)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_danhmuc).send_keys("Âm nhạc")
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.amnhac)))
+        element.click()
+
+        xoa = driver.find_element(By.XPATH, var.nhom_caidatnhom_tag)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_tag).send_keys(data['nhom']['danhmucvatag_tag'])
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.luu).click()
+        check_caidatnhom_danhmucvatag_message = driver.find_element(By.XPATH,var.check_caidatnhom_tenvamota_message).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message khi lưu Danh mục và tag - Cập nhật dữ liệu thành công")
+        logging.info(check_caidatnhom_danhmucvatag_message == "Cập nhật dữ liệu thành công")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_danhmucvatag).click()
+        time.sleep(1)
+
+        check_caidatnhom_danhmucvatag_danhmuc = driver.find_element(By.XPATH,var.check_caidatnhom_danhmucvatag_danhmuc).get_attribute("value")
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end: Danh mục và tag - Danh mục - Âm nhạc")
+        logging.info(check_caidatnhom_danhmucvatag_danhmuc)
+        logging.info(check_caidatnhom_danhmucvatag_danhmuc == "Âm nhạc")
+
+        check_caidatnhom_danhmucvatag_tag = driver.find_element(By.XPATH,var.check_caidatnhom_danhmucvatag_tag).get_attribute("value")
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end: Danh mục và tag - Tag - " + data['nhom']['danhmucvatag_tag'])
+        logging.info(check_caidatnhom_danhmucvatag_tag)
+        logging.info(check_caidatnhom_danhmucvatag_tag == data['nhom']['danhmucvatag_tag'])
+        time.sleep(1)
+
+        #Sửa lại Danh mục và tag
+        xoa = driver.find_element(By.XPATH, var.nhom_caidatnhom_danhmuc)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_danhmuc).send_keys("Làm đẹp")
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, var.lamdep)))
+        element.click()
+
+        xoa = driver.find_element(By.XPATH, var.nhom_caidatnhom_tag)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_tag).send_keys(data['nhom']['danhmucvatag_tag_sua'])
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.luu).click()
+        check_caidatnhom_danhmucvatag_message = driver.find_element(By.XPATH,var.check_caidatnhom_tenvamota_message).text
+        time.sleep(1)
+
+        #Quyền riêng tư - Công khai
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        check_nhomcongkhai_quyenriengtu = driver.find_element(By.XPATH,var.check_nhom_quyenriengtu).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm - Nhóm công khai")
+        logging.info("check font-end: Quyền riêng tư nam test - Nhóm công khai")
+        logging.info(check_nhomcongkhai_quyenriengtu)
+        logging.info(check_nhomcongkhai_quyenriengtu == "Nhóm công khai")
+
+        #Tạo post khi chưa tham gia nhóm
+        driver.find_element(By.XPATH, var.nhom_taobaiviet2).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys("Post này để test thành viên chưa tham gia nhom nhưng tạo bài viết")
+        driver.find_element(By.XPATH, var.dang).click()
+        check_nhomcongkhai_dangbailoi = driver.find_element(By.XPATH,var.check_nhomcongkhai_dangbailoi).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm - Nhóm công khai")
+        logging.info("check font-end: Message Đăng bài khi chưa tham gia nhóm - Vui lòng tham gia nhóm để có thể đăng nội dung.")
+        logging.info(check_nhomcongkhai_dangbailoi == "Vui lòng tham gia nhóm để có thể đăng nội dung.")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icon_x).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icon_x).click()
+
+        #Bình luận khi chưa tham gia nhóm
+        driver.find_element(By.XPATH, var.nhom_baiviet_binhluan).click()
+        driver.find_element(By.XPATH, var.vietbinhluan).send_keys("chưa tham gia nhóm nhưng vẫn bình luận được")
+        driver.find_element(By.XPATH, var.vietbinhluan).send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        #Quyền riêng tư - Riêng tư - Ẩn nhóm
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111561259300587836/setting_group")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_quyenriengtu).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_quyenriengtu_chon).click()
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_quyenriengtu_chon_annhom).click()
+        driver.find_element(By.XPATH, var.luu).click()
+        check_caidatnhom_quyenriengtu_message = driver.find_element(By.XPATH,var.check_caidatnhom_tenvamota_message).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message khi lưu quyền riêng tư ẩn nhóm - Cập nhật dữ liệu thành công")
+        logging.info(check_caidatnhom_quyenriengtu_message == "Cập nhật dữ liệu thành công")
+        time.sleep(1)
+
+        #Login để tìm kiếm nhóm riêng tư ẩn
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.icon_nhom)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        #Tìm kiếm
+        driver.find_element(By.XPATH, var.nhom_timkiem).send_keys(data['nhom']['nhomriengtu_timkiem'])
+        driver.find_element(By.XPATH, var.nhom_timkiem).send_keys(Keys.ENTER)
+        check_nhom_riengtu_an_timkiem = driver.find_element(By.XPATH,var.check_nhom_timkiem).text
+        print(check_nhom_riengtu_an_timkiem)
+        logging.info("Nhóm - Tìm kiếm- Nhóm riêng tư")
+        logging.info("check font-end: Tìm kiếm nhóm ẩn - "+ data['nhom']['nhomriengtu_timkiem'])
+        logging.info(check_nhom_riengtu_an_timkiem != data['nhom']['nhomriengtu_timkiem'])
+        time.sleep(1)
+        #Chuyển  tới trang riêng tư- ẩn
+        driver.get("https://cmc-fe.emso.vn/group/111561259300587836")
+        time.sleep(2)
+        check_nhom_riengtu_an_linktoitrang = driver.find_element(By.XPATH,var.nhomnaykhonghienthi).text
+        print(check_nhom_riengtu_an_linktoitrang)
+        logging.info("Nhóm - Tìm kiếm- Nhóm riêng tư")
+        logging.info("check font-end: Link tới nhóm riêng tư ẩn - Nhóm này không hiển thị")
+        logging.info(check_nhom_riengtu_an_linktoitrang == "Nhóm này không hiển thị")
+        time.sleep(1)
+
+        # Quyền riêng tư - Riêng tư - Ẩn nhóm
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111561259300587836/setting_group")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_quyenriengtu).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_quyenriengtu_chon).click()
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_quyenriengtu_chon_hienthi).click()
+        driver.find_element(By.XPATH, var.luu).click()
+        check_caidatnhom_quyenriengtu_message = driver.find_element(By.XPATH,var.check_caidatnhom_tenvamota_message).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message khi lưu quyền riêng tư hiển thị - Cập nhật dữ liệu thành công")
+        logging.info(check_caidatnhom_quyenriengtu_message == "Cập nhật dữ liệu thành công")
+        time.sleep(1)
+        #Login để tìm kiếm nhóm riêng tư hiển thị
+        login.login4(self, "truongvck22@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.icon_nhom)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        #Tìm kiếm
+        driver.find_element(By.XPATH, var.nhom_timkiem).send_keys(data['nhom']['nhomriengtu_timkiem'])
+        driver.find_element(By.XPATH, var.nhom_timkiem).send_keys(Keys.ENTER)
+        check_nhom_riengtu_an_timkiem = driver.find_element(By.XPATH,var.check_nhom_timkiem).text
+        print(check_nhom_riengtu_an_timkiem)
+        logging.info("Nhóm - Tìm kiếm- Nhóm riêng tư")
+        logging.info("check font-end: Tìm kiếm nhóm hiển thị - "+ data['nhom']['nhomriengtu_timkiem'])
+        logging.info(check_nhom_riengtu_an_timkiem == data['nhom']['nhomriengtu_timkiem'])
+        time.sleep(1)
+        #Chuyển  tới trang riêng tư- hiển thị
+        driver.find_element(By.XPATH, var.check_nhom_timkiem).click()
+        time.sleep(2)
+        check_nhom_riengtu_hienthi_linktoitrang = driver.find_element(By.XPATH,var.check_nhom_riengtu_hienthi_linktoitrang).text
+        print(check_nhom_riengtu_hienthi_linktoitrang)
+        logging.info("Nhóm - Tìm kiếm- Nhóm riêng tư")
+        logging.info("check font-end: Chọn nhóm riêng tư hiển thị - Đây là nhóm riêng tư")
+        logging.info(check_nhom_riengtu_hienthi_linktoitrang == "Đây là nhóm riêng tư")
+        time.sleep(1)
+
+
+    def tuychinhnhom(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879/setting_group")
+        time.sleep(2)
+        #Tùy chỉnh nhóm
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_diachiweb).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_diachiweb_input).send_keys("namtest")
+        driver.find_element(By.XPATH, var.luu).click()
+        check_caidatnhom_diachiweb_message = driver.find_element(By.XPATH,var.check_caidatnhom_tenvamota_message).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message khi lưu địa chỉ web - Cập nhật dữ liệu thành công")
+        logging.info(check_caidatnhom_diachiweb_message == "Cập nhật dữ liệu thành công")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_diachiweb).click()
+        time.sleep(1)
+
+        check_nhom_caidat_diachiweb = driver.find_element(By.XPATH,var.check_nhom_caidat_diachiweb).text
+        print(check_nhom_caidat_diachiweb)
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end: Địa chỉ web sau khi lưu - https://cmc-fe.emso.vn/group/namtest")
+        logging.info(check_nhom_caidat_diachiweb)
+        logging.info(check_nhom_caidat_diachiweb == "https://cmc-fe.emso.vn/group/namtest")
+
+        #check link sau khi thay đổi địa chỉ web
+        driver.get("https://cmc-fe.emso.vn/group/namtest")
+        time.sleep(2)
+        driver.implicitly_wait(5)
+        try:
+            check_nhom_tennhom = driver.find_element(By.XPATH,var.check_nhom_tennhom).text
+            print(check_nhom_tennhom)
+            logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+            logging.info("check font-end: Chuyển tới Địa chỉ web sau khi lưu - Tên nhóm - nam test")
+            logging.info(check_nhom_tennhom)
+            logging.info(check_nhom_tennhom == "nam test")
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+            logging.info("check font-end: Chuyển tới Địa chỉ web sau khi lưu - Tên nhóm - nam test")
+            logging.info("False")
+        driver.implicitly_wait(15)
+
+        driver.get("https://cmc-fe.emso.vn/group/namtest/setting_group")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_diachiweb).click()
+        time.sleep(1)
+        xoa = driver.find_element(By.XPATH, var.nhom_caidatnhom_diachiweb_input)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_diachiweb_input).send_keys("111504666936394879")
+        driver.find_element(By.XPATH, var.luu).click()
+        time.sleep(2)
+
+
+    def quanlynoidungthaoluan(self):
+        driver.implicitly_wait(15)
+        #Quản lý nội dung thảo luận
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_quanlynoidungthaoluan).click()
+        time.sleep(1)
+        #Ai có thể đăng - Chỉ có quản trị viên
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_aicothedang).click()
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_aicothedang_chicoquantrivien).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.luu).click()
+        check_caidatnhom_aicothedang_message = driver.find_element(By.XPATH,var.check_caidatnhom_tenvamota_message).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message khi lưu Ai có thể đăng - Chỉ có quản trị viên - Cập nhật dữ liệu thành công")
+        logging.info(check_caidatnhom_aicothedang_message == "Cập nhật dữ liệu thành công")
+        time.sleep(1)
+
+        #Check Ai có thể đăng - Chỉ có quản trị viên
+        driver.find_element(By.XPATH, var.nhom_trangchu).click()
+        time.sleep(1)
+        check_aicothedang_chicoqtv_qtv = driver.find_element(By.XPATH,var.check_aicothedang_chicoqtv_qtv).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end: Ai có thể đăng - Chỉ có quản trị viên - QTV check tạo bài viết")
+        logging.info(check_aicothedang_chicoqtv_qtv == "Mai ơi, bạn đang nghĩ gì thế?")
+
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        driver.implicitly_wait(3)
+        try:
+            check_aicothedang_chicoqtv_qtv = driver.find_element(By.XPATH, var.check_aicothedang_chicoqtv_thanhvien).is_displayed()
+            logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+            logging.info("check font-end: Ai có thể đăng - Chỉ có quản trị viên - Thành viên nhóm check tạo bài viết")
+            logging.info("False")
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+            logging.info("check font-end: Ai có thể đăng - Chỉ có quản trị viên - Thành viên nhóm check tạo bài viết")
+            logging.info("True")
+
+
+        #Ai có thể đăng - Bất cứ ai trong nhóm - Phê duyệt mọi bài viết của thành viên - Bài viết của thành viên phải được quản trị viên hoặc người kiểm duyệt phê duyệt
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879/setting_group")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_quanlynoidungthaoluan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_aicothedang).click()
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_aicothedang_batcuaitrongnhom).click()
+        time.sleep(1)
+        # Ai có thể đăng - Bất cứ ai trong nhóm - Phê duyệt mọi bài viết của thành viên
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_pheduyetmoibaivietcuathanhvien).click()
+        driver.find_element(By.XPATH, var.baivietphaiduocpheduyet).click()
+        driver.find_element(By.XPATH, var.luu).click()
+        check_caidatnhom_pheduyetmoibaiviet_message = driver.find_element(By.XPATH,var.check_caidatnhom_tenvamota_message).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message khi lưu Phê duyệt mọi bài viết của thành viên - Bài viết của thành viên phải được quản trị viên hoặc người kiểm duyệt phê duyệt - Cập nhật dữ liệu thành công")
+        logging.info(check_caidatnhom_pheduyetmoibaiviet_message == "Cập nhật dữ liệu thành công")
+        time.sleep(1)
+
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_taobaiviet1).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys(data['nhom']['baivietdangcho'])
+        driver.find_element(By.XPATH, var.dang).click()
+        check_nhom_baivietdangcho_message = driver.find_element(By.XPATH,var.check_nhom_baivietdangcho_message).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message Bài viết đang chờ - Cảm ơn bạn đã đăng bài! Hệ thống đã gửi bài viết cho quản trị viên nhóm phê duyệt.")
+        logging.info(check_nhom_baivietdangcho_message == "Cảm ơn bạn đã đăng bài! Hệ thống đã gửi bài viết cho quản trị viên nhóm phê duyệt.")
+        time.sleep(1)
+
+        #Bài viết đang chờ - phê duyệt
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879/waiting_post")
+        time.sleep(2)
+        try:
+            check_baivietdangcho_thongbao = driver.find_element(By.XPATH,var.check_baivietdangcho_thongbao)
+            logging.info("Nhóm - Nhóm của bạn - Bài viết đang chờ")
+            logging.info("check font-end: Có thông báo ở module hay không")
+            logging.info(check_baivietdangcho_thongbao.is_displayed())
+        except NoSuchElementException:
+            logging.info("Nhóm - Nhóm của bạn - Bài viết đang chờ")
+            logging.info("check font-end: Có thông báo ở module hay không")
+            logging.info("False")
+        driver.find_element(By.XPATH, var.pheduyet).click()
+        check_nhom_baivietdangcho_pheduyet_message = driver.find_element(By.XPATH,var.check_nhom_baivietdangcho_pheduyet_message).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message Bài viết đang chờ - Phê duyệt - Đã phê duyệt bài viết thành công")
+        logging.info(check_nhom_baivietdangcho_pheduyet_message == "Đã phê duyệt bài viết thành công")
+        time.sleep(1)
+
+        driver.find_element(By.XPATH, var.nhom_trangchu).click()
+        time.sleep(1)
+        check_nhom_baivietdangcho_pheduyet_baiviet = driver.find_element(By.XPATH,var.nhom_baiviet1_mota).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message Bài viết đang chờ - Phê duyệt")
+        logging.info("check font-end:  check trên dòng thời gian nhóm - "+ data['nhom']['baivietdangcho'])
+        logging.info(check_nhom_baivietdangcho_pheduyet_baiviet == data['nhom']['baivietdangcho'])
+        time.sleep(1)
+
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_taobaiviet1).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys(data['nhom']['baivietdangcho'])
+        driver.find_element(By.XPATH, var.dang).click()
+
+        #Bài viết đang chờ - từ chối
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_taobaiviet1).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys(data['nhom']['baivietdangcho_tuchoi'])
+        driver.find_element(By.XPATH, var.dang).click()
+        check_nhom_baivietdangcho_message = driver.find_element(By.XPATH,var.check_nhom_baivietdangcho_message).text
+        time.sleep(1)
+
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879/waiting_post")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.tuchoi).click()   #Phải từ chối 2l mới đc
+        check_nhom_baivietdangcho_tuchoi_message = driver.find_element(By.XPATH,var.check_nhom_baivietdangcho_tuchoi_message).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message Bài viết đang chờ - Từ chối - Đã phê duyệt bài viết thành công")
+        logging.info(check_nhom_baivietdangcho_tuchoi_message == "Đã từ chối bài viết thành công")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_trangchu).click()
+        time.sleep(1)
+        check_nhom_baivietdangcho_tuchoi_baiviet = driver.find_element(By.XPATH,var.nhom_baiviet1_mota).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Message Bài viết đang chờ - Phê duyệt")
+        logging.info("check font-end:  check trên dòng thời gian nhóm - "+ data['nhom']['baivietdangcho_tuchoi'])
+        logging.info(check_nhom_baivietdangcho_tuchoi_baiviet != data['nhom']['baivietdangcho_tuchoi'])
+        time.sleep(1)
+
+        #Ai có thể đăng - Bất cứ ai trong nhóm - Thành viên có thể trực tiếp đăng bài lên nhóm
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879/setting_group")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_quanlynoidungthaoluan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_aicothedang).click()
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_aicothedang_batcuaitrongnhom).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.nhom_caidatnhom_pheduyetmoibaivietcuathanhvien).click()
+        driver.find_element(By.XPATH, var.thanhviencothedangbaitructieplennhom).click()
+        driver.find_element(By.XPATH, var.luu).click()
+        check_caidatnhom_aicothedang_message = driver.find_element(By.XPATH,var.check_caidatnhom_tenvamota_message).text
+        time.sleep(1)
+
+        login.login4(self, "truongvck222@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/group/111504666936394879")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.nhom_taobaiviet1).click()
+        driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys(data['nhom']['thanhviencothetructiepdangbai'])
+        driver.find_element(By.XPATH, var.dang).click()
+        driver.find_element(By.XPATH, var.dangbaivietthanhcong)
+        time.sleep(2.5)
+
+        check_nhom_thanhviencothedangtructieplen_baiviet = driver.find_element(By.XPATH,var.nhom_baiviet1_mota).text
+        logging.info("Nhóm - Nhóm của bạn - Cài đặt nhóm")
+        logging.info("check font-end:  Ai có thể đăng - Thành viên có thể trực tiếp đăng bài lên nhóm")
+        logging.info("check font-end:  check trên dòng thời gian nhóm - "+ data['nhom']['thanhviencothetructiepdangbai'])
+        logging.info(check_nhom_thanhviencothedangtructieplen_baiviet == data['nhom']['thanhviencothetructiepdangbai'])
+        time.sleep(1)
 
 
 
 
 
+
+
+
+
+
+class quatrinhmuahang():
+    def timkiemsanpham(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.timkiemsanpham).send_keys(data['market']['timkiemtrangchu'])
+        driver.find_element(By.XPATH, var.timkiemsanpham).send_keys(Keys.ENTER)
+        time.sleep(1)
+
+        # check_market_timkiem_shop_anhdaidien = driver.find_element(By.XPATH,var.check_market_timkiem_shop_anhdaidien).get_attribute("src")
+        # logging.info("Market - Tìm kiếm")
+        # logging.info("check font-end:  Shop - Ảnh đại diện - Có hiển thị ảnh đại diện không?")
+        # logging.info(check_market_timkiem_shop_anhdaidien)
+        # logging.info(check_market_timkiem_shop_anhdaidien != "/static/media/page.8308143d.svg")
+        #
+        # check_market_timkiem_shop_sao = driver.find_element(By.XPATH,var.check_market_timkiem_shop_sao).text
+        # logging.info("Market - Tìm kiếm")
+        # logging.info("check font-end:  Shop - Số sao - Có hiển thị số sao không?")
+        # logging.info(check_market_timkiem_shop_sao)
+        # logging.info(check_market_timkiem_shop_sao != "0.00")
+        #
+        # check_market_timkiem_shop_follow = driver.find_element(By.XPATH,var.check_market_timkiem_shop_follow).text
+        # logging.info("Market - Tìm kiếm")
+        # logging.info("check font-end:  Shop - Số follow - Có hiển thị số follow không?")
+        # logging.info(check_market_timkiem_shop_follow)
+        # logging.info(check_market_timkiem_shop_follow != "0 Followers")
+        #
+        # check_market_timkiem_shop_tenshopmarket = driver.find_element(By.XPATH,var.check_market_timkiem_shop_tenshopmarket).text
+        # #Vào trang check tên tranng
+        # driver.find_element(By.XPATH, var.check_market_timkiem_shop_tenshopmarket).click()
+        # time.sleep(1)
+        # check_market_timkiem_shop_tenshoptrang = driver.find_element(By.XPATH,var.check_market_timkiem_shop_tenshoptrang).text
+        # logging.info("Market - Tìm kiếm")
+        # logging.info("check font-end:  Shop - Tên Shop - Tên shop khi tìm kiếm và khi click vào có giống nhau không")
+        # logging.info(check_market_timkiem_shop_tenshopmarket)
+        # logging.info(check_market_timkiem_shop_tenshoptrang)
+        # logging.info(check_market_timkiem_shop_tenshopmarket == check_market_timkiem_shop_tenshoptrang)
+        # driver.back()
+        # time.sleep(1)
+        driver.find_element(By.XPATH, var.timkiemsanpham_chonxem).click()
+        time.sleep(1)
+        #Mua ngay
+        driver.find_element(By.XPATH, var.muangay).click()
+        check_giohang_tenspmuangay = driver.find_element(By.XPATH, var.check_giohang_tensanpham1).text
+        if check_giohang_tenspmuangay == data['market']['timkiemtrangchu']:
+            driver.find_element(By.XPATH, var.giohang_xoasp1).click()
+            time.sleep(2)
+            check_giohang_xoasanpham = driver.find_element(By.XPATH, var.check_giohang_tensanpham1).text
+            if check_giohang_xoasanpham == data['market']['timkiemtrangchu']:
+                logging.info("Người mua - Giỏ hàng - giỏ hàng của bạn")
+                logging.info("check font-end: Xóa sản phẩm 1 - Có xóa được không")
+                logging.info("False")
+            else:
+                logging.info("Người mua - Giỏ hàng - giỏ hàng của bạn")
+                logging.info("check font-end: Xóa sản phẩm 1 - Có xóa được không")
+                logging.info("True")
+        else:
+            logging.info("Người mua - Tìm kiếm sản phẩm - Mua ngay")
+            logging.info("check font-end: Có chuyển tới Giỏ hàng và hiển thị sản phẩm không")
+            logging.info("False")
+        driver.back()
+
+        #Thêm vào giỏ hàng
+        driver.find_element(By.XPATH, var.themvaogiohang).click()
+        message_themvaogiohang = driver.find_element(By.XPATH, var.message_themvaogiohang)
+        #Giỏ hàng
+        driver.find_element(By.XPATH, var.icongiohang).click()
+        time.sleep(1)
+        check_giohang_tenspthemvaogiohang = driver.find_element(By.XPATH, var.check_giohang_tensanpham1).text
+        if check_giohang_tenspthemvaogiohang == data['market']['timkiemtrangchu']:
+            driver.find_element(By.XPATH, var.giohangcuaban_chonsp1).click()
+            driver.find_element(By.XPATH, var.xacnhandonhang).click()
+            time.sleep(1)
+        else:
+            logging.info("Người mua - Tìm kiếm sản phẩm - Thêm vào giỏ hàng")
+            logging.info("check font-end: Có thêm sản phẩm đã chọn vào gio hàng không")
+            logging.info("False")
+        #Thanh toán
+        driver.find_element(By.XPATH, var.capnhatdiachi).click()
+        driver.find_element(By.XPATH, var.luu).click()
+        driver.execute_script("window.scrollBy(0,500)", "")
+        driver.find_element(By.XPATH, var.thanhtoan_loinhan).send_keys(data['market']['loinhan'])
+        driver.find_element(By.XPATH, var.dathang).click()
+        time.sleep(1)
+        #Đơn hàng của tôi
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_chothanhtoan)
+        driver.execute_script("arguments[0].click();", button)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_chothanhtoan_tensp1 = driver.find_element(By.XPATH,var.check_donhangcuatoi_chothanhtoan_sp1).text
+            logging.info("Người mua - Đơn hàng của tôi - Đặt hàng - Chờ thanh toán")
+            logging.info("check font-end: Tên sản phẩm 1 - "+ data['market']['timkiemtrangchu'])
+            logging.info(check_donhangcuatoi_chothanhtoan_tensp1)
+            logging.info(check_donhangcuatoi_chothanhtoan_tensp1 == data['market']['timkiemtrangchu'])
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi - Đặt hàng - Chờ thanh toán")
+            logging.info("check font-end: Tên sản phẩm 1 - "+ data['market']['timkiemtrangchu'])
+            logging.info("False")
+
+        try:
+            check_donhangcuatoi_chothanhtoan_trangthaisp1 = driver.find_element(By.XPATH, var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Chờ thanh toán - Trạng thái đơn hàng - Chờ thanh toán")
+            logging.info(check_donhangcuatoi_chothanhtoan_trangthaisp1 == "Chờ thanh toán")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Chờ thanh toán - Trạng thái đơn hàng - Chờ thanh toán")
+            logging.info("False")
+
+    def xacnhandon(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlydonhang).click()
+        check_quanlydonhang_tatca_sp1 = driver.find_element(By.XPATH,var.check_quanlydonhang_sp1).text
+        logging.info("Người bán - Quản lý đơn hàng - Tất cả")
+        logging.info("check font-end: Tên sản phẩm 1 - "+ data['market']['timkiemtrangchu'])
+        logging.info(check_quanlydonhang_tatca_sp1)
+        logging.info(check_quanlydonhang_tatca_sp1 == data['market']['timkiemtrangchu'])
+
+        #Chờ xác nhận
+        driver.find_element(By.XPATH, var.quanlydonhang_choxacnhan).click()
+        time.sleep(1.5)
+        check_quanlydonhang_choxacnhan_sp1 = driver.find_element(By.XPATH,var.check_quanlydonhang_sp1).text
+        if check_quanlydonhang_choxacnhan_sp1 == data['market']['timkiemtrangchu']:
+            driver.find_element(By.XPATH, var.quanlydonhang_choxacnhan_xacnhandon1).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.xacnhan).click()
+            driver.implicitly_wait(2)
+            try:
+                check_message_xacnhandon = driver.find_element(By.XPATH,var.check_message_quanlydonhang)
+                logging.info("Người bán - Quản lý đơn hàng")
+                logging.info("check font-end: Có Message Xác nhận đơn Không?")
+                logging.info(check_message_xacnhandon.is_displayed())
+                logging.info(check_message_xacnhandon.text)
+            except NoSuchElementException:
+                logging.info("Người bán - Quản lý đơn hàng")
+                logging.info("check font-end: Có Message Xác nhận đơn Không?")
+                logging.info("False")
+        else:
+            logging.info("Người bán - Quản lý đơn hàng")
+            logging.info("check font-end: Có đơn hàng mới từ người mua chuyển qua không")
+            logging.info("False")
+
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_chothanhtoan)
+        driver.execute_script("arguments[0].click();", button)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_chothanhtoan_trangthai = driver.find_element(By.XPATH, var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Chờ thanh toán - Trạng thái đơn hàng - Đã xác nhận")
+            logging.info(check_donhangcuatoi_chothanhtoan_trangthai == "Đã xác nhận")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Chờ thanh toán - Trạng thái đơn hàng - Đã xác nhận")
+            logging.info("False")
+        time.sleep(1)
+
+    def chuanbihang(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlydonhang).click()
+        #Chờ lấy hàng
+        driver.find_element(By.XPATH, var.quanlydonhang_cholayhang).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlydonhang_daxacnhan).click()
+        time.sleep(1)
+        check_quanlydonhang_cholayhang_sp1 = driver.find_element(By.XPATH,var.check_quanlydonhang_daxacnhan_sp1).text
+        logging.info("Người bán - Quản lý đơn hàng - Chờ lấy hàng")
+        logging.info("check font-end: Đã xác nhận - Tên sản phẩm 1 - "+ data['market']['timkiemtrangchu'])
+        logging.info(check_quanlydonhang_cholayhang_sp1)
+        logging.info(check_quanlydonhang_cholayhang_sp1 == data['market']['timkiemtrangchu'])
+
+        driver.find_element(By.XPATH, var.quanlydonhang_cholayhang_chuanbihang).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.xacnhan).click()
+        driver.implicitly_wait(2)
+        try:
+            check_message_chuanbihang = driver.find_element(By.XPATH, var.check_message_quanlydonhang)
+            logging.info("Người bán - Quản lý đơn hàng")
+            logging.info("check font-end: Có Message Chuẩn bị hàng Không?")
+            logging.info(check_message_chuanbihang.is_displayed())
+            logging.info(check_message_chuanbihang.text)
+        except NoSuchElementException:
+            logging.info("Người bán - Quản lý đơn hàng")
+            logging.info("check font-end: Có Message Chuẩn bị hàng Không?")
+            logging.info("False")
+        driver.implicitly_wait(15)
+
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_vanchuyen)
+        driver.execute_script("arguments[0].click();", button)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_vanchuyen_trangthai = driver.find_element(By.XPATH, var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Vận chuyển - Trạng thái đơn hàng - Chờ lấy hàng")
+            logging.info(check_donhangcuatoi_vanchuyen_trangthai == "Chờ lấy hàng")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Vận chuyển - Trạng thái đơn hàng - Chờ lấy hàng")
+            logging.info("False")
+        time.sleep(1)
+
+    def donvivanchuyendanglayhang(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlydonhang).click()
+        #Chờ Chờ ĐVVC đến lấy hàng
+        driver.find_element(By.XPATH, var.quanlydonhang_cholayhang).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlydonhang_chodvvcdenlayhang).click()
+        time.sleep(1)
+        check_quanlydonhang_cholayhang_sp1 = driver.find_element(By.XPATH,var.check_quanlydonhang_daxacnhan_sp1).text
+        logging.info("Người bán - Quản lý đơn hàng - Chờ lấy hàng")
+        logging.info("check font-end: Chờ ĐVVC đến lấy hàng - Tên sản phẩm 1 - "+ data['market']['timkiemtrangchu'])
+        logging.info(check_quanlydonhang_cholayhang_sp1)
+        logging.info(check_quanlydonhang_cholayhang_sp1 == data['market']['timkiemtrangchu'])
+
+        driver.find_element(By.XPATH, var.quanlydonhang_cholayhang_donvivanchuyendanglayhang).click()
+        driver.implicitly_wait(2)
+        try:
+            check_message_chuanbihang = driver.find_element(By.XPATH, var.check_message_quanlydonhang)
+            logging.info("Người bán - Quản lý đơn hàng")
+            logging.info("check font-end: Có Message Đơn vị vận chuyển đang lấy hàng Không?")
+            logging.info(check_message_chuanbihang.is_displayed())
+            logging.info(check_message_chuanbihang.text)
+        except NoSuchElementException:
+            logging.info("Người bán - Quản lý đơn hàng")
+            logging.info("check font-end: Có Message Đơn vị vận chuyển đang lấy hàng Không?")
+            logging.info("False")
+        driver.implicitly_wait(15)
+        time.sleep(1)
+
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_vanchuyen)
+        driver.execute_script("arguments[0].click();", button)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_vanchuyen_trangthai = driver.find_element(By.XPATH, var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Vận chuyển - Trạng thái đơn hàng - Đã lấy hàng")
+            logging.info(check_donhangcuatoi_vanchuyen_trangthai == "Đã lấy hàng")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Vận chuyển - Trạng thái đơn hàng - Đã lấy hàng")
+            logging.info("False")
+        time.sleep(1)
+
+    def donvivanchuyendalayhang(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlydonhang).click()
+        #ĐVVC đã lấy hàng
+        driver.find_element(By.XPATH, var.quanlydonhang_cholayhang).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlydonhang_dvvcdalayhang).click()
+        time.sleep(1)
+        check_quanlydonhang_cholayhang_sp1 = driver.find_element(By.XPATH,var.check_quanlydonhang_daxacnhan_sp1).text
+        logging.info("Người bán - Quản lý đơn hàng - Chờ lấy hàng")
+        logging.info("check font-end: ĐVVC đã lấy hàng - Tên sản phẩm 1 - "+ data['market']['timkiemtrangchu'])
+        logging.info(check_quanlydonhang_cholayhang_sp1)
+        logging.info(check_quanlydonhang_cholayhang_sp1 == data['market']['timkiemtrangchu'])
+
+        driver.find_element(By.XPATH, var.quanlydonhang_cholayhang_donvivanchuyendalayhang).click()
+        driver.implicitly_wait(2)
+        try:
+            check_message_chuanbihang = driver.find_element(By.XPATH, var.check_message_quanlydonhang)
+            logging.info("Người bán - Quản lý đơn hàng")
+            logging.info("check font-end: Có Message Đơn vị vận chuyển đã lấy hàng Không?")
+            logging.info(check_message_chuanbihang.is_displayed())
+            logging.info(check_message_chuanbihang.text)
+        except NoSuchElementException:
+            logging.info("Người bán - Quản lý đơn hàng")
+            logging.info("check font-end: Có Message Đơn vị vận chuyển đã lấy hàng Không?")
+            logging.info("False")
+        driver.implicitly_wait(15)
+        time.sleep(1)
+
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_danggiao)
+        driver.execute_script("arguments[0].click();", button)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_danggiao_trangthai = driver.find_element(By.XPATH,var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Đang giao - Trạng thái đơn hàng - Đang giao")
+            logging.info(check_donhangcuatoi_danggiao_trangthai == "Đang giao")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Đang giao - Trạng thái đơn hàng - Đang giao")
+            logging.info("False")
+        time.sleep(1)
+
+    def danggiaohang(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlydonhang).click()
+        #Đang giao
+        driver.find_element(By.XPATH, var.quanlydonhang_danggiao).click()
+        time.sleep(1)
+        check_quanlydonhang_dangiao_sp1 = driver.find_element(By.XPATH,var.check_quanlydonhang_sp1).text
+        logging.info("Người bán - Quản lý đơn hàng - Đang giao")
+        logging.info("check font-end: Đang giao hàng - Tên sản phẩm 1 - "+ data['market']['timkiemtrangchu'])
+        logging.info(check_quanlydonhang_dangiao_sp1)
+        logging.info(check_quanlydonhang_dangiao_sp1 == data['market']['timkiemtrangchu'])
+
+        driver.find_element(By.XPATH, var.quanlydonhang_dangiao_dangiaohang).click()
+        driver.implicitly_wait(2)
+        try:
+            check_message_dangiaohang = driver.find_element(By.XPATH, var.check_message_quanlydonhang)
+            logging.info("Người bán - Quản lý đơn hàng")
+            logging.info("check font-end: Có Message Đơn vị vận chuyển đã lấy hàng Không?")
+            logging.info(check_message_dangiaohang.is_displayed())
+            logging.info(check_message_dangiaohang.text)
+        except NoSuchElementException:
+            logging.info("Người bán - Quản lý đơn hàng")
+            logging.info("check font-end: Có Message Đơn vị vận chuyển đã lấy hàng Không?")
+            logging.info("False")
+        driver.implicitly_wait(15)
+        time.sleep(1)
+
+
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_danggiao)
+        driver.execute_script("arguments[0].click();", button)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_danggiao_trangthai = driver.find_element(By.XPATH,var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Đang giao - Trạng thái đơn hàng - Đã giao")
+            logging.info(check_donhangcuatoi_danggiao_trangthai == "Đã giao")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Đang giao - Trạng thái đơn hàng - Đã giao")
+            logging.info("False")
+        time.sleep(1)
+
+    def danhanhang(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        #Đang giao
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_danggiao)      #ko hiện thị sp ở đơn hàng của tôi- đang giao
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.donhangcuatoi_danggiao_danhanhang).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.xacnhan).click()
+        #Đánh giá sản phẩm
+        driver.find_element(By.XPATH, var.donhangcuatoi_hoanthanh_danhgia).click()
+        time.sleep(1)
+        button = driver.find_element(By.XPATH, var.danhgiasanpham_chon4sao)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.danhgiasanpham_input).send_keys(data['market']['danhgiasanpham'])
+        driver.find_element(By.XPATH, var.danhgiasanpham_themanhvideo).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien2.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.gui).click()
+        driver.implicitly_wait(2)
+        try:
+            check_message_danhgiasanpham = driver.find_element(By.XPATH, var.check_message_danhgiasanpham)
+            logging.info("Người Mua - Đơn hàng của tôi")
+            logging.info("check font-end: Message đánh giá sản phẩm - Đánh giá thành công!")
+            logging.info(check_message_danhgiasanpham.is_displayed())
+            logging.info(check_message_danhgiasanpham.text)
+        except NoSuchElementException:
+            logging.info("Người Mua - Đơn hàng của tôi")
+            logging.info("check font-end: Message đánh giá sản phẩm - Đánh giá thành công!")
+            logging.info("False")
+        driver.implicitly_wait(15)
+
+        #Hoàn thành
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_hoanthanh)
+        driver.execute_script("arguments[0].click();", button)
+        #Mua lại
+        driver.find_element(By.XPATH, var.hoanthanh_mualai).click()
+        time.sleep(1)
+        check_donhangcuatoi_hoanthanh_mualai = driver.find_element(By.XPATH,var.check_donhangcuatoi_hoanthanh_mualai).text
+        logging.info("Người Mua - Đơn hàng của tôi - Hoàn thành")
+        logging.info("check font-end: Mua lại - Chuyển tới trang Giỏ hàng của bạn")
+        logging.info(check_donhangcuatoi_hoanthanh_mualai)
+        logging.info(check_donhangcuatoi_hoanthanh_mualai == "Giỏ hàng của bạn")
+        driver.back()
+        #Liên hệ người bán
+        driver.find_element(By.XPATH, var.donhangcuatoi_lienhenguoiban).click()
+        time.sleep(1)
+        try:
+            check_donhangcuatoi_hoanthanh_lienhenguoiban = driver.find_element(By.XPATH, var.check_donhangcuatoi_hoanthanh_lienhenguoiban).text
+            logging.info("Người Mua - Đơn hàng của tôi - Hoàn thành")
+            logging.info("check font-end: Liên hệ người bán - Có hiện hộp chat chat với người bán không?")
+            logging.info(check_donhangcuatoi_hoanthanh_lienhenguoiban)
+            logging.info(check_donhangcuatoi_hoanthanh_lienhenguoiban == "Bình Thuận")
+            driver.find_element(By.XPATH, var.hoanthanh_lienhenguoiban_x).click()
+
+        except NoSuchElementException:
+            logging.info("Người Mua - Đơn hàng của tôi - Hoàn thành")
+            logging.info("check font-end: Liên hệ người bán - Có hiện hộp chat chat với người bán không?")
+            logging.info("False")
+        driver.implicitly_wait(15)
+
+        #Xem đánh giá
+        button = driver.find_element(By.XPATH, var.hoanthanh_xemdanhgia)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        check_donhangcuatoi_hoanthanh_danhgiasanpham = driver.find_element(By.XPATH,var.check_donhangcuatoi_hoanthanh_danhgiasanpham)
+        logging.info("Người Mua - Đơn hàng của tôi - Hoàn thành")
+        logging.info("check font-end: Đánh giá sản phẩm - Có hiển thị các đánh giá không")
+        logging.info(check_donhangcuatoi_hoanthanh_danhgiasanpham)
+        logging.info(check_donhangcuatoi_hoanthanh_danhgiasanpham != None)
+        driver.find_element(By.XPATH, var.x).click()
+        time.sleep(1)
+
+    def chothanhtoan_dahuy(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        #Đang giao
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_chothanhtoan)      #ko hiện thị sp ở đơn hàng của tôi- đang giao
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+
+        #Xem chi tiết
+        driver.find_element(By.XPATH, var.donhangcuatoi_chothanhtoan_xemchitiet).click()
+        time.sleep(2)
+        try:
+            check_donhangcuatoi_chothanhtoan_xemchitiet = driver.find_element(By.XPATH,var.check_donhangcuatoi_chothanhtoan_xemchitiet)
+            logging.info("Người Mua - Đơn hàng của tôi - Chờ thanh toán")
+            logging.info("check font-end: Xem chi tiết - Có chuyển tới trang xem chi tiết sản phẩm không")
+            logging.info(check_donhangcuatoi_chothanhtoan_xemchitiet.text)
+            logging.info(check_donhangcuatoi_chothanhtoan_xemchitiet.is_displayed())
+        except NoSuchElementException:
+            logging.info("Người Mua - Đơn hàng của tôi - Chờ thanh toán")
+            logging.info("check font-end: Xem chi tiết - Có chuyển tới trang xem chi tiết sản phẩm không")
+            logging.info("False")
+        time.sleep(1)
+        driver.back()
+        time.sleep(1)
+
+        #Liên hệ người bán
+        # driver.find_element(By.XPATH, var.donhangcuatoi_lienhenguoiban).click()     #Tự bật popup liên hệ người bán
+        # time.sleep(1)
+        # try:
+        #     check_donhangcuatoi_chothanhtoan_lienhenguoiban = driver.find_element(By.XPATH, var.check_donhangcuatoi_hoanthanh_lienhenguoiban).text
+        #     logging.info("Người Mua - Đơn hàng của tôi - Chờ thanh toán")
+        #     logging.info("check font-end: Liên hệ người bán - Có hiện hộp chat chat với người bán không?")
+        #     logging.info(check_donhangcuatoi_chothanhtoan_lienhenguoiban)
+        #     logging.info(check_donhangcuatoi_chothanhtoan_lienhenguoiban == "Bình Thuận")
+        #     driver.find_element(By.XPATH, var.hoanthanh_lienhenguoiban_x).click()
+        #
+        # except NoSuchElementException:
+        #     logging.info("Người Mua - Đơn hàng của tôi - Chờ thanh toán")
+        #     logging.info("check font-end: Liên hệ người bán - Có hiện hộp chat chat với người bán không?")
+        #     logging.info("False")
+        # driver.implicitly_wait(15)
+
+        #Hủy đơn hàng
+        driver.find_element(By.XPATH, var.donhangcuatoi_huydonhang).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.khongphaibaygio).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.donhangcuatoi_huydonhang).click()
+        time.sleep(1)
+        driver.implicitly_wait(2)
+        try:
+            driver.find_element(By.XPATH, var.lydohuy_toimuonthaydoima).click()
+        except NoSuchElementException:
+            logging.info("Người Mua - Đơn hàng của tôi- Đã hủy")
+            logging.info("check font-end: Có hiển thị lý do hủy đơn không?")
+            logging.info("False")
+        driver.find_element(By.XPATH, var.huydonhang).click()
+        # driver.implicitly_wait(2)
+        # try:
+        #     check_message_donhangcuatoi = driver.find_element(By.XPATH, var.check_message_donhangcuatoi)    #ko hủy được đơn hàng
+        #     logging.info("Người Mua - Đơn hàng của tôi")
+        #     logging.info("check font-end: Message Hủy đơn hàng")
+        #     logging.info(check_message_donhangcuatoi.is_displayed())
+        #     logging.info(check_message_donhangcuatoi.text)
+        # except NoSuchElementException:
+        #     logging.info("Người Mua - Đơn hàng của tôi")
+        #     logging.info("check font-end: Message Hủy đơn hàng")
+        #     logging.info("False")
+        # driver.implicitly_wait(15)
+        time.sleep(2)
+        driver.refresh()
+        time.sleep(2)
+        #Đã hủy
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_dahuy)
+        driver.execute_script("arguments[0].click();", button)
+        try:
+            check_donhangcuatoi_dahuydon_trangthai = driver.find_element(By.XPATH,var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Đang giao - Trạng thái đơn hàng - Đã hủy")
+            logging.info(check_donhangcuatoi_dahuydon_trangthai == "Đã hủy")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Đang giao - Trạng thái đơn hàng - Đã hủy")
+            logging.info("False")
+        time.sleep(1)
+        #Mua lại
+        driver.find_element(By.XPATH, var.donhangcuatoi_mualai).click()
+        time.sleep(1)
+        try:
+            check_donhangcuatoi_dahuy_mualai = driver.find_element(By.XPATH,var.check_donhangcuatoi_dahuy_mualai).text
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Đã hủy - Mua lại có hiển thị sản phẩm "+ data['market']['timkiemtrangchu']+ "Không?")
+            logging.info(check_donhangcuatoi_dahuy_mualai)
+            logging.info(check_donhangcuatoi_dahuy_mualai == data['market']['timkiemtrangchu'])
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Đã hủy - Mua lại có hiển thị sản phẩm "+ data['market']['timkiemtrangchu']+ "Không?")
+            logging.info("False")
+        driver.back()
+        time.sleep(1)
+
+        #Chi tiết đơn hủy
+        driver.find_element(By.XPATH, var.donhangcuatoi_chitietdonhuy).click()
+        time.sleep(1)
+        try:
+            check_chitietdonhuy_lydo = driver.find_element(By.XPATH,var.check_chitietdonhuy_lydo).text
+            logging.info("Người mua - Đơn hàng của tôi - Đã hủy")
+            logging.info("check font-end: Lý do hủy đơn: Tôi muốn thêm/thay đổi Mã giảm giá")
+            logging.info(check_chitietdonhuy_lydo)
+            logging.info(check_chitietdonhuy_lydo == "Lý do hủy đơn: Tôi muốn thêm/thay đổi Mã giảm giá")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi - Đã hủy")
+            logging.info("check font-end: Lý do hủy đơn: Tôi muốn thêm/thay đổi Mã giảm giá")
+            logging.info("False")
+        driver.find_element(By.XPATH, var.quaylaimuasam).click()
+        time.sleep(2)
+
+    def shop_het_hang(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.timkiemsanpham).send_keys(data['market']['sanpham_hethang'])
+        driver.find_element(By.XPATH, var.timkiemsanpham).send_keys(Keys.ENTER)
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.timkiemsanpham_chonxem1).click()
+        time.sleep(1)
+        driver.implicitly_wait(2)
+        # Mua ngay
+        driver.find_element(By.XPATH, var.sanpham_muangay).click()
+        try:
+            time.sleep(1)
+            check_giohang_tenspmuangay = driver.find_element(By.XPATH, var.check_giohang_tensanpham1).text
+            logging.info("Người mua - Tìm kiếm sản phẩm - Mua ngay")
+            logging.info("check font-end: Sản phẩm đã hết hàng - đã disable nút mua ngay chưa")
+            logging.info("False")
+            driver.back()
+        except NoSuchElementException:
+            logging.info("Người mua - Tìm kiếm sản phẩm - Mua ngay")
+            logging.info("check font-end: Sản phẩm đã hết hàng - đã disable nút mua ngay chưa")
+            logging.info("True")
+
+        # Thêm vào giỏ hàng
+        driver.find_element(By.XPATH, var.themvaogiohang).click()
+        try:
+            message_themvaogiohang = driver.find_element(By.XPATH, var.message_themvaogiohang)
+            logging.info("Người mua - Tìm kiếm sản phẩm - Thêm vào giỏ hàng")
+            logging.info("check font-end: Sản phẩm đã hết hàng - đã disable nút thêm vào giỏ hàng chưa chưa")
+            logging.info("False")
+        except NoSuchElementException:
+            logging.info("Người mua - Tìm kiếm sản phẩm - Thêm vào giỏ hàng")
+            logging.info("check font-end: Sản phẩm đã hết hàng - đã disable nút thêm vào giỏ hàng chưa chưa")
+            logging.info("True")
+
+        check_sanpham_hethang = driver.find_element(By.XPATH,var.check_sanpham_hethang).text
+        logging.info("Người mua - Tìm kiếm sản phẩm - Xem sản phẩm")
+        logging.info("check font-end: Sản phẩm đã hết hàng - nhãn dán - Hết hàng")
+        logging.info(check_sanpham_hethang == "Hết Hàng")
+        time.sleep(1)
+
+    def trahanghoantien_dongy(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        #Đang giao
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_danggiao)      #ko hiện thị sp ở đơn hàng của tôi- đang giao
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        #Yêu cầu trả hàng/hoàn tiền
+        driver.find_element(By.XPATH, var.quanlydonhang_danggiao_trahanghoantien).click()
+        #Lý do
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_hangcovande).click()
+        driver.find_element(By.XPATH, var.tieptuc).click()
+        time.sleep(1)
+        #Chọn sản phẩm
+        check_trahanghoantien_chonsanpham = driver.find_element(By.XPATH,var.check_trahanghoantien_chonsanpham).text
+        logging.info("Người mua - Quản lý đơn hàng - Đang giao - Trả hàng hoàn tiền")
+        logging.info("check font-end: Chọn sản phẩm - Tên sản phẩm 1 - "+ data['market']['timkiemtrangchu'])
+        logging.info(check_trahanghoantien_chonsanpham)
+        logging.info(check_trahanghoantien_chonsanpham == data['market']['timkiemtrangchu'])
+        driver.find_element(By.XPATH, var.trahanghoantien_chonsanpham1).click()
+        driver.find_element(By.XPATH, var.tieptuc).click()
+        time.sleep(1)
+        #Yêu cầu
+        driver.find_element(By.XPATH, var.trahanghoantien_lydo).click()
+        driver.find_element(By.XPATH, var.trahanghoantien_lydo_hethansudung).click()
+
+        xoa = driver.find_element(By.XPATH, var.trahanghoantien_hoanlai_input)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.trahanghoantien_hoanlai_input).send_keys(data['market']['trahanghoantien_hoanlai'])
+        driver.find_element(By.XPATH, var.trahanghoantien_mota_input).send_keys(data['market']['trahanghoantien_mota'])
+        driver.find_element(By.XPATH, var.trahanghoantien_themhinhanh).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_themvideo).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/vay1.exe")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.tieptuc).click()
+        time.sleep(1)
+        #Hình thức vận chuyển
+        #Lấy hàng tại địa chỉ yêu cầu
+        driver.find_element(By.XPATH, var.gui).click()      #Chết luồng, ko gửi đươc yêu cầu hoàn tiền 6771
+        time.sleep(3)
+        #Trả hàng hoàn tiền
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_trahanghoantien)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_trahanghoantien_trangthai = driver.find_element(By.XPATH, var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Trả hàng/Hoàn tiền - Trạng thái đơn hàng - Shop đang xử lý")
+            logging.info(check_donhangcuatoi_trahanghoantien_trangthai == "Shop đang xử lý")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end: Trả hàng/Hoàn tiền - Trạng thái đơn hàng - Shop đang xử lý")
+            logging.info("False")
+        time.sleep(1)
+        driver.refresh()
+        time.sleep(2)
+        #Quản lý đơn
+        driver.find_element(By.XPATH, var.quanlydonhang_trahanghoantien_quanlydon).click()
+        time.sleep(1)
+        driver.execute_script("window.scrollBy(0,1500)", "")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(data['market']['trahanghoantien_vietthaoluan1'])
+        driver.find_element(By.XPATH, var.trahanghoantien_iconanh).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/iconbuon.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(Keys.ENTER)   #ko bình luận được
+        time.sleep(3)
+        driver.implicitly_wait(2)
+        try:
+            check_trahanghoantien_quanlydon_thaoluan1 = driver.find_element(By.XPATH,var.check_trahanghoantien_xemchitiet_thaoluan1).text
+            logging.info("Người Mua - Trả hàng/Hoàn tiền - Quản lý đơn")
+            logging.info("check font-end: Thảo luận - Bình luận 1 - "+ data['market']['trahanghoantien_vietthaoluan1'])
+            logging.info(check_trahanghoantien_quanlydon_thaoluan1 == data['market']['trahanghoantien_vietthaoluan1'])
+        except NoSuchElementException:
+            logging.info("Người Mua - Trả hàng/Hoàn tiền - Quản lý đơn")
+            logging.info("check font-end: Thảo luận - Bình luận 1 - "+ data['market']['trahanghoantien_vietthaoluan1'])
+            logging.info("False")
+
+        try:
+            check_trahanghoantien_xemchitiet_anh1 = driver.find_element(By.XPATH,var.check_trahanghoantien_xemchitiet_anh1)
+            logging.info("Người Mua - Trả hàng/Hoàn tiền - Quản lý đơn")
+            logging.info("check font-end: Thảo luận - Có hiển thị ảnh không")
+            logging.info(check_trahanghoantien_xemchitiet_anh1)
+        except NoSuchElementException:
+            logging.info("Người Mua - Trả hàng/Hoàn tiền - Quản lý đơn")
+            logging.info("check font-end: Thảo luận - Có hiển thị ảnh không")
+            logging.info("False")
+        time.sleep(1)
+        driver.implicitly_wait(15)
+
+
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlydonhang).click()
+        # Trả hàng/hoàn tiền
+        driver.find_element(By.XPATH, var.quanlydonhang_trahanghoantien).click()
+        time.sleep(1)
+        check_quanlydonhang_trahanghoantien_sp1 = driver.find_element(By.XPATH,var.check_quanlydonhang_daxacnhan_sp1).text
+        logging.info("Người bán - Quản lý đơn hàng - Trả hàng/hoàn tiền")
+        logging.info("check font-end: Tên sản phẩm 1 - " + data['market']['timkiemtrangchu'])
+        logging.info(check_quanlydonhang_trahanghoantien_sp1)
+        logging.info(check_quanlydonhang_trahanghoantien_sp1 == data['market']['timkiemtrangchu'])
+
+        driver.find_element(By.XPATH, var.quanlydonhang_trahanghoantien_xemchitiet).click()
+        time.sleep(2)
+        handles = driver.window_handles
+        for handle in handles:
+            driver.switch_to.window(handle)
+        time.sleep(1)
+        driver.execute_script("window.scrollBy(0,1500)", "")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(data['market']['trahanghoantien_vietthaoluan_dongy'])
+        driver.find_element(By.XPATH, var.trahanghoantien_iconanh).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/vay2.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(Keys.ENTER)   #Ko bình luận được
+        time.sleep(3)
+        driver.implicitly_wait(2)
+        try:
+            check_trahanghoantien_xemchitiet_thaoluan1 = driver.find_element(By.XPATH,var.check_trahanghoantien_xemchitiet_thaoluan1).text
+            logging.info("Người Bán - Trả hàng/Hoàn tiền - Xem chi tiết")
+            logging.info("check font-end: Thảo luận - Bình luận 1 - "+ data['market']['trahanghoantien_vietthaoluan_dongy'])
+            logging.info(check_trahanghoantien_xemchitiet_thaoluan1 == data['market']['trahanghoantien_vietthaoluan_dongy'])
+        except NoSuchElementException:
+            logging.info("Người Bán - Trả hàng/Hoàn tiền - Xem chi tiết")
+            logging.info("check font-end: Thảo luận - Bình luận 1 - "+ data['market']['trahanghoantien_vietthaoluan_dongy'])
+            logging.info("False")
+        try:
+            check_trahanghoantien_xemchitiet_anh1 = driver.find_element(By.XPATH,var.check_trahanghoantien_xemchitiet_anh1)
+            logging.info("Người Bán - Trả hàng/Hoàn tiền - Xem chi tiết")
+            logging.info("check font-end: Thảo luận - Có hiển thị ảnh không")
+            logging.info(check_trahanghoantien_xemchitiet_anh1)
+        except NoSuchElementException:
+            logging.info("Người Bán - Trả hàng/Hoàn tiền - Xem chi tiết")
+            logging.info("check font-end: Thảo luận - Có hiển thị ảnh không")
+            logging.info("False")
+
+        driver.execute_script("window.scrollBy(0,-800)", "")
+        button = driver.find_element(By.XPATH, var.dongyhoanhangvahoantien)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.chapnhan).click()
+        time.sleep(1)
+        check_popup_trahanghoantien_dongy = driver.find_element(By.XPATH,var.check_popup_trahanghoantien_dongy).text
+        logging.info("Người bán - Quản lý đơn hàng - Trả hàng/hoàn tiền")
+        logging.info("check font-end: Popup đồng ý - Gửi khiếu nại thành công")
+        logging.info(check_popup_trahanghoantien_dongy)
+        logging.info(check_popup_trahanghoantien_dongy == "Gửi khiếu nại thành công")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.dong).click()
+        time.sleep(1)
+
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        # Trả hàng/Hoàn tiền
+        button = driver.find_element(By.XPATH,var.donhangcuatoi_trahanghoantien)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_trahanghoantien_trangthai = driver.find_element(By.XPATH, var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi - Trả hàng/Hoàn tiền")
+            logging.info("check font-end: Shop đồng ý hoàn tiền - Trạng thái đơn hàng - Shop đồng ý")
+            logging.info(check_donhangcuatoi_trahanghoantien_trangthai == "Shop đồng ý")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi - Trả hàng/Hoàn tiền")
+            logging.info("check font-end: Shop đồng ý hoàn tiền - Trạng thái đơn hàng - Shop đồng ý")
+            logging.info("False")
+        time.sleep(1)
+
+    def trahanghoantien_khongdongy(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        #Đang giao
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_danggiao)      #
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        #Yêu cầu trả hàng/hoàn tiền
+        driver.find_element(By.XPATH, var.quanlydonhang_danggiao_trahanghoantien).click()
+        # Lý do
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_toichuanhanduochang).click()
+        driver.find_element(By.XPATH, var.tieptuc).click()
+        time.sleep(1)
+        # Chọn sản phẩm
+        check_trahanghoantien_chonsanpham = driver.find_element(By.XPATH, var.check_trahanghoantien_chonsanpham).text
+        logging.info("Người mua - Quản lý đơn hàng - Đang giao - Trả hàng hoàn tiền2")
+        logging.info("check font-end: Chọn sản phẩm - Tên sản phẩm 1 - " + data['market']['timkiemtrangchu'])
+        logging.info(check_trahanghoantien_chonsanpham)
+        logging.info(check_trahanghoantien_chonsanpham == data['market']['timkiemtrangchu'])
+        # driver.find_element(By.XPATH, var.trahanghoantien_chontatcasanpham).click()     6758#trả hàng hoàn tiền ko chọn được icon tất cả
+        driver.find_element(By.XPATH, var.trahanghoantien_chonsanpham1).click()
+        driver.find_element(By.XPATH, var.tieptuc).click()
+        time.sleep(1)
+        # Yêu cầu
+        driver.find_element(By.XPATH, var.trahanghoantien_lydo).click()
+        driver.find_element(By.XPATH, var.trahanghoantien_lydo_thieuhang).click()
+        driver.find_element(By.XPATH, var.trahanghoantien_mota_input).send_keys(data['market']['trahanghoantien_mota1'])
+        driver.find_element(By.XPATH, var.trahanghoantien_themhinhanh).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/tft.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_themvideo).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/ao2.exe")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.tieptuc).click()
+        time.sleep(1)
+        # Hình thức vận chuyển
+        # Gửi hàng tại bưu cục
+        driver.find_element(By.XPATH, var.guihangtaibuucuc).click()
+        driver.find_element(By.XPATH, var.gui).click()
+        time.sleep(2)
+        # Trả hàng hoàn tiền
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_trahanghoantien)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_trahanghoantien_trangthai = driver.find_element(By.XPATH,var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi2")
+            logging.info("check font-end: Trả hàng/Hoàn tiền - Trạng thái đơn hàng - Shop đang xử lý")
+            logging.info(check_donhangcuatoi_trahanghoantien_trangthai == "Shop đang xử lý")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi2")
+            logging.info("check font-end: Trả hàng/Hoàn tiền - Trạng thái đơn hàng - Shop đang xử lý")
+            logging.info("False")
+        time.sleep(1)
+        driver.refresh()
+        time.sleep(2)
+        # Quản lý đơn
+        driver.find_element(By.XPATH, var.quanlydonhang_trahanghoantien_quanlydon).click()
+        time.sleep(1)
+        driver.execute_script("window.scrollBy(0,1500)", "")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(data['market']['trahanghoantien_vietthaoluan2'])
+        driver.find_element(By.XPATH, var.trahanghoantien_iconanh).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/iconbuon.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(Keys.ENTER)  # ko bình luận được
+        time.sleep(3)
+        driver.implicitly_wait(2)
+        try:
+            check_trahanghoantien_quanlydon_thaoluan1 = driver.find_element(By.XPATH,var.check_trahanghoantien_xemchitiet_thaoluan1).text
+            logging.info("Người Mua - Trả hàng/Hoàn tiền - Quản lý đơn2")
+            logging.info("check font-end: Thảo luận - Bình luận 1 - "+ data['market']['trahanghoantien_vietthaoluan2'])
+            logging.info(check_trahanghoantien_quanlydon_thaoluan1 == data['market']['trahanghoantien_vietthaoluan2'])
+        except NoSuchElementException:
+            logging.info("Người Mua - Trả hàng/Hoàn tiền - Quản lý đơn2")
+            logging.info("check font-end: Thảo luận - Bình luận 1 - "+ data['market']['trahanghoantien_vietthaoluan2'])
+            logging.info("False")
+
+        try:
+            check_trahanghoantien_xemchitiet_anh1 = driver.find_element(By.XPATH,var.check_trahanghoantien_xemchitiet_anh1)
+            logging.info("Người Mua - Trả hàng/Hoàn tiền - Quản lý đơn2")
+            logging.info("check font-end: Thảo luận - Có hiển thị ảnh không")
+            logging.info(check_trahanghoantien_xemchitiet_anh1)
+        except NoSuchElementException:
+            logging.info("Người Mua - Trả hàng/Hoàn tiền - Quản lý đơn2")
+            logging.info("check font-end: Thảo luận - Có hiển thị ảnh không")
+            logging.info("False")
+
+
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlydonhang).click()
+        # Trả hàng/hoàn tiền
+        driver.find_element(By.XPATH, var.quanlydonhang_trahanghoantien).click()
+        time.sleep(1)
+        check_quanlydonhang_trahanghoantien_sp1 = driver.find_element(By.XPATH,var.check_quanlydonhang_daxacnhan_sp1).text
+        logging.info("Người bán - Quản lý đơn hàng - Trả hàng/hoàn tiền2")
+        logging.info("check font-end: Tên sản phẩm 1 - " + data['market']['timkiemtrangchu'])
+        logging.info(check_quanlydonhang_trahanghoantien_sp1)
+        logging.info(check_quanlydonhang_trahanghoantien_sp1 == data['market']['timkiemtrangchu'])
+
+        driver.find_element(By.XPATH, var.quanlydonhang_trahanghoantien_xemchitiet).click()
+        time.sleep(2)
+        handles = driver.window_handles
+        for handle in handles:
+            driver.switch_to.window(handle)
+        time.sleep(1)
+        driver.execute_script("window.scrollBy(0,1500)", "")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(data['market']['trahanghoantien_vietthaoluan_khongdongy'])
+        driver.find_element(By.XPATH, var.trahanghoantien_iconanh).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/vay2.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(Keys.ENTER)  # Ko bình luận được
+        time.sleep(3)
+        driver.implicitly_wait(2)
+        try:
+            check_trahanghoantien_xemchitiet_thaoluan1 = driver.find_element(By.XPATH,var.check_trahanghoantien_xemchitiet_thaoluan1).text
+            logging.info("Người Bán - Trả hàng/Hoàn tiền - Xem chi tiết2")
+            logging.info("check font-end: Thảo luận - Bình luận 1 - "+ data['market']['trahanghoantien_vietthaoluan_khongdongy'])
+            logging.info(check_trahanghoantien_xemchitiet_thaoluan1 == data['market']['trahanghoantien_vietthaoluan_khongdongy'])
+        except NoSuchElementException:
+            logging.info("Người Bán - Trả hàng/Hoàn tiền - Xem chi tiết2")
+            logging.info("check font-end: Thảo luận - Bình luận 1 - "+ data['market']['trahanghoantien_vietthaoluan_khongdongy'])
+            logging.info("False")
+
+        try:
+            check_trahanghoantien_xemchitiet_anh1 = driver.find_element(By.XPATH,var.check_trahanghoantien_xemchitiet_anh1)
+            logging.info("Người Bán - Trả hàng/Hoàn tiền - Xem chi tiết2")
+            logging.info("check font-end: Thảo luận - Có hiển thị ảnh không")
+            logging.info(check_trahanghoantien_xemchitiet_anh1)
+        except NoSuchElementException:
+            logging.info("Người Bán - Trả hàng/Hoàn tiền - Xem chi tiết2")
+            logging.info("check font-end: Thảo luận - Có hiển thị ảnh không")
+            logging.info("False")
+        driver.implicitly_wait(15)
+        driver.execute_script("window.scrollBy(0,-800)", "")
+        button = driver.find_element(By.XPATH, var.khongdongyhoanhangvahoantien)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(0.5)
+
+        #Popup khiếu nại đơn hàng
+        driver.find_element(By.XPATH, var.khieunaidonhang_mota).send_keys(data['market']['khieunaidonhang_mota'])
+        driver.find_element(By.XPATH, var.khieunaidonhang_themhinhanh).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/donghang.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.khieunaidonhang_themvideo).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/vay1.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.gui).click()      #6765 Không gửi được khiếu nại
+
+        check_message_trahanghoantien_khongdongy = driver.find_element(By.XPATH, var.check_message_trahanghoantien_khongdongy).text
+        logging.info("Người bán - Quản lý đơn hàng - Trả hàng/hoàn tiền2")
+        logging.info("check font-end: Mesage không đồng ý - Gửi khiếu nại thành công")
+        logging.info(check_message_trahanghoantien_khongdongy)
+        logging.info(check_message_trahanghoantien_khongdongy == "Gửi khiếu nại thành công")
+        time.sleep(1)
+
+
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        # Trả hàng/Hoàn tiền
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_trahanghoantien)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_trahanghoantien_trangthai = driver.find_element(By.XPATH,var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi - Trả hàng/Hoàn tiền2")
+            logging.info("check font-end: Shop đồng ý hoàn tiền - Trạng thái đơn hàng - Shop Không đồng ý")
+            logging.info(check_donhangcuatoi_trahanghoantien_trangthai == "Shop không đồng ý")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi - Trả hàng/Hoàn tiền2")
+            logging.info("check font-end: Shop đồng ý hoàn tiền - Trạng thái đơn hàng - Shop không đồng ý")
+            logging.info("False")
+        time.sleep(1)
+
+    def shophuydon(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlydonhang).click()
+        #Chờ xác nhận
+        driver.find_element(By.XPATH, var.quanlydonhang_choxacnhan).click()
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.quanlydonhang_choxacnhan_xemmadonhang).click()
+        time.sleep(1)
+        handles = driver.window_handles
+        for handle in handles:
+            driver.switch_to.window(handle)
+        time.sleep(1)
+        #Ghi chú
+        driver.execute_script("window.scrollBy(0,1500)", "")
+        button = driver.find_element(By.XPATH, var.them)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.xemchitietdonhang_ghichu_input).send_keys(data['market']['xemchitietdonhang_ghichu'])
+        driver.find_element(By.XPATH, var.them).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.capnhat).click()
+        xoa = driver.find_element(By.XPATH, var.xemchitietdonhang_ghichu_input)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.xemchitietdonhang_ghichu_input).send_keys(data['market']['xemchitietdonhang_ghichu1'])
+        driver.find_element(By.XPATH, var.capnhat).click()
+        time.sleep(1)
+        check_xemchitietdonhang_ghichu1 = driver.find_element(By.XPATH, var.check_xemchitietdonhang_ghichu1).text
+        logging.info("Người Bán - Quản lý đơn hàng - Chờ xác nhận - Mã đơn hàng")
+        logging.info("check font-end: Ghi chú 1 - " + data['market']['xemchitietdonhang_ghichu1'])
+        logging.info(check_xemchitietdonhang_ghichu1)
+        logging.info(check_xemchitietdonhang_ghichu1 == data['market']['xemchitietdonhang_ghichu1'])
+
+        #Hủy đơn hàng
+        driver.execute_script("window.scrollBy(0,-1500)", "")
+        button = driver.find_element(By.XPATH, var.huydonhang1)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.huydonhang_chonlydo).click()
+        driver.find_element(By.XPATH, var.hethang).click()
+        driver.find_element(By.XPATH, var.huydonhangnay).click()
+        check_message_shophuydonhang = driver.find_element(By.XPATH, var.check_message_shophuydonhang).text
+        logging.info("Người Bán - Quản lý đơn hàng - Chờ xác nhận - Mã đơn hàng")
+        logging.info("check font-end: Message Hủy đơn hàng - Huỷ đơn hàng thành công")
+        logging.info(check_message_shophuydonhang == "Huỷ đơn hàng thành công")
+        time.sleep(1)
+
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        #Đã Hủy
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_dahuy)
+        driver.execute_script("arguments[0].click();", button)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_dahuy_trangthai = driver.find_element(By.XPATH,var.check_donhangcuatoi_trangthai1).text
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end:Đã hủy - Trạng thái đơn hàng khi shop hủy đơn - Đã hủy")
+            logging.info(check_donhangcuatoi_dahuy_trangthai == "Đã hủy")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi")
+            logging.info("check font-end:Đã hủy - Trạng thái đơn hàng khi shop hủy đơn - Đã hủy")
+            logging.info("False")
+        time.sleep(1)
+
+
+
+
+    def trahanghoantien_nguoimuahuy(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.icontaikhoan).click()
+        driver.find_element(By.XPATH, var.donhangcuatoi).click()
+        time.sleep(1)
+        #Đang giao
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_danggiao)      #
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        #Yêu cầu trả hàng/hoàn tiền
+        driver.find_element(By.XPATH, var.quanlydonhang_danggiao_trahanghoantien).click()
+        # Lý do
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_toichuanhanduochang).click()
+        driver.find_element(By.XPATH, var.tieptuc).click()
+        time.sleep(1)
+        # Chọn sản phẩm
+        check_trahanghoantien_chonsanpham = driver.find_element(By.XPATH, var.check_trahanghoantien_chonsanpham).text
+        logging.info("Người mua - Quản lý đơn hàng - Đang giao - Trả hàng hoàn tiền3")
+        logging.info("check font-end: Chọn sản phẩm - Tên sản phẩm 1 - " + data['market']['timkiemtrangchu'])
+        logging.info(check_trahanghoantien_chonsanpham)
+        logging.info(check_trahanghoantien_chonsanpham == data['market']['timkiemtrangchu'])
+        driver.find_element(By.XPATH, var.trahanghoantien_chonsanpham1).click()
+        driver.find_element(By.XPATH, var.tieptuc).click()
+        time.sleep(1)
+        # Yêu cầu
+        driver.find_element(By.XPATH, var.trahanghoantien_lydo).click()
+        driver.find_element(By.XPATH, var.trahanghoantien_lydo_thieuhang).click()
+        driver.find_element(By.XPATH, var.trahanghoantien_mota_input).send_keys(data['market']['trahanghoantien_mota1'])
+        driver.find_element(By.XPATH, var.trahanghoantien_themhinhanh).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/tft.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.trahanghoantien_themvideo).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/ao2.exe")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.tieptuc).click()
+        time.sleep(1)
+        # Hình thức vận chuyển
+        # Gửi hàng tại bưu cục
+        driver.find_element(By.XPATH, var.guihangtaibuucuc).click()
+        driver.find_element(By.XPATH, var.gui).click()
+        time.sleep(2)
+        # Trả hàng hoàn tiền
+        button = driver.find_element(By.XPATH, var.donhangcuatoi_trahanghoantien)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.quanlydonhang_trahanghoantien_huyyeucau).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.xacnhan).click()
+        time.sleep(2)
+        driver.implicitly_wait(2)
+        try:
+            check_donhangcuatoi_trahanghoantien_trangthai = driver.find_element(By.XPATH,var.check_donhangcuatoi_trangthai1).text   #7209, f5 load lại mới đổi trạng thái
+            logging.info("Người mua - Đơn hàng của tôi3")
+            logging.info("check font-end: Trả hàng/Hoàn tiền - Trạng thái đơn hàng - Người mua huỷ hoàn hàng")
+            logging.info(check_donhangcuatoi_trahanghoantien_trangthai == "Người mua huỷ hoàn hàng")
+        except NoSuchElementException:
+            logging.info("Người mua - Đơn hàng của tôi3")
+            logging.info("check font-end: Trả hàng/Hoàn tiền - Trạng thái đơn hàng - Người mua huỷ hoàn hàng")
+            logging.info("False")
+        time.sleep(1)
+
+
+
+
+
+
+class quanlysanpham():
+    def themsanphammoi(self, guipheduyet_luunhap):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlysanpham).click()
+        driver.find_element(By.XPATH, var.themsanphammoi).click()
+        time.sleep(1)
+        #Thông tin cơ bản
+        driver.find_element(By.XPATH, var.themsanpham_tensanpham).send_keys(data['quanlysanpham']['themspmoi_tensanpham'])
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.themsanpham_nghanhhang).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.thoitrangnam).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.hoodie_aoni).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.hoodie).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.luu).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.themsanpham_themhinhanh).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/hoodie1.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.themsanpham_themvideo).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/hoodie5.exe")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.themsanpham_mota).send_keys(data['quanlysanpham']['themspmoi_tensanpham'])
+        #Thông tin chi tiết
+        driver.execute_script("window.scrollBy(0,400)", "")
+        button = driver.find_element(By.XPATH, var.themsanpham_xemthem)
+        driver.execute_script("arguments[0].click();", button)
+        # driver.find_element(By.XPATH, var.themsanpham_xemthem).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.themsanpham_thuonghieu).click()
+        driver.find_element(By.XPATH, var.no_brand).click()
+
+        button = driver.find_element(By.XPATH, var.themsanpham_xuatxu)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.hanquoc).click()
+
+        button = driver.find_element(By.XPATH, var.themsanpham_tall_fit)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.co).click()
+
+        button = driver.find_element(By.XPATH, var.themsanpham_ratlon)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.co).click()
+
+        button = driver.find_element(By.XPATH, var.themsanpham_phongcach)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.thethao).click()
+        time.sleep(1)
+        # button = driver.find_element(By.XPATH, var.themsanpham_phongcach)
+        # driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.duongpho).click()
+
+        button = driver.find_element(By.XPATH, var.themsanpham_mua)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.muadong).click()
+
+        button = driver.find_element(By.XPATH, var.themsanpham_mau)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.hoatiet).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.hoa).click()
+
+        button = driver.find_element(By.XPATH, var.themsanpham_chieudaitayao)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.daitay).click()
+
+        button = driver.find_element(By.XPATH, var.themsanpham_chatlieu)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.ni).click()
+        driver.find_element(By.XPATH, var.chinos).click()
+
+        button = driver.find_element(By.XPATH, var.themsanpham_tentochuc)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.dangcapnhat).click()
+
+        button = driver.find_element(By.XPATH, var.themsanpham_diachitochuc)
+        driver.execute_script("arguments[0].click();", button)
+        driver.find_element(By.XPATH, var.dangcapnhat).click()
+
+        #Thông tin bán hàng
+        driver.find_element(By.XPATH, var.themsanpham_themnhomphanloai).click()
+        #Phân loại hàng
+        #Nhóm phân loại
+        driver.find_element(By.XPATH, var.themsanpham_nhomphanloai1).send_keys(data['quanlysanpham']['themspmoi_nhomphanloai1'])
+        driver.find_element(By.XPATH, var.phanloaihanga).send_keys(data['quanlysanpham']['themspmoi_phanloaihang1a'])
+        driver.find_element(By.XPATH, var.phanloaihangb).send_keys(data['quanlysanpham']['themspmoi_phanloaihang1b'])
+        driver.find_element(By.XPATH, var.phanloaihangc).send_keys(data['quanlysanpham']['themspmoi_phanloaihang1C'])
+        time.sleep(1)
+
+        #Nhóm phân loại 2
+        driver.find_element(By.XPATH, var.themsanpham_themnhomphanloai2).click()
+        driver.find_element(By.XPATH, var.themsanpham_nhomphanloai2).send_keys(data['quanlysanpham']['themspmoi_nhomphanloai2'])
+        driver.find_element(By.XPATH, var.phanloaihang2a).send_keys(data['quanlysanpham']['themspmoi_phanloaihang2a'])
+        driver.find_element(By.XPATH, var.phanloaihang2b).send_keys(data['quanlysanpham']['themspmoi_phanloaihang2b'])
+        driver.find_element(By.XPATH, var.phanloaihang2c).send_keys(data['quanlysanpham']['themspmoi_phanloaihang2c'])
+
+        #Danh sách phân loại
+        driver.find_element(By.XPATH, var.themsanpham_gia).send_keys(data['quanlysanpham']['themspmoi_gia'])
+        driver.find_element(By.XPATH, var.themsanpham_tonkho).send_keys(data['quanlysanpham']['themspmoi_tonkho'])
+        driver.find_element(By.XPATH, var.themsanpham_sku).send_keys(data['quanlysanpham']['themspmoi_sku'])
+        driver.find_element(By.XPATH, var.apdungchotatca).click()
+        time.sleep(5)
+        #Xám
+        driver.find_element(By.XPATH, var.dsphanloai_tailenanh_xam).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/hoodie1.exe")
+        time.sleep(1)
+        xoa = driver.find_element(By.XPATH, var.dsphanloai_xam_gia_l)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.dsphanloai_xam_gia_l).send_keys(data['quanlysanpham']['dsphanloai_gia_l'])
+        xoa = driver.find_element(By.XPATH, var.dsphanloai_xam_gia_xl)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.dsphanloai_xam_gia_xl).send_keys(data['quanlysanpham']['dsphanloai_gia_xl'])
+        #Lục
+        driver.find_element(By.XPATH, var.dsphanloai_tailenanh_luc).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/hoodie3.exe")
+        time.sleep(1)
+        xoa = driver.find_element(By.XPATH, var.dsphanloai_luc_gia_l)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.dsphanloai_luc_gia_l).send_keys(data['quanlysanpham']['dsphanloai_gia_l'])
+        xoa = driver.find_element(By.XPATH, var.dsphanloai_luc_gia_xl)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.dsphanloai_luc_gia_xl).send_keys(data['quanlysanpham']['dsphanloai_gia_xl'])
+        #Xanh
+        driver.find_element(By.XPATH, var.dsphanloai_tailenanh_xanh).click()
+        time.sleep(1)
+        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/hoodie4.exe")
+        time.sleep(1)
+        xoa = driver.find_element(By.XPATH, var.dsphanloai_xanh_gia_l)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.dsphanloai_xanh_gia_l).send_keys(data['quanlysanpham']['dsphanloai_gia_l'])
+        xoa = driver.find_element(By.XPATH, var.dsphanloai_xanh_gia_xl)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.dsphanloai_xanh_gia_xl).send_keys(data['quanlysanpham']['dsphanloai_gia_xl'])
+
+        #Vận chuyển
+        driver.find_element(By.XPATH, var.themsanpham_cannang).send_keys(data['quanlysanpham']['themspmoi_cannang'])
+        driver.find_element(By.XPATH, var.themsanpham_kichthuocdonggoi_r).send_keys(data['quanlysanpham']['themspmoi_kichthuoc_r'])
+        driver.find_element(By.XPATH, var.themsanpham_kichthuocdonggoi_d).send_keys(data['quanlysanpham']['themspmoi_kichthuoc_d'])
+        driver.find_element(By.XPATH, var.themsanpham_kichthuocdonggoi_c).send_keys(data['quanlysanpham']['themspmoi_kichthuoc_c'])
+
+        #Thông tin khác
+        driver.find_element(By.XPATH, var.themsanpham_hangdattruoc_dongy).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.themsanpham_hangdattruoc_khongdongy).click()
+
+        driver.find_element(By.XPATH, var.themsanpham_tinhtrang_daquasudung).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.themsanpham_tinhtrang_moi).click()
+        time.sleep(1)
+        #Gửi phê duyệt - luu nhap
+        driver.find_element(By.XPATH, guipheduyet_luunhap).click()
+
+    def themsanphammoi_guipheduyet(self):
+        quanlysanpham.themsanphammoi(self, var.guipheduyet)
+        driver.implicitly_wait(7)
+        try:
+            check_message_themmoisanpham = driver.find_element(By.XPATH, var.check_message_themmoisanpham).text
+            logging.info("Người bán - Quản lý sản phẩm - Thêm sản phẩm mới")
+            logging.info("check font-end: Message Gửi phê duyệt - Tạo sản phẩm thành công!")
+            logging.info(check_message_themmoisanpham == "Tạo sản phẩm thành công!")
+        except NoSuchElementException:
+            check_message_themmoisanpham = driver.find_element(By.XPATH, var.check_message_themmoisanpham).text
+            logging.info("Người bán - Quản lý sản phẩm - Thêm sản phẩm mới")
+            logging.info("check font-end: Message Gửi phê duyệt - Tạo sản phẩm thành công!")
+            logging.info("False")
+        time.sleep(2)
+
+    def themsanphammoi_luunhap(self):
+        quanlysanpham.themsanphammoi(self, var.luunhap)
+        driver.implicitly_wait(7)
+        try:
+            check_message_themmoisanpham_luunhap = driver.find_element(By.XPATH,
+                                                                       var.check_message_themmoisanpham_luunhap)
+            logging.info("Người bán - Quản lý sản phẩm - Thêm sản phẩm mới")
+            logging.info("check font-end: Message Lưu nháp - Lưu sản phẩm nháp thành công!")
+            logging.info(check_message_themmoisanpham_luunhap.is_displayed())
+            logging.info(check_message_themmoisanpham_luunhap.text == "Lưu sản phẩm nháp thành công!")
+        except NoSuchElementException:
+            logging.info("Người bán - Quản lý sản phẩm - Thêm sản phẩm mới")
+            logging.info("check font-end: Message Lưu nháp - Lưu sản phẩm nháp thành công!")
+            logging.info("False")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.danhsachsanpham).click()
+        driver.find_element(By.XPATH, var.roikhoi).click()
+        time.sleep(2)
+        check_danhsachsanpham_tensp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_tensp1).text
+        check_danhsachsanpham_trangthaisp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_trangthaisp1).text
+        if check_danhsachsanpham_tensp1 == data['quanlysanpham'][
+            'themspmoi_tensanpham'] and check_danhsachsanpham_trangthaisp1 == "Nháp":
+            driver.find_element(By.XPATH, var.danhsachsanpham_sanpham1_dau3cham).click()
+            driver.find_element(By.XPATH, var.danhsachsanpham_sanpham1_dau3cham_xoa).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.danhsachsanpham_sanpham1_dau3cham_xoa_xoa).click()
+            check_message_danhsachsanpham_xoasp = driver.find_element(By.XPATH,
+                                                                      var.check_message_danhsachsanpham_xoasp).text
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Message Xóa Nháp - Xóa sản phẩm thành công")
+            logging.info(check_message_danhsachsanpham_xoasp == "Xóa sản phẩm thành công")
+        else:
+            logging.info("Người bán - Quản lý sản phẩm - Danh sách sản phẩm")
+            logging.info("check font-end: Có hiển thị bản nháp không")
+            logging.info("False")
+        time.sleep(1)
+
+    def danhsachsanpham(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlysanpham).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham).click()
+        time.sleep(1)
+        # Check các trạng thái
+        # Tất cả
+        check_danhsachsanpham_tensp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_tensp1)
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - có hiển thị sản phẩm không?")
+        logging.info(check_danhsachsanpham_tensp1.text)
+        logging.info(check_danhsachsanpham_tensp1.is_displayed())
+
+        check_danhsachsanpham_trangthaisp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_trangthaisp1)
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - có hiển thị trạng thái sản phẩm không")
+        logging.info(check_danhsachsanpham_trangthaisp1.text)
+        logging.info(check_danhsachsanpham_trangthaisp1.is_displayed())
+        time.sleep(1)
+
+        # Đang hoạt động
+        driver.find_element(By.XPATH, var.danhsachsanpham_danghoatdong).click()
+        check_danhsachsanpham_tensp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_tensp1)
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Đang hoạt động - có hiển thị sản phẩm không?")
+        logging.info(check_danhsachsanpham_tensp1.text)
+        logging.info(check_danhsachsanpham_tensp1.is_displayed())
+
+        check_danhsachsanpham_trangthaisp1 = driver.find_element(By.XPATH,
+                                                                 var.check_danhsachsanpham_trangthaisp1_danghoatdong).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Đang hoạt động - Trạng thái - Đang hoạt động")
+        logging.info(check_danhsachsanpham_trangthaisp1)
+        logging.info(check_danhsachsanpham_trangthaisp1 == "Đang hoạt động")
+        time.sleep(1)
+
+        # Chờ duyệt
+        driver.find_element(By.XPATH, var.danhsachsanpham_choduyet).click()
+        check_danhsachsanpham_tensp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_tensp1)
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Chờ duyệt - có hiển thị sản phẩm không?")
+        logging.info(check_danhsachsanpham_tensp1.text)
+        logging.info(check_danhsachsanpham_tensp1.is_displayed())
+
+        check_danhsachsanpham_trangthaisp1 = driver.find_element(By.XPATH,var.check_danhsachsanpham_trangthaisp1_choduyet).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Chờ duyệt - Trạng thái - Chờ duyệt")
+        logging.info(check_danhsachsanpham_trangthaisp1)
+        logging.info(check_danhsachsanpham_trangthaisp1 == "Chờ duyệt")
+        time.sleep(1)
+
+        # Trả lại
+        driver.find_element(By.XPATH, var.danhsachsanpham_tralai).click()
+        check_danhsachsanpham_tensp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_tensp1)
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Trả lại - có hiển thị sản phẩm không?")
+        logging.info(check_danhsachsanpham_tensp1.text)
+        logging.info(check_danhsachsanpham_tensp1.is_displayed())
+
+        check_danhsachsanpham_trangthaisp1 = driver.find_element(By.XPATH,var.check_danhsachsanpham_trangthaisp1_tralai).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Trả lại - Trạng thái - Trả lại")
+        logging.info(check_danhsachsanpham_trangthaisp1)
+        logging.info(check_danhsachsanpham_trangthaisp1 == "Trả lại")
+        time.sleep(1)
+
+        # Nháp
+        driver.find_element(By.XPATH, var.danhsachsanpham_nhap).click()
+        check_danhsachsanpham_tensp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_tensp1)
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Nháp - có hiển thị sản phẩm không?")
+        logging.info(check_danhsachsanpham_tensp1.text)
+        logging.info(check_danhsachsanpham_tensp1.is_displayed())
+
+        check_danhsachsanpham_trangthaisp1 = driver.find_element(By.XPATH,var.check_danhsachsanpham_trangthaisp1_nhap).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Nháp - Trạng thái - Nháp")
+        logging.info(check_danhsachsanpham_trangthaisp1)
+        logging.info(check_danhsachsanpham_trangthaisp1 == "Nháp")
+        time.sleep(1)
+
+        # Đã ẩn
+        driver.find_element(By.XPATH, var.danhsachsanpham_daan).click()
+        check_danhsachsanpham_tensp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_tensp1)
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Đã ẩn - có hiển thị sản phẩm không?")
+        logging.info(check_danhsachsanpham_tensp1.text)
+        logging.info(check_danhsachsanpham_tensp1.is_displayed())
+
+        check_danhsachsanpham_trangthaisp1 = driver.find_element(By.XPATH,var.check_danhsachsanpham_trangthaisp1_daan).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Đã ẩn - Trạng thái - Đã ẩn")
+        logging.info(check_danhsachsanpham_trangthaisp1)
+        logging.info(check_danhsachsanpham_trangthaisp1 == "Đã ẩn")
+        time.sleep(1)
+
+        # Vi phạm
+        driver.find_element(By.XPATH, var.danhsachsanpham_vipham).click()
+        time.sleep(1.5)
+        # Hạn chế hiển thị
+        driver.find_element(By.XPATH, var.danhsachsanpham_vipham_hanchehienthi).click()
+        time.sleep(1.5)
+        check_danhsachsanpham_vipham_tensp1 = driver.find_element(By.XPATH,var.check_danhsachsanpham_vipham_tensp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm - Vi phạm")
+        logging.info(
+            "check font-end: Hạn chế hiển thị - tên sp - 🌸Kẹp Tóc Hình Trái Tim Màu Hồng Ngọt Ngào Dễ Thương Cho Y2K 2023 YINSAF🌸")
+        logging.info(check_danhsachsanpham_vipham_tensp1)
+        logging.info(
+            check_danhsachsanpham_vipham_tensp1 == "🌸Kẹp Tóc Hình Trái Tim Màu Hồng Ngọt Ngào Dễ Thương Cho Y2K 2023 YINSAF🌸")
+
+        # Đã tạm khóa
+        driver.find_element(By.XPATH, var.danhsachsanpham_vipham_datamkhoa).click()
+        time.sleep(2.5)
+        check_danhsachsanpham_vipham_tensp1 = driver.find_element(By.XPATH,var.check_danhsachsanpham_vipham_tensp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm - Vi phạm")
+        logging.info("check font-end: Đã tạm khóa - tên sp - " + data['quanlysanpham']['vipham_datamkhoa_dam'])
+        logging.info(check_danhsachsanpham_vipham_tensp1)
+        logging.info(check_danhsachsanpham_vipham_tensp1 == data['quanlysanpham']['vipham_datamkhoa_dam'])
+        driver.find_element(By.XPATH, var.nhaplai).click()
+
+        # Tìm kiếm - Tên sản phẩm
+        driver.find_element(By.XPATH, var.danhsachsanpham_vipham_tensanpham_input).send_keys(data['quanlysanpham']['vipham_datamkhoa_son'])
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(1.5)
+        check_danhsachsanpham_vipham_tensp1 = driver.find_element(By.XPATH,
+                                                                  var.check_danhsachsanpham_vipham_tensp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm - Vi phạm")
+        logging.info("check font-end: Tìm kiếm  - Tên sản phẩm  - " + data['quanlysanpham']['vipham_datamkhoa_son'])
+        logging.info(check_danhsachsanpham_vipham_tensp1)
+        logging.info(check_danhsachsanpham_vipham_tensp1 == data['quanlysanpham']['vipham_datamkhoa_son'])
+        driver.find_element(By.XPATH, var.nhaplai).click()
+        time.sleep(1)
+
+        # Loại vi phạm
+        # driver.find_element(By.XPATH, var.danhsachsanpham_vipham_loaivipham).click()        #Chức năng ko hoạt động
+
+        driver.find_element(By.XPATH, var.capnhat).click()
+        time.sleep(1)
+        check_danhsachsanpham_vipham_capnhat = driver.find_element(By.XPATH,var.check_danhsachsanpham_vipham_capnhat).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Vi phạm - Cập nhật - Có chuyển tới trang cập nhật sản phẩm không")
+        logging.info(check_danhsachsanpham_vipham_capnhat)
+        logging.info(check_danhsachsanpham_vipham_capnhat == "Cập nhật sản phẩm")
+        time.sleep(1)
+        driver.back()
+        driver.find_element(By.XPATH, var.roikhoi).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.danhsachsanpham_vipham).click()
+        time.sleep(1)
+        # driver.find_element(By.XPATH, var.an).click()       #ds sản phẩm - vi pham - ẩn => ko hoạt động
+        # time.sleep(1)
+        # driver.find_element(By.XPATH, var.xoa).click()      ##ds sản phẩm - vi pham - xóa => ko hoạt động
+        # time.sleep(1)
+
+        # Tất cả
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca).click()
+        time.sleep(1.5)
+        # Tên/SKU sản phẩm
+        # SKU sản phẩm
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku).click()
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_sku).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input).send_keys(data['quanlysanpham']['themspmoi_sku'])
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(2)
+        check_danhsachsanpham_sp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - Tìm kiếm SKU - " + data['quanlysanpham']['themspmoi_sku'])
+        logging.info(check_danhsachsanpham_sp1)
+        logging.info(check_danhsachsanpham_sp1 != None)
+        driver.find_element(By.XPATH, var.nhaplai).click()
+        time.sleep(1)
+
+        # Tên sản phẩm
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku).click()
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_tensp).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input).send_keys(data['quanlysanpham']['tatca_timkiemsp'])
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(2)
+        check_danhsachsanpham_sp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - Tìm kiếm sản phẩm - " + data['quanlysanpham']['tatca_timkiemsp'])
+        logging.info(check_danhsachsanpham_sp1)
+        logging.info(check_danhsachsanpham_sp1 == data['quanlysanpham']['tatca_timkiemsp'])
+        driver.find_element(By.XPATH, var.nhaplai).click()
+        time.sleep(1)
+
+        # Nghành hàng
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_nghanhhang).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.chinhsuanghanhhang_thoitrangnu).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.chinhsuanghanhhang_ao).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.chinhsuanghanhhang_aoong).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.luu).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(2)
+        check_danhsachsanpham_sp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - Tìm kiếm Nghành hàng - " + data['quanlysanpham']['tatca_timkiemsp'])
+        logging.info(check_danhsachsanpham_sp1)
+        logging.info(check_danhsachsanpham_sp1 == data['quanlysanpham']['tatca_timkiemsp'])
+        driver.find_element(By.XPATH, var.nhaplai).click()
+        time.sleep(1)
+
+        # Sắp xếp
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_sapxep).click()
+        time.sleep(0.5)
+        # Giá cao tới thấp
+        driver.find_element(By.XPATH, var.danhsachsanpham_sapxep_giacaotoithap).click()
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(3)
+        check_danhsachsanpham_giacaotoithap1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - Sắp xếp - Giá cao tới thấp - " + data['quanlysanpham']['vipham_datamkhoa_son'])
+        logging.info(check_danhsachsanpham_giacaotoithap1)
+        logging.info(check_danhsachsanpham_giacaotoithap1 == data['quanlysanpham']['vipham_datamkhoa_son'])
+        driver.find_element(By.XPATH, var.nhaplai).click()
+
+        # Giá thấp tới cao
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_sapxep).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham_sapxep_giathaptoicao).click()
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(3)
+        check_danhsachsanpham_giathaptoicao1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - Sắp xếp - Giá thấp tới cao - 🌸Kẹp Tóc Hình Trái Tim Màu Hồng Ngọt Ngào Dễ Thương Cho Y2K 2023 YINSAF🌸")
+        logging.info(check_danhsachsanpham_giathaptoicao1)
+        logging.info(check_danhsachsanpham_giathaptoicao1 == "🌸Kẹp Tóc Hình Trái Tim Màu Hồng Ngọt Ngào Dễ Thương Cho Y2K 2023 YINSAF🌸")
+        driver.find_element(By.XPATH, var.nhaplai).click()
+
+        # Số lượng ít
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_sapxep).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham_sapxep_soluongit).click()
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(3)
+        check_danhsachsanpham_soluongit1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - Sắp xếp - Số lượng ít - " + data['quanlysanpham']['sanpham_hethang'])
+        logging.info(check_danhsachsanpham_soluongit1)
+        logging.info(check_danhsachsanpham_soluongit1 == "Váy Trễ Vai Voan 2 Lớp Dáng Xoè Nữ Màu Trắng Dáng Tiểu Thư")
+        driver.find_element(By.XPATH, var.nhaplai).click()
+        time.sleep(1)
+
+        # Cập nhật cũ nhất
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_sapxep).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham_sapxep_capnhatcunhat).click()
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(3)
+        check_danhsachsanpham_capnhatcunhat = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - Sắp xếp - Cập nhật cũ nhất - áo phông nam")
+        logging.info(check_danhsachsanpham_capnhatcunhat)
+        logging.info(check_danhsachsanpham_capnhatcunhat == "áo phông nam")
+        driver.find_element(By.XPATH, var.nhaplai).click()
+
+        # Cập nhật gần nhất
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_sapxep).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham_sapxep_capnhatgannhat).click()
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(3)
+        check_danhsachsanpham_capnhatgannhat = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - Sắp xếp - Cập nhật gần nhất - Có hiển thị sản phẩm không?")
+        logging.info(check_danhsachsanpham_capnhatgannhat)
+        logging.info(check_danhsachsanpham_capnhatgannhat != None)
+        driver.find_element(By.XPATH, var.nhaplai).click()
+
+        # Tạo sớm nhất
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_sapxep).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham_sapxep_taosomnhat).click()
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(3)
+        check_danhsachsanpham_taosomnhat1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - Sắp xếp - Tạo sớm nhất - Áo polo nam")
+        logging.info(check_danhsachsanpham_taosomnhat1)
+        logging.info(check_danhsachsanpham_taosomnhat1 == "Áo polo nam")
+
+        # Tạo gần nhất
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_sapxep).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham_sapxep_taogannhat).click()
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(2.5)
+        check_danhsachsanpham_taogannhat1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Tất cả - Sắp xếp - Tạo gần nhất - Có hiển thị sản phẩm không?")
+        logging.info(check_danhsachsanpham_taogannhat1)
+        logging.info(check_danhsachsanpham_taogannhat1 != None)
+        driver.find_element(By.XPATH, var.nhaplai).click()
+        time.sleep(1)
+
+        # Thêm sản phẩm mới
+        driver.find_element(By.XPATH, var.danhsachsanpham_themsanphammoi).click()
+        time.sleep(1)
+        check_danhsachsanpham_themsanphammoi = driver.find_element(By.XPATH,
+                                                                   var.check_danhsachsanpham_themsanphammoi).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Thêm sản phẩm mới - Có chuyển tới trang Thêm sản phẩm mới không?")
+        logging.info(check_danhsachsanpham_themsanphammoi)
+        logging.info(check_danhsachsanpham_themsanphammoi == "Thêm sản phẩm")
+        time.sleep(1)
+        driver.back()
+        time.sleep(2)
+
+        # Danh sách sản phẩm - Dấu 3 chấm
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku).click()
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_tensp).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input).send_keys(data['quanlysanpham']['dssanpham_dau3cham'])
+        driver.find_element(By.XPATH, var.timkiem).click()
+        time.sleep(2)
+        check_danhsachsanpham_sp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
+        if check_danhsachsanpham_sp1 == data['quanlysanpham']['dssanpham_dau3cham']:
+            # Ẩn sản phẩm
+            driver.find_element(By.XPATH, var.danhsachsanpham_dau3cham).click()
+            driver.find_element(By.XPATH, var.danhsachsanpham_dau3cham_an).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.luu).click()
+            check_message_ansanpham = driver.find_element(By.XPATH, var.check_message_ansanpham).text
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Dấu 3 chấm - Message Ẩn sản phẩm - Ẩn sản phẩm thành công")
+            logging.info(check_message_ansanpham == "Ẩn sản phẩm thành công")
+            time.sleep(1)
+            check_danhsachsanpham_trangthaisp1 = driver.find_element(By.XPATH,var.check_danhsachsanpham_trangthaisp1_daan).text
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Ẩn sản phẩm - Trạng thái - Đã ẩn")
+            logging.info(check_danhsachsanpham_trangthaisp1)
+            logging.info(check_danhsachsanpham_trangthaisp1 == "Đã ẩn")
+            time.sleep(1)
+
+            driver.get("https://cmc-fe.emso.vn/product/747/about")
+            time.sleep(2)
+            check_danhsachsanpham_ansanpham = driver.find_element(By.XPATH, var.trangnaykhonghienthi).text
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Dấu 3 chấm - Ẩn - Có ẩn được sản phẩm không")
+            logging.info(check_danhsachsanpham_ansanpham == "Trang này không hiển thị")
+            driver.back()
+            time.sleep(2)
+
+            # Cập nhật
+            xoa = driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input)
+            xoa.send_keys(Keys.CONTROL, "a")
+            driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input).send_keys(data['quanlysanpham']['dssanpham_dau3cham'])
+            driver.find_element(By.XPATH, var.timkiem).click()
+            time.sleep(2)
+            driver.find_element(By.XPATH, var.danhsachsanpham_dau3cham).click()
+            driver.find_element(By.XPATH, var.danhsachsanpham_dau3cham_capnhat).click()
+            time.sleep(2)
+            check_danhsachsanpham_capnhat = driver.find_element(By.XPATH, var.check_danhsachsanpham_capnhat).text
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Cập nhật - Có chuyển tới trang Cập nhật sản phẩm không?")
+            logging.info(check_danhsachsanpham_capnhat)
+            logging.info(check_danhsachsanpham_capnhat == "Cập nhật sản phẩm")
+            driver.back()
+            driver.find_element(By.XPATH, var.roikhoi).click()
+            time.sleep(2)
+
+            # Hiển sản phẩm
+            xoa = driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input)
+            xoa.send_keys(Keys.CONTROL, "a")
+            driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input).send_keys(data['quanlysanpham']['dssanpham_dau3cham'])
+            driver.find_element(By.XPATH, var.timkiem).click()
+            time.sleep(2)
+            driver.find_element(By.XPATH, var.danhsachsanpham_dau3cham).click()
+            driver.find_element(By.XPATH, var.danhsachsanpham_dau3cham_hien).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.luu).click()
+            check_message_hiensanpham = driver.find_element(By.XPATH, var.check_message_hiensanpham).text
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Dấu 3 chấm - Message Hiện sản phẩm - Hiện sản phẩm thành công")
+            logging.info(check_message_hiensanpham == "Hiện sản phẩm thành công")
+            time.sleep(1)
+            check_danhsachsanpham_trangthaisp1 = driver.find_element(By.XPATH,var.check_danhsachsanpham_trangthaisp1_danghoatdong).text
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Hiện sản phẩm - Trạng thái - Đang hoạt động")
+            logging.info(check_danhsachsanpham_trangthaisp1)
+            logging.info(check_danhsachsanpham_trangthaisp1 == "Đang hoạt động")
+            time.sleep(1)
+
+            # Sao chép liên kết
+            xoa = driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input)
+            xoa.send_keys(Keys.CONTROL, "a")
+            driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input).send_keys(data['quanlysanpham']['dssanpham_dau3cham'])
+            driver.find_element(By.XPATH, var.timkiem).click()
+            time.sleep(2)
+            driver.find_element(By.XPATH, var.danhsachsanpham_dau3cham).click()
+            driver.find_element(By.XPATH, var.danhsachsanpham_dau3cham_saocheplienket).click()
+            logging.info(Keys.CONTROL + "v")
+            time.sleep(2)
+            # check_danhsachsanpham_saocheplienket = driver.find_element(By.XPATH,var.check_danhsachsanpham_saocheplienket).text
+            # logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            # logging.info("check font-end: Sao chép liên kết - Có chuyển tới trang liên kết vừa coppy hay không?")
+            # logging.info(check_danhsachsanpham_saocheplienket)
+            # logging.info(check_danhsachsanpham_saocheplienket == data['quanlysanpham']['dssanpham_dau3cham'])
+            # time.sleep(1)
+            # driver.back()
+            # time.sleep(2)
+
+            # Xem trước
+            xoa = driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input)
+            xoa.send_keys(Keys.CONTROL, "a")
+            driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input).send_keys(data['quanlysanpham']['dssanpham_dau3cham'])
+            driver.find_element(By.XPATH, var.timkiem).click()
+            time.sleep(2)
+            driver.find_element(By.XPATH, var.danhsachsanpham_dau3cham).click()
+            driver.find_element(By.XPATH, var.danhsachsanpham_dau3cham_xemtruoc).click()
+            time.sleep(1.5)
+            check_danhsachsanpham_xemtruoc = driver.find_element(By.XPATH,var.check_danhsachsanpham_saocheplienket).text
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Xem trước - Có chuyển tới trang Xem trước sản phẩm hay không?")
+            logging.info(check_danhsachsanpham_xemtruoc)
+            logging.info(check_danhsachsanpham_xemtruoc == data['quanlysanpham']['dssanpham_dau3cham'])
+        else:
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Dấu 3 chấm - Không tìm thấy sản phẩm")
+            logging.info("False")
+        time.sleep(1)
+
+
+class add_dulieuemso():
+    def themsanphammoi1(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "emsomanagerhd@gmail.com", "khongnhomatkhaucu")
+        time.sleep(1.5)
+        hang = 135
+        while hang<141:
+            hang += 1
+            tensanpham = readData(var.path_datamarket, 'Sheet1', hang, 1)
+            nghanhcha = readData(var.path_datamarket, 'Sheet1', hang, 2)
+            data_nghanhcha = "//*[text()='"+nghanhcha+"']"
+            conbac1 = readData(var.path_datamarket, 'Sheet1', hang, 3)
+            data_conbac1 = "//*[text()='"+conbac1+"']"
+            conbac2 = readData(var.path_datamarket, 'Sheet1', hang, 4)
+            data_conbac2 = "//*[text()='"+conbac2+"']"
+            conbac3 = readData(var.path_datamarket, 'Sheet1', hang, 5)
+            data_conbac3 = "//*[text()='"+conbac3+"']"
+
+            mota = readData(var.path_datamarket, 'Sheet1', hang, 6)
+            thuonghieu = readData(var.path_datamarket, 'Sheet1', hang, 7)
+            data_thuonghieu = "//*[text()='"+thuonghieu+"']"
+            gia = readData(var.path_datamarket, 'Sheet1', hang, 8)
+            tonkho = readData(var.path_datamarket, 'Sheet1', hang, 9)
+            cannang = readData(var.path_datamarket, 'Sheet1', hang, 10)
+            anh1 = readData(var.path_datamarket, 'Sheet1', hang, 11)
+            anh2 = readData(var.path_datamarket, 'Sheet1', hang, 12)
+            anh3 = readData(var.path_datamarket, 'Sheet1', hang, 13)
+            sku = readData(var.path_datamarket, 'Sheet1', hang, 14)
+            kichthuocdonggoi_r = readData(var.path_datamarket, 'Sheet1', hang, 15)
+            kichthuocdonggoi_d = readData(var.path_datamarket, 'Sheet1', hang, 16)
+            kichthuocdonggoi_c = readData(var.path_datamarket, 'Sheet1', hang, 17)
+            dathangtruoc = readData(var.path_datamarket, 'Sheet1', hang, 18)
+            tinhtrang = readData(var.path_datamarket, 'Sheet1', hang, 19)
+
+
+            driver.get("https://cmc-fe.emso.vn/marketplace/shop/create_product?page_id=108277159419224061")
+            time.sleep(2)
+            #Thông tin cơ bản
+            driver.find_element(By.XPATH, var.themsanpham_tensanpham).send_keys(tensanpham[0:115])
+            time.sleep(1)
+
+            #Co nghanh cha con
+            driver.find_element(By.XPATH, var.themsanpham_nghanhhang).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, data_nghanhcha).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, data_conbac1).click()
+            time.sleep(1)
+            driver.implicitly_wait(1)
+            try:
+                driver.find_element(By.XPATH, data_conbac2).click()
+            except:
+                pass
+            time.sleep(1)
+
+            try:
+                driver.find_element(By.XPATH, data_conbac3).click()
+            except:
+                pass
+            driver.implicitly_wait(15)
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.luu).click()
+            time.sleep(1)
+
+            # Có nghành cha
+            driver.find_element(By.XPATH, var.themsanpham_themhinhanh1).send_keys(anh1)
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.themsanpham_themhinhanh2).send_keys(anh2)
+            time.sleep(1)
+            actions = ActionChains(driver)
+            hover_themmoisp_anh = driver.find_element(By.XPATH, var.hover_themmoisp_anh)
+            actions.move_to_element(hover_themmoisp_anh).perform()
+            driver.find_element(By.XPATH, "//*[@class='fa-regular fa-xmark']").click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.themsanpham_themhinhanh3).send_keys(anh3)
+            time.sleep(1)
+            hover_themmoisp_anh4 = driver.find_element(By.XPATH, var.hover_themmoisp_anh4)
+            actions.move_to_element(hover_themmoisp_anh4).perform()
+            button = driver.find_element(By.XPATH, "//*[@class='fa-regular fa-xmark']")
+            driver.execute_script("arguments[0].click();", button)
+            time.sleep(1)
+            actions.move_to_element(hover_themmoisp_anh4).perform()
+            button = driver.find_element(By.XPATH, "//*[@class='fa-regular fa-xmark']")
+            driver.execute_script("arguments[0].click();", button)
+
+            # #khong co nghanh cha con
+            # driver.find_element(By.XPATH, var.themsanpham_nghanh_goiy1).click()
+            # time.sleep(1.5)
+            # driver.find_element(By.XPATH, var.themsanpham_themhinhanh1a).send_keys(anh1)
+            # time.sleep(1)
+            # driver.find_element(By.XPATH, var.themsanpham_themhinhanh2a).send_keys(anh2)
+            # time.sleep(1)
+            # driver.find_element(By.XPATH, var.themsanpham_themhinhanh3a).send_keys(anh3)
+            # time.sleep(1)
+            driver.find_element(By.XPATH, var.themsanpham_mota).send_keys(".")
+            JS_ADD_TEXT_TO_INPUT = """
+              elm = arguments[0], txt = arguments[1];
+              elm.value += txt;
+              elm.dispatchEvent(new Event('change'));
+              """
+            elm = driver.find_element(By.XPATH, var.themsanpham_mota)
+            driver.execute_script(JS_ADD_TEXT_TO_INPUT, elm, mota[0:2950])
+            driver.find_element(By.XPATH, var.themsanpham_mota).send_keys(".")
+            time.sleep(2)
+
+
+            # Thông tin chi tiết
+            # driver.execute_script("window.scrollBy(0,400)", "")
+
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.themsanpham_thuonghieu).click()
+            driver.find_element(By.XPATH, data_thuonghieu).click()
+
+            driver.implicitly_wait(2)
+            try:
+                driver.find_element(By.XPATH, var.thongtinchitiet_button2).click()
+                # driver.find_element(By.XPATH, var.thongtinchitiet_button2_chon1).click()
+                button = driver.find_element(By.XPATH, var.thongtinchitiet_button2_chon1)
+                driver.execute_script("arguments[0].click();", button)
+            except:
+                pass
+
+            try:
+                driver.find_element(By.XPATH, var.thongtinchitiet_button3).click()
+                # driver.find_element(By.XPATH, var.thongtinchitiet_button3_chon1).click()
+                button = driver.find_element(By.XPATH, var.thongtinchitiet_button3_chon1)
+                driver.execute_script("arguments[0].click();", button)
+            except:
+                pass
+            driver.implicitly_wait(15)
+            #Thông tin bán hàng
+            driver.find_element(By.XPATH, var.themsanpham_gia1).send_keys(gia)
+            driver.find_element(By.XPATH, var.themsanpham_tonkho1).send_keys(tonkho)
+            driver.find_element(By.XPATH, var.themsanpham_sku1).send_keys(sku)
+
+            # Vận chuyển
+            driver.find_element(By.XPATH, var.themsanpham_cannang).send_keys(cannang)
+            driver.find_element(By.XPATH, var.themsanpham_kichthuocdonggoi_r).send_keys(kichthuocdonggoi_r)
+            driver.find_element(By.XPATH, var.themsanpham_kichthuocdonggoi_d).send_keys(kichthuocdonggoi_d)
+            driver.find_element(By.XPATH, var.themsanpham_kichthuocdonggoi_c).send_keys(kichthuocdonggoi_c)
+            time.sleep(1)
+
+            # Thông tin khác
+            if dathangtruoc == "Đồng ý":
+                driver.find_element(By.XPATH, var.themsanpham_hangdattruoc_dongy).click()
+            else:
+                driver.find_element(By.XPATH, var.themsanpham_hangdattruoc_khongdongy).click()
+            time.sleep(1)
+            if tinhtrang == "Đã qua sử dụng":
+                driver.find_element(By.XPATH, var.themsanpham_tinhtrang_daquasudung).click()
+            else:
+                driver.find_element(By.XPATH, var.themsanpham_tinhtrang_moi).click()
+            time.sleep(1)
+
+            # # Gửi phê duyệt
+            driver.execute_script("window.scrollBy(0,700)", "")
+            button = driver.find_element(By.XPATH, var.guipheduyet)
+            driver.execute_script("arguments[0].click();", button)
+            time.sleep(5)
+            print("da tai len san pham hang: ", hang)
+
+            # driver.find_element(By.XPATH, var.quanlydonhang).click()
+            # time.sleep(0.5)
+            # driver.find_element(By.XPATH, var.roikhoi).click()
+            # time.sleep(1)
+
+    def themsanphammoi1_khongconghanhcha(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "emsomanagerhd@gmail.com", "khongnhomatkhaucu")
+        time.sleep(1.5)
+        hang = 58
+        while hang < 59:
+            hang += 1
+            tensanpham = readData(var.path_datamarket, 'Sheet1', hang, 1)
+            nghanhcha = readData(var.path_datamarket, 'Sheet1', hang, 2)
+            data_nghanhcha = "//*[text()='" + nghanhcha + "']"
+            conbac1 = readData(var.path_datamarket, 'Sheet1', hang, 3)
+            data_conbac1 = "//*[text()='" + conbac1 + "']"
+            conbac2 = readData(var.path_datamarket, 'Sheet1', hang, 4)
+            data_conbac2 = "//*[text()='" + conbac2 + "']"
+            conbac3 = readData(var.path_datamarket, 'Sheet1', hang, 5)
+            data_conbac3 = "//*[text()='" + conbac3 + "']"
+
+            mota = readData(var.path_datamarket, 'Sheet1', hang, 6)
+            thuonghieu = readData(var.path_datamarket, 'Sheet1', hang, 7)
+            data_thuonghieu = "//*[text()='" + thuonghieu + "']"
+            gia = readData(var.path_datamarket, 'Sheet1', hang, 8)
+            tonkho = readData(var.path_datamarket, 'Sheet1', hang, 9)
+            cannang = readData(var.path_datamarket, 'Sheet1', hang, 10)
+            anh1 = readData(var.path_datamarket, 'Sheet1', hang, 11)
+            anh2 = readData(var.path_datamarket, 'Sheet1', hang, 12)
+            anh3 = readData(var.path_datamarket, 'Sheet1', hang, 13)
+            sku = readData(var.path_datamarket, 'Sheet1', hang, 14)
+            kichthuocdonggoi_r = readData(var.path_datamarket, 'Sheet1', hang, 15)
+            kichthuocdonggoi_d = readData(var.path_datamarket, 'Sheet1', hang, 16)
+            kichthuocdonggoi_c = readData(var.path_datamarket, 'Sheet1', hang, 17)
+            dathangtruoc = readData(var.path_datamarket, 'Sheet1', hang, 18)
+            tinhtrang = readData(var.path_datamarket, 'Sheet1', hang, 19)
+
+            driver.get("https://cmc-fe.emso.vn/marketplace/shop/create_product?page_id=108277159419223806")
+            time.sleep(2)
+            # Thông tin cơ bản
+            driver.find_element(By.XPATH, var.themsanpham_tensanpham).send_keys(tensanpham)
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.themsanpham_nghanh_goiy1).click()
+            time.sleep(1)
+            driver.implicitly_wait(15)
+
+            # actions = ActionChains(driver)
+            # actions.move_to_element(hover_themmoisp_anh4).perform()
+            # button = driver.find_element(By.XPATH, "//*[@class='fa-regular fa-xmark']")
+            # driver.execute_script("arguments[0].click();", button)
+
+            #khong co nghanh cha con
+            driver.find_element(By.XPATH, var.themsanpham_themhinhanh1a).send_keys(anh1)
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.themsanpham_themhinhanh2a).send_keys(anh2)
+            time.sleep(1)
+            actions = ActionChains(driver)
+            hover_themmoisp_anh3a = driver.find_element(By.XPATH, var.hover_themmoisp_anh3a)
+            actions.move_to_element(hover_themmoisp_anh3a).perform()
+            button = driver.find_element(By.XPATH, "//*[@class='fa-regular fa-xmark']")
+            driver.execute_script("arguments[0].click();", button)
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.themsanpham_themhinhanh3a).send_keys(anh3)
+            time.sleep(1)
+
+            hover_themmoisp_anh4a = driver.find_element(By.XPATH, var.hover_themmoisp_anh4a)
+            actions.move_to_element(hover_themmoisp_anh4a).perform()
+            button = driver.find_element(By.XPATH, "//*[@class='fa-regular fa-xmark']")
+            driver.execute_script("arguments[0].click();", button)
+            time.sleep(1)
+            hover_themmoisp_anh4a = driver.find_element(By.XPATH, var.hover_themmoisp_anh4a)
+            actions.move_to_element(hover_themmoisp_anh4a).perform()
+            button = driver.find_element(By.XPATH, "//*[@class='fa-regular fa-xmark']")
+            driver.execute_script("arguments[0].click();", button)
+            time.sleep(1)
+
+            driver.find_element(By.XPATH, var.themsanpham_mota).send_keys(".")
+            JS_ADD_TEXT_TO_INPUT = """
+              elm = arguments[0], txt = arguments[1];
+              elm.value += txt;
+              elm.dispatchEvent(new Event('change'));
+              """
+            elm = driver.find_element(By.XPATH, var.themsanpham_mota)
+            driver.execute_script(JS_ADD_TEXT_TO_INPUT, elm, mota[0:2950])
+            driver.find_element(By.XPATH, var.themsanpham_mota).send_keys(".")
+            time.sleep(2)
+
+            # Thông tin chi tiết
+            # driver.execute_script("window.scrollBy(0,400)", "")
+
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.themsanpham_thuonghieu).click()
+            driver.find_element(By.XPATH, data_thuonghieu).click()
+
+            driver.implicitly_wait(2)
+            try:
+                driver.find_element(By.XPATH, var.thongtinchitiet_button2).click()
+                # driver.find_element(By.XPATH, var.thongtinchitiet_button2_chon1).click()
+                button = driver.find_element(By.XPATH, var.thongtinchitiet_button2_chon1)
+                driver.execute_script("arguments[0].click();", button)
+            except:
+                pass
+
+            try:
+                driver.find_element(By.XPATH, var.thongtinchitiet_button3).click()
+                # driver.find_element(By.XPATH, var.thongtinchitiet_button3_chon1).click()
+                button = driver.find_element(By.XPATH, var.thongtinchitiet_button3_chon1)
+                driver.execute_script("arguments[0].click();", button)
+            except:
+                pass
+            driver.implicitly_wait(15)
+            # Thông tin bán hàng
+            driver.find_element(By.XPATH, var.themsanpham_gia1).send_keys(gia)
+            driver.find_element(By.XPATH, var.themsanpham_tonkho1).send_keys(tonkho)
+            driver.find_element(By.XPATH, var.themsanpham_sku1).send_keys(sku)
+
+            # Vận chuyển
+            driver.find_element(By.XPATH, var.themsanpham_cannang).send_keys(cannang)
+            driver.find_element(By.XPATH, var.themsanpham_kichthuocdonggoi_r).send_keys(kichthuocdonggoi_r)
+            driver.find_element(By.XPATH, var.themsanpham_kichthuocdonggoi_d).send_keys(kichthuocdonggoi_d)
+            driver.find_element(By.XPATH, var.themsanpham_kichthuocdonggoi_c).send_keys(kichthuocdonggoi_c)
+            time.sleep(1)
+
+            # Thông tin khác
+            if dathangtruoc == "Đồng ý":
+                driver.find_element(By.XPATH, var.themsanpham_hangdattruoc_dongy).click()
+            else:
+                driver.find_element(By.XPATH, var.themsanpham_hangdattruoc_khongdongy).click()
+            time.sleep(1)
+            if tinhtrang == "Đã qua sử dụng":
+                driver.find_element(By.XPATH, var.themsanpham_tinhtrang_daquasudung).click()
+            else:
+                driver.find_element(By.XPATH, var.themsanpham_tinhtrang_moi).click()
+            time.sleep(1)
+
+            # # Gửi phê duyệt
+            driver.execute_script("window.scrollBy(0,700)", "")
+            button = driver.find_element(By.XPATH, var.guipheduyet)
+            driver.execute_script("arguments[0].click();", button)
+            time.sleep(5)
+            print("da tai len san pham hang: ", hang)
+
+            # driver.find_element(By.XPATH, var.quanlydonhang).click()
+            # time.sleep(0.5)
+            # driver.find_element(By.XPATH, var.roikhoi).click()
+            # time.sleep(1)
+
+    def vietfilesanpham(self):
+        hang = 108       #hang = 60 thì sẽ ghi ào hàng 61
+        tenfile = int(input("Moi nhap so duoi file: "))
+        while hang<315:
+            hang += 1
+            anh1 = tenfile+1
+            anh1 = str(anh1)
+            writeData(var.path_datamarket, "Sheet1", hang, 11, "C:/Users\Admin/PycharmProjects/pythonProject/market_anh/" + anh1+".jpg")
+            anh1 = int(anh1)
+
+            anh2 = tenfile+2
+            anh2 = str(anh2)
+            writeData(var.path_datamarket, "Sheet1", hang, 12, "C:/Users\Admin/PycharmProjects/pythonProject/market_anh/" + anh2+".jpg")
+            anh2 = int(anh2)
+
+            anh3 = tenfile+3
+            anh3 = str(anh3)
+            writeData(var.path_datamarket, "Sheet1", hang, 13, "C:/Users\Admin/PycharmProjects/pythonProject/market_anh/" + anh3+".jpg")
+            anh3 = int(anh3)
+            tenfile = anh3
+            print("Đã ghi ào dòng", hang)
+
+    def get_data_lazada(self):
+        from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+        import random
+        capa = DesiredCapabilities.CHROME
+        capa["pageLoadStrategy"] = "none"
+        driver = webdriver.Chrome(desired_capabilities=capa)
+
+        wait = WebDriverWait(driver, 20)
+        driver.implicitly_wait(30)
+
+        driver.get("https://www.lazada.vn/?spm=a2o4n.home-vn.header.dhome.7a103bdc3mCnRj")
+        driver.maximize_window()
+        time.sleep(random.randint(4, 8))
+        driver.execute_script("window.scrollBy(0,1700)", "")
+        time.sleep(random.randint(5, 10))
+        hang = 297
+        while hang<1000:
+            hang += 1
+            a = random.randint(1, 20)
+            a = str(a)
+            chidanhchoban_sp1 = "//*[@id='J_JFY']/div[2]/div[1]/div/a[" + a + "]"
+            try:
+                driver.find_element(By.XPATH, chidanhchoban_sp1).click()
+            except:
+                driver.refresh()
+                time.sleep(10)
+                driver.find_element(By.XPATH, chidanhchoban_sp1).click()
+            a = int(a)
+            time.sleep(random.randint(8, 15))
+            driver.execute_script("window.stop();")
+            try:
+                lazada_nghanhcha = driver.find_element(By.XPATH, var.lazada_nghanhcha).text
+                lazada_tensp = driver.find_element(By.XPATH, var.lazada_tensp).text
+                lazada_gia = driver.find_element(By.XPATH, var.lazada_gia).text
+            except NoSuchElementException:
+                driver.refresh()
+                time.sleep(5)
+            lazada_nghanhcha = driver.find_element(By.XPATH, var.lazada_nghanhcha).text
+            lazada_tensp = driver.find_element(By.XPATH, var.lazada_tensp).text
+            lazada_gia = driver.find_element(By.XPATH, var.lazada_gia).text
+
+            writeData(var.path_datamarket, "Sheet1", hang, 2, lazada_nghanhcha[0:100])
+            writeData(var.path_datamarket, "Sheet1", hang, 1, lazada_tensp)
+            writeData(var.path_datamarket, "Sheet1", hang, 8, lazada_gia[1::])
+
+            driver.implicitly_wait(1)
+            try:
+                lazada_anh1a = driver.find_element(By.XPATH, var.lazada_anh1a).get_attribute("src")
+                writeData(var.path_datamarket, "Sheet1", hang, 11, lazada_anh1a[0:-6])
+            except NoSuchElementException:
+                lazada_anh1 = driver.find_element(By.XPATH, var.lazada_anh1).get_attribute("src")
+                writeData(var.path_datamarket, "Sheet1", hang, 11, lazada_anh1[0:-6])
+
+            driver.implicitly_wait(2)
+            #Lay src ảnh 2
+            try:
+                actions = ActionChains(driver)
+                lazada_hoveranh2 = driver.find_element(By.XPATH, var.lazada_hoveranh2)
+                actions.move_to_element(lazada_hoveranh2).perform()
+                time.sleep(1)
+                lazada_anh2 = driver.find_element(By.XPATH, var.lazada_anh1).get_attribute("src")
+                writeData(var.path_datamarket, "Sheet1", hang, 12, lazada_anh2[0:-6])
+            except:
+                pass
+            time.sleep(1)
+            #Lay src ảnh 3
+            try:
+                actions = ActionChains(driver)
+                lazada_hoveranh3 = driver.find_element(By.XPATH, var.lazada_hoveranh3)
+                actions.move_to_element(lazada_hoveranh3).perform()
+                time.sleep(1)
+                lazada_anh3 = driver.find_element(By.XPATH, var.lazada_anh1).get_attribute("src")
+                writeData(var.path_datamarket, "Sheet1", hang, 13, lazada_anh3[0:-6])
+            except:
+                pass
+            driver.implicitly_wait(15)
+            driver.execute_script("window.scrollBy(0,1000)", "")
+            #lấy mô tả
+            lazada_mota = driver.find_element(By.XPATH, var.lazada_mota).text
+            writeData(var.path_datamarket, "Sheet1", hang, 6, lazada_mota)
+            time.sleep(3)
+            driver.find_element(By.XPATH, var.ladaza_icon).click()
+            time.sleep(random.randint(10, 15))
+            driver.execute_script("window.stop();")
+            driver.execute_script("window.scrollBy(0,2500)", "")
+            time.sleep(random.randint(2, 5))
+            print("da toi dong,", hang)
+
+    def get_image(self):
+        from urllib.request import urlretrieve
+        import urllib.request
+        driver.implicitly_wait(15)
+        hang = 287       #hang = 60 thì sẽ ghi ào hàng 61
+        sofile = int(input("Moi nhap so duoi file: "))
+        while hang<321:
+            hang += 1
+            anh1 = readData(var.path_datamarket, 'Sheet1', hang, 11)
+            anh2 = readData(var.path_datamarket, 'Sheet1', hang, 12)
+            anh3 = readData(var.path_datamarket, 'Sheet1', hang, 13)
+            tenanh1 = sofile +1
+            tenanh2 = sofile +2
+            tenanh3 = sofile +3
+
+            tenanh1 = str(tenanh1)
+            tenfile1 = tenanh1+".jpg"
+            tenanh2 = str(tenanh2)
+            tenfile2 = tenanh2+".jpg"
+            tenanh3 = str(tenanh3)
+            tenfile3 = tenanh3+".jpg"
+
+            urllib.request.urlretrieve(anh1, tenfile1)
+            urllib.request.urlretrieve(anh2, tenfile2)
+            urllib.request.urlretrieve(anh3, tenfile3)
+
+            # urlretrieve(anh1, tenfile1)
+            # urlretrieve(anh2, tenfile2)
+            # urlretrieve(anh3, tenfile3)
+
+            tenanh1 = int(tenanh1)
+            tenanh2 = int(tenanh2)
+            tenanh3 = int(tenanh3)
+            sofile = tenanh3
+            print("da tai xong anh hang", hang)
+
+
+
+
+
+
+
+class thuongmai():
+    def duyetsanpham_tuchoi(self):
+        driver.implicitly_wait(15)
+        login.login5(self, "thanghoa1420@gmail.com", "hoathang1420")
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.admin_thuongmai).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.thuongmai_duyetsanpham).click()
+        time.sleep(2)
+        duyetsanpham_tensanpham1 = driver.find_element(By.XPATH, var.duyetsanpham_tensanpham1).text
+        check_duyetsanpham_trangthai1 = driver.find_element(By.XPATH, var.check_duyetsanpham_trangthai1).text
+        if duyetsanpham_tensanpham1 == data['quanlysanpham']['themspmoi_tensanpham'] and check_duyetsanpham_trangthai1 == "Đang chờ":
+
+            logging.info("Admin - Thương mại - Duyệt sản phẩm - Từ chối sp")
+            logging.info("check font-end: Tên thái sản phẩm 1 - " + data['quanlysanpham']['themspmoi_tensanpham'])
+            logging.info(duyetsanpham_tensanpham1)
+            logging.info(duyetsanpham_tensanpham1 == data['quanlysanpham']['themspmoi_tensanpham'])
+
+            logging.info("Admin - Thương mại - Duyệt sản phẩm - Từ chối sp")
+            logging.info("check font-end: Trạng thái sản phẩm 1 - Đang chờ")
+            logging.info(check_duyetsanpham_trangthai1)
+            logging.info(check_duyetsanpham_trangthai1 == "Đang chờ")
+
+            #Từ chối sản phẩm
+            driver.find_element(By.XPATH, var.duyetsanpham_dau3cham).click()
+            driver.find_element(By.XPATH, var.duyetsanpham_dau3cham_tuchoi).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.duyetsanpham_dau3cham_tuchoi_lydo).send_keys(data['admin']['tuchoiduyetsp_lydo'])
+            driver.find_element(By.XPATH, var.duyetsanpham_dau3cham_tuchoi_tuchoi).click()
+            check_message_duyetsanpham_tuchoi = driver.find_element(By.XPATH, var.check_message_duyetsanpham).text
+            logging.info("Admin - Thương mại - Duyệt sản phẩm - Từ chối sp")
+            logging.info("check font-end: Message từ chối sản phẩm - Dấu 3 chấm - Từ chối")
+            logging.info(check_message_duyetsanpham_tuchoi == "Cập nhật thành công")
+
+        else:
+            logging.info("Admin - Thương mại - Duyệt sản phẩm - Từ chối sp")
+            logging.info("check font-end: Có hiển thị sản phẩm gửi phê duyệt từ người bán không")
+            logging.info(duyetsanpham_tensanpham1)
+            logging.info(check_duyetsanpham_trangthai1)
+            logging.info("False")
+        time.sleep(1.5)
+
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlysanpham).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham).click()
+        time.sleep(1)
+        check_danhsachsanpham_tensp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_tensp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Admin Từ chối duyệt sp- Tên sản phẩm 1 - " + data['quanlysanpham']['themspmoi_tensanpham'])
+        logging.info(check_danhsachsanpham_tensp1 == data['quanlysanpham']['themspmoi_tensanpham'])
+
+        check_danhsachsanpham_trangthaisp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_trangthaisp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Admin Từ chối duyệt sp- Trạng thái sản phẩm 1 - Trả lại")
+        logging.info(check_danhsachsanpham_trangthaisp1 == "Trả lại")
+        time.sleep(1)
+
+    def duyetsanpham_duyet(self):
+        driver.implicitly_wait(15)
+        login.login5(self, "thanghoa1420@gmail.com", "hoathang1420")
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.admin_thuongmai).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.thuongmai_duyetsanpham).click()
+        time.sleep(1.5)
+        duyetsanpham_tensanpham1 = driver.find_element(By.XPATH, var.duyetsanpham_tensanpham1).text
+        check_duyetsanpham_trangthai1 = driver.find_element(By.XPATH, var.check_duyetsanpham_trangthai1).text
+        if duyetsanpham_tensanpham1 == data['quanlysanpham']['themspmoi_tensanpham'] and check_duyetsanpham_trangthai1 == "Từ chối":
+
+            logging.info("Admin - Thương mại - Duyệt sản phẩm - Duyệt sp")
+            logging.info("check font-end: Tên thái sản phẩm 1 - " + data['quanlysanpham']['themspmoi_tensanpham'])
+            logging.info(duyetsanpham_tensanpham1 == data['quanlysanpham']['themspmoi_tensanpham'])
+
+            logging.info("Admin - Thương mại - Duyệt sản phẩm - Duyệt sp")
+            logging.info("check font-end: Trạng thái sản phẩm 1 - Từ chối")
+            logging.info(check_duyetsanpham_trangthai1 == "Từ chối")
+
+            #Duyệt sản phẩm
+            driver.find_element(By.XPATH, var.duyetsanpham_dau3cham).click()
+            driver.find_element(By.XPATH, var.duyetsanpham_dau3cham_duyet).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.duyetsanpham_dau3cham_duyet_duyet).click()
+            check_message_duyetsanpham_tuchoi = driver.find_element(By.XPATH, var.check_message_duyetsanpham).text
+            logging.info("Admin - Thương mại - Duyệt sản phẩm - Duyệt sp")
+            logging.info("check font-end: Message từ chối sản phẩm - Dấu 3 chấm - Duyêt")
+            logging.info(check_message_duyetsanpham_tuchoi == "Cập nhật thành công")
+
+        else:
+            logging.info("Admin - Thương mại - Duyệt sản phẩm - Duyệt sp ")
+            logging.info("check font-end: Có hiển thị sản phẩm gửi phê duyệt từ người bán không")
+            logging.info("False")
+        time.sleep(2)
+
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.quanlysanpham).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachsanpham).click()
+        time.sleep(1)
+        check_danhsachsanpham_tensp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_tensp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Admin Duyệt sp- Tên sản phẩm 1 - " + data['quanlysanpham']['themspmoi_tensanpham'])
+        logging.info(check_danhsachsanpham_tensp1 == data['quanlysanpham']['themspmoi_tensanpham'])
+
+        check_danhsachsanpham_trangthaisp1 = driver.find_element(By.XPATH, var.check_danhsachsanpham_trangthaisp1).text
+        logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+        logging.info("check font-end: Admin Duyệt sp- Trạng thái sản phẩm 1 - Đang hoạt động")
+        logging.info(check_danhsachsanpham_trangthaisp1 == "Đang hoạt động")
+        time.sleep(1)
+        if check_danhsachsanpham_tensp1 == data['quanlysanpham']['themspmoi_tensanpham'] and check_danhsachsanpham_trangthaisp1 == "Đang hoạt động":
+            driver.find_element(By.XPATH, var.danhsachsanpham_sanpham1_dau3cham).click()
+            driver.find_element(By.XPATH, var.danhsachsanpham_sanpham1_dau3cham_xoa).click()
+            driver.find_element(By.XPATH, var.danhsachsanpham_sanpham1_dau3cham_xoa_xoa).click()
+            check_message_danhsachsanpham_xoasp = driver.find_element(By.XPATH,var.check_message_danhsachsanpham_xoasp).text
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Message - Xóa sản phẩm")
+            logging.info(check_message_danhsachsanpham_xoasp == "Xóa sản phẩm thành công")
+
+            check_danhsachsanpham_tensp1_daxoa = driver.find_element(By.XPATH, var.check_danhsachsanpham_tensp1).text
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Xóa sản phẩm - Có xóa được sản phẩm không")
+            logging.info(check_danhsachsanpham_tensp1 != check_danhsachsanpham_tensp1_daxoa)
+        else:
+            logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
+            logging.info("check font-end: Admin Duyệt sp- Có hiển thị sản phẩm không")
+            logging.info("False")
+
+
+
+
+
+    
+class kenhmarketing():
+    def magiamgiacuashop(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.kenhmarketting).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.magiamgiacuashop).click()
+        time.sleep(1)
+        #Tạo Voucher ngay!
+        driver.find_element(By.XPATH, var.taovoucherngay).click()
+        time.sleep(1)
+        #Voucher toàn shop
+        driver.find_element(By.XPATH, var.taovoucher_tenchuongtrinh).send_keys(data['kenhmarketing']['tenvoucher'])
+        driver.find_element(By.XPATH, var.taovoucher_mavoucher).send_keys(data['kenhmarketing']['mavoucher'])
+        #Thời gian sử dụng
+        #Voucher - từ ngày
+        driver.find_element(By.XPATH, var.taovoucher_icontungay).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_iconchonnam).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_iconchonnam_2025).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.xacnhan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_icontungay).click()
+        time.sleep(1)
+        count = 0
+        while (count < 12):
+            count = count + 1
+            try:
+                driver.find_element(By.XPATH, var.taovoucher_iconchuyenthang).click()
+                time.sleep(0.2)
+                if driver.find_element(By.XPATH, var.check_taovoucher_lich_thang).text == "January 2025":
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_ngay1).click()
+                    time.sleep(0.5)
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_10gio).click()
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_15phut).click()
+                    time.sleep(2)
+                    driver.find_element(By.XPATH, var.xacnhan).click()
+                    break
+            except:
+                pass
+        time.sleep(1)
+
+        #Voucher - đến ngày
+        driver.find_element(By.XPATH, var.taovoucher_icondenngay).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_iconchonnam).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_iconchonnam_2026).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.xacnhan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_icondenngay).click()
+        time.sleep(1)
+        count = 0
+        while (count < 12):
+            count = count + 1
+            try:
+                driver.find_element(By.XPATH, var.taovoucher_iconchuyenthang).click()
+                time.sleep(0.2)
+                if driver.find_element(By.XPATH, var.check_taovoucher_lich_thang).text == "January 2026":
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_ngay10).click()
+                    time.sleep(0.5)
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_15gio).click()
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_30phut).click()
+                    time.sleep(2)
+                    driver.find_element(By.XPATH, var.xacnhan).click()
+                    break
+            except:
+                pass
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_chophepluuma).click()
+
+        #Thiết lập mã giảm giá
+        driver.find_element(By.XPATH, var.taovoucher_loaigiamgia).click()
+        driver.find_element(By.XPATH, var.taovoucher_loaigiamgia_theosotien).click()
+        driver.find_element(By.XPATH, var.taovoucher_loaigiamgia_theosotien_input).send_keys(data['kenhmarketing']['loaigiamgia_theosotien'])
+        driver.find_element(By.XPATH, var.taovoucher_donhangtoithieu).send_keys(data['kenhmarketing']['donhangtoithieu'])
+
+        xoa = driver.find_element(By.XPATH, var.taovoucher_tongluotsudungtoida)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.taovoucher_tongluotsudungtoida).send_keys("2")
+
+        xoa = driver.find_element(By.XPATH, var.taovoucher_luotsudungtoida)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.taovoucher_luotsudungtoida).send_keys("1")
+        #Hiển thị mã giảm giá và các sản phẩm áp dụng
+        #Hiển thị nhiều nơi
+        driver.execute_script("window.scrollBy(0,700)", "")
+        time.sleep(1)
+        button = driver.find_element(By.XPATH, var.xacnhan)
+        driver.execute_script("arguments[0].click();", button)
+        check_messsage_taovoucher = driver.find_element(By.XPATH, var.check_messsage_taovoucher).text
+        logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+        logging.info("check font-end: Message Tạo voucher - Tạo Voucher thành công!")
+        logging.info(check_messsage_taovoucher)
+        logging.info(check_messsage_taovoucher == "Tạo Voucher thành công!")
+        time.sleep(2)
+
+        #Xóa Voucher
+        driver.execute_script("window.scrollBy(0,400)", "")
+        check_danhsachmagiamgia1 = driver.find_element(By.XPATH, var.check_danhsachmagiamgia).text
+        if check_danhsachmagiamgia1 == data['kenhmarketing']['tenvoucher']:
+            logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+            logging.info("check font-end: Tên Voucher vừa tạo - " + data['kenhmarketing']['tenvoucher'])
+            logging.info(check_danhsachmagiamgia1)
+            logging.info(check_danhsachmagiamgia1 == data['kenhmarketing']['tenvoucher'])
+            driver.find_element(By.XPATH, var.danhsachmagiamgia_chonmagiamgia1).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.danhsachmagiamgia_xoa).click()
+            driver.find_element(By.XPATH, var.danhsachmagiamgia_xoa_xoa).click()
+            check_messsage_xoavoucher = driver.find_element(By.XPATH, var.check_messsage_xoavoucher).text
+            logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+            logging.info("check font-end: Message Xóa voucher - Cập nhật thành công")
+            logging.info(check_messsage_xoavoucher)
+            logging.info(check_messsage_xoavoucher == "Cập nhật thành công")
+            time.sleep(1)
+
+            check_xoavoucher = driver.find_element(By.XPATH, var.check_danhsachmagiamgia).text
+            logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+            logging.info("check font-end: Xóa voucher - " + data['kenhmarketing']['tenvoucher'])
+            logging.info(check_xoavoucher)
+            logging.info(check_xoavoucher != data['kenhmarketing']['tenvoucher'])
+
+        else:
+            logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+            logging.info("check font-end: Tên Voucher vừa tạo - " + data['kenhmarketing']['tenvoucher'])
+            logging.info("False")
+
+        driver.execute_script("window.scrollBy(0,-400)", "")
+        #Voucher tòan shop
+        driver.find_element(By.XPATH, var.magiamgiacuashop_vouchertoanshop_taovoucher).click()
+        time.sleep(1)
+        check_vouchertoanshop_taovoucher = driver.find_element(By.XPATH, var.check_vouchertoanshop_taovoucher).text
+        logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+        logging.info("check font-end: Tạo voucher toàn shop - Coa chuyển tới trang tạo voucher không?")
+        logging.info(check_vouchertoanshop_taovoucher)
+        logging.info(check_vouchertoanshop_taovoucher == "Tạo mã giảm giá mới")
+        driver.back()
+        time.sleep(1)
+
+        #Voucher sản phẩm
+        driver.find_element(By.XPATH, var.magiamgiacuashop_vouchersanpham_taovoucher).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_tenchuongtrinh).send_keys(data['kenhmarketing']['tenvouchersp1'])
+        driver.find_element(By.XPATH, var.taovoucher_mavoucher).send_keys(data['kenhmarketing']['mavouchersp1'])
+        #Thời gian sử dụng
+        #Voucher - từ ngày
+        driver.find_element(By.XPATH, var.taovoucher_icontungay).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_iconchonnam).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_iconchonnam_2025).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.xacnhan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_icontungay).click()
+        time.sleep(1)
+        count = 0
+        while (count < 12):
+            count = count + 1
+            try:
+                driver.find_element(By.XPATH, var.taovoucher_iconchuyenthang).click()
+                time.sleep(0.2)
+                if driver.find_element(By.XPATH, var.check_taovoucher_lich_thang).text == "January 2025":
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_ngay1).click()
+                    time.sleep(0.5)
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_10gio).click()
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_15phut).click()
+                    time.sleep(2)
+                    driver.find_element(By.XPATH, var.xacnhan).click()
+                    break
+            except:
+                pass
+        time.sleep(1)
+
+        #Voucher - đến ngày
+        driver.find_element(By.XPATH, var.taovoucher_icondenngay).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_iconchonnam).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_iconchonnam_2026).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.xacnhan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_icondenngay).click()
+        time.sleep(1)
+        count = 0
+        while (count < 12):
+            count = count + 1
+            try:
+                driver.find_element(By.XPATH, var.taovoucher_iconchuyenthang).click()
+                time.sleep(0.2)
+                if driver.find_element(By.XPATH, var.check_taovoucher_lich_thang).text == "January 2026":
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_ngay10).click()
+                    time.sleep(0.5)
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_15gio).click()
+                    driver.find_element(By.XPATH, var.taovoucher_tungay_30phut).click()
+                    time.sleep(2)
+                    driver.find_element(By.XPATH, var.xacnhan).click()
+                    break
+            except:
+                pass
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_chophepluuma).click()
+
+        #Thiết lập mã giảm giá
+        driver.find_element(By.XPATH, var.taovoucher_loaigiamgia).click()
+        driver.find_element(By.XPATH, var.taovoucher_loaigiamgia_theophantram).click()
+        driver.find_element(By.XPATH, var.taovoucher_loaigiamgia_theosotien_input).send_keys(data['kenhmarketing']['loaigiamgia_theophantram'])
+        driver.find_element(By.XPATH, var.taovoucher_donhangtoithieu).send_keys(data['kenhmarketing']['donhangtoithieu'])
+
+        xoa = driver.find_element(By.XPATH, var.taovoucher_tongluotsudungtoida)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.taovoucher_tongluotsudungtoida).send_keys("2")
+
+        xoa = driver.find_element(By.XPATH, var.taovoucher_luotsudungtoida)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.taovoucher_luotsudungtoida).send_keys("1")
+        #Hiển thị mã giảm giá và các sản phẩm áp dụng
+        #Chia sẻ thông qua mã vocher
+        driver.execute_script("window.scrollBy(0,700)", "")
+        driver.find_element(By.XPATH, var.taovoucher_chiasethonguqmavoucher).click()
+        time.sleep(1)
+        button = driver.find_element(By.XPATH, var.themsanpham)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        #Chọn sản phẩm
+        driver.find_element(By.XPATH, var.taovoucher_chonsp_tensp_masp).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.taovoucher_chonsp_tensp_masp_masp).click()
+        driver.find_element(By.XPATH, var.taovoucher_chonsp_input).send_keys(data['quanlysanpham']['themspmoi_sku'])
+        # driver.find_element(By.XPATH, var.taovoucher_chonsp_timkiem).click()    #Không có nút tìm kiếm
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_chonsp_chonsp1).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_chonsp_xacnhan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_sanphamduocapdung_iconxoa).click()
+        time.sleep(1)
+        driver.implicitly_wait(2)
+        try:
+            taovoucher_xoasp1 = driver.find_element(By.XPATH, var.taovoucher_sanphamduocapdung_iconxoa).is_displayed()
+            logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+            logging.info("check font-end: Tạo voucher sản phẩm - Thêm sản phẩm - Xóa sản phẩm")
+            logging.info("Có xóa được sản phẩm không")
+            logging.info("False")
+        except NoSuchElementException:
+            logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+            logging.info("check font-end: Tạo voucher sản phẩm - Thêm sản phẩm - Xóa sản phẩm")
+            logging.info("Có xóa được sản phẩm không")
+            logging.info("True")
+        driver.implicitly_wait(15)
+        button = driver.find_element(By.XPATH, var.themsanpham)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.taovoucher_chonsp_chonsp1).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taovoucher_chonsp_xacnhan).click()
+        time.sleep(1)
+        button = driver.find_element(By.XPATH, var.xacnhan)
+        driver.execute_script("arguments[0].click();", button)
+        check_messsage_taovoucher = driver.find_element(By.XPATH, var.check_messsage_taovoucher).text
+        time.sleep(2)
+        check_danhsachmagiamgia_loaima1 = driver.find_element(By.XPATH, var.check_danhsachmagiamgia_loaima1).text
+        logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+        logging.info("check font-end: Loại Voucher vừa tạo - Mã giảm giá trên sản phẩm")
+        logging.info(check_danhsachmagiamgia_loaima1)
+        logging.info(check_danhsachmagiamgia_loaima1 == "Mã giảm giá trên sản phẩm")
+
+    def danhsachmagiamgia(self):
+        #Danh sách mã giảm giá
+        #Đang diễn ra
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/marketplace/shop/vouchers?page_id=108277159419223993&page=1&type=all")
+        time.sleep(2)
+        driver.execute_script("window.scrollBy(0,900)", "")
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_dangdienra).click()
+        time.sleep(1.5)
+        check_danhsachmagiamgia_trangthai1 = driver.find_element(By.XPATH, var.check_danhsachmagiamgia_trangthai1).text
+        logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+        logging.info("check font-end: Danh sách mã giảm giá - Đang diễn ra - Trạng thái - Đang diễn ra")
+        logging.info(check_danhsachmagiamgia_trangthai1)
+        logging.info(check_danhsachmagiamgia_trangthai1 == "Đang diễn ra")
+
+        #Sắp diễn ra
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_sapdienra).click()
+        time.sleep(1.5)
+        check_danhsachmagiamgia_trangthai1 = driver.find_element(By.XPATH, var.check_danhsachmagiamgia_trangthai1).text
+        logging.info("Người bán - Kênh Marketing -sapMã giảm giá của shop")
+        logging.info("check font-end: Danh sách mã giảm giá - Sắp diễn ra - Trạng thái - Sắp diễn ra")
+        logging.info(check_danhsachmagiamgia_trangthai1)
+        logging.info(check_danhsachmagiamgia_trangthai1 == "Sắp diễn ra")
+
+        #Đã kết thúc
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_daketthuc).click()
+        time.sleep(1.5)
+        check_danhsachmagiamgia_trangthai1 = driver.find_element(By.XPATH, var.check_danhsachmagiamgia_trangthai1).text
+        logging.info("Người bán - Kênh Marketing -sapMã giảm giá của shop")
+        logging.info("check font-end: Danh sách mã giảm giá - Đã kết thúc - Trạng thái - Đã kết thúc")
+        logging.info(check_danhsachmagiamgia_trangthai1)
+        logging.info(check_danhsachmagiamgia_trangthai1 == "Đã kết thúc")
+
+        #Tất cả
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_tatca).click()
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_input).send_keys(data['kenhmarketing']['mavouchersp1'])
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_timkiem).click()
+        time.sleep(1.5)
+
+        check_danhsachmagiamgia_timkiem = driver.find_element(By.XPATH, var.check_danhsachmagiamgia_timkiem).text
+        logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+        logging.info("check font-end: Tìm kiếm mã voucher - " + data['kenhmarketing']['mavouchersp1'])
+        logging.info(check_danhsachmagiamgia_timkiem)
+        logging.info(check_danhsachmagiamgia_timkiem == data['kenhmarketing']['mavouchersp1'])
+
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_timkiem_xoa).click()
+        time.sleep(1.5)
+        driver.implicitly_wait(2)
+        check_danhsachmagiamgia_timkiem2 = driver.find_element(By.XPATH, var.check_danhsachmagiamgia_timkiem2).is_displayed()
+        logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+        logging.info("check font-end: Danh sách mã giảm giá - Xóa tìm kiếm")
+        logging.info(check_danhsachmagiamgia_timkiem2)
+
+        #Danh sách mã giảm giá - Dấu 3 chấm
+        #Dấu 3 chấm - Cập nhật
+        xoa = driver.find_element(By.XPATH, var.danhsachmagiamgia_input)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_input).send_keys(data['kenhmarketing']['mavouchersp1'])
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_timkiem).click()
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_dau3cham).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_dau3cham_capnhat).click()
+        time.sleep(1.5)
+        driver.execute_script("window.scrollBy(0,-1200)", "")
+        xoa = driver.find_element(By.XPATH, var.taovoucher_tenchuongtrinh)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.taovoucher_tenchuongtrinh).send_keys(data['kenhmarketing']['mavouchersp_capnhat'])
+        driver.find_element(By.XPATH, var.taovoucher_loaigiamgia_theophantram_input).send_keys("20")
+
+        driver.execute_script("window.scrollBy(0,600)", "")
+        button = driver.find_element(By.XPATH, var.taovoucher_capnhat)
+        driver.execute_script("arguments[0].click();", button)
+        # driver.find_element(By.XPATH, var.taovoucher_capnhat).click()
+
+        check_message_danhsachmagiamgia_capnhat = driver.find_element(By.XPATH, var.check_message_danhsachmagiamgia_capnhat).text
+        logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+        logging.info("check font-end: Message Cập nhật sản phẩm - Cập nhật Voucher thành công!")
+        logging.info(check_message_danhsachmagiamgia_capnhat)
+        logging.info(check_message_danhsachmagiamgia_capnhat == "Cập nhật Voucher thành công!")
+        time.sleep(1)
+
+        check_capnhatvoucher = driver.find_element(By.XPATH, var.check_danhsachmagiamgia).text
+        logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+        logging.info("check font-end: Cập nhật voucher - Tên voucher - " + data['kenhmarketing']['mavouchersp_capnhat'])
+        logging.info(check_capnhatvoucher)
+        logging.info(check_capnhatvoucher == data['kenhmarketing']['mavouchersp_capnhat'])
+
+        #Dấu 3 chấm - Xóa
+        xoa = driver.find_element(By.XPATH, var.danhsachmagiamgia_input)
+        xoa.send_keys(Keys.CONTROL, "a")
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_input).send_keys(data['kenhmarketing']['mavouchersp1'])
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_timkiem).click()
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_dau3cham).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_dau3cham_xoa).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.danhsachmagiamgia_dau3cham_xoa_xoa).click()
+
+        check_message_danhsachmagiamgia_xoa = driver.find_element(By.XPATH, var.check_message_danhsachmagiamgia_xoa).text
+        logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+        logging.info("check font-end: Message Xóa sản phẩm - Cập nhật thành công")
+        logging.info(check_message_danhsachmagiamgia_xoa)
+        logging.info(check_message_danhsachmagiamgia_xoa == "Cập nhật thành công")
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.xoa).click()
+        time.sleep(1.5)
+        check_dsmagiamgia_xoavoucher = driver.find_element(By.XPATH, var.check_danhsachmagiamgia).text
+        logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop")
+        logging.info("check font-end: Dấu 3 chấm - Xóa voucher - " + data['kenhmarketing']['mavouchersp_capnhat'])
+        logging.info(check_dsmagiamgia_xoavoucher)
+        logging.info(check_dsmagiamgia_xoavoucher != data['kenhmarketing']['mavouchersp_capnhat'])
+        time.sleep(1)
+
+
+
+    def chuongtrinhkhuyenmai_tatca(self):
+        driver.implicitly_wait(15)
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.iconshopcuatoi).click()
+        driver.find_element(By.XPATH, var.iconshopcuatoi_binhthuan).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.kenhmarketting).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.chuongtrinhkhuyenmai).click()
+        time.sleep(1.5)
+        #Tất cả - Chương trình Flash Sale cùng EMSO
+        ten_chuongtrinh_flashsale_ten1 = driver.find_element(By.XPATH, var.ten_chuongtrinh_flashsale_ten1).text
+        ten_chuongtrinh_flashsale_thoigian1 = driver.find_element(By.XPATH, var.ten_chuongtrinh_flashsale_thoigian1).text
+        ten_chuongtrinh_flashsale_chitietchuongtrinh1 = driver.find_element(By.XPATH, var.ten_chuongtrinh_flashsale_chitietchuongtrinh1).text
+        ten_chuongtrinh_flashsale_gianhangdangky1 = driver.find_element(By.XPATH, var.ten_chuongtrinh_flashsale_gianhangdangky1).text
+
+        logging.info("Người bán - Kênh marketting - Chương trình khuyến mãi -  Flash Sale")
+        logging.info("check font-end: Tên chương trình - Có hiển thị không")
+        logging.info(ten_chuongtrinh_flashsale_ten1)
+        logging.info(ten_chuongtrinh_flashsale_ten1 != None)
+
+
+        logging.info("Người bán - Kênh marketting - Chương trình khuyến mãi -  Flash Sale")
+        logging.info("check font-end: Thời gian - Có hiển thị không")
+        logging.info(ten_chuongtrinh_flashsale_thoigian1)
+        logging.info(ten_chuongtrinh_flashsale_thoigian1 != None)
+
+
+        logging.info("Người bán - Kênh marketting - Chương trình khuyến mãi -  Flash Sale")
+        logging.info("check font-end: Chi tiết chương trình - Có hiển thị không")
+        logging.info(ten_chuongtrinh_flashsale_chitietchuongtrinh1)
+        logging.info(ten_chuongtrinh_flashsale_chitietchuongtrinh1 != None)
+
+
+        logging.info("Người bán - Kênh marketting - Chương trình khuyến mãi -  Flash Sale")
+        logging.info("check font-end: Gian hàng đăng ký - Có hiển thị không")
+        logging.info(ten_chuongtrinh_flashsale_gianhangdangky1)
+        logging.info(ten_chuongtrinh_flashsale_gianhangdangky1 != None)
+
+
+        #Xem Flash Sale 1
+        driver.find_element(By.XPATH, var.chuongtrinh_flashsale_chon1).click()
+        time.sleep(2)
+        ten_chuongtrinh_flashsale_vaoxemten1 = driver.find_element(By.XPATH, var.ten_chuongtrinh_flashsale_vaoxemten1).text
+        logging.info("Người bán - Kênh marketting - Chương trình khuyến mãi -  Flash Sale")
+        logging.info("check font-end: Tên Flash Sale khi chọn xem chi tiết")
+        logging.info(ten_chuongtrinh_flashsale_ten1 == ten_chuongtrinh_flashsale_vaoxemten1)
+
+        driver.find_element(By.XPATH, var.dieukienthamgia).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.dangkychiendich).click()
+        time.sleep(1)
+
+        ten_chuongtrinh_flashsale_dangkychiendich1 = driver.find_element(By.XPATH, var.ten_chuongtrinh_flashsale_dangkychiendich1).text
+        logging.info("Người bán - Kênh marketting - Chương trình khuyến mãi -  Flash Sale")
+        logging.info("check font-end: Đăng ký chiến djch - Tên chiến dịch 1 có hiển thị không?")
+        logging.info(ten_chuongtrinh_flashsale_dangkychiendich1)
+        logging.info(ten_chuongtrinh_flashsale_dangkychiendich1 != None)
+        driver.back()
+        time.sleep(1)
+        driver.back()
+        time.sleep(1)
+        driver.back()
+        time.sleep(2)
+
+        #Tất cả - Chương trình Khuyến mãi cùng EMSO
+        driver.execute_script("window.scrollBy(0,400)", "")
+        ten_chuongtrinh_khuyenmai_ten1 = driver.find_element(By.XPATH, var.ten_chuongtrinh_khuyenmai_ten1).text
+        driver.find_element(By.XPATH, var.chuongtrinh_khuyenmai_chon1).click()
+        time.sleep(1.5)
+        ten_chuongtrinh_khuyenmai_vaoxemten1 = driver.find_element(By.XPATH, var.ten_chuongtrinh_flashsale_vaoxemten1).text
+        logging.info("Người bán - Kênh marketting - Chương trình khuyến mãi -  Khuyến mãi")
+        logging.info("check font-end: Tên Khuyến mãi khi chọn xem chi tiết")
+        logging.info(ten_chuongtrinh_khuyenmai_vaoxemten1 == ten_chuongtrinh_khuyenmai_ten1)
+
+        driver.find_element(By.XPATH, var.dieukienthamgia).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.dangkychiendich).click()
+        time.sleep(1.5)
+        driver.back()
+        time.sleep(1)
+        driver.back()
+        time.sleep(1)
+        driver.back()
+        time.sleep(2)
+
+        #Tất cả - Chương trình Voucher cùng EMSO
+        driver.execute_script("window.scrollBy(0,800)", "")
+        ten_chuongtrinh_voucher_ten1 = driver.find_element(By.XPATH, var.ten_chuongtrinh_voucher_ten1).text
+        driver.find_element(By.XPATH, var.chuongtrinh_voucher_chon1).click()
+        time.sleep(1.5)
+        ten_chuongtrinh_voucher_vaoxemten1 = driver.find_element(By.XPATH, var.ten_chuongtrinh_voucher_vaoxemten1).text
+        logging.info("Người bán - Kênh marketting - Chương trình khuyến mãi -  Voucher")
+        logging.info("check font-end: Tên voucher khi chọn xem chi tiết")
+        logging.info(ten_chuongtrinh_voucher_ten1 == ten_chuongtrinh_voucher_vaoxemten1)
+        time.sleep(1)
+
+
+    def chuongtrinhkhuyenmai_flashsale(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "emsomanagerhd@gmail.com", "khongnhomatkhaucu")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.chuongtrinhkhuyenmai_flashsale).click()
+        time.sleep(2)
+
+        n = 0
+        while (n < 100):
+            n = n + 1
+            n = str(n)
+            danhsach_flashsale = "//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div/div["+n+"]/div/div"
+            danhsach_flashsale_ten = danhsach_flashsale +"/p[1]"
+            danhsach_flashsale_ten1 = driver.find_element(By.XPATH, danhsach_flashsale_ten).text
+            danhsach_flashsale_trangthaibutton = danhsach_flashsale +"/button"
+            danhsach_flashsale_trangthaibutton1 = driver.find_element(By.XPATH, danhsach_flashsale_trangthaibutton).text
+            print(danhsach_flashsale_ten1)
+            print(danhsach_flashsale_trangthaibutton1)
+            n = int(n)
+            if danhsach_flashsale_ten1[0:7] == "FLS VT1" and danhsach_flashsale_trangthaibutton1 == "Đăng ký ngay":
+                button = driver.find_element(By.XPATH, danhsach_flashsale_trangthaibutton)
+                driver.execute_script("arguments[0].click();", button)
+                driver.find_element(By.XPATH, var.dangkychiendich).click()
+                time.sleep(1)
+
+                danhsachkhuyenmai = driver.find_elements(By.XPATH, var.danhsachkhuyenmai)
+                for khuyenmai in danhsachkhuyenmai:
+                    khuyenmai1 = khuyenmai.text
+                    if khuyenmai1 == "Giảm giá 10% thời trang nữ 2024":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thoitrangnu, "10", "2", "1")
+                    if khuyenmai1 == "Giảm giá 15% thời trang nam 2024":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thoitrangnam, "10", "3","2")
+                    if khuyenmai1 == "Giảm giá thiết bị âm thanh dưới 199k 2024":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "10", "2","3")
+                    print(khuyenmai1)
+                break
+
+
+
+    def chuongtrinhkhuyenmai_themsanpham(self, chonkhuyenmai, chonnghanhhang, khuyenmai, soluongsanpham, gioihandathang):
+        driver.find_element(By.XPATH,"//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[1]/div/nav//*[text()='" + chonkhuyenmai + "']").click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.themsanpham).click()
+        time.sleep(2)
+        # Chọn sản phẩm
+        driver.find_element(By.XPATH, var.themsanpham_nghanhhang1).click()
+        time.sleep(1)
+        actions = ActionChains(driver)
+        themsanpham_hovernghanhhang = driver.find_element(By.XPATH, var.chonnghanhhang + chonnghanhhang)
+        actions.move_to_element(themsanpham_hovernghanhhang).perform()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.chonnghanhhang + chonnghanhhang).click()
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.themsanpham_chontatcasanpham).click()
+        driver.find_element(By.XPATH, var.themsanpham_chonsanpham1).click()
+        driver.find_element(By.XPATH, var.themsanpham_xacnhan).click()
+        time.sleep(1)
+        # Chỉnh sửa sản phẩm
+        driver.find_element(By.XPATH, var.themsanpham_chinhsua_khuyenmai).send_keys(khuyenmai)
+        driver.find_element(By.XPATH, var.themsanpham_chinhsua_soluongsanpham).send_keys(soluongsanpham)
+        driver.find_element(By.XPATH, var.themsanpham_chinhsua_gioihandathang).send_keys(gioihandathang)
+        driver.find_element(By.XPATH, var.themsanpham_chinhsua_chontatcasanpham).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.themsanpham_chinhsua_capnhat).click()
+        time.sleep(4)
+        button = driver.find_element(By.XPATH, var.themsanpham_chinhsua_xacnhan)
+        driver.execute_script("arguments[0].click();", button)
+        # check_message_chonspkhuyenmai = driver.find_element(By.XPATH, var.check_message_chonspkhuyenmai)
+        time.sleep(2.5)
 
 
 

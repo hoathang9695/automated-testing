@@ -103,7 +103,6 @@ def thongtincanhan_anhdaidien(self):
     action.anhdaidien.anhdaidien_themkhung(self)
     action.checkdata_be.trangcanhan_thongtincanhan_anhdaidien_themkhung(self)
 
-# @retry(tries=3, delay=2, backoff=1, jitter=5, )
 def thongtincanhan_anhbia(self):
     action.anhbia.anhbia_tailen(self)
     action.checkdata_be.trangcanhan_thongtincanhan_anhbia_tailen(self)
@@ -114,14 +113,12 @@ def thongtincanhan_anhbia(self):
 
 
 class gioithieu():
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def gioithieu_tongquan(self):
         action.tongquan.tongquan(self)
         action.checkdata_be.trangcanhan_gioithieu_tongquan(self)
 
         action.tongquan.tongquan_dulieusai(self)
 
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def congviec_vahocvan(self):
         action.cong_viec_va_hoc_van.congviecvahocvan_congviec(self)
         action.checkdata_be.trangcanhan_gioithieu_cvvahocvan_congviec(self)
@@ -132,7 +129,6 @@ class gioithieu():
         action.cong_viec_va_hoc_van.congviecvahocvan_trunghoc(self)
         action.checkdata_be.trangcanhan_gioithieu_cvvahocvan_trunghoc(self)
 
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def xemsukientrongdoi_congviecvahocvan(self):
 
         action.xemkientrongdoi.congviecvahocvan_congviec(self)
@@ -144,23 +140,19 @@ class gioithieu():
         action.xemkientrongdoi.congviecvahocvan_trunghoc(self)
         action.checkdata_be.trangcanhan_gioithieu_cvvahocvan_xemsukientrongdoi_trunghoc(self)
 
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_congviecvahocvan_addthem(self):
         action.cong_viec_va_hoc_van.congviecvahocvan_addthem(self)
 
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_thongtincoban(self):
         action.thongtincoban.thongtincoban(self)
         action.checkdata_be.trangcanhan_gioithieu_thongtincoban(self)
 
         action.thongtincoban.thongtincoban_dulieusai(self)
 
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_gd_va_mqh(self):
         action.giadinh_va_cacmoiquanhe.gd_va_mqh_taikhoan1(self)
         action.checkdata_be.trangcanhan_gioithieu_giadinh_va_cacmqh(self)
 
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_sukientrongdoi(self):
         action.sukientrongdoi.sukientrongdoi_xem(self)
 
@@ -182,28 +174,24 @@ class gioithieu():
         action.checkdata_be.trangcanhan_gioithieu_sukientrongdoi(self)
         action.sukientrongdoi.sukientrongdoi_themmoisukien_chinhsua_xoa(self)
 
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def trangcanhan_gioithieu_noitungsong(self):
         action.noitungsong.noitungsong(self)
 
 
 class banbe():
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def banbe_tatcabanbe(self):
-        # action.banbe.tatcabanbe(self)
+        action.banbe.tatcabanbe(self)
         action.banbe.banbe_chinhsuaquyenriengtu(self)
 
 
 
 class anh_video():
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def anh_video(self):
         action.anh_video.anh(self)
         action.anh_video.video(self)
 
 
 class check_thongtin_trangcanhan():
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def check_thongtin_trangcanhan(self):
         action.check_thongtin_trangcanhan.check_thongtin_trangcanhan(self)
     def phandangchuy(self):
@@ -211,7 +199,6 @@ class check_thongtin_trangcanhan():
 
 
 class trangchu():
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def taobaiviet_khoangkhac(self):
         action.trangchu.taobaiviet_congkhai(self)
         action.trangchu.taobaiviet_banbe(self)
@@ -219,20 +206,16 @@ class trangchu():
         action.trangchu.taobaimoment(self)
         # action.trangchu.camxuc_hoatdong(self)       #Mất icon xúc động
 
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def menu(self):
         action.trangchu.menu(self)
         action.trangchu.menu_tao(self)
 
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def tinnhanmoi(self):
         action.trangchu.tinnhanmoi(self)
 
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def chat(self):
         action.trangchu.chat(self)
 
-    # @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def chat_xemtatca(self):
         action.trangchu.chat_xemtatca(self)
 
@@ -255,7 +238,7 @@ class trangchu():
         action.trangchu.caidatvaquyenriengtu_trangcanhanvaganthe(self)
         action.trangchu.caidatvaquyenriengtu_baivietcongkhai(self)
         action.trangchu.caidatvaquyenriengtu_chan(self)
-        action.trangchu.caidatvaquyenriengtu_batkiemtien(self)
+        # action.trangchu.caidatvaquyenriengtu_batkiemtien(self)        #lỗi xác minh page từ Tuấn
 
     def trogiupvahotro(self):
         action.trangchu.trogiupvahotro_sudungemso(self)
@@ -317,12 +300,12 @@ class trang():
     def trangdathich(self):
         action.trang.trangdathich(self)
     def trangdathich_dau3cham(self):
-        action.login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        action.login.login4(self, "truongvck333@gmail.com", "voncamk22")
         action.trang.trangdathich_dau3cham(self)
     def loimoi(self):
         action.trang.loimoi(self)
     def taotrangmoi(self):
-        action.login.login4(self, "truongvck333@gmail.com", "atgmj123456")
+        action.login.login4(self, "truongvck22@gmail.com", "voncamk22")
         action.trang.taotrangmoi_banhang(self)
         action.trang.taotrangmoi_bankhoahoc(self)
         action.trang.taotrangmoi_trangnoidung(self)
@@ -419,8 +402,134 @@ class nhom:
     def yeucaulamthanhvien(self):
         action.nhom.yeucaulamthanhvien(self)
 
-
     def baivietdalenlich(self):
         action.nhom.baivietdalenlich(self)
+
+    def nhatkyhoatdong(self):
+        action.nhom.nhatkyhoatdong(self)
+
+    def quytacnhom(self):
+        action.nhom.quytacnhom(self)
+
+    def noidungthanhvienbaocao(self):
+        action.nhom.noidungthanhvienbaocao(self)
+
+    def thongbaokiemduyet(self):
+        action.nhom.thongbaokiemduyet(self)
+
+    def cauhoichonthanhvien(self):
+        action.nhom.cauhoichonthanhvien(self)
+
+    def caidatnhom(self):
+        action.nhom.caidatnhom(self)
+        action.nhom.thietlapnhom(self)
+        action.nhom.tuychinhnhom(self)
+        action.nhom.quanlynoidungthaoluan(self)     #Bài viết đang chờ phải từ chối 2l 6622
+
+
+
+class quatrinhmuahang():
+    def timkiemsanpham(self):
+        action.quatrinhmuahang.timkiemsanpham(self)
+
+    def xacnhandon(self):
+        action.quatrinhmuahang.xacnhandon(self)
+
+    def chuanbihang(self):
+        action.quatrinhmuahang.chuanbihang(self)
+
+    def donvivanchuyendanglayhang(self):
+        action.quatrinhmuahang.donvivanchuyendanglayhang(self)
+
+    def donvivanchuyendalayhang(self):
+        action.quatrinhmuahang.donvivanchuyendalayhang(self)
+
+    def danggiaohang(self):
+        action.quatrinhmuahang.danggiaohang(self)
+
+    def danhanhang(self):
+        action.quatrinhmuahang.danhanhang(self)
+
+    def chothanhtoan_dahuy(self):
+        action.quatrinhmuahang.timkiemsanpham(self)
+        action.quatrinhmuahang.chothanhtoan_dahuy(self)
+
+    def shop_het_hang(self):
+        action.quatrinhmuahang.shop_het_hang(self)
+
+
+    def trahanghoantien_dongy(self):
+        action.quatrinhmuahang.timkiemsanpham(self)
+        action.quatrinhmuahang.xacnhandon(self)
+        action.quatrinhmuahang.chuanbihang(self)
+        action.quatrinhmuahang.donvivanchuyendanglayhang(self)
+        action.quatrinhmuahang.donvivanchuyendalayhang(self)
+        action.quatrinhmuahang.danggiaohang(self)
+        action.quatrinhmuahang.trahanghoantien_dongy(self)
+
+
+    def trahanghoantien_khongdongy(self):
+        action.quatrinhmuahang.timkiemsanpham(self)
+        action.quatrinhmuahang.xacnhandon(self)
+        action.quatrinhmuahang.chuanbihang(self)
+        action.quatrinhmuahang.donvivanchuyendanglayhang(self)
+        action.quatrinhmuahang.donvivanchuyendalayhang(self)
+        action.quatrinhmuahang.danggiaohang(self)
+        action.quatrinhmuahang.trahanghoantien_khongdongy(self)
+
+    def trahanghoantien_nguoimuahuy(self):
+        action.quatrinhmuahang.timkiemsanpham(self)
+        action.quatrinhmuahang.xacnhandon(self)
+        action.quatrinhmuahang.chuanbihang(self)
+        action.quatrinhmuahang.donvivanchuyendanglayhang(self)
+        action.quatrinhmuahang.donvivanchuyendalayhang(self)
+        action.quatrinhmuahang.danggiaohang(self)
+        action.quatrinhmuahang.trahanghoantien_nguoimuahuy(self)
+
+
+    def shophuydon(self):
+        action.quatrinhmuahang.timkiemsanpham(self)
+        action.quatrinhmuahang.shophuydon(self)
+
+
+class quanlysanpham():
+    def themsanphammoi(self):
+        action.quanlysanpham.themsanphammoi_guipheduyet(self)
+        action.thuongmai.duyetsanpham_tuchoi(self)
+        action.thuongmai.duyetsanpham_duyet(self)
+
+        action.quanlysanpham.themsanphammoi_luunhap(self)
+
+    def danhsachsanpham(self):
+        action.quanlysanpham.danhsachsanpham(self)
+
+
+class add_dulieuemso():
+    def themsanphammoi1(self):
+        action.add_dulieuemso.themsanphammoi1(self)
+
+    def themsanphammoi1_khongconghanhcha(self):
+        action.add_dulieuemso.themsanphammoi1_khongconghanhcha(self)
+
+    def vietfilesanpham(self):
+        action.add_dulieuemso.vietfilesanpham(self)
+
+    # @retry(tries=5, delay=2, backoff=1, jitter=5, )
+    def get_data_lazada(self):
+        action.add_dulieuemso.get_data_lazada(self)
+
+    def get_image(self):
+        action.add_dulieuemso.get_image(self)
+
+
+class kenhmarketing():
+    def magiamgiacuashop(self):
+        action.kenhmarketing.magiamgiacuashop(self)
+        action.kenhmarketing.danhsachmagiamgia(self)
+
+
+    def chuongtrinhkhuyenmai(self):
+        # action.kenhmarketing.chuongtrinhkhuyenmai_tatca(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_flashsale(self)
 
 

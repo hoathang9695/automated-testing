@@ -1,5 +1,5 @@
 import emso
-
+import action
 
 # emso.dang_nhap(self="")
 # emso.trangcanhan(self="")
@@ -8,26 +8,22 @@ import emso
 # emso.khoanhkhac(self="")
 # emso.watch(self="")
 # emso.trang(self="")
-emso.nhom(self="")
+# emso.nhom(self="")
+
+
+#Người mua
+# emso.muahangthanhcong(self="")
+# emso.muahangthatbai(self="")
+
+#Người bán
+# emso.quanlysanpham(self="")
+emso.kenhmarketing(self="")
+
+#add sản phẩm market space
+# emso.add_dulieuemso(self="")
 
 
 
 
 
 
-
-
-
-
-
-
-
-# r = 3
-# i = 0
-# while i <= r:
-#     i = i+1
-#     emso.dang_nhap(self="")
-#     emso.trangcanhan(self="")
-#     # emso.trangchu(self="")
-#     # emso.khoanhkhac(self="")
-#     print("Đã chạy được số vòng", i)
