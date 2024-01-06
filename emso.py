@@ -151,7 +151,8 @@ def muahangthatbai(self):
     funcion.quatrinhmuahang.shophuydon(self)
     funcion.quatrinhmuahang.trahanghoantien_nguoimuahuy(self)
     funcion.quatrinhmuahang.trahanghoantien_dongy(self)
-    funcion.quatrinhmuahang.trahanghoantien_khongdongy(self)
+    funcion.quatrinhmuahang.trahanghoantien_khongdongy_dongy(self)
+    funcion.quatrinhmuahang.trahanghoantien_khongdongy_khongdongy(self)
 
 
 def quanlysanpham(self):
@@ -160,16 +161,17 @@ def quanlysanpham(self):
 
 
 def add_dulieuemso(self):
-    funcion.add_dulieuemso.themsanphammoi1(self)
-    funcion.add_dulieuemso.themsanphammoi1_khongconghanhcha(self)
-    funcion.add_dulieuemso.vietfilesanpham(self)
-    funcion.add_dulieuemso.get_data_lazada(self)
-    funcion.add_dulieuemso.get_image(self)
+    # funcion.add_dulieuemso.themsanphammoi1(self)
+    # funcion.add_dulieuemso.themsanphammoi1_khongconghanhcha(self)
+    # funcion.add_dulieuemso.vietfilesanpham(self)
+    # funcion.add_dulieuemso.get_data_lazada(self)
+    funcion.add_dulieuemso.get_data_lazada_theonghanh(self)
+    # funcion.add_dulieuemso.get_image(self)
 
 
 def kenhmarketing(self):
     action.login.login4(self, "truongvck33@gmail.com", "voncamk22")
-    # funcion.kenhmarketing.magiamgiacuashop(self)
+    funcion.kenhmarketing.magiamgiacuashop(self)
     funcion.kenhmarketing.chuongtrinhkhuyenmai(self)
 
 

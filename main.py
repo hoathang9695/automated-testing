@@ -17,10 +17,10 @@ import action
 
 #Người bán
 # emso.quanlysanpham(self="")
-emso.kenhmarketing(self="")
+# emso.kenhmarketing(self="")
 
 #add sản phẩm market space
-# emso.add_dulieuemso(self="")
+emso.add_dulieuemso(self="")
 
 
 

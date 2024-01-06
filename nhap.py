@@ -32,8 +32,9 @@ data['trangcanhan_sukientrongdoi']['taosukienrieng']
 
 //*[@class='']/div[@class='']/span[@class='']
 //*[@class='app']/div/main/div/div[2]/div
+//*[@class='app']/div/div[3]
 //*[@class='MuiBox-root css-1nqnusv']//*[text()='Nhóm']
-
+timkiemsanpham_chonxem ="//*[@class='app']/div/main/div/div[1]//*[text()='"+ data['market']['timkiemtrangchu']+"']"
 
 anh_bia = driver.find_element(By.XPATH, var.trangcanhan_anhbia)
 button_themmoi = driver.find_element(By.XPATH, var.trangcanhan_button_themmoi)
@@ -142,7 +143,19 @@ while (count < 25):
         pass
 driver.implicitly_wait(15)
 
-//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div/div[2]/div[3]/ul/li[1]/div[1]/div[1]/div[2]/div/span/div/div/p
+
+#Chuyển sang trang
+handles = driver.window_handles
+for handle in handles:
+    driver.switch_to.window(handle)
 
 
 
+
+
+driver.find_element(By.XPATH, var.themsanpham_themhinhanh_input1).send_keys("C:/Users/Admin/PycharmProjects/pythonProject/import/anhmes1.jpg")
+time.sleep(1)
+
+
+
+//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[1]/div/nav[1]/div[2]/div/div/div/div

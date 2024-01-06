@@ -468,14 +468,28 @@ class quatrinhmuahang():
         action.quatrinhmuahang.trahanghoantien_dongy(self)
 
 
-    def trahanghoantien_khongdongy(self):
+    def trahanghoantien_khongdongy_dongy(self):
         action.quatrinhmuahang.timkiemsanpham(self)
         action.quatrinhmuahang.xacnhandon(self)
         action.quatrinhmuahang.chuanbihang(self)
         action.quatrinhmuahang.donvivanchuyendanglayhang(self)
         action.quatrinhmuahang.donvivanchuyendalayhang(self)
         action.quatrinhmuahang.danggiaohang(self)
-        action.quatrinhmuahang.trahanghoantien_khongdongy(self)
+        action.quatrinhmuahang.trahanghoantien_khongdongy_dongy(self)
+
+
+    def trahanghoantien_khongdongy_khongdongy(self):
+        action.quatrinhmuahang.timkiemsanpham(self)
+        action.quatrinhmuahang.xacnhandon(self)
+        action.quatrinhmuahang.chuanbihang(self)
+        action.quatrinhmuahang.donvivanchuyendanglayhang(self)
+        action.quatrinhmuahang.donvivanchuyendalayhang(self)
+        action.quatrinhmuahang.danggiaohang(self)
+        action.quatrinhmuahang.trahanghoantien_khongdongy_khongdongy(self)
+
+
+
+
 
     def trahanghoantien_nguoimuahuy(self):
         action.quatrinhmuahang.timkiemsanpham(self)
@@ -496,6 +510,8 @@ class quanlysanpham():
     def themsanphammoi(self):
         action.quanlysanpham.themsanphammoi_guipheduyet(self)
         action.thuongmai.duyetsanpham_tuchoi(self)
+
+        action.quanlysanpham.themsanphammoi_guipheduyet(self)
         action.thuongmai.duyetsanpham_duyet(self)
 
         action.quanlysanpham.themsanphammoi_luunhap(self)
@@ -518,6 +534,10 @@ class add_dulieuemso():
     def get_data_lazada(self):
         action.add_dulieuemso.get_data_lazada(self)
 
+    def get_data_lazada_theonghanh(self):
+        action.add_dulieuemso.get_data_lazada_theonghanh(self)
+
+
     def get_image(self):
         action.add_dulieuemso.get_image(self)
 
@@ -529,7 +549,9 @@ class kenhmarketing():
 
 
     def chuongtrinhkhuyenmai(self):
-        # action.kenhmarketing.chuongtrinhkhuyenmai_tatca(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_tatca(self)
         action.kenhmarketing.chuongtrinhkhuyenmai_flashsale(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_emsocampaign(self)
+
 
 
