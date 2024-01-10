@@ -1,4 +1,5 @@
 import json
+import openpyxl
 PATH ="C:/Users/Admin/PycharmProjects/pythonProject/chromedriver.exe"
 path_baocao = "C:/Users/Admin/PycharmProjects/pythonProject/baocao_emso.xlsx"
 linkvideo ="C:/Users/Admin/PycharmProjects/pythonProject/linkvideo.xlsx"
@@ -10,6 +11,30 @@ file_name = 'data_emso.json'
 with open(file_name, 'r', encoding='utf-8') as f:
     data = json.load(f, strict = False)
 
+
+def getRowCount(file, sheetName):
+    wordbook = openpyxl.load_workbook(file)
+    sheet = wordbook.get_sheet_by_name(sheetName)
+    return (sheet.max_row)
+
+def getColumnCount(file, sheetName):
+    wordbook = openpyxl.load_workbook(file)
+    sheet = wordbook.get_sheet_by_name(sheetName)
+    return (sheet.max_column)
+
+def readData(file,sheetName,rownum,columnno):
+    wordbook = openpyxl.load_workbook(file)
+    sheet = wordbook.get_sheet_by_name(sheetName)
+    return sheet.cell(row=rownum,column=columnno).value
+
+def writeData(file,sheetName,rowum,columnno,data):
+    wordbook = openpyxl.load_workbook(file)
+    sheet = wordbook.get_sheet_by_name(sheetName)
+    sheet.cell(row=rowum,column=columnno).value = data
+    wordbook.save(file)
+
+
+rows = getRowCount(path_baocao,'Sheet1')
 
 # 1.login
 url = "https://cmc-fe.emso.vn/login"
@@ -1559,10 +1584,10 @@ cuahangphutungoto ="//*[text()='Cửa hàng phụ tùng ô tô']"
 icon_trang ="//*[@id='root']/div/div/main/div/div/div/nav/a[@aria-label='Trang']"
 trang_timkiem ="//*[@placeholder='Tìm kiếm trang page']"
 trang_timkiem_trang1 = "//*[text()='Trường test bản tin']"
-trang_trangcuaban ="//*[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-hx7jar']"
+trang_trangcuaban ="//*[@id='scrollDivPage']/div[3]//*[text()='Trang của bạn']"
 trang_trangcuaban1 =""
-trang_trangcuaban_truongtest ="//*[@class='app']/div/main/div/div[1]/div[2]/div[2]/div/div/div[2]/ul/div/div[2]/div/div/div/div/div[2]/div"
-trang_trangcuaban_binhthuan ="//*[@class='app']/div/main/div/div[1]/div[2]/div[2]/div/div/div[2]/ul/div/div[2]/div/div/div/div/div[1]/div"
+trang_trangcuaban_truongtest ="//*[@class='app']/div/main/div/div[2]/div/div/div[2]/div//*[text()='Trường test bản tin']"
+trang_trangcuaban_binhthuan ="//*[@class='app']/div/main/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/button"
 trang_trangcuaban_binhthuan1  ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/p"
 trang_trangcuaban_truongtest1 ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/p"
 
@@ -1747,13 +1772,13 @@ trang_xemthem_sukien_taosukienmoi ="//*[text()='Tạo sự kiện mới.']"
 taosukien_tensukien ="//*[@placeholder='Tên sự kiện']"
 taosukien_iconngaybatdau ="//*[@id='scrollableDiv']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/form/div[1]/div[3]/div/div/div/div/div/div/button"
 taosukien_ngaybatdau_iconchonnam ="//*[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1wjkg3']"
-taosukien_ngaybatdau_chonnam_2024 = "//*[text()='2024']"
+taosukien_ngaybatdau_chonnam_2024 = "//*[@role='dialog']/div[2]/div/div/div/div[2]//*[text()='2024']"
 taosukien_ngaybatdau_chonngay_20 ="//*[text()='20']"
 taosukien_giobatdau_input ="//*[@id='scrollableDiv']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/form/div/div[4]/div/div/div/div/div/div/input"
 taosukien_ngayvagioketthuc ="//*[text()='Ngày và giờ kết thúc']"
 taosukien_iconngayketthuc ="//*[@id='scrollableDiv']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/form/div[1]/div[5]/div/div/div/div/div/div/button"
 taosukien_ngayketthuc_iconchonnam ="//*[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1wjkg3']"
-taosukien_ngayketthuc_chonnam_2024 ="//*[text()='2024']"
+taosukien_ngayketthuc_chonnam_2024 ="//*[@role='dialog']/div[2]/div/div/div/div[2]//*[text()='2024']"
 taosukien_ngayketthuc_chonngay_25 ="//*[text()='25']"
 taosukien_gioketthuc_input = "//*[@id='scrollableDiv']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/form/div/div[6]/div/div/div/div/div/div/input"
 congkhai = "//*[text()='Công khai']"
@@ -1799,6 +1824,7 @@ trang_xemthem_uudai ="//*[@class='MuiBox-root css-1nqnusv']//*[text()='Ưu đãi
 trang_cuahang ="//*[text()='Cửa hàng']"
 check_trang_cuahang_magiamgia ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div[1]/div/p[1]"
 check_trang_cuahang_goiy_tensp ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div[3]/div/div[1]/div/div/div[2]/div[1]/div[1]/div/div/div/div/div[2]/div/div[1]/div"
+                            # a  ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div[3]/div/div[2]/div/div/div[2]/div[1]/div[1]/div/div/div/div/div[2]/div/div[1]/div"
 check_trang_cuahang_goiy_anhsp        ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div[3]/div/div[1]/div/div/div[2]/div[1]/div[1]/div/div/div/div/div[1]/img"
 check_trang_cuahang_banchaynhat_tensp ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div[3]/div/div[2]/div/div/div[2]/div[1]/div[1]/div/div/div/div/div[2]/div/div[1]/div"
 check_trang_cuahang_banchaynhat_anhsp ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div[3]/div/div[2]/div/div/div[2]/div[1]/div[1]/div/div/div/div/div[1]/img"
@@ -2452,12 +2478,12 @@ sanpham_muangay ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/di
 message_themvaogiohang = "//*[text()='Sản phẩm đã được thêm vào Giỏ hàng']"
 icongiohang ="//*[@aria-label='Giỏ hàng']"
 xacnhandonhang ="//*[text()='Xác nhận đơn hàng']"
-giohangcuaban_chonsp1 ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[1]/div/div[2]/div/div/div/div[1]/div[2]/div/div[1]/div/span/input"
+giohangcuaban_chonsp1 ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[1]/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div[1]/div/span/input"
 capnhatdiachi ="//*[text()='Cập nhật địa chỉ']"
 dathang ="//*[text()='Đặt hàng']"
 thanhtoan_loinhan ="//*[@placeholder='Lưu ý cho Người bán']"
 donhangcuatoi_chothanhtoan ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[2]/div/div/div[2]/div/button[2]"
-check_donhangcuatoi_chothanhtoan_sp1 ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div/div[1]/div[2]/div/div[1]/div[2]/div/span"
+check_donhangcuatoi_chothanhtoan_sp1 ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[1]/div[2]/div/div[1]/div[2]/div/span"
 check_donhangcuatoi_chothanhtoan_trangthaisp1 ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div/div[1]/div[1]/div[2]/p"
 iconshopcuatoi ="//*[@aria-label='Shop của tôi']"
 iconshopcuatoi_binhthuan ="//*[@id='scroll-paper']/ul/div/div/li[1]/div/div"
@@ -2470,7 +2496,7 @@ quanlydonhang_choxacnhan_xacnhandon1 ="//*[@class='app']/div/main/div/div[2]/div
 check_message_quanlydonhang ="/html/body/div/div/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div[2]"
 icontaikhoan = "//*[@aria-label='Tài khoản']"
 donhangcuatoi ="//*[text()='Đơn hàng của tôi']"
-check_donhangcuatoi_trangthai1 ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[1]/div[2]/p"
+check_donhangcuatoi_trangthai1 ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[1]/div[1]/div[2]/p"
 quanlydonhang_cholayhang ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div/div/div[1]/div/div/div[2]/div/button[3]"
 quanlydonhang_daxacnhan = "//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div/div/div[2]/div[2]/div/div/div[2]/div//*[text()='Đã xác nhận']"
 check_quanlydonhang_daxacnhan_sp1 ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div/div/div[2]/div[4]/div[2]/div[1]/div/p[1]"
@@ -2484,32 +2510,33 @@ donhangcuatoi_danggiao ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]
 quanlydonhang_danggiao ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div/div/div[1]/div/div/div[2]/div/button[4]"
 quanlydonhang_dangiao_dangiaohang ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div/div/div[2]/div[3]/div[2]//*[text()='Đang giao hàng']"
 check_message_dangiaohang ="/html/body/div/div/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div[2]"
-donhangcuatoi_danggiao_danhanhang ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div/div//*[text()='Đã nhận hàng']"
+donhangcuatoi_danggiao_danhanhang ="//*[@class='app']/div/main/div/div[2]/div/div[3 ]/div[1]/div/div/div/div[2]/div/div/div[1]/div[3]//*[text()='Đã nhận hàng']"
 donhangcuatoi_hoanthanh_danhgia ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div/div//*[text()='Đánh giá']"
 danhgiasanpham_input ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[3]/div/div/textarea[1]"
 danhgiasanpham_chon4sao ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/div/div/span/label[4]"
 check_message_danhgiasanpham ="//*[text()='Đánh giá thành công!']"
 hoanthanh_mualai ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div//*[text()='Mua lại']"
 check_donhangcuatoi_hoanthanh_mualai ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div[1]/div/p"
-donhangcuatoi_lienhenguoiban ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div//*[text()='Liên hệ người bán']"
+donhangcuatoi_lienhenguoiban ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[1]/div[3]/div/div//*[text()='Liên hệ người bán']"
 check_donhangcuatoi_hoanthanh_lienhenguoiban ="//*[@class='app']/div/div[2]/div/div/div[1]/li/button/div/div/div[2]/div/p"
+check_message_donhangcuatoi = "//*[text()='']"
 hoanthanh_xemdanhgia ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div//*[text()='Xem đánh giá']"
 check_donhangcuatoi_hoanthanh_danhgiasanpham ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[1]/div[2]/div[2]/div/p[2]"
-donhangcuatoi_chothanhtoan_xemchitiet = "//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div//*[text()='Xem chi tiết']"
+donhangcuatoi_chothanhtoan_xemchitiet = "//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[1]/div[3]/div/div//*[text()='Xem chi tiết']"
 check_donhangcuatoi_chothanhtoan_xemchitiet ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div/div/div[1]/div[3]/div[1]/p"
-donhangcuatoi_huydonhang ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div//*[text()='Hủy đơn hàng']"
+donhangcuatoi_huydonhang ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[1]/div[3]/div/div//*[text()='Hủy đơn hàng']"
 lydohuy_toimuonthaydoima ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div/label[2]/span[1]/input"
 huydonhang ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[2]//*[text()='Hủy đơn hàng']"
 khongphaibaygio ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[2]//*[text()='Không phải bây giờ']"
 donhangcuatoi_dahuy ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[2]/div/div/div[2]/div/button[6]"
-donhangcuatoi_mualai ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div//*[text()='Mua lại']"
+donhangcuatoi_mualai ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[1]/div[3]/div/div//*[text()='Mua lại']"
 check_donhangcuatoi_dahuy_mualai ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div[1]/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/p"
-donhangcuatoi_chitietdonhuy ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div//*[text()='Chi tiết đơn hủy']"
+donhangcuatoi_chitietdonhuy ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[1]/div[3]/div/div//*[text()='Chi tiết đơn hủy']"
 check_chitietdonhuy_lydo ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[3]/div/div[1]/p"
 quaylaimuasam ="//*[text()='Quay lại mua sắm']"
 donhangcuatoi_hoanthanh = "//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[2]/div/div/div[2]/div/button[5]"
 check_sanpham_hethang ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div[2]/div/div/div/div[1]/div[1]/div[1]/div/div[2]/div/p"
-quanlydonhang_danggiao_trahanghoantien ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div//*[text()='Yêu cầu trả hàng/hoàn tiền']"
+quanlydonhang_danggiao_trahanghoantien ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[1]/div[3]/div/div//*[text()='Yêu cầu trả hàng/hoàn tiền']"
 trahanghoantien_hangcovande = "//*[text()='Tôi đã nhận hàng và hàng có vấn đề(bể vỡ, sai mẫu, lỗi, khác mô tả,...)']"
 tieptuc ="//*[text()='Tiếp tục']"
 check_trahanghoantien_chonsanpham = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div/div/div[2]/div[2]/div/label/span[2]/div/div/div[2]/div[1]/span"
@@ -2526,7 +2553,7 @@ quanlydonhang_trahanghoantien_xemchitiet ="//*[@class='app']/div/main/div/div[2]
 trahanghoantien_vietthaoluan ="//*[@placeholder='Viết thảo luận...']"
 trahanghoantien_iconanh ="//*[@data-testid='CameraAltIcon']"
 dongyhoanhangvahoantien ="//*[text()='Đồng ý hoàn hàng và trả tiền']"
-quanlydonhang_trahanghoantien_quanlydon ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div//*[text()='Quản lý đơn']"
+quanlydonhang_trahanghoantien_quanlydon ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[1]/div[3]/div/div//*[text()='Quản lý đơn']"
 check_popup_trahanghoantien_dongy ="//*[text()='Gửi khiếu nại thành công']"
 dongyvoiquyetdinhcuashop ="//*[text()='Đồng ý với quyết định từ chối của shop']"
 dong ="//*[text()='Đóng']"
@@ -2549,7 +2576,7 @@ huydonhang_chonlydo ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-
 hethang ="//*[text()='Hết Hàng']"
 huydonhangnay ="//*[text()='Huỷ đơn hàng này']"
 check_message_shophuydonhang ="//*[text()='Huỷ đơn hàng thành công']"
-quanlydonhang_trahanghoantien_huyyeucau ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div/div[4]/div/div[1]/div[1]/div[3]/div/div//*[text()='Hủy yêu cầu']"
+quanlydonhang_trahanghoantien_huyyeucau ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div/div/div[2]/div/div/div[1]/div[3]/div/div//*[text()='Hủy yêu cầu']"
 quanlysanpham ="//*[text()='Quản lý sản phẩm']"
 themsanphammoi ="//*[@class='app']/div/main/div/div[1]/div[2]/div[2]/div/div/div[2]/div[1]/ul/div[6]/div[2]/div/div/div/div//*[text()='Thêm sản phẩm mới']"
 themsanpham_tensanpham ="//*[@placeholder='Nhập tên sản phẩm']"
@@ -2622,7 +2649,7 @@ themsanpham_tinhtrang_daquasudung ="//*[@class='app']/div/main/div/div[2]/div/di
 luunhap ="//*[text()='Lưu nháp']"
 guipheduyet ="//*[text()='Gửi phê duyệt']"
 check_message_themmoisanpham = "//*[text()='Tạo sản phẩm thành công!']"
-admin_thuongmai ="//*[@class='app']/div/div[2]/div/div/ul//*[text()='Thương mại']"
+admin_marketting ="//*[@class='app']/div/div[2]/div/div/ul//*[text()='Marketing MKP']"
 thuongmai_duyetsanpham ="//*[text()='Duyệt sản phẩm ']"
 duyetsanpham_tensanpham1 ="//*[@class='app']/div/div[3]/div[3]/table/tbody/tr[1]/td[3]/p"
 duyetsanpham_dau3cham ="//*[@class='app']/div/div[3]/div[3]/table/tbody/tr[1]/td[11]/div/div/button"
@@ -2765,7 +2792,7 @@ themsanpham ="//*[text()='Thêm sản phẩm']"
 taovoucher_chonsp_tensp_masp ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[1]/button"
 taovoucher_chonsp_tensp_masp_masp ="//*[@id='scroll-paper']//*[text()='Mã Sản phẩm']"
 taovoucher_chonsp_input ="//*[@class='MuiDialog-container MuiDialog-scrodfllPaper css-ekeie0']/div/div[1]/div[1]//*[@placeholder='Nhập vào']"
-taovoucher_chonsp_chonsp1 ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/table/tbody/tr[1]/td[1]/div/span/input"
+taovoucher_chonsp_chonsp1 ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div/div[4]/div/div[2]/div/div[1]/table/tbody/tr[1]/td[1]/span/input"
 taovoucher_chonsp_xacnhan ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[2]//*[text()='Xác nhận']"
 taovoucher_sanphamduocapdung_iconxoa ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div/div/div/div[1]/div[3]/div[2]/div/div[2]/table/tbody/tr[1]/td[4]/button"
 check_danhsachmagiamgia_loaima1 ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div/div/div[3]/div[3]/div[1]/table/tbody/tr[1]/td[2]/p"
@@ -2840,7 +2867,7 @@ chiendich_timkiem ="//*[@class='app']/div/div[3]/div[2]/div[1]/div/div/div/input
 check_chiendich_timkiem ="//*[@class='app']/div/div[3]/div[3]/table/tbody/tr/td[4]/p"
 chiendich_sp1_dau3cham ="//*[@class='app']/div/div[3]/div[3]/table/tbody/tr/td[17]/div/div/button"
 chiendich_sp1_dau3cham_chitiet ="//*[@role='presentation']/div[3]/ul//*[text()='Chi tiết']"
-chiendich_duyetsp_chontatca ="//*[@class='app']/div/div[3]/div[3]/table/thead/tr/th[1]/th/span/input"
+chiendich_duyetsp_chontatca ="/html/body/div[2]/div[3]/div/div/div[3]/div/div[3]/table/thead/tr/th[1]/th/span/input"
 chiendich_duyetsp_action ="//*[text()='Action']"
 chiendich_duyetsp_action_pheduyet ="//*[@role='menu']//*[text()='Phê duyệt']"
 chiendich_duyetsp_action_pheduyet_pheduyet = "//*[@role='presentation']//*[text()='Phê duyệt']"
@@ -2852,4 +2879,50 @@ lazada_mota1 ="//*[@data-spm='product_detail']"
 ladaza_icon1 ="//*[@class='lzd-logo-content']/a"
 themsanpham_chonsotrang ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div/div/div[2]/div/div/div[4]/div/div[2]/div/div[2]/div/div/div"
 themsanpham_chonsotrang10 ="//*[text()='10/trang']"
+chuongtrinhkhuyenmai_voucherchoshop ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[1]//*[text()='Voucher cho Shop']"
+voucherchoshop_chon1 ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div/div[1]/div/img"
+tenvoucherchoshop1_vaoxem ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[1]/div[2]/div[1]/p[2]"
+tenvoucherchoshop1 ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div/div[1]/div/div/p[1]"
+chuongtrinhkhuyenmai_dadangky ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[1]//*[text()='Đã đăng ký']"
+chiendich_duyetsp_chonsotrang ="/html/body/div[2]/div[3]/div/div/div[3]/div/div[4]/div[2]/div[2]/div/div[2]/div"
+chiendich_duyetsp_chonsotrang50 ="//*[@role='listbox']//*[text()='50']"
+chiendich_duyetsp_dangcho ="/html/body/div[2]/div[3]/div/div/div[3]/div/div[1]/div[1]/button[3]"
+
+flashsale_ten1 = readData(path_baocao, 'Sheet1', 14, 6)
+campaign_ten_ttkm2 = readData(path_baocao, 'Sheet1', 15, 6)
+campaign_ten_ttkm3 = readData(path_baocao, 'Sheet1', 16, 6)
+campaign_ten_ttkm4 = readData(path_baocao, 'Sheet1', 17, 6)
+campaign_ten_ttkm5 = readData(path_baocao, 'Sheet1', 18, 6)
+campaign_ten_ttkm6 = readData(path_baocao, 'Sheet1', 19, 6)
+dangkychiendich_danhsachsp_dau3cham1 ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[2]/div/div[2]/table/tbody/tr[1]/td[8]/button"
+dangkychiendich_danhsachsp_dau3cham1_capnhat ="//*[@id='scroll-paper']//*[text()='Cập nhật']"
+chinhsuasanpham_giasaugiam ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div/div/div[2]/div[1]/div/div[2]/div[2]/div[4]/div/div/input"
+chinhsuasanpham_chonsanpham1 = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div/div/div[2]/div[1]/div/div[1]/div[1]/span/input"
+capnhatpheduyetspthanhcong ="//*[text()='Cập nhật phê duyệt sản phẩm thành công']"
+dangkychiendich_danhsachsp_tensp1 ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[2]/div/div[2]/table/tbody/tr[1]/td[1]/div/div[2]/p"
+dangkychiendich_danhsachsp_dau3cham1_xoa ="//*[@id='scroll-paper']//*[text()='Xóa']"
+xoaspthanhcong = "//*[text()='Xoá sản phầm thành công']"
+dangkychiendich_giasaugiamsp1 ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[2]/div/div[2]/table/tbody/tr[1]/td[3]"
+dangkychiendich_giatruocgiamsp1 ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[2]/div/div[2]/table/tbody/tr[1]/td[3]"
+giohang_themvoucher ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[1]/div/div[2]/div/div/div/div[1]/div[1]//*[text()='Thêm voucher']"
+danhsachvoucher_shop = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/div/div/div"
+giohang_themvoucher_input ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[1]/div[1]/div/div/input"
+giohang_themvoucher_timkiem = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[1]//*[text()='Tìm kiếm']"
+check_vouchershop_timkiem ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/div/div/div/label/span[2]/div/div[2]/p[2]"
+giohang_tongtiensp ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]/div[2]/div/p"
+danhsachvoucher_shop_luu ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[2]//*[text()='Lưu']"
+sotientamtinh_web = "//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[2]/div/div[2]/div/p"
+check_apdungmathatbai = "//*[text()='Áp dụng mã giảm giá thất bại']"
+giohang_themvoucher1 ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[1]/div/div[2]/div/div/div/div[1]/div[1]/div[2]/div[2]/div"
+admin_thuongmai = "//*[text()='Sản phẩm MKP']"
+chonhoacnhapma ="//*[text()='Chọn hoặc nhập mã']"
+thanhtoan_themvoucher_input = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[1]/div[1]/div/div[2]/input"
+thanhtoan_themvoucher_apdung ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[1]//*[text()='Áp dụng']"
+check_voucheremso_timkiem ="//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/div/div/label[1]/span[2]/div/div[2]/p[2]"
+voucheremso_tongtiensanpham ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[2]/div[1]/div[2]/p"
+voucheremso_chiphigiaovan ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[1]/div/div[3]/table/tbody/tr[3]/td[2]/div/div/div/div/label[1]/span[2]/div/div[1]/div[2]/p"
+voucheremso_sotientamtinh ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[2]/div[3]/div[2]/p"
+voucheremso_shopvoucher ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[2]/div[3]/div[2]/p"
+voucheremso_sotientamtinh1 ="//*[@class='app']/div/main/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[2]/div[4]/div[2]/p"
+
 

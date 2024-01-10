@@ -89,16 +89,16 @@ def watch(self):
 
 def trang(self):
     action.login.login4(self, "truongvck33@gmail.com", "voncamk22")
-    # funcion.trang.timkiem_trangcuaban(self)     #ko chọn được
-    funcion.trang.khampha(self)
-    funcion.trang.trangdathich(self)
-    funcion.trang.trangdathich_dau3cham(self)
-    funcion.trang.loimoi(self)
-    # funcion.trang.taotrangmoi(self) #vẫn bị lỗi ảnh
-    funcion.trang.trang_gioithieu(self)
-    funcion.trang.anh(self)
-    funcion.trang.music(self)
-    funcion.trang.video(self)
+    # funcion.trang.timkiem_trangcuaban(self)
+    # funcion.trang.khampha(self)
+    # funcion.trang.trangdathich(self)
+    # funcion.trang.trangdathich_dau3cham(self)
+    # funcion.trang.loimoi(self)
+    # # funcion.trang.taotrangmoi(self) #vẫn bị lỗi ảnh
+    # funcion.trang.trang_gioithieu(self)
+    # funcion.trang.anh(self)     #Trắng trang like video, xem ảnh 7401
+    # funcion.trang.music(self)
+    # funcion.trang.video(self)
     funcion.trang.xemthem(self)
     funcion.trang.cuahang(self)
     funcion.trang.cacnutkhac(self)
@@ -137,13 +137,16 @@ def nhom(self):
 
 
 def muahangthanhcong(self):
-    funcion.quatrinhmuahang.timkiemsanpham(self)
-    funcion.quatrinhmuahang.xacnhandon(self)
-    funcion.quatrinhmuahang.chuanbihang(self)
-    funcion.quatrinhmuahang.donvivanchuyendanglayhang(self)
-    funcion.quatrinhmuahang.donvivanchuyendalayhang(self)
-    funcion.quatrinhmuahang.danggiaohang(self)
-    funcion.quatrinhmuahang.danhanhang(self)
+    # funcion.quatrinhmuahang.timkiemsanpham(self)
+    funcion.quatrinhmuahang.timkiemsanpham_thanhtoanonline(self)
+    #
+    #
+    # funcion.quatrinhmuahang.xacnhandon(self)
+    # funcion.quatrinhmuahang.chuanbihang(self)
+    # funcion.quatrinhmuahang.donvivanchuyendanglayhang(self)
+    # funcion.quatrinhmuahang.donvivanchuyendalayhang(self)
+    # funcion.quatrinhmuahang.danggiaohang(self)
+    # funcion.quatrinhmuahang.danhanhang(self)
 
 def muahangthatbai(self):
     funcion.quatrinhmuahang.chothanhtoan_dahuy(self)
@@ -161,12 +164,12 @@ def quanlysanpham(self):
 
 
 def add_dulieuemso(self):
-    # funcion.add_dulieuemso.themsanphammoi1(self)
-    # funcion.add_dulieuemso.themsanphammoi1_khongconghanhcha(self)
-    # funcion.add_dulieuemso.vietfilesanpham(self)
-    # funcion.add_dulieuemso.get_data_lazada(self)
+    funcion.add_dulieuemso.themsanphammoi1(self)
+    funcion.add_dulieuemso.themsanphammoi1_khongconghanhcha(self)
+    funcion.add_dulieuemso.vietfilesanpham(self)
+    funcion.add_dulieuemso.get_data_lazada(self)
     funcion.add_dulieuemso.get_data_lazada_theonghanh(self)
-    # funcion.add_dulieuemso.get_image(self)
+    funcion.add_dulieuemso.get_image(self)
 
 
 def kenhmarketing(self):

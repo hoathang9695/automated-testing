@@ -1,5 +1,5 @@
 from urllib import response
-
+import re
 import openpyxl
 import asyncio
 import requests
@@ -13637,9 +13637,11 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.themvaogiohang).click()
         message_themvaogiohang = driver.find_element(By.XPATH, var.message_themvaogiohang)
         #Giỏ hàng
+        time.sleep(1)
         driver.find_element(By.XPATH, var.icongiohang).click()
         time.sleep(1)
         check_giohang_tenspthemvaogiohang = driver.find_element(By.XPATH, var.check_giohang_tensanpham1).text
+        print(data['market']['timkiemtrangchu'])
         if check_giohang_tenspthemvaogiohang == data['market']['timkiemtrangchu']:
             driver.find_element(By.XPATH, var.giohangcuaban_chonsp1).click()
             driver.find_element(By.XPATH, var.xacnhandonhang).click()
@@ -13679,6 +13681,288 @@ class quatrinhmuahang():
             logging.info("Người mua - Đơn hàng của tôi")
             logging.info("check font-end: Chờ thanh toán - Trạng thái đơn hàng - Chờ thanh toán")
             logging.info("False")
+
+
+
+
+    def timkiemsanpham_thanhtoanonline(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck333@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        button = driver.find_element(By.XPATH, var.khonggianthuongmai)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.timkiemsanpham).send_keys(data['market']['timkiemtrangchu'])
+        driver.find_element(By.XPATH, var.timkiemsanpham).send_keys(Keys.ENTER)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.timkiemsanpham_chonxem).click()
+        time.sleep(1)
+        #Mua ngay
+        driver.find_element(By.XPATH, var.muangay).click()
+        time.sleep(1.5)
+        # #Thêm Voucher shop
+        driver.find_element(By.XPATH, var.giohang_themvoucher).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.giohang_themvoucher_input).send_keys(data['market']['vouchershop_input'])
+        driver.find_element(By.XPATH, var.giohang_themvoucher_timkiem).click()
+        time.sleep(2)
+        check_vouchershop_timkiem = driver.find_element(By.XPATH, var.check_vouchershop_timkiem).text
+        logging.info("Người mua - Giỏ hàng - Thêm voucher shop")
+        logging.info("check font-end:  Tìm kiếm mã voucher 34589321 - Mã giảm giá vĩnh viễn")
+        logging.info(check_vouchershop_timkiem)
+        logging.info(check_vouchershop_timkiem == "Mã giảm giá vĩnh viễn")
+        driver.find_element(By.XPATH, var.huy).click()
+        time.sleep(1)
+        giohang_tongtiensp = driver.find_element(By.XPATH, var.giohang_tongtiensp).text
+        giohang_tongtiensp_so = ''.join(re.findall(r'\d+', giohang_tongtiensp))
+        giohang_tongtiensp_so = int(giohang_tongtiensp_so)
+        print("Tổng tiền sản phẩm:",giohang_tongtiensp_so)
+        driver.find_element(By.XPATH, var.giohang_themvoucher).click()
+        n = 0
+        while (n < 4):
+            driver.implicitly_wait(15)
+            n = n + 1
+            n = str(n)
+            danhsachvoucher_shop = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/div/div/div["+n+"]"
+            danhsachvoucher_shop_dieukien = danhsachvoucher_shop + "/label/span[2]/div/div[2]/p[3]"
+            danhsachvoucher_shop_chon = danhsachvoucher_shop + "/label/span[1]/input"
+            danhsachvoucher_shop_ten = danhsachvoucher_shop + "/label/span[2]/div/div[2]/p[2]"
+            danhsachvoucher_shop_giam = danhsachvoucher_shop + "/label/span[2]/div/div[1]/p[2]"
+            danhsachvoucher_shop_loaigiamgia = danhsachvoucher_shop + "/label/span[2]/div/div[1]/p[2]"
+            danhsachvoucher_shop_ten = driver.find_element(By.XPATH, danhsachvoucher_shop_ten).text
+            danhsachvoucher_shop_loaigiamgia = driver.find_element(By.XPATH, danhsachvoucher_shop_loaigiamgia).text
+            danhsachvoucher_shop_dieukien_ten = driver.find_element(By.XPATH, danhsachvoucher_shop_dieukien).text
+            danhsachvoucher_shop_giam = driver.find_element(By.XPATH, danhsachvoucher_shop_giam).text
+            danhsachvoucher_shop_dieukien_so = ''.join(re.findall(r'\d+', danhsachvoucher_shop_dieukien_ten))
+            danhsachvoucher_shop_dieukien_so = danhsachvoucher_shop_dieukien_so+"000"
+            danhsachvoucher_shop_dieukien_so = int(danhsachvoucher_shop_dieukien_so)
+            danhsachvoucher_shop_giam_so = ''.join(re.findall(r'\d+', danhsachvoucher_shop_giam))
+            print("Tên mã: ", danhsachvoucher_shop_ten)
+            print("Loại giảm giá", danhsachvoucher_shop_giam_so,danhsachvoucher_shop_loaigiamgia[-1])
+            print("Đơn hàng tối thiểu:", danhsachvoucher_shop_dieukien_so)
+            n = int(n)
+            driver.implicitly_wait(2)
+            try:
+                driver.find_element(By.XPATH, danhsachvoucher_shop_chon).click()
+            except:
+                pass
+            time.sleep(1)
+            driver.implicitly_wait(15)
+            driver.find_element(By.XPATH, var.danhsachvoucher_shop_luu).click()
+            danhsachvoucher_shop_dieukien_so = int(danhsachvoucher_shop_dieukien_so)
+            giohang_tongtiensp_so = int(giohang_tongtiensp_so)
+            if danhsachvoucher_shop_dieukien_so<=giohang_tongtiensp_so:
+                if danhsachvoucher_shop_loaigiamgia[-1] == "%":
+                    giohang_tongtiensp_so = int(giohang_tongtiensp_so)
+                    danhsachvoucher_shop_giam_so = int(danhsachvoucher_shop_giam_so)
+                    tongtiengiamtru = giohang_tongtiensp_so/100
+                    tongtiengiamtru = tongtiengiamtru * danhsachvoucher_shop_giam_so
+                    tongtiengiamtru = round(tongtiengiamtru)
+                    sotientamtinh = giohang_tongtiensp_so - tongtiengiamtru
+                    print("Số tiền tạm tính:", sotientamtinh)
+                    tongtiengiamtru = str(tongtiengiamtru)
+                    tongtiengiamtru = ''.join(re.findall(r'\d+', tongtiengiamtru))
+                    print("Tổng số tiền giảm trừ/ khuyến mãi:",tongtiengiamtru)
+                    time.sleep(2)
+                    sotientamtinh_web = driver.find_element(By.XPATH, var.sotientamtinh_web).text
+                    sotientamtinh_web = ''.join(re.findall(r'\d+', sotientamtinh_web))
+                    danhsachvoucher_shop_giam_so = str(danhsachvoucher_shop_giam_so)
+                    danhsachvoucher_shop_dieukien_so = str(danhsachvoucher_shop_dieukien_so)
+                    giohang_tongtiensp_so = str(giohang_tongtiensp_so)
+                    tongtiengiamtru = str(tongtiengiamtru)
+                    sotientamtinh= str(sotientamtinh)
+                    sotientamtinh_web = str(sotientamtinh_web)
+                    print("Số tiền tạm tính web",sotientamtinh_web)
+                    logging.info("Người mua - Giỏ hàng - Thêm voucher shop")
+                    logging.info("check font-end: Tên mã: "+ danhsachvoucher_shop_ten)
+                    logging.info("Loại giảm giá: "+ danhsachvoucher_shop_giam_so + danhsachvoucher_shop_loaigiamgia[-1])
+                    logging.info("Đơn hàng tối thiểu: "+danhsachvoucher_shop_dieukien_so)
+                    logging.info("Giá sản phẩm: "+ giohang_tongtiensp_so)
+                    logging.info("Tổng số tiền giảm trừ/ khuyến mãi: "+tongtiengiamtru)
+                    logging.info("Số tiền tạm tính: "+ sotientamtinh)
+                    logging.info("Số tiền tạm tính web: "+ sotientamtinh_web)
+                    logging.info(sotientamtinh == sotientamtinh_web)
+                else:
+                    giohang_tongtiensp_so = int(giohang_tongtiensp_so)
+                    danhsachvoucher_shop_giam_so = danhsachvoucher_shop_giam_so+ "000"
+                    danhsachvoucher_shop_giam_so = int(danhsachvoucher_shop_giam_so)
+                    tongtientamtinh = giohang_tongtiensp_so - danhsachvoucher_shop_giam_so
+                    tongtientamtinh = round(tongtientamtinh)
+                    print("Tổng tiền tạm tính:", tongtientamtinh)
+                    tongtiengiamtru = giohang_tongtiensp_so - tongtientamtinh
+                    print("Tổng số tiền giảm trừ/ khuyến mãi::", tongtiengiamtru)
+                    time.sleep(2)
+                    sotientamtinh_web = driver.find_element(By.XPATH, var.sotientamtinh_web).text
+                    sotientamtinh_web = ''.join(re.findall(r'\d+', sotientamtinh_web))
+                    danhsachvoucher_shop_giam_so = str(danhsachvoucher_shop_giam_so)
+                    danhsachvoucher_shop_dieukien_so = str(danhsachvoucher_shop_dieukien_so)
+                    giohang_tongtiensp_so = str(giohang_tongtiensp_so)
+                    tongtiengiamtru = str(tongtiengiamtru)
+                    tongtientamtinh = str(tongtientamtinh)
+                    print("Số tiền tạm tính web:", sotientamtinh_web)
+                    print("Số tiền tạm tính web",sotientamtinh_web)
+                    logging.info("Người mua - Giỏ hàng - Thêm voucher shop")
+                    logging.info("check font-end: Tên mã: "+ danhsachvoucher_shop_ten)
+                    logging.info("Loại giảm giá: "+ danhsachvoucher_shop_giam_so + danhsachvoucher_shop_loaigiamgia[-1])
+                    logging.info("Đơn hàng tối thiểu: "+danhsachvoucher_shop_dieukien_so)
+                    logging.info("Giá sản phẩm: "+ giohang_tongtiensp_so)
+                    logging.info("Tổng số tiền giảm trừ/ khuyến mãi: "+tongtiengiamtru)
+                    logging.info("Số tiền tạm tính: "+ tongtientamtinh)
+                    logging.info("Số tiền tạm tính web: "+ sotientamtinh_web)
+                    logging.info(tongtientamtinh == sotientamtinh_web)
+            else:
+                check_apdungmathatbai = driver.find_element(By.XPATH, var.check_apdungmathatbai).text
+                danhsachvoucher_shop_dieukien_so = str(danhsachvoucher_shop_dieukien_so)
+                giohang_tongtiensp_so = str(giohang_tongtiensp_so)
+                logging.info("Người mua - Giỏ hàng - Thêm voucher shop")
+                logging.info("check font-end:Messsage thêm thất bại - Áp dụng mã giảm giá thất bại")
+                logging.info(check_apdungmathatbai == "Áp dụng mã giảm giá thất bại")
+                logging.info("check font-end: Tên mã: " + danhsachvoucher_shop_ten)
+                logging.info("Đơn hàng tối thiểu: " + danhsachvoucher_shop_dieukien_so)
+                logging.info("Giá sản phẩm: " + giohang_tongtiensp_so)
+                logging.info(danhsachvoucher_shop_dieukien_so>giohang_tongtiensp_so)
+            driver.implicitly_wait(3)
+            try:
+                driver.find_element(By.XPATH, var.giohang_themvoucher1).click()
+            except:
+                driver.find_element(By.XPATH, var.giohang_themvoucher).click()
+            time.sleep(1)
+        driver.find_element(By.XPATH, var.huy).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.xacnhandonhang).click()
+        #Thêm voucher EMSO
+        driver.execute_script("window.scrollBy(0,500)", "")
+        time.sleep(3.5)
+        # driver.find_element(By.XPATH, var.chonhoacnhapma).click()   #Không tìm kiếm được voucher emso 7514
+        # time.sleep(1)
+        # driver.find_element(By.XPATH, var.thanhtoan_themvoucher_input).send_keys(data['market']['voucheremso_input'])
+        # driver.find_element(By.XPATH, var.thanhtoan_themvoucher_apdung).click()
+        # time.sleep(2)
+        # check_voucheremso_timkiem = driver.find_element(By.XPATH, var.check_voucheremso_timkiem).text
+        # logging.info("Người mua - Giỏ hàng - Thêm voucher shop")
+        # logging.info("check font-end:  Tìm kiếm mã voucher CODEVCHT1 - Voucher free ship T1 2024")
+        # logging.info(check_voucheremso_timkiem)
+        # logging.info(check_voucheremso_timkiem == "Voucher free ship T1 2024")
+        # driver.find_element(By.XPATH, var.huy).click()
+        #voucher emso - Mã miễn phí vận chuyển
+        voucheremso_tongtiensanpham = driver.find_element(By.XPATH, var.voucheremso_tongtiensanpham).text
+        voucheremso_tongtiensanpham = ''.join(re.findall(r'\d+', voucheremso_tongtiensanpham))
+        voucheremso_tongtiensanpham = int(voucheremso_tongtiensanpham)
+        voucheremso_chiphigiaovan = driver.find_element(By.XPATH, var.voucheremso_chiphigiaovan).text
+        voucheremso_chiphigiaovan = ''.join(re.findall(r'\d+', voucheremso_chiphigiaovan))
+        voucheremso_chiphigiaovan = int(voucheremso_chiphigiaovan)
+        driver.implicitly_wait(2)
+        try:
+            voucheremso_shopvoucher = driver.find_element(By.XPATH, var.voucheremso_shopvoucher).text
+            voucheremso_shopvoucher = ''.join(re.findall(r'\d+', voucheremso_shopvoucher))
+            voucheremso_shopvoucher = int(voucheremso_shopvoucher)
+        except NoSuchElementException:
+            pass
+        print("chi phí giao vận", voucheremso_chiphigiaovan)
+        time.sleep(1.5)
+        n = 0
+        while (n < 2):
+            driver.implicitly_wait(15)
+            driver.find_element(By.XPATH, var.chonhoacnhapma).click()
+            n = n + 1
+            n = str(n)
+            danhsachvoucher_emsovanchuyen = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div[2]/div/div/label["+n+"]"
+            n = int(n)
+            danhsachvoucher_emsovanchuyen_dieukien = danhsachvoucher_emsovanchuyen + "/span[2]/div/div[2]/p[3]"
+            danhsachvoucher_emsovanchuyen_ten = danhsachvoucher_emsovanchuyen + "/span[2]/div/div[2]/p[2]"
+            danhsachvoucher_emsovanchuyen_giagiam = danhsachvoucher_emsovanchuyen + "/span[2]/div/div[1]/p[2]"
+            danhsachvoucher_emsovanchuyen_loai = danhsachvoucher_emsovanchuyen + "/span[2]/div[1]/div[1]/p[3]"
+            danhsachvoucher_emsovanchuyen_chon = danhsachvoucher_emsovanchuyen +"/span[1]/input"
+            driver.implicitly_wait(5)
+            try:
+                danhsachvoucher_emsovanchuyen_dieukien = driver.find_element(By.XPATH, danhsachvoucher_emsovanchuyen_dieukien).text
+            except NoSuchElementException:
+                break
+            driver.implicitly_wait(15)
+            danhsachvoucher_emsovanchuyen_ten = driver.find_element(By.XPATH, danhsachvoucher_emsovanchuyen_ten).text
+            danhsachvoucher_emsovanchuyen_giagiam = driver.find_element(By.XPATH, danhsachvoucher_emsovanchuyen_giagiam).text
+            danhsachvoucher_emsovanchuyen_loai= driver.find_element(By.XPATH, danhsachvoucher_emsovanchuyen_loai).text
+
+            danhsachvoucher_emsovanchuyen_dieukien = ''.join(re.findall(r'\d+', danhsachvoucher_emsovanchuyen_dieukien))
+            danhsachvoucher_emsovanchuyen_dieukien = danhsachvoucher_emsovanchuyen_dieukien + "000"
+            danhsachvoucher_emsovanchuyen_giagiam = ''.join(re.findall(r'\d+', danhsachvoucher_emsovanchuyen_giagiam))
+            danhsachvoucher_emsovanchuyen_giagiam = danhsachvoucher_emsovanchuyen_giagiam + "000"
+
+            danhsachvoucher_emsovanchuyen_dieukien = int(danhsachvoucher_emsovanchuyen_dieukien)
+            danhsachvoucher_emsovanchuyen_giagiam = int(danhsachvoucher_emsovanchuyen_giagiam)
+
+            print("Tên mã: ", danhsachvoucher_emsovanchuyen_ten)
+            print("Loại giảm giá", danhsachvoucher_emsovanchuyen_loai, "Giảm:", danhsachvoucher_emsovanchuyen_giagiam)
+            print("Đơn hàng tối thiểu:", danhsachvoucher_emsovanchuyen_dieukien)
+            driver.implicitly_wait(2)
+            try:
+                driver.find_element(By.XPATH, danhsachvoucher_emsovanchuyen_chon).click()
+            except:
+                pass
+            time.sleep(1)
+            driver.implicitly_wait(15)
+            driver.find_element(By.XPATH, var.luu).click()
+            voucheremso_tongtiensanpham = int(voucheremso_tongtiensanpham)
+            danhsachvoucher_emsovanchuyen_dieukien = int(danhsachvoucher_emsovanchuyen_dieukien)
+            if voucheremso_tongtiensanpham > danhsachvoucher_emsovanchuyen_dieukien:
+                time.sleep(2)
+                driver.implicitly_wait(2)
+                try:
+                    voucheremso_sotientamtinh = voucheremso_tongtiensanpham + voucheremso_chiphigiaovan
+                    print("so tien tam tinh1a:", voucheremso_sotientamtinh)
+                    voucheremso_sotientamtinh = voucheremso_sotientamtinh - danhsachvoucher_emsovanchuyen_giagiam - voucheremso_shopvoucher
+                    print("so tien tam tinh2a:", voucheremso_sotientamtinh)
+                except NoSuchElementException:
+                    voucheremso_sotientamtinh = voucheremso_tongtiensanpham + voucheremso_chiphigiaovan
+                    print("so tien tam tinh1b:", voucheremso_sotientamtinh)
+                    voucheremso_sotientamtinh = voucheremso_sotientamtinh - danhsachvoucher_emsovanchuyen_giagiam
+                    print("so tien tam tinh2b:", voucheremso_sotientamtinh)
+                voucheremso_chiphigiaovan_donhang = voucheremso_chiphigiaovan - danhsachvoucher_emsovanchuyen_giagiam
+                try:
+                    voucheremso_sotientamtinh_web = driver.find_element(By.XPATH, var.voucheremso_sotientamtinh1).text
+                except NoSuchElementException:
+                    voucheremso_sotientamtinh_web = driver.find_element(By.XPATH, var.voucheremso_sotientamtinh).text
+                driver.implicitly_wait(15)
+                voucheremso_sotientamtinh_web = ''.join(re.findall(r'\d+', voucheremso_sotientamtinh_web))
+
+                danhsachvoucher_emsovanchuyen_ten = str(danhsachvoucher_emsovanchuyen_ten)
+                danhsachvoucher_emsovanchuyen_loai = str(danhsachvoucher_emsovanchuyen_loai)
+                danhsachvoucher_emsovanchuyen_dieukien = str(danhsachvoucher_emsovanchuyen_dieukien)
+                voucheremso_tongtiensanpham = str(voucheremso_tongtiensanpham)
+                voucheremso_sotientamtinh = str(voucheremso_sotientamtinh)
+                voucheremso_chiphigiaovan_donhang = str(voucheremso_chiphigiaovan_donhang)
+                voucheremso_sotientamtinh = str(voucheremso_sotientamtinh)
+
+                logging.info("Người mua - Giỏ hàng - Thanh toán - Thêm Emso Voucher vận chuyển")
+                logging.info("Người mua - Giỏ hàng - Thêm voucher shop")
+                logging.info("check font-end: Tên mã:"+ danhsachvoucher_emsovanchuyen_ten)
+                logging.info("Loại giảm giá: "+danhsachvoucher_emsovanchuyen_loai)
+                logging.info("Đơn hàng tối thiểu:"+ danhsachvoucher_emsovanchuyen_dieukien)
+                logging.info("Giá sản phẩm: "+ voucheremso_tongtiensanpham)
+                logging.info("Tổng số tiền giảm trừ/ khuyến mãi - Chi phí giao vận:"+ voucheremso_chiphigiaovan_donhang)
+                logging.info("Số tiền tạm tính: "+ voucheremso_sotientamtinh)
+                logging.info("Số tiền tạm tính web: "+voucheremso_sotientamtinh_web)
+                logging.info(voucheremso_sotientamtinh == voucheremso_sotientamtinh_web)
+            else:
+                # check_apdungmathatbai = driver.find_element(By.XPATH, var.check_apdungmathatbai).text   # ko cos messsage
+                # logging.info("check font-end:Messsage thêm thất bại - Áp dụng mã giảm giá thất bại")
+                danhsachvoucher_emsovanchuyen_ten = str(danhsachvoucher_emsovanchuyen_ten)
+                danhsachvoucher_emsovanchuyen_loai = str(danhsachvoucher_emsovanchuyen_loai)
+                danhsachvoucher_emsovanchuyen_dieukien = str(danhsachvoucher_emsovanchuyen_dieukien)
+                voucheremso_tongtiensanpham = str(voucheremso_tongtiensanpham)
+                danhsachvoucher_emsovanchuyen_dieukien = str(danhsachvoucher_emsovanchuyen_dieukien)
+
+                logging.info("Người mua - Giỏ hàng - Thanh toán - Thêm voucher Emso vận chuyển")
+                logging.info("Thêm Voucher thất bại")
+                logging.info("Tên mã:"+ danhsachvoucher_emsovanchuyen_ten)
+                logging.info("Loại giảm giá: "+ danhsachvoucher_emsovanchuyen_loai)
+                logging.info("Đơn hàng tối thiểu:"+ danhsachvoucher_emsovanchuyen_dieukien)
+                logging.info("Giá sản phẩm: "+ voucheremso_tongtiensanpham)
+                voucheremso_tongtiensanpham  = int(voucheremso_tongtiensanpham)
+                danhsachvoucher_emsovanchuyen_dieukien =int(danhsachvoucher_emsovanchuyen_dieukien)
+                logging.info(voucheremso_tongtiensanpham < danhsachvoucher_emsovanchuyen_dieukien)
+
+
 
     def xacnhandon(self):
         driver.implicitly_wait(15)
@@ -14094,21 +14378,21 @@ class quatrinhmuahang():
         time.sleep(1)
 
         #Liên hệ người bán
-        # driver.find_element(By.XPATH, var.donhangcuatoi_lienhenguoiban).click()     #Tự bật popup liên hệ người bán
-        # time.sleep(1)
-        # try:
-        #     check_donhangcuatoi_chothanhtoan_lienhenguoiban = driver.find_element(By.XPATH, var.check_donhangcuatoi_hoanthanh_lienhenguoiban).text
-        #     logging.info("Người Mua - Đơn hàng của tôi - Chờ thanh toán")
-        #     logging.info("check font-end: Liên hệ người bán - Có hiện hộp chat chat với người bán không?")
-        #     logging.info(check_donhangcuatoi_chothanhtoan_lienhenguoiban)
-        #     logging.info(check_donhangcuatoi_chothanhtoan_lienhenguoiban == "Bình Thuận")
-        #     driver.find_element(By.XPATH, var.hoanthanh_lienhenguoiban_x).click()
-        #
-        # except NoSuchElementException:
-        #     logging.info("Người Mua - Đơn hàng của tôi - Chờ thanh toán")
-        #     logging.info("check font-end: Liên hệ người bán - Có hiện hộp chat chat với người bán không?")
-        #     logging.info("False")
-        # driver.implicitly_wait(15)
+        driver.find_element(By.XPATH, var.donhangcuatoi_lienhenguoiban).click()     #Tự bật popup liên hệ người bán
+        time.sleep(1)
+        try:
+            check_donhangcuatoi_chothanhtoan_lienhenguoiban = driver.find_element(By.XPATH, var.check_donhangcuatoi_hoanthanh_lienhenguoiban).text
+            logging.info("Người Mua - Đơn hàng của tôi - Chờ thanh toán")
+            logging.info("check font-end: Liên hệ người bán - Có hiện hộp chat chat với người bán không?")
+            logging.info(check_donhangcuatoi_chothanhtoan_lienhenguoiban)
+            logging.info(check_donhangcuatoi_chothanhtoan_lienhenguoiban == "Bình Thuận")
+            driver.find_element(By.XPATH, var.hoanthanh_lienhenguoiban_x).click()
+
+        except NoSuchElementException:
+            logging.info("Người Mua - Đơn hàng của tôi - Chờ thanh toán")
+            logging.info("check font-end: Liên hệ người bán - Có hiện hộp chat chat với người bán không?")
+            logging.info("False")
+        driver.implicitly_wait(15)
 
         #Hủy đơn hàng
         driver.find_element(By.XPATH, var.donhangcuatoi_huydonhang).click()
@@ -14137,8 +14421,6 @@ class quatrinhmuahang():
         #     logging.info("check font-end: Message Hủy đơn hàng")
         #     logging.info("False")
         # driver.implicitly_wait(15)
-        time.sleep(2)
-        driver.refresh()
         time.sleep(2)
         #Đã hủy
         button = driver.find_element(By.XPATH, var.donhangcuatoi_dahuy)
@@ -14896,9 +15178,6 @@ class quatrinhmuahang():
         time.sleep(1)
 
 
-
-
-
     def shophuydon(self):
         driver.implicitly_wait(15)
         login.login4(self, "truongvck33@gmail.com", "voncamk22")
@@ -14976,8 +15255,6 @@ class quatrinhmuahang():
         time.sleep(1)
 
 
-
-
     def trahanghoantien_nguoimuahuy(self):
         driver.implicitly_wait(15)
         login.login4(self, "truongvck333@gmail.com", "voncamk22")
@@ -15046,9 +15323,6 @@ class quatrinhmuahang():
             logging.info("check font-end: Trả hàng/Hoàn tiền - Trạng thái đơn hàng - Người mua huỷ hoàn hàng")
             logging.info("False")
         time.sleep(1)
-
-
-
 
 
 
@@ -15537,9 +15811,9 @@ class quanlysanpham():
         time.sleep(3)
         check_danhsachsanpham_capnhatcunhat = driver.find_element(By.XPATH, var.check_danhsachsanpham_sp1).text
         logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
-        logging.info("check font-end: Tất cả - Sắp xếp - Cập nhật cũ nhất - áo phông nam")
+        logging.info("check font-end: Tất cả - Sắp xếp - Cập nhật cũ nhất - Có hiển thị không")
         logging.info(check_danhsachsanpham_capnhatcunhat)
-        logging.info(check_danhsachsanpham_capnhatcunhat == "áo phông nam")
+        logging.info(check_danhsachsanpham_capnhatcunhat != None)
         driver.find_element(By.XPATH, var.nhaplai).click()
 
         # Cập nhật gần nhất
@@ -15620,6 +15894,8 @@ class quanlysanpham():
             logging.info(check_danhsachsanpham_trangthaisp1 == "Đã ẩn")
             time.sleep(1)
 
+            login.login4(self, "truongvck333@gmail.com", "voncamk22")
+            time.sleep(1.5)
             driver.get("https://cmc-fe.emso.vn/product/747/about")
             time.sleep(2)
             try:
@@ -15631,9 +15907,11 @@ class quanlysanpham():
                 logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
                 logging.info("check font-end: Dấu 3 chấm - Ẩn - Có ẩn được sản phẩm không")
                 logging.info("False")
-            driver.back()
-            time.sleep(2)
+            time.sleep(1)
 
+            login.login4(self, "truongvck33@gmail.com", "voncamk22")
+            time.sleep(1.5)
+            driver.get("https://cmc-fe.emso.vn/marketplace/shop/product_hosting?page_id=108277159419223993&page=1&type=all")
             # Cập nhật
             xoa = driver.find_element(By.XPATH, var.danhsachsanpham_tatca_tensp_sku_input)
             xoa.send_keys(Keys.CONTROL, "a")
@@ -15719,8 +15997,8 @@ class add_dulieuemso():
         driver.implicitly_wait(15)
         login.login4(self, "emsomanagerhd@gmail.com", "khongnhomatkhaucu")
         time.sleep(1.5)
-        hang = 386
-        while hang<396:
+        hang = 754
+        while hang<772:
             hang += 1
             tensanpham = readData(var.path_datamarket, 'Sheet1', hang, 1)
             nghanhcha = readData(var.path_datamarket, 'Sheet1', hang, 2)
@@ -16024,9 +16302,9 @@ class add_dulieuemso():
             # time.sleep(1)
 
     def vietfilesanpham(self):
-        hang = 300       #hang = 60 thì sẽ ghi ào hàng 61
+        hang = 396       #hang = 60 thì sẽ ghi ào hàng 61
         tenfile = int(input("Moi nhap so duoi file: "))
-        while hang<397:
+        while hang<773:
             hang += 1
             anh1 = tenfile+1
             anh1 = str(anh1)
@@ -16043,7 +16321,7 @@ class add_dulieuemso():
             writeData(var.path_datamarket, "Sheet1", hang, 13, "C:/Users\Admin/PycharmProjects/pythonProject/market_anh/" + anh3+".jpg")
             anh3 = int(anh3)
             tenfile = anh3
-            print("Đã ghi ào dòng", hang)
+            print("Đã ghi vào dòng", hang)
 
     def get_data_lazada(self):
         from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -16149,12 +16427,12 @@ class add_dulieuemso():
         wait = WebDriverWait(driver, 20)
         driver.implicitly_wait(30)
 
-        driver.get("https://www.lazada.vn/tag/loa/?q=loa&catalog_redirect_tag=true")
+        driver.get("https://www.lazada.vn/catalog/?q=quan%20nam")
         driver.maximize_window()
         time.sleep(random.randint(4, 8))
         driver.execute_script("window.scrollBy(0,400)", "")
         time.sleep(random.randint(5, 10))
-        hang = 579
+        hang = 744
         cuon =200
         sanpham = int(input("moi nhap so thu tu san pham:"))
         while hang<1000:
@@ -16230,7 +16508,7 @@ class add_dulieuemso():
             lazada_mota = driver.find_element(By.XPATH, var.lazada_mota1).text
             writeData(var.path_datamarket, "Sheet1", hang, 6, lazada_mota)
             time.sleep(3)
-            driver.get("https://www.lazada.vn/tag/loa/?q=loa&catalog_redirect_tag=true")
+            driver.get("https://www.lazada.vn/catalog/?q=quan%20nam")
             time.sleep(random.randint(10, 15))
             driver.execute_script("window.stop();")
             time.sleep(random.randint(2, 5))
@@ -16240,9 +16518,9 @@ class add_dulieuemso():
         from urllib.request import urlretrieve
         import urllib.request
         driver.implicitly_wait(15)
-        hang = 300       #hang = 60 thì sẽ ghi ào hàng 61
+        hang = 419       #hang = 60 thì sẽ ghi ào hàng 61
         sofile = int(input("Moi nhap so duoi file: "))
-        while hang<396:
+        while hang<773:
             hang += 1
             anh1 = readData(var.path_datamarket, 'Sheet1', hang, 11)
             anh2 = readData(var.path_datamarket, 'Sheet1', hang, 12)
@@ -16271,10 +16549,6 @@ class add_dulieuemso():
             tenanh3 = int(tenanh3)
             sofile = tenanh3
             print("da tai xong anh hang", hang)
-
-
-
-
 
 
 
@@ -16426,9 +16700,6 @@ class thuongmai():
             logging.info("Người bán - Quản lý sản phẩm -  Danh sách sản phẩm")
             logging.info("check font-end: Admin Duyệt sp- Có hiển thị sản phẩm không")
             logging.info("False")
-
-
-
 
 
     
@@ -16667,11 +16938,11 @@ class kenhmarketing():
         driver.execute_script("arguments[0].click();", button)
         time.sleep(2)
         #Chọn sản phẩm
-        driver.find_element(By.XPATH, var.taovoucher_chonsp_tensp_masp).click()
-        time.sleep(0.5)
-        driver.find_element(By.XPATH, var.taovoucher_chonsp_tensp_masp_masp).click()
+        # driver.find_element(By.XPATH, var.taovoucher_chonsp_tensp_masp).click()
+        # time.sleep(0.5)
+        # driver.find_element(By.XPATH, var.taovoucher_chonsp_tensp_masp_masp).click()
         # driver.find_element(By.XPATH, var.taovoucher_chonsp_input).send_keys(data['quanlysanpham']['themspmoi_sku'])
-        # driver.find_element(By.XPATH, var.taovoucher_chonsp_timkiem).click()    #Không có nút tìm kiếm
+        # driver.find_element(By.XPATH, var.taovoucher_chonsp_timkiem).click()    #thiếu tìm kiếm theo mã sp
         time.sleep(1)
         driver.find_element(By.XPATH, var.taovoucher_chonsp_chonsp1).click()
         time.sleep(1)
@@ -16939,11 +17210,13 @@ class kenhmarketing():
         actions.move_to_element(themsanpham_hovernghanhhang).perform()
         time.sleep(1)
         driver.find_element(By.XPATH, var.chonnghanhhang + chonnghanhhang).click()
-        time.sleep(1.5)
+        time.sleep(2)
         driver.find_element(By.XPATH, var.themsanpham_chonsotrang).click()
         time.sleep(0.5)
         driver.find_element(By.XPATH, var.themsanpham_chonsotrang10).click()
-        time.sleep(1.5)
+        time.sleep(3.5)
+        # button = driver.find_element(By.XPATH, var.themsanpham_chontatcasanpham)
+        # driver.execute_script("arguments[0].click();", button)
         driver.find_element(By.XPATH, var.themsanpham_chontatcasanpham).click()
         time.sleep(1)
         # driver.find_element(By.XPATH, var.themsanpham_chonsanpham1).click()
@@ -16966,13 +17239,14 @@ class kenhmarketing():
         driver.implicitly_wait(15)
         login.login4(self, "emsomanagerhd@gmail.com", "khongnhomatkhaucu")
         time.sleep(1.5)
-        driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")
+        # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419224061&type=all") #vnshop
+        driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")  #a12
         time.sleep(2)
         driver.find_element(By.XPATH, var.chuongtrinhkhuyenmai_flashsale).click()
         time.sleep(2)
 
         n = 0
-        while (n < 100):
+        while (n < 20):
             n = n + 1
             n = str(n)
             danhsach_flashsale = "//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div/div["+n+"]/div/div"
@@ -16994,65 +17268,93 @@ class kenhmarketing():
                 danhsachkhuyenmai = driver.find_elements(By.XPATH, var.danhsachkhuyenmai)
                 for khuyenmai in danhsachkhuyenmai:
                     khuyenmai1 = khuyenmai.text
+                    if khuyenmai1 == "Giảm giá 70% thực phẩm và đồ uống":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "50", "1","1")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 70% thực phẩm và đồ uống không?")
+                        logging.info("True")
+                        #Dấu 3 chấm
+                        #Cập nhật sản phẩm
+                        dangkychiendich_giatruocgiamsp1 = driver.find_element(By.XPATH, var.dangkychiendich_giatruocgiamsp1).text
+                        driver.find_element(By.XPATH, var.dangkychiendich_danhsachsp_dau3cham1).click()
+                        time.sleep(0.5)
+                        driver.find_element(By.XPATH, var.dangkychiendich_danhsachsp_dau3cham1_capnhat).click()
+                        time.sleep(1)
+                        xoa = driver.find_element(By.XPATH, var.chinhsuasanpham_giasaugiam)
+                        xoa.send_keys(Keys.CONTROL, "a")
+                        driver.find_element(By.XPATH, var.chinhsuasanpham_giasaugiam).send_keys(data['kenhmarketing']['giasaugiam'])
+                        driver.find_element(By.XPATH, var.chinhsuasanpham_chonsanpham1).click()
+                        time.sleep(1)
+                        driver.find_element(By.XPATH, var.xacnhan).click()
+                        driver.implicitly_wait(5)
+                        try:
+                            message_capnhatsp_flashsale = driver.find_element(By.XPATH, var.capnhatpheduyetspthanhcong).text
+                            logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
+                            logging.info("check font-end: Message Cập nhật sản phẩm 1 - Cập nhật phê duyệt sản phẩm thành công")
+                            logging.info(message_capnhatsp_flashsale == "Cập nhật phê duyệt sản phẩm thành công")
+                        except NoSuchElementException:
+                            logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
+                            logging.info("check font-end: Message Cập nhật sản phẩm 1 - Cập nhật phê duyệt sản phẩm thành công")
+                            logging.info("False")
+                        time.sleep(1)
+                        dangkychiendich_giasaugiamsp1 = driver.find_element(By.XPATH, var.dangkychiendich_giatruocgiamsp1).text
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
+                        logging.info("check font-end: Cập nhật sản phẩm 1 - Có chỉnh sửa được giá tiền không không")
+                        logging.info(dangkychiendich_giasaugiamsp1 != dangkychiendich_giatruocgiamsp1)
+                        time.sleep(1)
+
+                        #xóa sản phẩm
+                        dangkychiendich_tensp1 = driver.find_element(By.XPATH, var.dangkychiendich_danhsachsp_tensp1).text
+                        driver.find_element(By.XPATH, var.dangkychiendich_danhsachsp_dau3cham1).click()
+                        time.sleep(0.5)
+                        driver.find_element(By.XPATH, var.dangkychiendich_danhsachsp_dau3cham1_xoa).click()
+                        time.sleep(1)
+                        driver.find_element(By.XPATH, var.xoa).click()
+                        try:
+                            message_xoasp_flashsale = driver.find_element(By.XPATH,var.xoaspthanhcong).text
+                            logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
+                            logging.info("check font-end: Message Xóa sản phẩm 1 - Xoá sản phầm thành công")
+                            logging.info(message_xoasp_flashsale == "Xoá sản phầm thành công")
+                        except NoSuchElementException:
+                            logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
+                            logging.info("check font-end: Message Xóa sản phẩm 1 - Xoá sản phầm thành công")
+                            logging.info("False")
+                        time.sleep(1)
+                        dangkychiendich_tenxoasp1 = driver.find_element(By.XPATH, var.dangkychiendich_danhsachsp_tensp1).text
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
+                        logging.info("check font-end: Xóa sản phẩm 1 - Có xóa được sản phẩm không")
+                        logging.info(dangkychiendich_tensp1 != dangkychiendich_tenxoasp1)
+                        time.sleep(1)
+
+                    if khuyenmai1 == "Giảm giá 30% thiết bị âm thanh":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "30", "10","3")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 30% thiết bị âm thanh không?")
+                        logging.info("True")
+
                     if khuyenmai1 == "Phụ kiện thời trang giảm 50% 2024":
                         kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.phukienthoitrang, "50", "10", "1")
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Phụ kiện thời trang giảm 50% 2024 không?")
                         logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Phụ kiện thời trang giảm 50% 2024 không?")
-                        logging.info("False")
 
                     if khuyenmai1 == "Giảm 5% Điện Thoại & Phụ Kiện 2024":
                         kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.dienthoai_phukien, "5", "10","2")
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm 5% Điện Thoại & Phụ Kiện 2024 không?")
                         logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm 5% Điện Thoại & Phụ Kiện 2024 không?")
-                        logging.info("False")
-
-                    # if khuyenmai1 == "Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024":
-                    #     kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "20", "1","1")
-                    #     logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
-                    #     logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                    #     logging.info("True")
-                    # else:
-                    #     logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
-                    #     logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                    #     logging.info("False")
-
-                    if khuyenmai1 == "Giảm giá thiết bị âm thanh dưới 199k 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "45", "10","3")
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
-                        logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
-                        logging.info("False")
 
                     if khuyenmai1 == "Giảm giá 15% thời trang nam 2024":
                         kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thoitrangnam, "15", "10","3")
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 15% thời trang nam 2024 không?")
                         logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 15% thời trang nam 2024 không?")
-                        logging.info("False")
 
                     if khuyenmai1 == "Giảm giá 10% thời trang nữ 2024":
                         kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thoitrangnu, "10", "2","3")
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 10% thời trang nữ 2024 không?")
                         logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Falash Sale - FLS VT1")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 10% thời trang nữ 2024 không?")
-                        logging.info("False")
                     print(khuyenmai1)
                 break
 
@@ -17067,7 +17369,7 @@ class kenhmarketing():
         time.sleep(2)
 
         n = 0
-        while (n < 100):
+        while (n < 20):
             n = n + 1
             n = str(n)
             danhsach_campaign = "//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div/div[" + n + "]/div/div"
@@ -17089,8 +17391,28 @@ class kenhmarketing():
                 danhsachkhuyenmai = driver.find_elements(By.XPATH, var.danhsachkhuyenmai)
                 for khuyenmai in danhsachkhuyenmai:
                     khuyenmai1 = khuyenmai.text
+                    if khuyenmai1 == "Giảm giá 70% thực phẩm và đồ uống":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "50", "10","2")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT2")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 70% thực phẩm và đồ uống không?")
+                        logging.info("True")
+                    else:
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT2")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 70% thực phẩm và đồ uống không?")
+                        logging.info("False")
+
+                    if khuyenmai1 == "Giảm giá 30% thiết bị âm thanh":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "30", "10","1")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT2")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 30% thiết bị âm thanh không?")
+                        logging.info("True")
+                    else:
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT2")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 30% thiết bị âm thanh không?")
+                        logging.info("False")
+
                     if khuyenmai1 == "Phụ kiện thời trang giảm 50% 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.phukienthoitrang, "50", "1","1")
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.phukienthoitrang, "50", "10","1")
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT2")
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Phụ kiện thời trang giảm 50% 2024 không?")
                         logging.info("True")
@@ -17100,33 +17422,13 @@ class kenhmarketing():
                         logging.info("False")
 
                     if khuyenmai1 == "Giảm 5% Điện Thoại & Phụ Kiện 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thoitrangnam, "5", "10","1")
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.dienthoai_phukien, "5", "10","2")
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT2")
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm 5% Điện Thoại & Phụ Kiện 2024 không?")
                         logging.info("True")
                     else:
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT2")
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm 5% Điện Thoại & Phụ Kiện 2024 không?")
-                        logging.info("False")
-
-                    if khuyenmai1 == "Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "80", "10","1")
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT2")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                        logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT2")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                        logging.info("False")
-
-                    if khuyenmai1 == "Giảm giá thiết bị âm thanh dưới 199k 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "45", "10","1")
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT2")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
-                        logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT2")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
                         logging.info("False")
 
                     if khuyenmai1 == "Giảm giá 15% thời trang nam 2024":
@@ -17149,12 +17451,7 @@ class kenhmarketing():
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 10% thời trang nữ 2024 không?")
                         logging.info("False")
                     print(khuyenmai1)
-
                 break
-            else:
-                logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop - Emso Campaign")
-                logging.info("check font-end: Có tìm thấy Campaign CTKM VT2(Đăng ký ngay) không?")
-                logging.info("False")     #km2
 
             if danhsach_campaign_ten1[0:8] == "CTKM VT3" and danhsach_campaign_trangthaibutton1 == "Đăng ký ngay":
                 button = driver.find_element(By.XPATH, danhsach_campaign_trangthaibutton)
@@ -17166,6 +17463,26 @@ class kenhmarketing():
                 danhsachkhuyenmai = driver.find_elements(By.XPATH, var.danhsachkhuyenmai)
                 for khuyenmai in danhsachkhuyenmai:
                     khuyenmai1 = khuyenmai.text
+                    if khuyenmai1 == "Giảm giá 70% thực phẩm và đồ uống":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "40", "10","2")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT3")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 70% thực phẩm và đồ uống không?")
+                        logging.info("True")
+                    else:
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT3")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 70% thực phẩm và đồ uống không?")
+                        logging.info("False")
+
+                    if khuyenmai1 == "Giảm giá 30% thiết bị âm thanh":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "30", "10","2")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT3")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 30% thiết bị âm thanh không?")
+                        logging.info("True")
+                    else:
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT3")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 30% thiết bị âm thanh không?")
+                        logging.info("False")
+
                     if khuyenmai1 == "Phụ kiện thời trang giảm 50% 2024":
                         kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.phukienthoitrang, "50", "1","1")
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT3")
@@ -17184,26 +17501,6 @@ class kenhmarketing():
                     else:
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT3")
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm 5% Điện Thoại & Phụ Kiện 2024 không?")
-                        logging.info("False")
-
-                    if khuyenmai1 == "Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "80", "10","1")
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT3")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                        logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT3")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                        logging.info("False")
-
-                    if khuyenmai1 == "Giảm giá thiết bị âm thanh dưới 199k 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "45", "10","1")
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT3")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
-                        logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT3")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
                         logging.info("False")
 
                     if khuyenmai1 == "Giảm giá 15% thời trang nam 2024":
@@ -17232,11 +17529,9 @@ class kenhmarketing():
                 time.sleep(1)
                 driver.back()
                 time.sleep(2)
-                driver.execute_script("window.scrollBy(0,2500)", "")
-            else:
-                logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop - Emso Campaign")
-                logging.info("check font-end: Có tìm thấy Campaign CTKM VT3(Đăng ký ngay) không?")
-                logging.info("False")
+                driver.execute_script("window.scrollBy(0,1000)", "")
+                time.sleep(1.5)
+                driver.execute_script("window.scrollBy(0,1000)", "")
 
             if danhsach_campaign_ten1[0:8] == "CTKM VT4" and danhsach_campaign_trangthaibutton1 == "Đăng ký ngay":
                 button = driver.find_element(By.XPATH, danhsach_campaign_trangthaibutton)
@@ -17248,6 +17543,26 @@ class kenhmarketing():
                 danhsachkhuyenmai = driver.find_elements(By.XPATH, var.danhsachkhuyenmai)
                 for khuyenmai in danhsachkhuyenmai:
                     khuyenmai1 = khuyenmai.text
+                    if khuyenmai1 == "Giảm giá 70% thực phẩm và đồ uống":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "30", "10","1")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT4")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 70% thực phẩm và đồ uống không?")
+                        logging.info("True")
+                    else:
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT4")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 70% thực phẩm và đồ uống không?")
+                        logging.info("False")
+
+                    if khuyenmai1 == "Giảm giá 30% thiết bị âm thanh":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "30", "10","1")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT4")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 30% thiết bị âm thanh không?")
+                        logging.info("True")
+                    else:
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT4")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 30% thiết bị âm thanh không?")
+                        logging.info("False")
+
                     if khuyenmai1 == "Phụ kiện thời trang giảm 50% 2024":
                         kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.phukienthoitrang, "50", "1","1")
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT4")
@@ -17266,26 +17581,6 @@ class kenhmarketing():
                     else:
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT4")
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm 5% Điện Thoại & Phụ Kiện 2024 không?")
-                        logging.info("False")
-
-                    if khuyenmai1 == "Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "80", "10","1")
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT4")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                        logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT4")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                        logging.info("False")
-
-                    if khuyenmai1 == "Giảm giá thiết bị âm thanh dưới 199k 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "45", "10","1")
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT4")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
-                        logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT4")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
                         logging.info("False")
 
                     if khuyenmai1 == "Giảm giá 15% thời trang nam 2024":
@@ -17314,11 +17609,9 @@ class kenhmarketing():
                 time.sleep(1)
                 driver.back()
                 time.sleep(2)
-                driver.execute_script("window.scrollBy(0,2500)", "")
-            else:
-                logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop - Emso Campaign")
-                logging.info("check font-end: Có tìm thấy Campaign CTKM VT4(Đăng ký ngay) không?")
-                logging.info("False")
+                driver.execute_script("window.scrollBy(0,1000)", "")
+                time.sleep(1.5)
+                driver.execute_script("window.scrollBy(0,1000)", "")
 
             if danhsach_campaign_ten1[0:8] == "CTKM VT5" and danhsach_campaign_trangthaibutton1 == "Đăng ký ngay":
                 button = driver.find_element(By.XPATH, danhsach_campaign_trangthaibutton)
@@ -17330,6 +17623,26 @@ class kenhmarketing():
                 danhsachkhuyenmai = driver.find_elements(By.XPATH, var.danhsachkhuyenmai)
                 for khuyenmai in danhsachkhuyenmai:
                     khuyenmai1 = khuyenmai.text
+                    if khuyenmai1 == "Giảm giá 70% thực phẩm và đồ uống":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "50", "10","1")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT5")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 70% thực phẩm và đồ uống không?")
+                        logging.info("True")
+                    else:
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT5")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 70% thực phẩm và đồ uống không?")
+                        logging.info("False")
+
+                    if khuyenmai1 == "Giảm giá 30% thiết bị âm thanh":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "30", "10","1")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT5")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 30% thiết bị âm thanh không?")
+                        logging.info("True")
+                    else:
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT5")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 30% thiết bị âm thanh không?")
+                        logging.info("False")
+
                     if khuyenmai1 == "Phụ kiện thời trang giảm 50% 2024":
                         kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.phukienthoitrang, "50", "1","1")
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT5")
@@ -17348,26 +17661,6 @@ class kenhmarketing():
                     else:
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT5")
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm 5% Điện Thoại & Phụ Kiện 2024 không?")
-                        logging.info("False")
-
-                    if khuyenmai1 == "Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "80", "10","1")
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT5")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                        logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT5")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                        logging.info("False")
-
-                    if khuyenmai1 == "Giảm giá thiết bị âm thanh dưới 199k 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "45", "10","1")
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT5")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
-                        logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT5")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
                         logging.info("False")
 
                     if khuyenmai1 == "Giảm giá 15% thời trang nam 2024":
@@ -17396,11 +17689,9 @@ class kenhmarketing():
                 time.sleep(1)
                 driver.back()
                 time.sleep(2)
-                driver.execute_script("window.scrollBy(0,2500)", "")
-            else:
-                logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop - Emso Campaign")
-                logging.info("check font-end: Có tìm thấy Campaign CTKM VT5(Đăng ký ngay) không?")
-                logging.info("False")
+                driver.execute_script("window.scrollBy(0,1000)", "")
+                time.sleep(1.5)
+                driver.execute_script("window.scrollBy(0,1000)", "")
 
             if danhsach_campaign_ten1[0:8] == "CTKM VT6" and danhsach_campaign_trangthaibutton1 == "Đăng ký ngay":
                 button = driver.find_element(By.XPATH, danhsach_campaign_trangthaibutton)
@@ -17412,6 +17703,26 @@ class kenhmarketing():
                 danhsachkhuyenmai = driver.find_elements(By.XPATH, var.danhsachkhuyenmai)
                 for khuyenmai in danhsachkhuyenmai:
                     khuyenmai1 = khuyenmai.text
+                    if khuyenmai1 == "Giảm giá 70% thực phẩm và đồ uống":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "40", "10","1")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT6")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 70% thực phẩm và đồ uống không?")
+                        logging.info("True")
+                    else:
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT6")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 70% thực phẩm và đồ uống không?")
+                        logging.info("False")
+
+                    if khuyenmai1 == "Giảm giá 30% thiết bị âm thanh":
+                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "30", "10","1")
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT6")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 30% thiết bị âm thanh không?")
+                        logging.info("True")
+                    else:
+                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT6")
+                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá 30% thiết bị âm thanh không?")
+                        logging.info("False")
+
                     if khuyenmai1 == "Phụ kiện thời trang giảm 50% 2024":
                         kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.phukienthoitrang, "50", "1","1")
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT6")
@@ -17430,26 +17741,6 @@ class kenhmarketing():
                     else:
                         logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT6")
                         logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm 5% Điện Thoại & Phụ Kiện 2024 không?")
-                        logging.info("False")
-
-                    if khuyenmai1 == "Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thucphamvadouong, "80", "10","1")
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT6")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                        logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT6")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá từ 10k - 50k thực phẩm và đồ uống 2024 không?")
-                        logging.info("False")
-
-                    if khuyenmai1 == "Giảm giá thiết bị âm thanh dưới 199k 2024":
-                        kenhmarketing.chuongtrinhkhuyenmai_themsanpham(self, khuyenmai1, var.thietbiamthanh, "45", "10","1")
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT6")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
-                        logging.info("True")
-                    else:
-                        logging.info("Người bán - Kênh Marketing - Chương trình khuyến mãi - Emso Campaign - CTKM VT6")
-                        logging.info("check font-end: Có thêm sản phẩm được vào mục - Giảm giá thiết bị âm thanh dưới 199k 2024 không?")
                         logging.info("False")
 
                     if khuyenmai1 == "Giảm giá 15% thời trang nam 2024":
@@ -17479,35 +17770,31 @@ class kenhmarketing():
                 time.sleep(1)
                 driver.back()
                 time.sleep(2)
-                driver.execute_script("window.scrollBy(0,2500)", "")
-            else:
-                logging.info("Người bán - Kênh Marketing - Mã giảm giá của shop - Emso Campaign")
-                logging.info("check font-end: Có tìm thấy Campaign CTKM VT6(Đăng ký ngay) không?")
-                logging.info("False")
+                driver.execute_script("window.scrollBy(0,1000)", "")
+                time.sleep(1.5)
+                driver.execute_script("window.scrollBy(0,1000)", "")
 
-
-        #Duyệt cambpaign
-        flashsale_ten1 = readData(var.path_baocao, 'Sheet1', 14, 6)
-        campaign_ten_ttkm2 = readData(var.path_baocao, 'Sheet1', 15, 6)
-        campaign_ten_ttkm3 = readData(var.path_baocao, 'Sheet1', 16, 6)
-        campaign_ten_ttkm4 = readData(var.path_baocao, 'Sheet1', 17, 6)
-        campaign_ten_ttkm5 = readData(var.path_baocao, 'Sheet1', 18, 6)
-        campaign_ten_ttkm6 = readData(var.path_baocao, 'Sheet1', 19, 6)
-
+    def chuongtrinhkhuyenmai_pheduyetsp(self, tenkhuyenmai):
+        driver.implicitly_wait(15)
+        # Duyệt Flash Sale
         login.login5(self, "thanghoa1420@gmail.com", "hoathang1420")
         time.sleep(1.5)
-        driver.find_element(By.XPATH, var.admin_thuongmai).click()
+        driver.find_element(By.XPATH, var.admin_marketting).click()
         time.sleep(0.5)
         driver.find_element(By.XPATH, var.thuongmai_chiendich).click()
         time.sleep(2)
-        driver.find_element(By.XPATH, var.chiendich_timkiem).send_keys(flashsale_ten1)
+        driver.find_element(By.XPATH, var.chiendich_timkiem).send_keys(tenkhuyenmai)
         driver.find_element(By.XPATH, var.chiendich_timkiem).send_keys(Keys.ENTER)
         time.sleep(1)
         check_chiendich_timkiem = driver.find_element(By.XPATH, var.check_chiendich_timkiem).text
-        if check_chiendich_timkiem == flashsale_ten1:
+        if check_chiendich_timkiem == tenkhuyenmai:
             driver.find_element(By.XPATH, var.chiendich_sp1_dau3cham).click()
             time.sleep(0.5)
             driver.find_element(By.XPATH, var.chiendich_sp1_dau3cham_chitiet).click()
+            time.sleep(2)
+            button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho)
+            driver.execute_script("arguments[0].click();", button)
+            # driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho).click()
             time.sleep(1)
             driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca).click()
             time.sleep(1)
@@ -17518,12 +17805,66 @@ class kenhmarketing():
             driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet_pheduyet).click()
             driver.find_element(By.XPATH, var.capnhatthanhcong).click()
             time.sleep(1)
-            driver.back()
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang50).click()
+            time.sleep(2)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet_pheduyet).click()
+            driver.find_element(By.XPATH, var.capnhatthanhcong).click()
             time.sleep(1)
         else:
             logging.info("Admin - Thương mại - Chiến dịch - Tìm kiếm")
-            logging.info("check font-end: Có tìm thấy Campaign CTKM VT6(Đăng ký ngay) không?")
+            logging.info("check font-end: Có tìm thấy"+tenkhuyenmai+" không?")
             logging.info("False")
+
+
+    def chuongtrinhkhuyenmai_pheduyetsp_flashsale(self):
+        kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp(self, var.flashsale_ten1)
+
+
+    def chuongtrinhkhuyenmai_pheduyetsp_cambpaign(self):
+        kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp(self, var.campaign_ten_ttkm2)
+        kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp(self, var.campaign_ten_ttkm3)
+        kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp(self, var.campaign_ten_ttkm4)
+        kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp(self, var.campaign_ten_ttkm5)
+        kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp(self, var.campaign_ten_ttkm6)
+
+
+    def chuongtrinhkhuyenmai_voucherchoshop_dadangky(self):
+            driver.implicitly_wait(15)
+            login.login4(self, "emsomanagerhd@gmail.com", "khongnhomatkhaucu")
+            time.sleep(1.5)
+            driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")
+            time.sleep(2)
+            driver.find_element(By.XPATH, var.chuongtrinhkhuyenmai_voucherchoshop).click()
+            time.sleep(2)
+            #Voucher cho shop
+            tenvoucherchoshop1 = driver.find_element(By.XPATH, var.tenvoucherchoshop1).text
+            driver.find_element(By.XPATH, var.voucherchoshop_chon1).click()
+            time.sleep(1)
+            tenvoucherchoshop1_vaoxem = driver.find_element(By.XPATH, var.tenvoucherchoshop1_vaoxem).text
+            logging.info("Người bán - Kênh marketting - Chương trình khuyến mãi -  Voucher cho shop")
+            logging.info("check font-end: Tên Voucher cho shop khi chọn xem chi tiết")
+            logging.info(tenvoucherchoshop1 == tenvoucherchoshop1_vaoxem)
+            time.sleep(1)
+            driver.back()
+            time.sleep(1)
+            #Đã đăng ký
+            driver.find_element(By.XPATH, var.chuongtrinhkhuyenmai_dadangky).click()
+            time.sleep(1)
+
+
+
+
+
 
 
 

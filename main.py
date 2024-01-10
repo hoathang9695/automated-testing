@@ -12,7 +12,7 @@ import action
 
 
 #Người mua
-# emso.muahangthanhcong(self="")
+emso.muahangthanhcong(self="")
 # emso.muahangthatbai(self="")
 
 #Người bán
@@ -20,7 +20,7 @@ import action
 # emso.kenhmarketing(self="")
 
 #add sản phẩm market space
-emso.add_dulieuemso(self="")
+# emso.add_dulieuemso(self="")
 
 
 
