@@ -1,4 +1,4 @@
-
+pip install selenium==3.141.0
 
 check_trang_nhatkyhoatdong_thongbao1 = driver.find_element(By.XPATH, var.check_trang_nhatkyhoatdong_thongbao1).text
 logging.info("Trang - Cài đặt - Nhật ký hoạt động")
@@ -57,16 +57,13 @@ try:
     logging.info("Watch - Video đã lưu - xem video - x")
     logging.info("check font-end: Có trở lại trang Video đã lưu không")
     logging.info(check_luuvideo_title)
-    time.sleep(2)
 except NoSuchElementException:
     logging.info("Watch - Video đã lưu - xem video - x")
     logging.info("check font-end: Có trở lại trang Video đã lưu không")
     logging.info("False")
-    time.sleep(2)
+    driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "flashsalecuashop_timkiem.png")
 
 driver.implicitly_wait(15)
-
-check_hoatdongcogantheban
 
 #check màu
 element1 = driver.find_element(By.XPATH, var.check_color_mautennhom)
@@ -151,11 +148,64 @@ for handle in handles:
 
 
 
+#Tách chữ và số
+letters = ''.join(re.findall(r'[a-zA-Z]+', text))
+digits = ''.join(re.findall(r'\d+', text))
+print("Chữ trong chuỗi:", letters)  # Kết quả: "HelloWorld"
+print("Số trong chuỗi:", digits)  # Kết quả: "123"
 
 
-driver.find_element(By.XPATH, var.themsanpham_themhinhanh_input1).send_keys("C:/Users/Admin/PycharmProjects/pythonProject/import/anhmes1.jpg")
-time.sleep(1)
+#Chụp ảnh màn hình
+if driver.title == "Mạng xã hội Emso - Mạng xã hội vì người Việt1":
+    assert True
+    print("đã đúng title")
+else:
+    driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "anh_title.png")
+    print("sai title")
+    assert False, "sai title web roi"
+time.sleep(2)
 
 
 
-//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[1]/div/nav[1]/div[2]/div/div/div/div
+
+------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+#swipe(startX, startY, endX, endY, duration)
+self.driver.swipe(150, 400, 150, 200, 1000)
+
+#Vuốt
+actions.long_press(None,startx,starty).move_to(None,endx,endy).release().perform()
+
+#Click
+element = driver.find_element(AppiumBy.XPATH, '//android.widget.TextView[@content-desc="tb-btn"]')
+actions.tap(ele).perform()
+
+#Zoom
+zoom_action = MultiAction(driver)
+# Zoom
+finger1.long_press(x=xx, y=yy).move_to(x=0, y=50).wait(200).release()
+finger2.long_press(x=xx, y=yy).move_to(x=0, y=-50).wait(200).release()
+zoom_action.add(finger1, finger2)
+
+#Giữ nút
+actions = TouchAction(driver)
+action.long_press(x=xx, y=yy).move_to(x=0, y=50).wait(200).release()
+
+#Kéo và thả
+actions = TouchAction(driver)
+actions.press(element[0]).wait(1000).move_to(element[5]).perfrom().release()
+
+#Alert
+driver.switch_to.alert.accept()     #ok
+driver.switch_to.alert.dismiss()     #cancel
+
+#print text
+el = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="nguyễn huy (ga)")
+print("content-desc")
+print(el.get_attribute("content-desc"))
+
+
+
+//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[1]/div/nav[2]/div[2]/div/div/div/div[1]/div[2]/p[1]
+//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div/div/div[3]/div/div/p[1]

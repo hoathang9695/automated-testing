@@ -47,19 +47,19 @@ def trangcanhan(self):
 
 def trangchu(self):
     action.login.login4(self, "truongvck33@gmail.com", "voncamk22")
-    funcion.trangchu.taobaiviet_khoangkhac(self)
-    funcion.trangchu.menu(self)
-    funcion.trangchu.caidatcanhan_chuyentaikhoan(self)
-    funcion.trangchu.canhan_caidatvaquyenriengtu(self)
-    funcion.trangchu.trogiupvahotro(self)
+    # funcion.trangchu.taobaiviet_khoangkhac(self)
+    # funcion.trangchu.menu(self)
+    # funcion.trangchu.caidatcanhan_chuyentaikhoan(self)
+    # funcion.trangchu.canhan_caidatvaquyenriengtu(self)
+    # funcion.trangchu.trogiupvahotro(self)
     funcion.trangchu.caidatcanhan_manhinh(self)
-    funcion.trangchu.caidatcanhan_donggopykien(self)
-    funcion.trangchu.caidatcanhan_dangxuat(self)
-    funcion.trangchu.trangchu_timkiem(self)
+    # funcion.trangchu.caidatcanhan_donggopykien(self)
+    # funcion.trangchu.caidatcanhan_dangxuat(self)
+    # funcion.trangchu.trangchu_timkiem(self)
 
 def chat(self):
     action.login.login4(self, "truongvck33@gmail.com", "voncamk22")
-    funcion.trangchu.tinnhanmoi(self)
+    # funcion.trangchu.tinnhanmoi(self)   #Lỗi không chạy được
     funcion.trangchu.chat(self)
     funcion.trangchu.chat_xemtatca(self)
 
@@ -70,17 +70,17 @@ def chat(self):
 
 def khoanhkhac(self):
     action.login.login4(self, "truongvck333@gmail.com", "voncamk22")
-    funcion.khoanhkhac.dangtheodoi(self)
-    # funcion.khoanhkhac.tructiep(self) #khoong co phien live
-    funcion.khoanhkhac.taokhoanhkhac(self)
-    # funcion.khoanhkhac.taikhoan_duocdexuat(self)
-    funcion.khoanhkhac.taikhoan_dangtheodoi(self)
+    # funcion.khoanhkhac.dangtheodoi(self)
+    # funcion.khoanhkhac.tructiep(self) #ko cos phieen live
+    # funcion.khoanhkhac.taokhoanhkhac(self)
+    # # funcion.khoanhkhac.taikhoan_duocdexuat(self)    #video không ổn định
+    # funcion.khoanhkhac.taikhoan_dangtheodoi(self)
     funcion.khoanhkhac.khoanhkhac_timkiem(self)
 
 
 def watch(self):
     action.login.login4(self, "truongvck333@gmail.com", "voncamk22")
-    # funcion.watch.timkiem(self)   #đang bị trắng trang
+    funcion.watch.timkiem(self)
     funcion.watch.trangchu(self)
     funcion.watch.chuongtrinh(self)
     funcion.watch.videodaluu(self)
@@ -89,16 +89,16 @@ def watch(self):
 
 def trang(self):
     action.login.login4(self, "truongvck33@gmail.com", "voncamk22")
-    # funcion.trang.timkiem_trangcuaban(self)
-    # funcion.trang.khampha(self)
-    # funcion.trang.trangdathich(self)
-    # funcion.trang.trangdathich_dau3cham(self)
-    # funcion.trang.loimoi(self)
-    # # funcion.trang.taotrangmoi(self) #vẫn bị lỗi ảnh
-    # funcion.trang.trang_gioithieu(self)
-    # funcion.trang.anh(self)     #Trắng trang like video, xem ảnh 7401
-    # funcion.trang.music(self)
-    # funcion.trang.video(self)
+    funcion.trang.timkiem_trangcuaban(self)
+    funcion.trang.khampha(self)
+    funcion.trang.trangdathich(self)
+    funcion.trang.trangdathich_dau3cham(self)
+    funcion.trang.loimoi(self)
+    funcion.trang.taotrangmoi(self)     #vẫn bị lỗi tạo trang
+    funcion.trang.trang_gioithieu(self)
+    funcion.trang.anh(self)
+    funcion.trang.music(self)
+    funcion.trang.video(self)
     funcion.trang.xemthem(self)
     funcion.trang.cuahang(self)
     funcion.trang.cacnutkhac(self)
@@ -108,14 +108,14 @@ def trang(self):
     funcion.trang.hopthu(self)
     funcion.trang.thongbao(self)
     funcion.trang.chatluongtrang(self)
-    funcion.trang.baivietdalenlich(self)        #6597 ko đăng ngay được
+    funcion.trang.baivietdalenlich(self)
     funcion.trang.chinhsuathongtintrang(self)
     funcion.trang.caidat(self)
 
 
 def nhom(self):
     action.login.login4(self, "truongvck333@gmail.com", "voncamk22")
-    funcion.nhom.timkiem(self)        #Lỗi icon
+    funcion.nhom.timkiem(self)
     funcion.nhom.bangtincuaban(self)
     funcion.nhom.khampha(self)
     funcion.nhom.moithamgianhom(self)
@@ -137,16 +137,17 @@ def nhom(self):
 
 
 def muahangthanhcong(self):
-    # funcion.quatrinhmuahang.timkiemsanpham(self)
-    funcion.quatrinhmuahang.timkiemsanpham_thanhtoanonline(self)
-    #
-    #
-    # funcion.quatrinhmuahang.xacnhandon(self)
-    # funcion.quatrinhmuahang.chuanbihang(self)
-    # funcion.quatrinhmuahang.donvivanchuyendanglayhang(self)
-    # funcion.quatrinhmuahang.donvivanchuyendalayhang(self)
-    # funcion.quatrinhmuahang.danggiaohang(self)
-    # funcion.quatrinhmuahang.danhanhang(self)
+    funcion.quatrinhmuahang.timkiemsanpham_voucher(self)    #Case này để chạy riêng test voucher
+    funcion.quatrinhmuahang.timkiemsanpham_thanhtoanonline(self)    ##Case này để chạy riêng test thanh toán thẻ
+
+
+    funcion.quatrinhmuahang.timkiemsanpham(self)      #Case này thanh toán tiền mặt
+    funcion.quatrinhmuahang.xacnhandon(self)
+    funcion.quatrinhmuahang.chuanbihang(self)
+    funcion.quatrinhmuahang.donvivanchuyendanglayhang(self)
+    funcion.quatrinhmuahang.donvivanchuyendalayhang(self)
+    funcion.quatrinhmuahang.danggiaohang(self)
+    funcion.quatrinhmuahang.danhanhang(self)
 
 def muahangthatbai(self):
     funcion.quatrinhmuahang.chothanhtoan_dahuy(self)
@@ -165,17 +166,19 @@ def quanlysanpham(self):
 
 def add_dulieuemso(self):
     funcion.add_dulieuemso.themsanphammoi1(self)
-    funcion.add_dulieuemso.themsanphammoi1_khongconghanhcha(self)
-    funcion.add_dulieuemso.vietfilesanpham(self)
-    funcion.add_dulieuemso.get_data_lazada(self)
-    funcion.add_dulieuemso.get_data_lazada_theonghanh(self)
-    funcion.add_dulieuemso.get_image(self)
+    # funcion.add_dulieuemso.themsanphammoi1_khongconghanhcha(self)
+    # funcion.add_dulieuemso.vietfilesanpham(self)
+    # funcion.add_dulieuemso.get_data_lazada(self)
+    # funcion.add_dulieuemso.get_data_lazada_theonghanh(self)
+    # funcion.add_dulieuemso.get_image(self)
 
 
 def kenhmarketing(self):
     action.login.login4(self, "truongvck33@gmail.com", "voncamk22")
-    funcion.kenhmarketing.magiamgiacuashop(self)
+    # funcion.kenhmarketing.magiamgiacuashop(self)
     funcion.kenhmarketing.chuongtrinhkhuyenmai(self)
+    # funcion.kenhmarketing.flashsalecuashop(self)
+
 
 
 

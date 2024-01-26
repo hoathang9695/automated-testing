@@ -204,7 +204,7 @@ class trangchu():
         action.trangchu.taobaiviet_banbe(self)
         action.trangchu.taobaiviet_riengtu(self)
         action.trangchu.taobaimoment(self)
-        # action.trangchu.camxuc_hoatdong(self)       #Mất icon xúc động
+        action.trangchu.camxuc_hoatdong(self)
 
     def menu(self):
         action.trangchu.menu(self)
@@ -361,7 +361,7 @@ class trang():
         action.trang.caidat_thongbao(self)
         action.trang.caidat_vaitrotrentrang(self)
         action.trang.caidat_chutaikhoantrang(self)
-        action.trang.caidat_nguoivatrangkhac(self)
+        action.trang.caidat_nguoivatrangkhac(self)  #trắng trang khi chọn 7720
         action.trang.caidat_nhatkyhoatdong(self)
         action.trang.caidat_caidathopthu(self)
 
@@ -424,7 +424,7 @@ class nhom:
         action.nhom.caidatnhom(self)
         action.nhom.thietlapnhom(self)
         action.nhom.tuychinhnhom(self)
-        action.nhom.quanlynoidungthaoluan(self)     #Bài viết đang chờ phải từ chối 2l 6622
+        action.nhom.quanlynoidungthaoluan(self)
 
 
 
@@ -434,6 +434,9 @@ class quatrinhmuahang():
 
     def timkiemsanpham_thanhtoanonline(self):
         action.quatrinhmuahang.timkiemsanpham_thanhtoanonline(self)
+
+    def timkiemsanpham_voucher(self):
+        action.quatrinhmuahang.timkiemsanpham_voucher(self)
 
     def xacnhandon(self):
         action.quatrinhmuahang.xacnhandon(self)
@@ -550,15 +553,21 @@ class kenhmarketing():
         action.kenhmarketing.magiamgiacuashop(self)
         action.kenhmarketing.danhsachmagiamgia(self)
 
-
     def chuongtrinhkhuyenmai(self):
-        action.kenhmarketing.chuongtrinhkhuyenmai_tatca(self)
+        # action.kenhmarketing.chuongtrinhkhuyenmai_tatca(self)
 
         action.kenhmarketing.chuongtrinhkhuyenmai_flashsale(self)
-        action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_flashsale(self)
+        # action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_flashsale(self)
 
-        action.kenhmarketing.chuongtrinhkhuyenmai_emsocampaign(self)
-        action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_cambpaign(self)
+        # action.kenhmarketing.chuongtrinhkhuyenmai_emsocampaign(self)
+        # action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_cambpaign(self)
+
+    def flashsalecuashop(self):
+        # action.kenhmarketing.flashsalecuashop_admin(self)
+        # action.kenhmarketing.flashsalecuashop_themsanpham(self)
+        action.kenhmarketing.flashsalecuashop_danhsachchuongtrinh(self)
+
+
 
 
 

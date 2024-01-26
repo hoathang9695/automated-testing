@@ -83,7 +83,7 @@
     "bietdanh_dai": "1 Chai 2 Lít, CertVerifyProcBuiltin for update.googleapis.com failed:",
     "sodienthoai_dai": "0835210360832",
     "sodienthoai_ngan": "08",
-    "sodienthoai_trung": "09876543221",
+    "sodienthoai_trung": "0835210321",
     "sodienthoai2": "0359667777"
   },
   "trangcanhan_gd_va_mqh": {
@@ -365,7 +365,7 @@
     "nhandan1": "Test nhãn dán bình luận nè"
   },
   "market": {
-    "timkiemtrangchu": "VÁY ĐẦM BODY ÔM SÁT HÀN QUỐC SANG CHẢNH TÔN DÁNG SIÊU XINH THỜI TRANG 1989",
+    "timkiemtrangchu": "Giày thẻ thao nữ",
     "sanpham_hethang": "Váy Trễ Vai Voan 2 Lớp Dáng Xoè Nữ Màu Trắng Dáng Tiểu Thư",
     "loinhan": "Sốp gửi nhanh giúp e nhó",
     "danhgiasanpham": "Đồ đẹp lắm ạ",
@@ -380,7 +380,8 @@
     "xemchitietdonhang_ghichu": "Shop tạm thời hết hàng r ạ, bạn xem tạm mẫu khác nhé",
     "xemchitietdonhang_ghichu1": "Shop tạm thời hết hàng r ạ, bạn xem tạm mẫu khác nhé 1",
     "vouchershop_input": "34589321",
-    "voucheremso_input": "CODEGM20",
+    "voucheremso_vanchuyen_input": "CODEFSH01",
+    "voucheremso_giamgia_input": "CODEGM20",
     "nhandan1": "Test nhãn dán bình luận nè"
   },
   "quanlysanpham": {
@@ -433,6 +434,27 @@
     "loaigiamgia_theophantram": "50",
     "donhangtoithieu": "30000",
     "anhdaidienkhac_mota": "Ohh nooo Trường sẽ đi uống nước lọc",
+    "khung_anhdaidien": "Yêu thương Việt Nam"
+  },
+  "thanhtoan": {
+    "vnpay_sothe": "9704198526191432198",
+    "vnpay_tenchuthe": "NGUYEN VAN A",
+    "vnpay_ngayphathang": "07/15",
+    "vnpay_maotp": "123456",
+    "vtcpay_sothe": "4111111111111111",
+    "vtcpay_tenchuthe": "NGUYEN VAN A",
+    "vtcpay_cvv": "123",
+    "vtcpay_email": "truongvck33@gmail.com",
+    "vtcpay_diachi": "250 Minh khai, Hai Bà Trưng, Hà Nội",
+    "vtcpay_tinhthanh": "hanoi",
+    "vtcpay_mabuudien": "100000",
+    "tenvouchersp": "TS_Váy xinh",
+    "khung_anhdaidien": "Yêu thương Việt Nam"
+  },
+  "flashsaleshop": {
+    "themchiendich_tenchiendich": "Flash Sale hàng ngày",
+    "vnpay_tenchuthe": "NGUYEN VAN A",
+    "vnpay_ngayphathang": "07/15",
     "khung_anhdaidien": "Yêu thương Việt Nam"
   }
 }
