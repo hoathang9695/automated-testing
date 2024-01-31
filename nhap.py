@@ -28,7 +28,7 @@ element.click()
 driver.execute_script("window.scrollBy(0,700)", "")
 
 data['trangcanhan_sukientrongdoi']['taosukienrieng']
-
+driver.find_element(By.XPATH, var.popupmarket_x).click()
 
 //*[@class='']/div[@class='']/span[@class='']
 //*[@class='app']/div/main/div/div[2]/div
@@ -166,7 +166,12 @@ else:
 time.sleep(2)
 
 
-
+#cookie
+time.sleep(1)
+cookies = driver.get_cookies()
+for cookie in cookies:
+    print(cookie)
+time.sleep(2)
 
 ------------------------------------------------------------------------
 ---------------------------------------------------------------------------
