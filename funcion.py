@@ -519,7 +519,7 @@ class quanlysanpham():
 
         action.quanlysanpham.themsanphammoi_guipheduyet(self)
         action.thuongmai.duyetsanpham_duyet(self)
-
+        #
         action.quanlysanpham.themsanphammoi_luunhap(self)
 
     def danhsachsanpham(self):
@@ -550,22 +550,22 @@ class add_dulieuemso():
 
 class kenhmarketing():
     def magiamgiacuashop(self):
-        action.kenhmarketing.magiamgiacuashop(self)
+        # action.kenhmarketing.magiamgiacuashop(self)
         action.kenhmarketing.danhsachmagiamgia(self)
 
     def chuongtrinhkhuyenmai(self):
         # action.kenhmarketing.chuongtrinhkhuyenmai_tatca(self)
 
-        action.kenhmarketing.chuongtrinhkhuyenmai_flashsale(self)
+        # action.kenhmarketing.chuongtrinhkhuyenmai_flashsale(self)
         # action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_flashsale(self)
 
-        # action.kenhmarketing.chuongtrinhkhuyenmai_emsocampaign(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_emsocampaign(self)
         # action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_cambpaign(self)
 
     def flashsalecuashop(self):
-        # action.kenhmarketing.flashsalecuashop_admin(self)
+        action.kenhmarketing.flashsalecuashop_admin(self)
         # action.kenhmarketing.flashsalecuashop_themsanpham(self)
-        action.kenhmarketing.flashsalecuashop_danhsachchuongtrinh(self)
+        # action.kenhmarketing.flashsalecuashop_danhsachchuongtrinh(self)
 
 
 
