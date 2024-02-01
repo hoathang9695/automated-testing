@@ -78,7 +78,6 @@ logging.warning("đây là warning")
 logging.error("đây là error")
 logging.critical("đây là critical")
 
-@retry(tries=3, delay=2, backoff=1, jitter=5, )
 def logout():
     driver.implicitly_wait(15)
     time.sleep(2)
@@ -90,9 +89,8 @@ def logout():
 
 
 class login():
-    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login1(self, user, password):
-        driver.implicitly_wait(15)
+        driver.implicitly_wait(5)
         driver.get(var.url)
         driver.maximize_window()
         driver.find_element(By.XPATH, var.login_user).send_keys(user)
@@ -108,9 +106,8 @@ class login():
         print("mật khẩu login:", password)
         print("login vào phần mềm emso khong thành công")
 
-    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login2(self, user, password):
-        driver.implicitly_wait(15)
+        driver.implicitly_wait(3)
         driver.get(var.url)
         driver.maximize_window()
         driver.find_element(By.XPATH, var.login_user).send_keys(user)
@@ -118,25 +115,32 @@ class login():
         driver.find_element(By.XPATH, var.login_submit).click()
         time.sleep(1)
         # bỏ trống tài khoản
-        message_bo_trong_tk = driver.find_element(By.XPATH, var.message_bo_trong_tk1).text
-        print(message_bo_trong_tk)
-        logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
-        logging.info("Message Email, Số điện thoại:Email hoặc số điện thoại không được để trống ")
-        logging.info(message_bo_trong_tk == "Email hoặc số điện thoại không được để trống")
-        # bỏ trống mật khẩu
-        message_bo_trong_mk = driver.find_element(By.XPATH, var.message_bo_trong_mk1).text
-        print(message_bo_trong_mk)
-        logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
-        logging.info("Message Mật khẩu: Mật khẩu không được để trống")
-        logging.info(message_bo_trong_mk == "Mật khẩu không được để trống")
+        try:
+            message_bo_trong_tk = driver.find_element(By.XPATH, var.message_bo_trong_tk1).text
+            logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
+            logging.info("Message Email, Số điện thoại:Email hoặc số điện thoại không được để trống ")
+            logging.info(message_bo_trong_tk == "Email hoặc số điện thoại không được để trống")
+        except:
+            logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
+            logging.info("Message Email, Số điện thoại: Email hoặc số điện thoại không được để trống ")
+            logging.info("False")
 
+        # bỏ trống mật khẩu
+        try:
+            message_bo_trong_mk = driver.find_element(By.XPATH, var.message_bo_trong_mk1).text
+            logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
+            logging.info("Message Mật khẩu: Mật khẩu không được để trống")
+            logging.info(message_bo_trong_mk == "Mật khẩu không được để trống")
+        except:
+            logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
+            logging.info("Message Mật khẩu: Mật khẩu không được để trống")
+            logging.info("False")
         print("tên tài khoản login:", user)
         print("mật khẩu login:", password)
         print("login vào phần mềm emso khong thành công")
 
-    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login3(self, user, password):
-        driver.implicitly_wait(15)
+        driver.implicitly_wait(5)
         driver.get(var.url)
         driver.maximize_window()
         # driver.set_window_size(400, 600)
@@ -155,7 +159,6 @@ class login():
         driver.find_element(By.XPATH, var.trangcanhan).click()
         time.sleep(1)
 
-    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login4(self, user, password):
         driver.implicitly_wait(15)
         driver.get(var.url)
@@ -206,7 +209,6 @@ class login():
 
 
 
-    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login_google(self, user, passsword):
         driver.implicitly_wait(20)
         driver.get(var.url)
@@ -239,7 +241,6 @@ class login():
                 driver.close()
 
 
-    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login_chon_tk_dang_nhap_gan_day_nhap_sai_pass(self, password):
         driver.implicitly_wait(15)
         driver.get(var.url)
@@ -256,7 +257,6 @@ class login():
         logging.info("Message: Tài khoản hoặc mật khẩu không đúng, vui lòng kiểm tra lại.")
         logging.info( message_ganday_sai_mk == "Tài khoản hoặc mật khẩu không đúng, vui lòng kiểm tra lại.")
 
-    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login_chon_tk_dang_nhap_gan_day_khong_nhap_pass(self):
         driver.implicitly_wait(15)
         driver.get(var.url)
@@ -273,7 +273,6 @@ class login():
         logging.info("Message: Mật khẩu không được để trống")
         logging.info( message_ganday_khong_nhap_mk == "Mật khẩu không được để trống")
 
-    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login_chon_tk_dang_nhap_gan_day_chua_luu_mk(self, password):
         driver.implicitly_wait(15)
         driver.get(var.url)
@@ -289,7 +288,6 @@ class login():
         logging.info("Chọn tài khoản đăng nhập gần đây - (login thành công/Chuyển tài khoản thành công) - chưa lưu mật khẩu")
         logging.info( login_thanh_cong == "Khoảnh khắc")
 
-    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login_chon_tk_dang_nhap_gan_day_da_luu_mk(self):
         driver.implicitly_wait(15)
         driver.get(var.url)
@@ -18012,7 +18010,7 @@ class kenhmarketing():
         driver.implicitly_wait(15)
         login.login4(self, "emsomanagerhd@gmail.com", "khongnhomatkhaucu")
         time.sleep(1.5)
-                # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")  #a12
+        # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")  #a12
         # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419224061&type=all") #vnshop1
         driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419224196&type=all") #vnshop2
         time.sleep(2)
@@ -18241,9 +18239,9 @@ class kenhmarketing():
         driver.implicitly_wait(15)
         login.login4(self, "emsomanagerhd@gmail.com", "khongnhomatkhaucu")
         time.sleep(1.5)
-        driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")  #a12
+        # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")  #a12
         # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419224061&type=all")  #vnshop1
-        # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419224196&type=all")  #vnshop2
+        driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419224196&type=all")  #vnshop2
         time.sleep(2)
         driver.find_element(By.XPATH, var.chuongtrinhkhuyenmai_emsocampaign).click()
         time.sleep(2)
@@ -18700,6 +18698,38 @@ class kenhmarketing():
                 break
 
 
+
+    def chuongtrinhkhuyenmai_duyet50(self):
+        driver.implicitly_wait(5)
+        try:
+            button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho)
+            driver.execute_script("arguments[0].click();", button)
+        except:
+            button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho1)
+            driver.execute_script("arguments[0].click();", button)
+        time.sleep(1)
+        try:
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang).click()
+        except:
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang1).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang50).click()
+        time.sleep(2)
+        try:
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca).click()
+        except:
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca1).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.chiendich_duyetsp_action).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet_pheduyet).click()
+        driver.find_element(By.XPATH, var.capnhatthanhcong).click()
+        time.sleep(2)
+
+
+
     def chuongtrinhkhuyenmai_pheduyetsp(self, tenkhuyenmai):
         driver.implicitly_wait(3)
         # Duyệt Flash Sale
@@ -18718,99 +18748,62 @@ class kenhmarketing():
             time.sleep(0.5)
             driver.find_element(By.XPATH, var.chiendich_sp1_dau3cham_chitiet).click()
             time.sleep(2)
-            #Lần 1
-            driver.implicitly_wait(2)
-            try:
-                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho)
-                driver.execute_script("arguments[0].click();", button)
-            except:
-                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho1)
-                driver.execute_script("arguments[0].click();", button)
-            time.sleep(1)
-            try:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang).click()
-            except:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang1).click()
-            time.sleep(0.5)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang50).click()
-            time.sleep(2)
-            try:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca).click()
-            except:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca1).click()
-            time.sleep(1)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_action).click()
-            time.sleep(0.5)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet).click()
-            time.sleep(0.5)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet_pheduyet).click()
-            driver.find_element(By.XPATH, var.capnhatthanhcong).click()
-            time.sleep(1)
-
-            #Lần 2
-            driver.implicitly_wait(2)
-            try:
-                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho)
-                driver.execute_script("arguments[0].click();", button)
-            except:
-                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho1)
-                driver.execute_script("arguments[0].click();", button)
-            time.sleep(1)
-            try:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang).click()
-            except:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang1).click()
-            time.sleep(0.5)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang50).click()
-            time.sleep(2)
-            try:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca).click()
-            except:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca1).click()
-            time.sleep(1)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_action).click()
-            time.sleep(0.5)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet).click()
-            time.sleep(0.5)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet_pheduyet).click()
-            driver.find_element(By.XPATH, var.capnhatthanhcong).click()
-            time.sleep(1)
-
-            # Lần 3
-            driver.implicitly_wait(2)
-            try:
-                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho)
-                driver.execute_script("arguments[0].click();", button)
-            except:
-                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho1)
-                driver.execute_script("arguments[0].click();", button)
-            time.sleep(1)
-            try:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang).click()
-            except:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang1).click()
-            time.sleep(0.5)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang50).click()
-            time.sleep(2)
-            try:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca).click()
-            except:
-                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca1).click()
-            time.sleep(1)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_action).click()
-            time.sleep(0.5)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet).click()
-            time.sleep(0.5)
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet_pheduyet).click()
-            driver.find_element(By.XPATH, var.capnhatthanhcong).click()
-            time.sleep(1)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
         else:
             logging.info("Admin - Thương mại - Chiến dịch - Tìm kiếm")
             logging.info("check font-end: Có tìm thấy"+tenkhuyenmai+" không?")
             logging.info("False")
 
+
+    def chuongtrinhkhuyenmai_pheduyetsp1(self, tenkhuyenmai):
+        driver.implicitly_wait(5)
+        # Duyệt Flash Sale
+        login.login5(self, "thanghoa1420@gmail.com", "hoathang1420")
+        time.sleep(1.5)
+        driver.find_element(By.XPATH, var.admin_marketting).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.thuongmai_chiendich).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.chiendich_timkiem).send_keys(tenkhuyenmai)
+        driver.find_element(By.XPATH, var.chiendich_timkiem).send_keys(Keys.ENTER)
+        time.sleep(1)
+        check_chiendich_timkiem = driver.find_element(By.XPATH, var.check_chiendich_timkiem).text
+        if check_chiendich_timkiem == tenkhuyenmai:
+            driver.find_element(By.XPATH, var.chiendich_sp1_dau3cham).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_sp1_dau3cham_chitiet).click()
+            time.sleep(2)
+            driver.find_element(By.XPATH, var.dau3cham_chitiet_khunggio1).click()
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            time.sleep(2)
+
+            driver.find_element(By.XPATH, var.dau3cham_chitiet_khunggio2).click()
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            time.sleep(2)
+
+            driver.find_element(By.XPATH, var.dau3cham_chitiet_khunggio3).click()
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+        else:
+            logging.info("Admin - Thương mại - Chiến dịch - Tìm kiếm")
+            logging.info("check font-end: Có tìm thấy"+tenkhuyenmai+" không?")
+            logging.info("False")
+
+
+
     def chuongtrinhkhuyenmai_pheduyetsp_flashsale(self):
-        kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp(self, var.flashsale_ten1)
+        kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp1(self, var.flashsale_ten1)
 
     def chuongtrinhkhuyenmai_pheduyetsp_cambpaign(self):
         kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp(self, var.campaign_ten_ttkm2)
@@ -19185,7 +19178,6 @@ class kenhmarketing():
             logging.info("False")
             driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "flashsalecuashop_xoachuongtrinh.png")
 
-
         #Đã kết thúc
         driver.find_element(By.XPATH, var.danhsachchuongtrinh_daketthuc).click()
         time.sleep(1.5)
@@ -19204,6 +19196,89 @@ class kenhmarketing():
         driver.find_element(By.XPATH, var.danhsachchuongtrinh_tatca).click()
         time.sleep(1.5)
 
+
+
+
+    def flashsalecuashop_chuongtrinhcuashop(self):
+        driver.implicitly_wait(15)
+        login.login4(self, "truongvck33@gmail.com", "voncamk22")
+        time.sleep(1.5)
+        driver.get("https://cmc-fe.emso.vn/marketplace/shop/product_hosting?page_id=108277159419223993&page=1&type=all")  #Bình thuận
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.kenhmarketting).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.chuongtrinhcuashop).click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.chuongtrinhcuashop_tao).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.taochuongtrinh_ten).send_keys(data['chuongtrinhcuashop']['taochuongtrinhmoi_ten'])
+        #Ngày bắt đầu
+        driver.find_element(By.XPATH, var.taochuongtrinh_ngaybatdau).click()
+        time.sleep(1)
+        n = 0
+        m = 1
+        while (n < 31):
+            n = n + 1
+            m = m + 1
+            n = str(n)
+            m = str(m)
+            ngay_batdau = driver.find_element(By.XPATH,"//*[@role='grid']/div//*[text()='"+n+"']")
+            ngay_batdau1 = driver.find_element(By.XPATH,"//*[@role='grid']/div//*[text()='"+m+"']")
+            ngay_batdau1.click()
+            print(ngay_batdau.value_of_css_property("border"))
+            print(ngay_batdau.text)
+            if ngay_batdau.value_of_css_property("border") == "0.8px solid rgb(102, 102, 102)":
+                ngay_batdau.click()
+                time.sleep(1)
+                driver.find_element(By.XPATH, var.taochuongtrinh_ngaybatdau_gio19).click()
+                time.sleep(1)
+                driver.find_element(By.XPATH, var.taochuongtrinh_ngaybatdau_phut00).click()
+                time.sleep(1)
+                driver.find_element(By.XPATH, var.taochuongtrinh_thoigianbatdau_xacnhan).click()
+                time.sleep(1)
+                break
+            else:
+                logging.info("Người bán - Kênh Marketing - Chương trình của shop - Tạo Chương Trình của Shop mới")
+                logging.info("check font-end: Thông tin cơ bản - Chọn thời gian bắt đầu")
+                logging.info("False")
+            n = int(n)
+            m = int(m)
+        time.sleep(1.5)
+
+        # Thời gian kết thúc
+        driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc).click()
+        time.sleep(1)
+        n = 0
+        m = 1
+        while (n < 31):
+            n = n + 1
+            m = m + 1
+            n = str(n)
+            m = str(m)
+            ngay_ketthuc  = driver.find_element(By.XPATH,"//*[@role='grid']/div//*[text()='"+n+"']")
+            ngay_ketthuc1 = driver.find_element(By.XPATH,"//*[@role='grid']/div//*[text()='"+m+"']")
+            ngay_ketthuc1.click()
+            print(ngay_ketthuc.text)
+            print(ngay_ketthuc.value_of_css_property("border"))
+            if ngay_ketthuc.value_of_css_property("border") == "0.8px solid rgb(102, 102, 102)":
+                ngay_ketthuc.click()
+                time.sleep(1)
+                driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc_gio23).click()
+                time.sleep(1)
+                driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc_phut59).click()
+                time.sleep(1)
+                driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc_phut59).send_keys(Keys.TAB)
+                driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc_phut59).send_keys(Keys.ENTER)
+                # driver.find_element(By.XPATH, var.taochuongtrinh_thoigianketthuc_xacnhan)
+                # driver.find_element(By.XPATH, var.taochuongtrinh_thoigianketthuc_xacnhan)
+                break
+            else:
+                logging.info("Admin - Marketing MKP - Chiến dịch - Thêm Campaigns - Shop flash sale")
+                logging.info("check font-end: Thôgn tin chiến dịch - Chọn thời gian bắt đầu")
+                logging.info("False")
+            n = int(n)
+            m = int(m)
+        time.sleep(3)
 
 
 

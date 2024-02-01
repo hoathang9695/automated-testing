@@ -23,8 +23,8 @@ def dang_nhap(self):
     funcion.login.chon_tk_dang_nhap_gan_day_chua_luu_mk(self)
     funcion.login.chon_tk_dang_nhap_gan_day_da_luu_mk(self)
 
-    funcion.login.thanh_cong_tk_google1(self)
-    funcion.login.thanh_cong_tk_google2(self) #để chạy cuối, đang lỗi
+    # funcion.login.thanh_cong_tk_google1(self) #trình duyệt không hỗ trợ
+    # funcion.login.thanh_cong_tk_google2(self) #để chạy cuối, đang lỗi
 
 
 def trangcanhan(self):
@@ -47,15 +47,15 @@ def trangcanhan(self):
 
 def trangchu(self):
     action.login.login4(self, "truongvck33@gmail.com", "voncamk22")
-    # funcion.trangchu.taobaiviet_khoangkhac(self)
-    # funcion.trangchu.menu(self)
-    # funcion.trangchu.caidatcanhan_chuyentaikhoan(self)
-    # funcion.trangchu.canhan_caidatvaquyenriengtu(self)
-    # funcion.trangchu.trogiupvahotro(self)
+    funcion.trangchu.taobaiviet_khoangkhac(self)
+    funcion.trangchu.menu(self)
+    funcion.trangchu.caidatcanhan_chuyentaikhoan(self)
+    funcion.trangchu.canhan_caidatvaquyenriengtu(self)
+    funcion.trangchu.trogiupvahotro(self)
     funcion.trangchu.caidatcanhan_manhinh(self)
-    # funcion.trangchu.caidatcanhan_donggopykien(self)
-    # funcion.trangchu.caidatcanhan_dangxuat(self)
-    # funcion.trangchu.trangchu_timkiem(self)
+    funcion.trangchu.caidatcanhan_donggopykien(self)
+    funcion.trangchu.caidatcanhan_dangxuat(self)
+    funcion.trangchu.trangchu_timkiem(self)
 
 def chat(self):
     action.login.login4(self, "truongvck33@gmail.com", "voncamk22")
@@ -165,19 +165,19 @@ def quanlysanpham(self):
 
 
 def add_dulieuemso(self):
-    funcion.add_dulieuemso.themsanphammoi1(self)
+    # funcion.add_dulieuemso.themsanphammoi1(self)
     funcion.add_dulieuemso.themsanphammoi1_khongconghanhcha(self)
-    funcion.add_dulieuemso.vietfilesanpham(self)
-    funcion.add_dulieuemso.get_data_lazada(self)
-    funcion.add_dulieuemso.get_data_lazada_theonghanh(self)
-    funcion.add_dulieuemso.get_image(self)
+    # funcion.add_dulieuemso.vietfilesanpham(self)
+    # funcion.add_dulieuemso.get_data_lazada(self)
+    # funcion.add_dulieuemso.get_data_lazada_theonghanh(self)
+    # funcion.add_dulieuemso.get_image(self)
 
 
 def kenhmarketing(self):
     action.login.login4(self, "truongvck33@gmail.com", "voncamk22")
     # funcion.kenhmarketing.magiamgiacuashop(self)
-    # funcion.kenhmarketing.chuongtrinhkhuyenmai(self)
-    funcion.kenhmarketing.flashsalecuashop(self)
+    funcion.kenhmarketing.chuongtrinhkhuyenmai(self)
+    # funcion.kenhmarketing.flashsalecuashop(self)
 
 
 
