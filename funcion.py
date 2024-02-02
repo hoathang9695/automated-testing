@@ -563,13 +563,13 @@ class kenhmarketing():
         action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_cambpaign(self)
 
     def flashsalecuashop(self):
-        # action.kenhmarketing.flashsalecuashop_admin(self)
-        # action.kenhmarketing.flashsalecuashop_themsanpham(self)
-        # action.kenhmarketing.flashsalecuashop_danhsachchuongtrinh(self)
+        action.kenhmarketing.flashsalecuashop_admin(self)
+        action.kenhmarketing.flashsalecuashop_themsanpham(self)
+        action.kenhmarketing.flashsalecuashop_danhsachchuongtrinh(self)
+
+
+    def chuongtrinhcuashop(self):
         action.kenhmarketing.flashsalecuashop_chuongtrinhcuashop(self)
-
-
-
 
 
 

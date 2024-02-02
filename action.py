@@ -1,5 +1,9 @@
 import re
+from multiprocessing import Process
+
 import openpyxl
+import emso
+from threading import Thread
 import asyncio
 import requests
 from selenium import webdriver
@@ -17,7 +21,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import subprocess
 import pickle
-
+import threading
 from seleniumwire import webdriver
 from seleniumwire.utils import decode
 chrome_options = Options()
@@ -18006,6 +18010,48 @@ class kenhmarketing():
         except:
             pass
 
+    def kenhmarketting_themsanpham1(self, chonnghanhhang, khuyenmai, soluongsanpham, gioihandathang):
+        driver.implicitly_wait(5)
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.themsanpham).click()
+        time.sleep(2)
+        # Chọn sản phẩm
+        driver.find_element(By.XPATH, var.themsanpham_nghanhhang2).click()
+        time.sleep(1)
+        actions = ActionChains(driver)
+        themsanpham_hovernghanhhang = driver.find_element(By.XPATH, var.chonnghanhhang + chonnghanhhang)
+        actions.move_to_element(themsanpham_hovernghanhhang).perform()
+        time.sleep(2)
+        # driver.find_element(By.XPATH, var.chonnghanhhang + chonnghanhhang).click()
+        button = driver.find_element(By.XPATH, var.chonnghanhhang + chonnghanhhang)
+        driver.execute_script("arguments[0].click();", button)
+        time.sleep(2)
+        driver.find_element(By.XPATH, var.themsanpham_chonsotrang1).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.themsanpham_chonsotrang10).click()
+        time.sleep(3)
+        driver.find_element(By.XPATH, var.themsanpham_chontatcasanpham1).click()
+        time.sleep(1.5)
+        # driver.find_element(By.XPATH, var.themsanpham_chonsanpham1).click()
+        driver.find_element(By.XPATH, var.themsanpham_xacnhan1).click()
+        time.sleep(2)
+        # Chỉnh sửa sản phẩm
+        driver.find_element(By.XPATH, var.themsanpham_chinhsua_khuyenmai1).send_keys(khuyenmai)
+        driver.find_element(By.XPATH, var.themsanpham_chinhsua_soluongsanpham1).send_keys(soluongsanpham)
+        driver.find_element(By.XPATH, var.themsanpham_chinhsua_gioihandathang1).send_keys(gioihandathang)
+        driver.find_element(By.XPATH, var.themsanpham_chinhsua_chontatcasanpham1).click()
+        time.sleep(0.5)
+        driver.find_element(By.XPATH, var.themsanpham_chinhsua_capnhat1).click()
+        time.sleep(3)
+        button = driver.find_element(By.XPATH, var.themsanpham_chinhsua_xacnhan1)
+        driver.execute_script("arguments[0].click();", button)
+        check_message_chonspkhuyenmai = driver.find_element(By.XPATH, var.check_message_chonspkhuyenmai1)
+        time.sleep(2)
+
+
+
+
+
     def chuongtrinhkhuyenmai_flashsale(self):
         driver.implicitly_wait(15)
         login.login4(self, "emsomanagerhd@gmail.com", "khongnhomatkhaucu")
@@ -19013,11 +19059,6 @@ class kenhmarketing():
         #Thêm mới sản phẩm
         driver.find_element(By.XPATH, var.themmoiflashsale).click()
         time.sleep(1.5)
-        # driver.find_element(By.XPATH, var.themmoiflashsale_iconchonnam).click()
-        # time.sleep(1)
-        # driver.find_element(By.XPATH, var.themmoiflashsale_iconchonnam_2026).click()
-        # time.sleep(1)
-        # driver.find_element(By.XPATH, var.themmoiflashsale_iconchonthang).click()
         driver.execute_script("window.scrollBy(0,700)", "")
         n = 0
         while (n < 3):
@@ -19237,10 +19278,6 @@ class kenhmarketing():
                 driver.find_element(By.XPATH, var.taochuongtrinh_thoigianbatdau_xacnhan).click()
                 time.sleep(1)
                 break
-            else:
-                logging.info("Người bán - Kênh Marketing - Chương trình của shop - Tạo Chương Trình của Shop mới")
-                logging.info("check font-end: Thông tin cơ bản - Chọn thời gian bắt đầu")
-                logging.info("False")
             n = int(n)
             m = int(m)
         time.sleep(1.5)
@@ -19268,18 +19305,114 @@ class kenhmarketing():
                 driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc_phut59).click()
                 time.sleep(1)
                 driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc_phut59).send_keys(Keys.TAB)
-                driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc_phut59).send_keys(Keys.ENTER)
-                # driver.find_element(By.XPATH, var.taochuongtrinh_thoigianketthuc_xacnhan)
-                # driver.find_element(By.XPATH, var.taochuongtrinh_thoigianketthuc_xacnhan)
+                time.sleep(1)
+                button = driver.find_element(By.XPATH, var.taochuongtrinh_thoigianketthuc_xacnhan)
+                driver.execute_script("arguments[0].click();", button)
                 break
-            else:
-                logging.info("Admin - Marketing MKP - Chiến dịch - Thêm Campaigns - Shop flash sale")
-                logging.info("check font-end: Thôgn tin chiến dịch - Chọn thời gian bắt đầu")
-                logging.info("False")
             n = int(n)
             m = int(m)
-        time.sleep(3)
+        time.sleep(2)
+        kenhmarketing.kenhmarketting_themsanpham1(self, var.thoitrangnam, "20", "10", "10")
+        #Chỉnh sửa chương trình
+        driver.find_element(By.XPATH, var.danhsachchuongtrinh_chinhsua).click()
+        time.sleep(2)
+        try:
+            check_chuongtrinhcuashop_chinhsua = driver.find_element(By.XPATH,var.check_chuongtrinhcuashop_chinhsua).text
+            logging.info("Người bán - Kênh marketting - Chương trình của shop")
+            logging.info("check font-end: Danh sách chương trình - Chỉnh sửa - Có chuyển tới trang chỉnh sửa danh sách chương trình không?")
+            logging.info(check_chuongtrinhcuashop_chinhsua)
+            logging.info(check_chuongtrinhcuashop_chinhsua == "Chi Tiết Chương Trình của Shop\nSắp diễn ra")
+        except:
+            logging.info("Người bán - Kênh marketting - Chương trình của shop")
+            logging.info("check font-end: Danh sách chương trình - Chỉnh sửa - Có chuyển tới trang chỉnh sửa danh sách chương trình không?")
+            logging.info("False")
+            driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "chuongtrinhcuashop_chinhsua.png")
+        driver.back()
+        time.sleep(2)
+        check_chuongtrinhcuashop_tenchuongtrinh1 = driver.find_element(By.XPATH, var.check_chuongtrinhcuashop_tenchuongtrinh1).text
+        driver.find_element(By.XPATH, var.danhsachchuongtrinh_xoa2).click()
+        time.sleep(1)
+        driver.find_element(By.XPATH, var.danhsachchuongtrinh_xoa_xoa).click()
+        driver.find_element(By.XPATH, var.danhsachchuongtrinh_xoa_xoa_message)
+        time.sleep(1)
+        driver.implicitly_wait(3)
+        try:
+            check_chuongtrinhcuashop_tenchuongtrinh1 = driver.find_element(By.XPATH,var.check_chuongtrinhcuashop_tenchuongtrinh1).is_displayed()
+            logging.info("Người bán - Kênh marketting - Chương trình của shop")
+            logging.info("check font-end: Danh sách chương trình - Xóa - Có xóa được chương trình không")
+            logging.info("False")
+            driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "chuongtrinhcuashop_xoachuongtrinh.png")
+        except:
+            logging.info("Người bán - Kênh marketting - Chương trình của shop")
+            logging.info("check font-end: Danh sách chương trình - Xóa - Có xóa được chương trình không")
+            logging.info("True")
+        time.sleep(2)
 
+
+def runtest1():
+    driver.implicitly_wait(10)
+    driver.get("https://demo.automationtesting.in/Windows.html")
+    driver.maximize_window()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "//*[@id='Tabbed']/a/button").click()
+    time.sleep(2)
+    tab_id = driver.window_handles
+    tab_1 = tab_id[0]
+    tab_2 = tab_id[1]
+    driver.switch_to_window(tab_1)
+    time.sleep(1)
+    driver.refresh()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "//*[@id='Tabbed']/a/button").click()
+    time.sleep(2)
+    tab_id = driver.window_handles
+    tab_1 = tab_id[0]
+    tab_2 = tab_id[1]
+    tab_3 = tab_id[2]
+
+    # driver.switch_to_window(tab_1)
+    # thread1 = Thread(target=emso.trangcanhan(self=""))
+    # thread1.start()
+    #
+    # # driver.switch_to_window(tab_2)
+    # thread2 = Thread(target=emso.muahangthanhcong(self=""))
+    # thread2.start()
+    #
+    # # driver.switch_to_window(tab_3)
+    # thread3 = Thread(target=emso.add_dulieuemso(self=""))
+    # thread3.start()
+
+    driver.switch_to_window(tab_1)
+    # subprocess.Popen(emso.trangcanhan(self=""))
+    print("r1")
+
+    driver.switch_to_window(tab_2)
+    # subprocess.Popen(emso.muahangthanhcong(self=""))
+    print("r2")
+
+    driver.switch_to_window(tab_3)
+    # subprocess.Popen(emso.add_dulieuemso(self=""))
+    print("r3")
+
+
+
+def runtest(x):
+    print("đang chạy luồng,", x)
+    # Options = webdriver.ChromeOptions()
+    # Options.add_argument("https://www.youtube.com/watch?v=Iu8TK7crhSk")
+    # driver = webdriver.Chrome(options = Options)
+    chrome_options = Options()
+    driver = webdriver.Chrome(var.PATH, chrome_options=chrome_options)
+    driver.get("https://www.youtube.com/watch?v=Iu8TK7crhSk")
+    print("x= ",x)
+    driver.set_window_size(400, 600)
+    if x==0:
+        emso.trangchu(self="")
+    if x==1:
+        emso.chat(self="")
+    if x==2:
+        emso.add_dulieuemso(self="")
+    time.sleep(100)
 
 
 

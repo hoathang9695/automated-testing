@@ -176,8 +176,10 @@ def add_dulieuemso(self):
 def kenhmarketing(self):
     action.login.login4(self, "truongvck33@gmail.com", "voncamk22")
     # funcion.kenhmarketing.magiamgiacuashop(self)
-    funcion.kenhmarketing.chuongtrinhkhuyenmai(self)
+    # funcion.kenhmarketing.chuongtrinhkhuyenmai(self)
     # funcion.kenhmarketing.flashsalecuashop(self)
+    funcion.kenhmarketing.chuongtrinhcuashop(self)
+
 
 
 
