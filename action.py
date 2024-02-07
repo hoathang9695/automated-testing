@@ -1,6 +1,5 @@
 import re
 from multiprocessing import Process
-
 import openpyxl
 import emso
 from threading import Thread
@@ -61,11 +60,14 @@ def writeData(file,sheetName,rowum,columnno,data):
 rows = getRowCount(var.path_baocao,'Sheet1')
 
 
-file_name = 'data_emso.json'
+# file_name = 'data_emso.json'
+# with open(file_name, 'r', encoding='utf-8') as f:
+#     data = json.load(f, strict = False)
+
+
+file_name = 'C:/Users/Admin/PycharmProjects/pythonProject/data_emso.json'
 with open(file_name, 'r', encoding='utf-8') as f:
     data = json.load(f, strict = False)
-
-
 
 
 logging.basicConfig(handlers=[logging.FileHandler(filename="C:/Users/Admin/PycharmProjects/pythonProject/emso.log",
@@ -5821,11 +5823,16 @@ class khoanhkhac():
         driver.find_element(By.XPATH, var.trangcanhan_baiviet_tuychon_chinhsuabaiviet).click()
         driver.find_element(By.XPATH, var.trangcanhan_baiviet_tuychon_chinhsuabaiviet_input).send_keys(data['khoanhkhac']['noidung2'])
         driver.find_element(By.XPATH, var.luu).click()
-        check_tuychonbaiviet_chinhsuabaiviet = driver.find_element(By.XPATH,var.check_tuychonbaiviet_chinhsuabaiviet1).text
-        print(check_tuychonbaiviet_chinhsuabaiviet)
-        logging.info("Trang cá nhân - Tuỳ chọn bài viết - Chỉnh sửa bài viết")
-        logging.info("check font-end: Message - Chỉnh sửa bài viết thành công")
-        logging.info(check_tuychonbaiviet_chinhsuabaiviet == "Chỉnh sửa bài viết thành công")
+        try:
+            check_tuychonbaiviet_chinhsuabaiviet = driver.find_element(By.XPATH,var.check_tuychonbaiviet_chinhsuabaiviet1).text
+            print(check_tuychonbaiviet_chinhsuabaiviet)
+            logging.info("Trang cá nhân - Tuỳ chọn bài viết - Chỉnh sửa bài viết")
+            logging.info("check font-end: Message - Chỉnh sửa bài viết thành công")
+            logging.info(check_tuychonbaiviet_chinhsuabaiviet == "Chỉnh sửa bài viết thành công")
+        except:
+            logging.info("Trang cá nhân - Tuỳ chọn bài viết - Chỉnh sửa bài viết")
+            logging.info("check font-end: Message - Chỉnh sửa bài viết thành công")
+            logging.info("False")
 
         #Ai có thể bình luận về bài viết này?
         driver.find_element(By.XPATH, var.trangcanhan_baiviet_tuychon).click()
@@ -5888,11 +5895,16 @@ class khoanhkhac():
         driver.find_element(By.XPATH, var.trangcanhan_baiviet_tuychon_xoabaiviet).click()
         time.sleep(1)
         driver.find_element(By.XPATH, var.xoa).click()
-        check_tuychonbaiviet_xoa = driver.find_element(By.XPATH,var.check_tuychonbaiviet_xoa1).text
-        print(check_tuychonbaiviet_xoa)
-        logging.info("Trang cá nhân - Tuỳ chọn bài viết - Tắt thông báo về bài viết này")
-        logging.info("check font-end: Message - Bài viết của bạn đã bị xóa.")
-        logging.info(check_tuychonbaiviet_xoa == "Bài viết của bạn đã bị xóa.")
+        try:
+            check_tuychonbaiviet_xoa = driver.find_element(By.XPATH,var.check_tuychonbaiviet_xoa1).text
+            print(check_tuychonbaiviet_xoa)
+            logging.info("Trang cá nhân - Tuỳ chọn bài viết - Tắt thông báo về bài viết này")
+            logging.info("check font-end: Message - Bài viết của bạn đã bị xóa.")
+            logging.info(check_tuychonbaiviet_xoa == "Bài viết của bạn đã bị xóa.")
+        except:
+            logging.info("Trang cá nhân - Tuỳ chọn bài viết - Tắt thông báo về bài viết này")
+            logging.info("check font-end: Message - Bài viết của bạn đã bị xóa.")
+            logging.info("False")
         time.sleep(1.5)
 
         # chia sẻ lên bảng tin
@@ -6435,7 +6447,7 @@ class watch():
         driver.find_element(By.XPATH, var.watch_xemvideo_binhluan).send_keys(data['watch']['mota1'])
         driver.find_element(By.XPATH, var.watch_xemvideo_binhluan).submit()
         wait = WebDriverWait(driver, 10)
-        time.sleep(3)
+        time.sleep(4)
         element = wait.until(EC.element_to_be_clickable((By.XPATH, var.binhluan_like)))
         time.sleep(3)
         element.click()
@@ -8323,7 +8335,15 @@ class trang():
         time.sleep(1)
         driver.find_element(By.XPATH, var.taosukien_ngaybatdau_chonnam_2025).click()
         time.sleep(1)
-        driver.find_element(By.XPATH, var.taosukien_ngaybatdau_chonngay_20).click()
+        n = 0
+        while (n < 12):
+            n = n + 1
+            check_taosukienmoi_thang = driver.find_element(By.XPATH, var.check_taosukienmoi_thang).text
+            if check_taosukienmoi_thang == "January 2025":
+                driver.find_element(By.XPATH, var.taosukien_ngaybatdau_chonngay_20).click()
+                break
+            else:
+                driver.find_element(By.XPATH, var.check_taosukienmoi_iconchuyenthang).click()
         #Giờ bắt đầu
         driver.find_element(By.XPATH, var.taosukien_giobatdau_input).send_keys(data['trang']['sukien_giobatdau'])
         wait = WebDriverWait(driver, 10)
@@ -8338,7 +8358,15 @@ class trang():
         time.sleep(1)
         driver.find_element(By.XPATH, var.taosukien_ngayketthuc_chonnam_2025).click()
         time.sleep(1)
-        driver.find_element(By.XPATH, var.taosukien_ngayketthuc_chonngay_25).click()
+        n = 0
+        while (n < 12):
+            n = n + 1
+            check_taosukienmoi_thang = driver.find_element(By.XPATH, var.check_taosukienmoi_thang).text
+            if check_taosukienmoi_thang == "January 2025":
+                driver.find_element(By.XPATH, var.taosukien_ngayketthuc_chonngay_25).click()
+                break
+            else:
+                driver.find_element(By.XPATH, var.check_taosukienmoi_iconchuyenthang).click()
         time.sleep(1)
         #Giờ Kết thúc
         driver.find_element(By.XPATH, var.taosukien_gioketthuc_input).send_keys(data['trang']['sukien_gioketthuc'])
@@ -8389,6 +8417,7 @@ class trang():
         print(check_xemtruocsukien_thoigian)
         logging.info("Sự kiện - Tạo mới sự kiện")
         logging.info("check font-end: Thời gian - 08:00 Thứ hai, 20 tháng 1, 2025 - 15:30 Thứ bảy, 25 tháng 1, 2025")
+        logging.info(check_xemtruocsukien_thoigian)
         logging.info(check_xemtruocsukien_thoigian == "08:00 Thứ hai, 20 tháng 1, 2025 - 15:30 Thứ bảy, 25 tháng 1, 2025")
 
         check_xemtruocsukien_tensukien = driver.find_element(By.XPATH,var.check_xemtruocsukien_tensukien1).text
@@ -8578,19 +8607,19 @@ class trang():
         logging.info(check_trang_xemthem_danhgia1_binhluan1 == "4 sao thoy")
         time.sleep(2)
 
-        #Cộng đồng
-        driver.find_element(By.XPATH, var.trang_xemthem).click()
-        driver.find_element(By.XPATH, var.trang_xemthem_congdong).click()
-        time.sleep(1)
-        logging.info("Trang - Xem thêm - Cộng đồng")
-        logging.info("Chức năng chưa hoạt động")
-
-        #Ưu đãi
-        driver.find_element(By.XPATH, var.trang_xemthem).click()
-        driver.find_element(By.XPATH, var.trang_xemthem_uudai).click()
-        time.sleep(1)
-        logging.info("Trang - Xem thêm - Ưu đãi")
-        logging.info("Chức năng chưa hoạt động")
+        # #Cộng đồng
+        # driver.find_element(By.XPATH, var.trang_xemthem).click()
+        # driver.find_element(By.XPATH, var.trang_xemthem_congdong).click()
+        # time.sleep(1)
+        # logging.info("Trang - Xem thêm - Cộng đồng")
+        # logging.info("Chức năng chưa hoạt động")
+        #
+        # #Ưu đãi
+        # driver.find_element(By.XPATH, var.trang_xemthem).click()
+        # driver.find_element(By.XPATH, var.trang_xemthem_uudai).click()
+        # time.sleep(1)
+        # logging.info("Trang - Xem thêm - Ưu đãi")
+        # logging.info("Chức năng chưa hoạt động")
 
     def cuahang(self):
         driver.implicitly_wait(15)
@@ -8834,7 +8863,7 @@ class trang():
         time.sleep(2)
         #Thích
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham).click()
-        time.sleep(1)
+        time.sleep(2)
         check_trang_trangthai_thich = driver.find_element(By.XPATH, var.check_trang_trangthai_thich1).text
         logging.info("Trang - Trang của bạn - Dấu 3 chấm")
         logging.info("check font-end: Trạng thái thích trang - Đã thích")
@@ -8844,16 +8873,17 @@ class trang():
         time.sleep(5)
 
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham).click()
+        time.sleep(2)
         check_trang_trangthai_thich = driver.find_element(By.XPATH, var.check_trang_trangthai_thich1).text
         logging.info("Trang - Trang của bạn - Dấu 3 chấm")
         logging.info("check font-end: Trạng thái thích trang - Thích")
         logging.info(check_trang_trangthai_thich == "Thích")
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham_thichtrang).click()
-        time.sleep(1)
+        time.sleep(5)
 
         #theo dõi
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham).click()
-        time.sleep(1)
+        time.sleep(2)
         check_trang_trangthai_datheodoi = driver.find_element(By.XPATH, var.check_trang_trangthai_theodoi1).text
         logging.info("Trang - Trang của bạn - Dấu 3 chấm")
         logging.info("check font-end: Trạng thái Theo dõi trang - Đã theo dõi")
@@ -8862,13 +8892,13 @@ class trang():
         time.sleep(5)
 
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham).click()
-        time.sleep(1)
+        time.sleep(2)
         check_trang_trangthai_theodoi = driver.find_element(By.XPATH, var.check_trang_trangthai_theodoi1).text
         logging.info("Trang - Trang của bạn - Dấu 3 chấm")
         logging.info("check font-end: Trạng thái Theo dõi trang - Theo dõi")
         logging.info(check_trang_trangthai_theodoi == "Theo dõi")
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham_theodoi).click()
-        time.sleep(1)
+        time.sleep(5)
 
         #Tạo trang
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham).click()
@@ -8948,6 +8978,7 @@ class trang():
         button = driver.find_element(By.XPATH, var.trang_truongtest_choncachtuongtac)
         driver.execute_script("arguments[0].click();", button)
         driver.find_element(By.XPATH, var.choncachtuongtac_tranquangtruong).click()
+        time.sleep(2)
         driver.find_element(By.XPATH, var.trang_guitinnhan).click()
         time.sleep(1)
         driver.find_element(By.XPATH, var.trang_guitinnhan_input).send_keys("alo alo")

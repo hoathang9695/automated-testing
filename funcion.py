@@ -554,12 +554,12 @@ class kenhmarketing():
         action.kenhmarketing.danhsachmagiamgia(self)
 
     def chuongtrinhkhuyenmai(self):
-        # action.kenhmarketing.chuongtrinhkhuyenmai_tatca(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_tatca(self)
 
-        # action.kenhmarketing.chuongtrinhkhuyenmai_flashsale(self)
-        # action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_flashsale(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_flashsale(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_flashsale(self)
 
-        # action.kenhmarketing.chuongtrinhkhuyenmai_emsocampaign(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_emsocampaign(self)
         action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_cambpaign(self)
 
     def flashsalecuashop(self):

@@ -6,10 +6,13 @@ linkvideo ="C:/Users/Admin/PycharmProjects/pythonProject/linkvideo.xlsx"
 path_datamarket = "C:/Users/Admin/PycharmProjects/pythonProject/market_data.xlsx"
 
 
-
-file_name = 'data_emso.json'
+file_name = 'C:/Users/Admin/PycharmProjects/pythonProject/data_emso.json'
 with open(file_name, 'r', encoding='utf-8') as f:
     data = json.load(f, strict = False)
+
+# file_name = 'data_emso.json'
+# with open(file_name, 'r', encoding='utf-8') as f:
+#     data = json.load(f, strict = False)
 
 
 def getRowCount(file, sheetName):
@@ -1739,7 +1742,7 @@ trang_alum_chonvitri ="//*[@class='fa-solid fa-location-dot']"
 trang_music = "//*[text()='Music']"
 trang_music_phobiennhat_nghebai1 ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div/ul/li[1]/div[2]"
 tenbainhac1 ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div/ul/li[1]/div[2]/div[2]/div[1]/div/h6"
-tacgia1 ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div/ul[1]/li[1]/div[2]/div[2]/div[1]/div/span"
+tacgia1 ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div/ul[1]/li[1]/div[2]/div[2]/div[1]/div/div/span"
 tenbainhac1_dangnghe1 ="//*[@class='MuiBox-root css-k008qs']/div[2]/h6"
 tenbainhac1_dangnghe_trangthai ="//*[@data-testid='PauseRoundedIcon']"
 fancungthich1 ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[2]/div/div/div[3]/div[2]/div/div[1]/div/div[2]/h6[1]"
@@ -3096,7 +3099,7 @@ danhsachchuongtrinh_xoa2 = "//*[@class='app']/div/main/div/div[2]/div/div/div/di
 danhsachchuongtrinh_xoa_xoa = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[2]//*[text()='Xóa']"
 danhsachchuongtrinh_xoa_xoa_message = "//*[text()='Xóa Chương trình thành công']"
 check_chuongtrinhcuashop_chinhsua = "//*[text()=' Chi Tiết Chương Trình của Shop']"
-
-
+check_taosukienmoi_thang = "//*[@role='dialog']/div[2]/div/div/div/div[1]/div[1]/div/div"
+check_taosukienmoi_iconchuyenthang = "//*[@role='dialog']/div[2]/div/div/div/div[1]/div[2]/button[1]"
 
 
