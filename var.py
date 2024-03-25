@@ -6,10 +6,13 @@ linkvideo ="C:/Users/Admin/PycharmProjects/pythonProject/linkvideo.xlsx"
 path_datamarket = "C:/Users/Admin/PycharmProjects/pythonProject/market_data.xlsx"
 
 
-
-file_name = 'data_emso.json'
+file_name = 'C:/Users/Admin/PycharmProjects/pythonProject/data_emso.json'
 with open(file_name, 'r', encoding='utf-8') as f:
     data = json.load(f, strict = False)
+
+# file_name = 'data_emso.json'
+# with open(file_name, 'r', encoding='utf-8') as f:
+#     data = json.load(f, strict = False)
 
 
 def getRowCount(file, sheetName):
@@ -55,7 +58,7 @@ login_google_chontaikhoan = "/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/
 login_google_nhap_gmail = "/html/body/div[1]/div[1]/div[2]/div/c-wiz/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input"
 login_google_tiep = "//*[text()='Next']"
 login_google_nhap_password = "/html/body/div[1]/div[1]/div[2]/div/c-wiz/div/div[2]/div/div[1]/div/form/span/section[2]/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input"
-login_chon_tk_dang_nhap_gan_day = "//*[text()='Thùyyy']"
+login_chon_tk_dang_nhap_gan_day = "//*[text()='Trường']"
 login_nho_mat_khau = "/html/body/div[2]/div[3]/div/div/div/div[3]/div/label/span[1]/input"
 login_chon_tk_dang_nhap_gan_day_password = "/html/body/div[2]/div[3]/div/div/div/div[2]/div/div/input"
 login_chon_tk_dang_nhap_gan_day_dang_nhap = "/html/body/div[2]/div[3]/div/div/div/button[1]"
@@ -1739,7 +1742,7 @@ trang_alum_chonvitri ="//*[@class='fa-solid fa-location-dot']"
 trang_music = "//*[text()='Music']"
 trang_music_phobiennhat_nghebai1 ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div/ul/li[1]/div[2]"
 tenbainhac1 ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div/ul/li[1]/div[2]/div[2]/div[1]/div/h6"
-tacgia1 ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div/ul[1]/li[1]/div[2]/div[2]/div[1]/div/span"
+tacgia1 ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div/ul[1]/li[1]/div[2]/div[2]/div[1]/div/div/span"
 tenbainhac1_dangnghe1 ="//*[@class='MuiBox-root css-k008qs']/div[2]/h6"
 tenbainhac1_dangnghe_trangthai ="//*[@data-testid='PauseRoundedIcon']"
 fancungthich1 ="//*[@class='app']/div/main/div/div[2]/div/div/div/div[2]/div/div/div[3]/div[2]/div/div[1]/div/div[2]/h6[1]"
@@ -3065,8 +3068,38 @@ dangkychiendich_chiendich2 = "//*[@class='app']/div/main/div/div[2]/div/div/div[
 dangkychiendich_chiendich3 = "//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[1]/div/nav[3]/div[1]"
 dangkychiendich_chiendich2_chon1 ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[1]/div/nav[2]/div[2]/div/div/div/div[1]"
 dangkychiendich_chiendich3_chon1 ="//*[@class='app']/div/main/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[1]/div/nav[3]/div[2]/div/div/div/div[1]"
-
-
-
+chuongtrinhcuashop = "//*[text()='Chương trình của shop']"
+chuongtrinhcuashop_tao = "//*[text()='Tạo']"
+taochuongtrinh_ten = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div/input"
+taochuongtrinh_ngaybatdau = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div[1]/div/div[2]/div[2]/div/div[1]/button"
+taochuongtrinh_ngaybatdau_gio19 = "//*[@id='composition-menu']//*[text()='19']"
+taochuongtrinh_ngaybatdau_phut00 = "//*[@id='composition-menu1']//*[text()='00']"
+taochuongtrinh_ngayketthuc = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div[1]/div/div[2]/div[2]/div/div[3]/button"
+taochuongtrinh_ngayketthuc_gio23 = "//*[@id='composition-menu']//*[text()='23']"
+taochuongtrinh_ngayketthuc_phut59 = "//*[@id='composition-menu1']//*[text()='59']"
+taochuongtrinh_thoigianketthuc_xacnhan = "/html/body/div/div/div/main/div/div[2]/div/div/div[1]/div/div[1]/div/div[2]/div[2]/div/div[3]/div/div/div/div[2]/button"
+taochuongtrinh_thoigianbatdau_xacnhan = "//*[@data-popper-placement='bottom-start']/div/div/div[2]//*[text()='Xác nhận']"
+dau3cham_chitiet_khunggio1 = "//*[@role='dialog']/div/div[2]/div[2]/div[1]/label[1]"
+dau3cham_chitiet_khunggio2 = "//*[@role='dialog']/div/div[2]/div[2]/div[1]/label[2]"
+dau3cham_chitiet_khunggio3 = "//*[@role='dialog']/div/div[2]/div[2]/div[1]/label[3]"
+themsanpham_nghanhhang2 = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div/div[1]/div/div/button"
+themsanpham_chonsotrang1 = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div/div[4]/div/div[2]/div/div[2]/div/div/div"
+themsanpham_chontatcasanpham1 = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[1]/div/div[4]/div/div[2]/div/div[1]/table/thead/tr/th[1]/span/input"
+themsanpham_xacnhan1 = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[2]//*[text()='Xác nhận']"
+themsanpham_chinhsua_khuyenmai1 = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div[2]/div[2]/div[1]/div[2]/div[2]/div/div/input"
+themsanpham_chinhsua_soluongsanpham1 = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div[2]/div[2]/div[1]/div[2]/div[3]/div/div/input"
+themsanpham_chinhsua_gioihandathang1 = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div[2]/div[2]/div[1]/div[2]/div[4]/div/div/input"
+themsanpham_chinhsua_capnhat1 = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div[2]/div[2]/div[1]/div[2]/div[5]/button"
+themsanpham_chinhsua_chontatcasanpham1 = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div[2]/div[2]/div[2]/div[1]/span/input"
+themsanpham_chinhsua_xacnhan1 = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div[3]//*[text()='Xác nhận']"
+check_message_chonspkhuyenmai1 = "//*[text()='Tạo chương trình của shop thành công']"
+danhsachchuongtrinh_chinhsua = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div/div[2]/div[4]/div/table/tbody/tr/td[5]//*[text()='Chỉnh sửa']"
+check_chuongtrinhcuashop_tenchuongtrinh1 = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div/div[2]/div[4]/div/table/tbody/tr/td[1]/p"
+danhsachchuongtrinh_xoa2 = "//*[@class='app']/div/main/div/div[2]/div/div/div/div/div/div[2]/div[4]/div/table/tbody/tr/td[5]//*[text()='Xóa']"
+danhsachchuongtrinh_xoa_xoa = "//*[@class='MuiDialog-container MuiDialog-scrollPaper css-ekeie0']/div/div[2]//*[text()='Xóa']"
+danhsachchuongtrinh_xoa_xoa_message = "//*[text()='Xóa Chương trình thành công']"
+check_chuongtrinhcuashop_chinhsua = "//*[text()=' Chi Tiết Chương Trình của Shop']"
+check_taosukienmoi_thang = "//*[@role='dialog']/div[2]/div/div/div/div[1]/div[1]/div/div"
+check_taosukienmoi_iconchuyenthang = "//*[@role='dialog']/div[2]/div/div/div/div[1]/div[2]/button[1]"
 
 

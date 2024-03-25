@@ -49,7 +49,7 @@ rows = getRowCount(var.path_baocao,'Sheet1')
 
 class login():
     def thanh_cong_tk_emso(self):
-        action.login.login3(self, "s1456a2@gmail.com", "Neko101213111999")
+        action.login.login3(self, "truongvck33@gmail.com", "voncamk22")
         writeData(var.path_baocao, "Sheet1", 11, 2, "x")
         writeData(var.path_baocao, "Sheet1", 25, 2, "x")
         action.logout()
@@ -65,15 +65,15 @@ class login():
         writeData(var.path_baocao, "Sheet1", 29, 2, "x")
         time.sleep(1)
     def thanh_cong_tk_google1(self):
-        action.login.login4(self, "testeremso@gmail.com", "Neko10121311")
+        action.login.login4(self, "truongvck33@gmail.com", "voncamk22")
         writeData(var.path_baocao, "Sheet1", 15, 2, "x")
         action.logout()
 
     def thanh_cong_tk_google2(self):
-        action.login.login_google(self, "testeremso2@gmail.com", "Neko10121311")
+        action.login.login_google(self, "truongvck22@gmail.com", "voncamk22")
         # action.logout()
     def chon_tk_dang_nhap_gan_day_chua_luu_mk(self):
-        action.login.login_chon_tk_dang_nhap_gan_day_chua_luu_mk(self, "Neko101213111999")
+        action.login.login_chon_tk_dang_nhap_gan_day_chua_luu_mk(self, "voncamk22")
         writeData(var.path_baocao, "Sheet1", 21, 2, "x")
         writeData(var.path_baocao, "Sheet1", 24, 2, "x")
         action.logout()
@@ -554,21 +554,22 @@ class kenhmarketing():
         action.kenhmarketing.danhsachmagiamgia(self)
 
     def chuongtrinhkhuyenmai(self):
-        # action.kenhmarketing.chuongtrinhkhuyenmai_tatca(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_tatca(self)
 
-        # action.kenhmarketing.chuongtrinhkhuyenmai_flashsale(self)
-        # action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_flashsale(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_flashsale(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_flashsale(self)
 
         action.kenhmarketing.chuongtrinhkhuyenmai_emsocampaign(self)
-        # action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_cambpaign(self)
+        action.kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp_cambpaign(self)
 
     def flashsalecuashop(self):
         action.kenhmarketing.flashsalecuashop_admin(self)
-        # action.kenhmarketing.flashsalecuashop_themsanpham(self)
-        # action.kenhmarketing.flashsalecuashop_danhsachchuongtrinh(self)
+        action.kenhmarketing.flashsalecuashop_themsanpham(self)
+        action.kenhmarketing.flashsalecuashop_danhsachchuongtrinh(self)
 
 
-
+    def chuongtrinhcuashop(self):
+        action.kenhmarketing.flashsalecuashop_chuongtrinhcuashop(self)
 
 
 
