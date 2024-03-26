@@ -1,0 +1,13 @@
+selenium==3.141.0
+asyncio
+requests
+selenium-wire==4.6.1
+decode
+retry
+pandas
+logging
+# unittest
+openpyxl
+urllib3==1.26.18
+pyopenssl==22.0.0
+cryptography==38.0.4

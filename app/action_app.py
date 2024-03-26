@@ -34,7 +34,7 @@ with open(file_name, 'r', encoding='utf-8') as f:
 #adb devices
 #adb shell dumpsys window | find "mCurrentFocus"
 #pip install selenium==4.16.0
-logging.basicConfig(handlers=[logging.FileHandler(filename="C:/Users/Admin/PycharmProjects/pythonProject/app/emso_app.log",
+logging.basicConfig(handlers=[logging.FileHandler(filename="D:/automated-testing/app/emso_app.log",
                                                  encoding='utf-8', mode='a+')],
                     format="%(asctime)s %(name)s:%(levelname)s:%(message)s",
                     datefmt="%F %A %T",

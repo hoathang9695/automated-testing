@@ -61,7 +61,7 @@ except NoSuchElementException:
     logging.info("Watch - Video đã lưu - xem video - x")
     logging.info("check font-end: Có trở lại trang Video đã lưu không")
     logging.info("False")
-    driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "flashsalecuashop_timkiem.png")
+    driver.save_screenshot("D:/automated-testing/anhchupmanhinh/" + "flashsalecuashop_timkiem.png")
 
 driver.implicitly_wait(15)
 
@@ -160,7 +160,7 @@ if driver.title == "Mạng xã hội Emso - Mạng xã hội vì người Việt
     assert True
     print("đã đúng title")
 else:
-    driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "anh_title.png")
+    driver.save_screenshot("D:/automated-testing/anhchupmanhinh/" + "anh_title.png")
     print("sai title")
     assert False, "sai title web roi"
 time.sleep(2)

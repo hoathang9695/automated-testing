@@ -11777,3 +11777,1234 @@
 2024-01-31 Wednesday 17:57:32 seleniumwire.handler:INFO:Capturing response: https://cmc-marketplace.emso.vn/api/v1/total_payments 200 
 2024-01-31 Wednesday 17:57:39 seleniumwire.server:INFO:127.0.0.1:51538: HTTP/2 connection terminated by server: error code: 0, last stream id: 1, additional data: None
 2024-01-31 Wednesday 17:57:46 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1698073325&target=OPTIMIZATION_TARGET_CLIENT_SIDE_PHISHING 200 
+2024-01-31 Wednesday 18:17:13 root:INFO:đây là info
+2024-01-31 Wednesday 18:17:13 root:WARNING:đây là warning
+2024-01-31 Wednesday 18:17:13 root:ERROR:đây là error
+2024-01-31 Wednesday 18:17:13 root:CRITICAL:đây là critical
+2024-01-31 Wednesday 18:17:33 root:INFO:đây là info
+2024-01-31 Wednesday 18:17:33 root:WARNING:đây là warning
+2024-01-31 Wednesday 18:17:33 root:ERROR:đây là error
+2024-01-31 Wednesday 18:17:33 root:CRITICAL:đây là critical
+2024-01-31 Wednesday 18:17:34 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard
+2024-01-31 Wednesday 18:17:34 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard 200 
+2024-01-31 Wednesday 18:17:43 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+2024-01-31 Wednesday 18:17:43 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw 200 
+2024-01-31 Wednesday 18:17:44 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1699288392&target=OPTIMIZATION_TARGET_PAGE_ENTITIES
+2024-01-31 Wednesday 18:17:44 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+2024-01-31 Wednesday 18:17:44 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+2024-01-31 Wednesday 18:17:44 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1699288392&target=OPTIMIZATION_TARGET_PAGE_ENTITIES
+2024-01-31 Wednesday 18:17:44 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/login
+2024-01-31 Wednesday 18:17:44 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/login 200 OK
+2024-01-31 Wednesday 18:17:44 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css
+2024-01-31 Wednesday 18:17:44 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/15.d47ca17f.chunk.css
+2024-01-31 Wednesday 18:17:44 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/15.d47ca17f.chunk.css 200 OK
+2024-01-31 Wednesday 18:17:44 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/main.f6980035.chunk.css
+2024-01-31 Wednesday 18:17:44 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/main.f6980035.chunk.css 200 OK
+2024-01-31 Wednesday 18:17:45 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/15.9eb81cce.chunk.js
+2024-01-31 Wednesday 18:17:45 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION 200 
+2024-01-31 Wednesday 18:17:45 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/main.81be310c.chunk.js
+2024-01-31 Wednesday 18:17:45 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:17:45 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1701726572&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS
+2024-01-31 Wednesday 18:17:45 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css 200 OK
+2024-01-31 Wednesday 18:17:45 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.css
+2024-01-31 Wednesday 18:17:45 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.polyfilled.js
+2024-01-31 Wednesday 18:17:45 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:17:45 seleniumwire.handler:INFO:Capturing request: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap
+2024-01-31 Wednesday 18:17:46 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs/dist/css/grapes.min.css 302 
+2024-01-31 Wednesday 18:17:46 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js 302 
+2024-01-31 Wednesday 18:17:46 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.css 200 
+2024-01-31 Wednesday 18:17:46 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.polyfilled.js 200 
+2024-01-31 Wednesday 18:17:46 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:17:46 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:17:46 seleniumwire.handler:INFO:Capturing response: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap 200 
+2024-01-31 Wednesday 18:17:46 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css 200 
+2024-01-31 Wednesday 18:17:46 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js 200 
+2024-01-31 Wednesday 18:17:47 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/gsi/client
+2024-01-31 Wednesday 18:17:47 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/gsi/client 200 
+2024-01-31 Wednesday 18:17:47 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1701726572&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS 200 
+2024-01-31 Wednesday 18:17:48 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY
+2024-01-31 Wednesday 18:17:48 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION 200 
+2024-01-31 Wednesday 18:17:48 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/main.81be310c.chunk.js 200 OK
+2024-01-31 Wednesday 18:17:50 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/15.9eb81cce.chunk.js 200 OK
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/logoFull.b1da0db0.png
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-brands-400.woff2
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/logoFull.b1da0db0.png 200 OK
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-brands-400.woff2 200 OK
+2024-01-31 Wednesday 18:17:51 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2 200 
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2 200 
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2 200 
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2 200 
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2 200 
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2 200 
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2 200 
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2 200 
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2 200 
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSIAlM6bP33VfidxIFDXhvEhkSBQ3OQUx6IQAJ7HNjuc1w?alt=proto
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/favicon.svg
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/favicon.svg 200 OK
+2024-01-31 Wednesday 18:17:52 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/favicon.svg
+2024-01-31 Wednesday 18:17:53 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/favicon.svg 200 OK
+2024-01-31 Wednesday 18:17:53 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSIAlM6bP33VfidxIFDXhvEhkSBQ3OQUx6IQAJ7HNjuc1w?alt=proto 200 
+2024-01-31 Wednesday 18:17:53 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/oauth/token
+2024-01-31 Wednesday 18:17:53 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/oauth/token 200 
+2024-01-31 Wednesday 18:17:54 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:17:54 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:17:54 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1699288392&target=OPTIMIZATION_TARGET_PAGE_ENTITIES
+2024-01-31 Wednesday 18:17:54 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY
+2024-01-31 Wednesday 18:17:54 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/
+2024-01-31 Wednesday 18:17:54 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/ 200 OK
+2024-01-31 Wednesday 18:17:55 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:17:55 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:17:55 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js 302 
+2024-01-31 Wednesday 18:17:55 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs/dist/css/grapes.min.css 302 
+2024-01-31 Wednesday 18:17:55 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:17:55 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:17:55 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css 200 
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/logoEmso.831a9179.png
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/logoEmso.831a9179.png 200 OK
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js 200 
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/account_settings
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/report_categories
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/report_categories 200 
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/44.162ad8a8.chunk.js
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/pages?limit=10
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/44.162ad8a8.chunk.js 200 OK
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/account_settings 200 
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: wss://cmc-sn.emso.vn/api/v1/streaming?access_token=-o6S7QpF2UUpYA-LdTCjyLu240DUFvjBW3cxBbVP6iw
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-solid-900.woff2
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-regular-400.woff2
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/streaming?access_token=-o6S7QpF2UUpYA-LdTCjyLu240DUFvjBW3cxBbVP6iw 101 Switching Protocols
+2024-01-31 Wednesday 18:17:56 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:52692 and cmc-sn.emso.vn:443
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/account_settings
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/report_categories
+2024-01-31 Wednesday 18:17:56 root:INFO:Đăng nhập bằng tài khoản google - Đăng nhập thành công - tài khoản đã có sẵn và đã được đồng bộ
+2024-01-31 Wednesday 18:17:56 root:INFO:True
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/account_settings 200 
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/markers?timeline[]=notifications
+2024-01-31 Wednesday 18:17:56 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/pages?limit=10 200 
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-solid-900.woff2 200 OK
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/menuglobal.4d444770.png
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/notifications?limit=20
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/menuglobal.4d444770.png 200 OK
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/Noti.5ec382a2.svg
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=9
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/report_categories 200 
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/Noti.5ec382a2.svg 200 OK
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/LogoEmso.79893ace.svg
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/top_projects?limit=2
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/markers?timeline[]=notifications 200 
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/group_invitations
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/friendship_requests?limit=1
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/event_invitation_hosts
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/page_invitations
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=20
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-regular-400.woff2 200 OK
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/LogoEmso.79893ace.svg 200 OK
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/page_invitation_follows?limit=1
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/event_invitations
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/uploads/menu/IconMenu.png
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=9 200 
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/page_invitation_follows?limit=1 200 
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/uploads/menu/IconMenu.png 200 OK
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/page_invitations 200 
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/792/789/384/914/original/324c2a1c86b7ea3c.jpeg
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/event_invitations 200 
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=20 200 
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/images/frame/y%C3%AAu%20th%C6%B0%C6%A1ng%20vi%E1%BB%87t%20nam.png
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/event_invitation_hosts 200 
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/top_projects?limit=2 200 
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/friendship_requests?limit=1 200 
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/792/789/384/914/original/324c2a1c86b7ea3c.jpeg 200 OK
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/504/662/450/147/495/original/c7a0bd2297a71b35.jpeg
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/611/835/039/687/067/small/70afac4c88c50781.png
+2024-01-31 Wednesday 18:17:57 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/images/frame/y%C3%AAu%20th%C6%B0%C6%A1ng%20vi%E1%BB%87t%20nam.png 200 OK
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/611/835/039/687/067/small/70afac4c88c50781.png 200 OK
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/736/149/837/430/774/small/e442eaac07b1f64f.jpg
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/543/914/928/387/449/small/56d5d1ef2b045546.jpg
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/users.info?userId=111340222342420143
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/736/149/837/430/774/small/e442eaac07b1f64f.jpg 200 OK
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/543/914/928/387/449/small/56d5d1ef2b045546.jpg 200 OK
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/groups.listAll?limit=3
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/504/662/450/147/495/original/c7a0bd2297a71b35.jpeg 200 OK
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/users.info?userId=111340222342420143 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/groups.listAll?limit=3 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/users.presence?idsCustom=111504684554663768,111504680455625140,111504657986364400
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/users.presence?idsCustom=111504684554663768,111504680455625140,111504657986364400 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: wss://cmc-chat2.emso.vn/websocket
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://cmc-notification-api.emso.vn/v1/widgets/session/initialize
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/websocket 101 Switching Protocols
+2024-01-31 Wednesday 18:17:58 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:52699 and cmc-chat2.emso.vn:443
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-api.emso.vn/v1/widgets/session/initialize 201 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/group_invitations 500 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/feedback_categories
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/theme?theme=light
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/notifications?limit=20 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/feedback_categories 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/avatars/original/missing.png
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSGQmW4DaXKnf2XxIFDfkF5osh2k-SqTihtSQ=?alt=proto
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/avatars/original/missing.png 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/theme?theme=light 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSGQmW4DaXKnf2XxIFDfkF5osh2k-SqTihtSQ=?alt=proto 200 
+2024-01-31 Wednesday 18:17:58 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=4&target=OPTIMIZATION_TARGET_PAGE_TOPICS_V2
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/avatar/room/108277159419223992?etag=KY4i6Afb7DBknvFAn
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/avatar/truongvck333
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/avatar/nguyenhue608196
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSGQmW4DaXKnf2XxIFDfkF5osh2k-SqTihtSQ=?alt=proto
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen 200 
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/avatar/truongvck333 302 
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/avatar/room/108277159419223992?etag=KY4i6Afb7DBknvFAn 200 
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: wss://cmc-notification-ws.emso.vn/socket.io/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQzNmFlYjZmN2RlMWIwNWI0M2JiMGQiLCJvcmdhbml6YXRpb25JZCI6IjY0MWJmOTk1OTkzZjBjMzA2MWFlNGY1MiIsImVudmlyb25tZW50SWQiOiI2NDFiZjk5NTk5M2YwYzMwNjFhZTRmNTgiLCJzdWJzY3JpYmVySWQiOiIxMTEzNDAyMjIzNDI0MjAxNDMiLCJvcmdhbml6YXRpb25BZG1pbklkIjoiNjQxYmY5ODk4OTc1NTk5YmVhNzVlOTgwIiwiaWF0IjoxNzA2Njk5ODc3LCJleHAiOjE3MDc5OTU4NzcsImF1ZCI6IndpZGdldF91c2VyIiwiaXNzIjoibm92dV9hcGkifQ.Ebci8jcl-ClIm1CHFzz2XXN8vjsMRfduNDnafRhvCY0&EIO=3&transport=websocket
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/avatar/nguyenhue608196 302 
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSGQmW4DaXKnf2XxIFDfkF5osh2k-SqTihtSQ=?alt=proto 200 
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-ws.emso.vn/socket.io/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQzNmFlYjZmN2RlMWIwNWI0M2JiMGQiLCJvcmdhbml6YXRpb25JZCI6IjY0MWJmOTk1OTkzZjBjMzA2MWFlNGY1MiIsImVudmlyb25tZW50SWQiOiI2NDFiZjk5NTk5M2YwYzMwNjFhZTRmNTgiLCJzdWJzY3JpYmVySWQiOiIxMTEzNDAyMjIzNDI0MjAxNDMiLCJvcmdhbml6YXRpb25BZG1pbklkIjoiNjQxYmY5ODk4OTc1NTk5YmVhNzVlOTgwIiwiaWF0IjoxNzA2Njk5ODc3LCJleHAiOjE3MDc5OTU4NzcsImF1ZCI6IndpZGdldF91c2VyIiwiaXNzIjoibm92dV9hcGkifQ.Ebci8jcl-ClIm1CHFzz2XXN8vjsMRfduNDnafRhvCY0&EIO=3&transport=websocket 101 Switching Protocols
+2024-01-31 Wednesday 18:17:59 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:52732 and cmc-notification-ws.emso.vn:443
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen 200 
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/8.b140e1c8.chunk.js
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/1.fc419a55.chunk.js
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/8.b140e1c8.chunk.js 200 OK
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/1.fc419a55.chunk.js 200 OK
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/moment.93313878.svg
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/ImageVideo.86b29db6.svg
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-light-300.woff2
+2024-01-31 Wednesday 18:17:59 root:INFO:Trang chủ - Tài Khoản - Màn hình
+2024-01-31 Wednesday 18:17:59 root:INFO:check font-end: popup - Chế độ màn hình
+2024-01-31 Wednesday 18:17:59 root:INFO:True
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/moment.93313878.svg 200 OK
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/ImageVideo.86b29db6.svg 200 OK
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/uHYjueWnSjw2tZXQw/avatars/111504657986364400?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20240131%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240131T111757Z&X-Amz-Expires=120&X-Amz-Signature=4292ec273b0c54ef514eaffc41b213fe768b120d6599d917366f79db53e43a4b&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22truongvck333%22
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/uHYjueWnSjw2tZXQw/avatars/111504680455625140?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20240131%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240131T111758Z&X-Amz-Expires=120&X-Amz-Signature=4de9e743643b05125a43274738c72516e87a8462f59ac7084c4c339b99649ac7&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22nguyenhue608196%22
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-light-300.woff2 200 OK
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/uHYjueWnSjw2tZXQw/avatars/111504657986364400?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20240131%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240131T111757Z&X-Amz-Expires=120&X-Amz-Signature=4292ec273b0c54ef514eaffc41b213fe768b120d6599d917366f79db53e43a4b&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22truongvck333%22 200 OK
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/theme?theme=dark
+2024-01-31 Wednesday 18:17:59 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/timelines/home?exclude_replies=true&limit=3
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/uHYjueWnSjw2tZXQw/avatars/111504680455625140?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20240131%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240131T111758Z&X-Amz-Expires=120&X-Amz-Signature=4de9e743643b05125a43274738c72516e87a8462f59ac7084c4c339b99649ac7&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22nguyenhue608196%22 200 OK
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/timelines/home?exclude_replies=true&limit=3 200 
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/theme?theme=dark 200 
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/508/555/905/552/797/original/cd936091a537ac71.png
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/508/555/905/552/797/original/cd936091a537ac71.png 200 OK
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/timelines/home?exclude_replies=true&limit=3
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/timelines/home?exclude_replies=true&limit=3 200 
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/groups?limit=6&tab=featured
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/timelines/moment?limit=20
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/friend_suggestions?limit=25
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/suggestions/page?limit=6
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/groups?limit=6&tab=featured 200 
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/suggestions/page?limit=6 200 
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget 200 
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/843/070/833/727/315/small/69ac6a771613a9b1.jpg
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/904/280/708/702/770/small/01fd51777b19e4e4.png
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/907/177/266/316/844/small/da0f9edec19f9022.jpg
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/526/437/653/710/small/1234589f46bf4676.png
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/983/565/342/937/766/small/66efbda5773e7346.jpg
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/549/938/300/098/528/small/92fd03965ce24d15.jpg
+2024-01-31 Wednesday 18:18:00 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/843/070/833/727/315/small/69ac6a771613a9b1.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/501/683/799/452/small/d425ce38d2aa9da6.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/907/177/266/316/844/small/da0f9edec19f9022.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/983/565/342/937/766/small/66efbda5773e7346.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/549/938/300/098/528/small/92fd03965ce24d15.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/501/683/799/452/small/d425ce38d2aa9da6.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/526/437/653/710/small/1234589f46bf4676.png 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: wss://cmc-chat2.emso.vn/websocket
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/904/280/708/702/770/small/01fd51777b19e4e4.png 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/websocket 101 Switching Protocols
+2024-01-31 Wednesday 18:18:01 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:52747 and cmc-chat2.emso.vn:443
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://cmc-marketplace.emso.vn/api/v1/product_search?limit=6
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://cmc-marketplace.emso.vn/api/v1/suggestions/course?limit=6
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://cmc-marketplace.emso.vn/api/v1/product_search?limit=6 200 
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://cmc-marketplace.emso.vn/api/v1/suggestions/course?limit=6 200 
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/501/467/600/581/small/23432d1308252e5b.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/030/291/819/661/989/small/bc2838fc49996f3f.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/501/467/600/581/small/23432d1308252e5b.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/526/075/469/916/small/2240a3220d5d2bca.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/030/291/819/661/989/small/bc2838fc49996f3f.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/906/070/056/658/229/small/f92d97f641f7c441.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/526/075/469/916/small/2240a3220d5d2bca.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/578/176/651/673/716/small/24a09d037e969ce2.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/868/605/031/949/247/small/0f6719bf59b07507.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/684/560/755/421/216/small/71d0b1cef49720ec.jpeg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/258/714/928/955/830/small/fdeaf7748e4515ce.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/timelines/moment?limit=20 200 
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/906/070/056/658/229/small/f92d97f641f7c441.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/706/732/751/210/754/small/c4cab1c378ad25a1.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/572/436/282/704/794/small/b39cd33f958053e5.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/friend_suggestions?limit=25 200 
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/706/732/751/210/754/small/c4cab1c378ad25a1.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/638/846/567/534/620/small/64c0a54477ac4c59.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/684/560/755/421/216/small/71d0b1cef49720ec.jpeg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/543/922/717/648/816/small/18f52273a19afb30.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/868/605/031/949/247/small/0f6719bf59b07507.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/605/999/990/128/606/small/0a4b7dcafa3aa9ec.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/578/176/651/673/716/small/24a09d037e969ce2.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/572/436/282/704/794/small/b39cd33f958053e5.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 root:INFO:Màn hình tối có được chọn không?
+2024-01-31 Wednesday 18:18:01 root:INFO:True
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/258/714/928/955/830/small/fdeaf7748e4515ce.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 root:INFO:Màn hình tối có được bật không?
+2024-01-31 Wednesday 18:18:01 root:INFO:True
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/543/922/717/648/816/small/18f52273a19afb30.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/605/999/990/128/606/small/0a4b7dcafa3aa9ec.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/868/611/734/471/962/small/4c9fa5ed96e057bb.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/667/220/410/024/140/small/ee37ceb9914ada91.jpg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/638/846/567/534/620/small/64c0a54477ac4c59.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/840/414/573/845/755/original/18e8058b7f4c4a22.jpeg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/842/721/675/959/873/original/dfe149d9fe4e8da5.jpeg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/840/411/703/494/436/original/68ac7619d6c31fca.jpeg
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/868/611/734/471/962/small/4c9fa5ed96e057bb.jpg 200 OK
+2024-01-31 Wednesday 18:18:01 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/667/220/410/024/140/small/ee37ceb9914ada91.jpg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/840/409/551/097/101/original/67594d609ff60203.jpeg
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/840/406/544/898/729/original/f1d1b8fe7c952d44.jpeg
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/840/409/551/097/101/original/67594d609ff60203.jpeg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/840/404/665/331/031/original/69e52a11e1b3cbb7.jpeg
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/theme?theme=system
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/840/406/544/898/729/original/f1d1b8fe7c952d44.jpeg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/842/721/675/959/873/original/dfe149d9fe4e8da5.jpeg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/579/393/288/844/725/small/12c57843946cce57.jpg
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/679/909/098/333/728/small/8db2fe4ed8d8e327.jpg
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/840/404/665/331/031/original/69e52a11e1b3cbb7.jpeg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/724/651/381/331/557/small/15512ac5d30f9bde.jpg
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/579/393/288/844/725/small/12c57843946cce57.jpg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/666/518/182/637/308/small/1f0e75b012ad4158.jpg
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/840/411/703/494/436/original/68ac7619d6c31fca.jpeg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/340/113/570/910/320/small/24f4d4db0ba774df.jpg
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/840/414/573/845/755/original/18e8058b7f4c4a22.jpeg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/607/239/480/975/684/small/8839fa45a328b6f2.jpg
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/724/651/381/331/557/small/15512ac5d30f9bde.jpg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/666/518/182/637/308/small/1f0e75b012ad4158.jpg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/theme?theme=system 200 
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/607/239/480/975/684/small/8839fa45a328b6f2.jpg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/679/909/098/333/728/small/8db2fe4ed8d8e327.jpg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/340/113/570/910/320/small/24f4d4db0ba774df.jpg 200 OK
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:18:02 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:18:03 root:INFO:Màn hình tự động có được chọn không?
+2024-01-31 Wednesday 18:18:03 root:INFO:True
+2024-01-31 Wednesday 18:18:03 root:INFO:Màn hình tự động có được bật không?
+2024-01-31 Wednesday 18:18:03 root:INFO:True
+2024-01-31 Wednesday 18:18:03 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/theme?theme=light
+2024-01-31 Wednesday 18:18:03 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/theme?theme=light 200 
+2024-01-31 Wednesday 18:18:03 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing request: wss://cmc-chat2.emso.vn/websocket
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/websocket 101 Switching Protocols
+2024-01-31 Wednesday 18:18:04 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:52751 and cmc-chat2.emso.vn:443
+2024-01-31 Wednesday 18:18:04 root:INFO:Màn hình tối(tắt) có được chọn không?
+2024-01-31 Wednesday 18:18:04 root:INFO:True
+2024-01-31 Wednesday 18:18:04 root:INFO:Màn hình tối(tắt) có được bật không?
+2024-01-31 Wednesday 18:18:04 root:INFO:True
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing request: wss://cmc-chat2.emso.vn/websocket
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/websocket 101 Switching Protocols
+2024-01-31 Wednesday 18:18:04 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:52755 and cmc-chat2.emso.vn:443
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget 200 
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:18:04 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget 200 
+2024-01-31 Wednesday 18:18:05 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:18:05 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:18:05 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY 200 
+2024-01-31 Wednesday 18:23:11 root:INFO:đây là info
+2024-01-31 Wednesday 18:23:11 root:WARNING:đây là warning
+2024-01-31 Wednesday 18:23:11 root:ERROR:đây là error
+2024-01-31 Wednesday 18:23:11 root:CRITICAL:đây là critical
+2024-01-31 Wednesday 18:23:11 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard
+2024-01-31 Wednesday 18:23:11 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard 200 
+2024-01-31 Wednesday 18:23:15 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/login
+2024-01-31 Wednesday 18:23:15 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/login 200 OK
+2024-01-31 Wednesday 18:23:15 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css
+2024-01-31 Wednesday 18:23:16 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/15.d47ca17f.chunk.css
+2024-01-31 Wednesday 18:23:16 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/15.d47ca17f.chunk.css 200 OK
+2024-01-31 Wednesday 18:23:16 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/main.f6980035.chunk.css
+2024-01-31 Wednesday 18:23:16 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/main.f6980035.chunk.css 200 OK
+2024-01-31 Wednesday 18:23:16 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/15.9eb81cce.chunk.js
+2024-01-31 Wednesday 18:23:16 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css 200 OK
+2024-01-31 Wednesday 18:23:16 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/main.81be310c.chunk.js
+2024-01-31 Wednesday 18:23:16 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.polyfilled.js
+2024-01-31 Wednesday 18:23:16 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.css
+2024-01-31 Wednesday 18:23:16 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:23:16 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:23:17 seleniumwire.handler:INFO:Capturing request: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap
+2024-01-31 Wednesday 18:23:17 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.css 200 
+2024-01-31 Wednesday 18:23:17 seleniumwire.handler:INFO:Capturing response: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap 200 
+2024-01-31 Wednesday 18:23:17 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.polyfilled.js 200 
+2024-01-31 Wednesday 18:23:17 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js 302 
+2024-01-31 Wednesday 18:23:17 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:23:17 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js 200 
+2024-01-31 Wednesday 18:23:18 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/main.81be310c.chunk.js 200 OK
+2024-01-31 Wednesday 18:23:18 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs/dist/css/grapes.min.css 302 
+2024-01-31 Wednesday 18:23:18 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:23:18 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css 200 
+2024-01-31 Wednesday 18:23:19 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/15.9eb81cce.chunk.js 200 OK
+2024-01-31 Wednesday 18:23:19 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/gsi/client
+2024-01-31 Wednesday 18:23:19 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/gsi/client 200 
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/logoFull.b1da0db0.png
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/logoFull.b1da0db0.png 200 OK
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-brands-400.woff2
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-brands-400.woff2 200 OK
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2 200 
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2 200 
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2 200 
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2 200 
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2 200 
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2 200 
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2 200 
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2 200 
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2 200 
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/favicon.svg
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/favicon.svg 200 OK
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/favicon.svg
+2024-01-31 Wednesday 18:23:20 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/favicon.svg 200 OK
+2024-01-31 Wednesday 18:23:21 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSIAlM6bP33VfidxIFDXhvEhkSBQ3OQUx6IQAJ7HNjuc1w?alt=proto
+2024-01-31 Wednesday 18:23:21 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw 200 
+2024-01-31 Wednesday 18:23:21 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSIAlM6bP33VfidxIFDXhvEhkSBQ3OQUx6IQAJ7HNjuc1w?alt=proto 200 
+2024-01-31 Wednesday 18:23:21 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/oauth/token
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/oauth/token 200 
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/ 200 OK
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/main.f6980035.chunk.css
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/15.d47ca17f.chunk.css
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/main.f6980035.chunk.css 200 OK
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/15.d47ca17f.chunk.css 200 OK
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing request: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.css
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs/dist/css/grapes.min.css 302 
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing response: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap 200 
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css 200 OK
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js 302 
+2024-01-31 Wednesday 18:23:22 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.css 200 
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css 200 
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/gsi/client
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/logoEmso.831a9179.png
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/logoEmso.831a9179.png 200 OK
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/gsi/client 200 
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/pages?limit=10
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/account_settings
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: wss://cmc-sn.emso.vn/api/v1/streaming?access_token=-o6S7QpF2UUpYA-LdTCjyLu240DUFvjBW3cxBbVP6iw
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/account_settings 200 
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/report_categories
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/streaming?access_token=-o6S7QpF2UUpYA-LdTCjyLu240DUFvjBW3cxBbVP6iw 101 Switching Protocols
+2024-01-31 Wednesday 18:23:23 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:53040 and cmc-sn.emso.vn:443
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js 200 
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-regular-400.woff2
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-solid-900.woff2
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/account_settings
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/pages?limit=10 200 
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/report_categories 200 
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/account_settings 200 
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSGQmW4DaXKnf2XxIFDfkF5osh2k-SqTihtSQ=?alt=proto
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/notifications?limit=20
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/markers?timeline[]=notifications
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-regular-400.woff2 200 OK
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/report_categories
+2024-01-31 Wednesday 18:23:23 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSGQmW4DaXKnf2XxIFDfkF5osh2k-SqTihtSQ=?alt=proto 200 
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-solid-900.woff2 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/menuglobal.4d444770.png
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/LogoEmso.79893ace.svg
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/Noti.5ec382a2.svg
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/markers?timeline[]=notifications 200 
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/menuglobal.4d444770.png 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/report_categories 200 
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=9
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/Noti.5ec382a2.svg 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/44.162ad8a8.chunk.js
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/LogoEmso.79893ace.svg 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/44.162ad8a8.chunk.js 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/1.fc419a55.chunk.js
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/8.b140e1c8.chunk.js
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/1.fc419a55.chunk.js 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/8.b140e1c8.chunk.js 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/moment.93313878.svg
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/ImageVideo.86b29db6.svg
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-light-300.woff2
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/moment.93313878.svg 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/ImageVideo.86b29db6.svg 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=9 200 
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-light-300.woff2 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/top_projects?limit=2
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/group_invitations
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/friendship_requests?limit=1
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/page_invitation_follows?limit=1
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/event_invitations
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: wss://cmc-chat2.emso.vn/websocket
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=20
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/websocket 101 Switching Protocols
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/images/frame/y%C3%AAu%20th%C6%B0%C6%A1ng%20vi%E1%BB%87t%20nam.png
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/timelines/home?exclude_replies=true&limit=3
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/event_invitation_hosts
+2024-01-31 Wednesday 18:23:24 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:53045 and cmc-chat2.emso.vn:443
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/page_invitations
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/images/frame/y%C3%AAu%20th%C6%B0%C6%A1ng%20vi%E1%BB%87t%20nam.png 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/uploads/menu/IconMenu.png
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-notification-api.emso.vn/v1/widgets/session/initialize
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/uploads/menu/IconMenu.png 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/792/789/384/914/original/324c2a1c86b7ea3c.jpeg
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/users.info?userId=111340222342420143
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-api.emso.vn/v1/widgets/session/initialize 201 
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/groups.listAll?limit=3
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/792/789/384/914/original/324c2a1c86b7ea3c.jpeg 200 OK
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/groups.listAll?limit=3 200 
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/504/662/450/147/495/original/c7a0bd2297a71b35.jpeg
+2024-01-31 Wednesday 18:23:24 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/611/835/039/687/067/small/70afac4c88c50781.png
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/611/835/039/687/067/small/70afac4c88c50781.png 200 OK
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/event_invitations 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/users.info?userId=111340222342420143 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/504/662/450/147/495/original/c7a0bd2297a71b35.jpeg 200 OK
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/event_invitation_hosts 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/page_invitations 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=20 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/avatars/original/missing.png
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/avatars/original/missing.png 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/users.presence?idsCustom=111504684554663768,111504680455625140,111504657986364400
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/friendship_requests?limit=1 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: wss://cmc-notification-ws.emso.vn/socket.io/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQzNmFlYjZmN2RlMWIwNWI0M2JiMGQiLCJvcmdhbml6YXRpb25JZCI6IjY0MWJmOTk1OTkzZjBjMzA2MWFlNGY1MiIsImVudmlyb25tZW50SWQiOiI2NDFiZjk5NTk5M2YwYzMwNjFhZTRmNTgiLCJzdWJzY3JpYmVySWQiOiIxMTEzNDAyMjIzNDI0MjAxNDMiLCJvcmdhbml6YXRpb25BZG1pbklkIjoiNjQxYmY5ODk4OTc1NTk5YmVhNzVlOTgwIiwiaWF0IjoxNzA2NzAwMjAzLCJleHAiOjE3MDc5OTYyMDMsImF1ZCI6IndpZGdldF91c2VyIiwiaXNzIjoibm92dV9hcGkifQ.vezE0WBv9hIlLDzK1iR43nugc1aLj1QA6l2h-TqmLho&EIO=3&transport=websocket
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-ws.emso.vn/socket.io/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQzNmFlYjZmN2RlMWIwNWI0M2JiMGQiLCJvcmdhbml6YXRpb25JZCI6IjY0MWJmOTk1OTkzZjBjMzA2MWFlNGY1MiIsImVudmlyb25tZW50SWQiOiI2NDFiZjk5NTk5M2YwYzMwNjFhZTRmNTgiLCJzdWJzY3JpYmVySWQiOiIxMTEzNDAyMjIzNDI0MjAxNDMiLCJvcmdhbml6YXRpb25BZG1pbklkIjoiNjQxYmY5ODk4OTc1NTk5YmVhNzVlOTgwIiwiaWF0IjoxNzA2NzAwMjAzLCJleHAiOjE3MDc5OTYyMDMsImF1ZCI6IndpZGdldF91c2VyIiwiaXNzIjoibm92dV9hcGkifQ.vezE0WBv9hIlLDzK1iR43nugc1aLj1QA6l2h-TqmLho&EIO=3&transport=websocket 101 Switching Protocols
+2024-01-31 Wednesday 18:23:25 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:53067 and cmc-notification-ws.emso.vn:443
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/page_invitation_follows?limit=1 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/avatar/room/108277159419223992?etag=KY4i6Afb7DBknvFAn
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/avatar/nguyenhue608196
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/avatar/truongvck333
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/users.presence?idsCustom=111504684554663768,111504680455625140,111504657986364400 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/avatar/room/108277159419223992?etag=KY4i6Afb7DBknvFAn 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/avatar/nguyenhue608196 302 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/avatar/truongvck333 302 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/timelines/home?exclude_replies=true&limit=3 200 
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/508/555/905/552/797/original/cd936091a537ac71.png
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/508/555/905/552/797/original/cd936091a537ac71.png 200 OK
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/timelines/home?exclude_replies=true&limit=3
+2024-01-31 Wednesday 18:23:25 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/notifications?limit=20 200 
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/top_projects?limit=2 200 
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/group_invitations 500 
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/736/149/837/430/774/small/e442eaac07b1f64f.jpg
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/543/914/928/387/449/small/56d5d1ef2b045546.jpg
+2024-01-31 Wednesday 18:23:26 seleniumwire.server:INFO:127.0.0.1:53040: Ping Received from server
+  -> 
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/736/149/837/430/774/small/e442eaac07b1f64f.jpg 200 OK
+2024-01-31 Wednesday 18:23:26 seleniumwire.server:INFO:127.0.0.1:53040: Pong Received from client
+  -> 
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/timelines/home?exclude_replies=true&limit=3 200 
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/543/914/928/387/449/small/56d5d1ef2b045546.jpg 200 OK
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/groups?limit=6&tab=featured
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/timelines/moment?limit=20
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/suggestions/page?limit=6
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/friend_suggestions?limit=25
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/groups?limit=6&tab=featured 200 
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/suggestions/page?limit=6 200 
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/549/938/300/098/528/small/92fd03965ce24d15.jpg
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/907/177/266/316/844/small/da0f9edec19f9022.jpg
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/uHYjueWnSjw2tZXQw/avatars/111504680455625140?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20240131%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240131T112324Z&X-Amz-Expires=120&X-Amz-Signature=b5694d056a6f242d166f7de04a1c3cf1a223cd0157e5490d4817a6b9c114ce9c&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22nguyenhue608196%22
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/549/938/300/098/528/small/92fd03965ce24d15.jpg 200 OK
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/907/177/266/316/844/small/da0f9edec19f9022.jpg 200 OK
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/uHYjueWnSjw2tZXQw/avatars/111504680455625140?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20240131%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240131T112324Z&X-Amz-Expires=120&X-Amz-Signature=b5694d056a6f242d166f7de04a1c3cf1a223cd0157e5490d4817a6b9c114ce9c&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22nguyenhue608196%22 200 OK
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/843/070/833/727/315/small/69ac6a771613a9b1.jpg
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/uHYjueWnSjw2tZXQw/avatars/111504657986364400?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20240131%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240131T112324Z&X-Amz-Expires=120&X-Amz-Signature=430f395ca3e575d71e9172461aa41963d976d235622d05b2eaa604566acc39fe&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22truongvck333%22
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/983/565/342/937/766/small/66efbda5773e7346.jpg
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://sn-chat.s3-hn-2.cloud.cmctelecom.vn/sn-chat/uHYjueWnSjw2tZXQw/avatars/111504657986364400?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=L17J9FO1ZEHNHFE2HMO3%2F20240131%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240131T112324Z&X-Amz-Expires=120&X-Amz-Signature=430f395ca3e575d71e9172461aa41963d976d235622d05b2eaa604566acc39fe&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22truongvck333%22 200 OK
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/843/070/833/727/315/small/69ac6a771613a9b1.jpg 200 OK
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/983/565/342/937/766/small/66efbda5773e7346.jpg 200 OK
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/526/437/653/710/small/1234589f46bf4676.png
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/904/280/708/702/770/small/01fd51777b19e4e4.png
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/526/437/653/710/small/1234589f46bf4676.png 200 OK
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/030/291/819/661/989/small/bc2838fc49996f3f.jpg
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/904/280/708/702/770/small/01fd51777b19e4e4.png 200 OK
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/501/683/799/452/small/d425ce38d2aa9da6.jpg
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/030/291/819/661/989/small/bc2838fc49996f3f.jpg 200 OK
+2024-01-31 Wednesday 18:23:26 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/501/467/600/581/small/23432d1308252e5b.jpg
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/501/683/799/452/small/d425ce38d2aa9da6.jpg 200 OK
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/501/467/600/581/small/23432d1308252e5b.jpg 200 OK
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/526/075/469/916/small/2240a3220d5d2bca.jpg
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing request: https://cmc-marketplace.emso.vn/api/v1/product_search?limit=6
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/511/526/075/469/916/small/2240a3220d5d2bca.jpg 200 OK
+2024-01-31 Wednesday 18:23:27 root:INFO:Đăng nhập bằng tài khoản emso/Gmail
+2024-01-31 Wednesday 18:23:27 root:INFO:True
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing request: https://cmc-marketplace.emso.vn/api/v1/suggestions/course?limit=6
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://cmc-marketplace.emso.vn/api/v1/product_search?limit=6 200 
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/friend_suggestions?limit=25 200 
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://cmc-marketplace.emso.vn/api/v1/suggestions/course?limit=6 200 
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/578/176/651/673/716/small/24a09d037e969ce2.jpg
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/868/611/734/471/962/small/4c9fa5ed96e057bb.jpg
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/868/605/031/949/247/small/0f6719bf59b07507.jpg
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/258/714/928/955/830/small/fdeaf7748e4515ce.jpg
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/684/560/755/421/216/small/71d0b1cef49720ec.jpeg
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/906/070/056/658/229/small/f92d97f641f7c441.jpg
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/timelines/moment?limit=20 200 
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/868/611/734/471/962/small/4c9fa5ed96e057bb.jpg 200 OK
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/578/176/651/673/716/small/24a09d037e969ce2.jpg 200 OK
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/868/605/031/949/247/small/0f6719bf59b07507.jpg 200 OK
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/258/714/928/955/830/small/fdeaf7748e4515ce.jpg 200 OK
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/906/070/056/658/229/small/f92d97f641f7c441.jpg 200 OK
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/684/560/755/421/216/small/71d0b1cef49720ec.jpeg 200 OK
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/0.6e20774e.chunk.js
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/0.6e20774e.chunk.js 200 OK
+2024-01-31 Wednesday 18:23:27 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/9.2ce94eb6.chunk.js
+2024-01-31 Wednesday 18:23:28 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/9.2ce94eb6.chunk.js 200 OK
+2024-01-31 Wednesday 18:23:28 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/2.a7cfd7ab.chunk.js
+2024-01-31 Wednesday 18:23:28 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/2.a7cfd7ab.chunk.js 200 OK
+2024-01-31 Wednesday 18:23:28 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/28.593f2c8c.chunk.js
+2024-01-31 Wednesday 18:23:28 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/28.593f2c8c.chunk.js 200 OK
+2024-01-31 Wednesday 18:23:28 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/988/748/559/036/original/3fbe2ad8cf7f156e.jpeg
+2024-01-31 Wednesday 18:23:28 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/988/748/559/036/original/3fbe2ad8cf7f156e.jpeg 200 OK
+2024-01-31 Wednesday 18:23:28 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/friend_suggestions?limit=25
+2024-01-31 Wednesday 18:23:28 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/truongvck33
+2024-01-31 Wednesday 18:23:28 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/truongvck33 200 
+2024-01-31 Wednesday 18:23:28 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=9
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/featured_contents
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/social_categories
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/abouts
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/statuses?exclude_replies=true&limit=3
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/social_categories 200 
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/friend_suggestions?limit=25 200 
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/pin
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/featured_contents 200 
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=9
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=9 200 
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/life_events
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/pin 200 
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/679/909/098/333/728/small/8db2fe4ed8d8e327.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/724/651/381/331/557/small/15512ac5d30f9bde.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/340/113/570/910/320/small/24f4d4db0ba774df.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/666/518/182/637/308/small/1f0e75b012ad4158.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/607/239/480/975/684/small/8839fa45a328b6f2.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/579/393/288/844/725/small/12c57843946cce57.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/724/651/381/331/557/small/15512ac5d30f9bde.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/531/523/915/754/544/small/fd7c5c0af0e44ef5.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/679/909/098/333/728/small/8db2fe4ed8d8e327.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/340/113/570/910/320/small/24f4d4db0ba774df.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/579/393/288/844/725/small/12c57843946cce57.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/607/239/480/975/684/small/8839fa45a328b6f2.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/666/518/182/637/308/small/1f0e75b012ad4158.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/786/107/377/995/790/small/1efcf0203a19558f.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/238/074/625/619/099/small/35c79d7458f9d5c7.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/699/229/957/187/749/small/cfc10d8e29ee90f0.png
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/238/074/625/619/099/small/35c79d7458f9d5c7.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=9 200 
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/699/229/957/187/749/small/cfc10d8e29ee90f0.png 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/abouts 200 
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/786/107/377/995/790/small/1efcf0203a19558f.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/531/523/915/754/544/small/fd7c5c0af0e44ef5.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/life_events 200 
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/791/088/363/869/small/a85d40c414867919.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/755/793/505/430/small/5c4c2403ea66b33a.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/790/369/205/066/small/a6a077eec5f80f61.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/756/588/730/682/small/4c848be3b66af2e2.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/987/448/727/328/small/bdc9e7be64c9c166.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/987/800/542/611/small/bb876c81a1941388.png
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/755/793/505/430/small/5c4c2403ea66b33a.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/statuses?exclude_replies=true&limit=3 200 
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/790/369/205/066/small/a6a077eec5f80f61.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/987/448/727/328/small/bdc9e7be64c9c166.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/984/681/806/583/small/b44372fd1cc8428e.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/791/088/363/869/small/a85d40c414867919.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/756/588/730/682/small/4c848be3b66af2e2.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/987/800/542/611/small/bb876c81a1941388.png 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/983/840/415/815/small/ed7ad8b43be8f350.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/837/159/691/124/000/small/e5c27b958e562130.png
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/984/681/806/583/small/b44372fd1cc8428e.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/983/840/415/815/small/ed7ad8b43be8f350.jpg 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/categories/choi_nhac.png
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/504/647/170/121/973/original/573295dc4691aba7.jpg
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/statuses?exclude_replies=true&limit=3
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/837/159/691/124/000/small/e5c27b958e562130.png 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/categories/choi_nhac.png 200 OK
+2024-01-31 Wednesday 18:23:29 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/504/647/170/121/973/original/573295dc4691aba7.jpg 200 OK
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/statuses?exclude_replies=true&limit=3 200 
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143 200 
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing request: https://trial103.easyedu.vn/sites/default/files/easyschool/upload/2022/10/sed-12-256_1.jpg
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing response: https://trial103.easyedu.vn/sites/default/files/easyschool/upload/2022/10/sed-12-256_1.jpg 200 
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=20
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/791/113/176/914/original/a1635cda65c55569.jpeg
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/756/615/340/491/original/924f3dc9d45c994a.jpeg
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/791/113/176/914/original/a1635cda65c55569.jpeg 200 OK
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/756/615/340/491/original/924f3dc9d45c994a.jpeg 200 OK
+2024-01-31 Wednesday 18:23:30 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143 200 
+2024-01-31 Wednesday 18:23:31 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143
+2024-01-31 Wednesday 18:23:31 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=20 200 
+2024-01-31 Wednesday 18:23:31 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143 200 
+2024-01-31 Wednesday 18:23:33 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSIAlzaHkieqyeSxIFDfkF5osSBQ1Zc-uAIQgWIdlrjgkI?alt=proto
+2024-01-31 Wednesday 18:23:33 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSIAlzaHkieqyeSxIFDfkF5osSBQ1Zc-uAIQgWIdlrjgkI?alt=proto 200 
+2024-01-31 Wednesday 18:23:34 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/update_credentials
+2024-01-31 Wednesday 18:23:35 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/update_credentials 200 
+2024-01-31 Wednesday 18:23:36 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143
+2024-01-31 Wednesday 18:23:36 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:23:36 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:23:36 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143 200 
+2024-01-31 Wednesday 18:23:36 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/850/305/242/247/198/original/24a947afe97d678b.jpeg
+2024-01-31 Wednesday 18:23:36 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/850/305/242/247/198/original/24a947afe97d678b.jpeg 200 OK
+2024-01-31 Wednesday 18:23:38 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1701726572&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS
+2024-01-31 Wednesday 18:23:38 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+2024-01-31 Wednesday 18:23:38 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION 200 
+2024-01-31 Wednesday 18:23:39 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY
+2024-01-31 Wednesday 18:23:41 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY 200 
+2024-01-31 Wednesday 18:23:41 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=4&target=OPTIMIZATION_TARGET_PAGE_TOPICS_V2
+2024-01-31 Wednesday 18:23:43 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1701726572&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS 200 
+2024-01-31 Wednesday 18:23:43 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1701726567&target=OPTIMIZATION_TARGET_GEOLOCATION_PERMISSION_PREDICTIONS
+2024-01-31 Wednesday 18:23:44 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=20
+2024-01-31 Wednesday 18:23:44 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=20 200 
+2024-01-31 Wednesday 18:23:45 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1701726567&target=OPTIMIZATION_TARGET_GEOLOCATION_PERMISSION_PREDICTIONS 200 
+2024-01-31 Wednesday 18:23:45 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1698073325&target=OPTIMIZATION_TARGET_CLIENT_SIDE_PHISHING
+2024-01-31 Wednesday 18:23:47 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=4&target=OPTIMIZATION_TARGET_PAGE_TOPICS_V2 200 
+2024-01-31 Wednesday 18:23:48 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1691042511&target=OPTIMIZATION_TARGET_NEW_TAB_PAGE_HISTORY_CLUSTERS_MODULE_RANKING
+2024-01-31 Wednesday 18:23:52 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1691042511&target=OPTIMIZATION_TARGET_NEW_TAB_PAGE_HISTORY_CLUSTERS_MODULE_RANKING 200 
+2024-01-31 Wednesday 18:23:52 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1689043206&target=OPTIMIZATION_TARGET_VISUAL_SEARCH_CLASSIFICATION
+2024-01-31 Wednesday 18:23:52 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1698073325&target=OPTIMIZATION_TARGET_CLIENT_SIDE_PHISHING 200 
+2024-01-31 Wednesday 18:23:55 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1689043206&target=OPTIMIZATION_TARGET_VISUAL_SEARCH_CLASSIFICATION 200 
+2024-01-31 Wednesday 18:23:56 seleniumwire.server:INFO:127.0.0.1:53040: Ping Received from server
+  -> 
+2024-01-31 Wednesday 18:23:56 seleniumwire.server:INFO:127.0.0.1:53040: Pong Received from client
+  -> 
+2024-01-31 Wednesday 18:24:30 root:INFO:đây là info
+2024-01-31 Wednesday 18:24:30 root:WARNING:đây là warning
+2024-01-31 Wednesday 18:24:30 root:ERROR:đây là error
+2024-01-31 Wednesday 18:24:30 root:CRITICAL:đây là critical
+2024-01-31 Wednesday 18:24:30 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard
+2024-01-31 Wednesday 18:24:30 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard 200 
+2024-01-31 Wednesday 18:24:35 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/login
+2024-01-31 Wednesday 18:24:35 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/login 200 OK
+2024-01-31 Wednesday 18:24:35 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css
+2024-01-31 Wednesday 18:24:35 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/15.d47ca17f.chunk.css
+2024-01-31 Wednesday 18:24:35 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/15.d47ca17f.chunk.css 200 OK
+2024-01-31 Wednesday 18:24:35 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/main.f6980035.chunk.css
+2024-01-31 Wednesday 18:24:35 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/main.f6980035.chunk.css 200 OK
+2024-01-31 Wednesday 18:24:35 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/15.9eb81cce.chunk.js
+2024-01-31 Wednesday 18:24:36 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css 200 OK
+2024-01-31 Wednesday 18:24:36 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/main.81be310c.chunk.js
+2024-01-31 Wednesday 18:24:36 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.css
+2024-01-31 Wednesday 18:24:36 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.polyfilled.js
+2024-01-31 Wednesday 18:24:36 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:24:36 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:24:36 seleniumwire.handler:INFO:Capturing request: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap
+2024-01-31 Wednesday 18:24:36 seleniumwire.handler:INFO:Capturing response: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap 200 
+2024-01-31 Wednesday 18:24:36 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.css 200 
+2024-01-31 Wednesday 18:24:37 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js 302 
+2024-01-31 Wednesday 18:24:37 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.polyfilled.js 200 
+2024-01-31 Wednesday 18:24:37 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs/dist/css/grapes.min.css 302 
+2024-01-31 Wednesday 18:24:37 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:24:37 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:24:37 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css 200 
+2024-01-31 Wednesday 18:24:37 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js 200 
+2024-01-31 Wednesday 18:24:38 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/gsi/client
+2024-01-31 Wednesday 18:24:38 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/main.81be310c.chunk.js 200 OK
+2024-01-31 Wednesday 18:24:38 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/gsi/client 200 
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/15.9eb81cce.chunk.js 200 OK
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/logoFull.b1da0db0.png
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/logoFull.b1da0db0.png 200 OK
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-brands-400.woff2
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-brands-400.woff2 200 OK
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw 200 
+2024-01-31 Wednesday 18:24:39 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2 200 
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2 200 
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2 200 
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2 200 
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2 200 
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2 200 
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2 200 
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2 200 
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2 200 
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/favicon.svg
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/favicon.svg 200 OK
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/favicon.svg
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/favicon.svg 200 OK
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSIAlM6bP33VfidxIFDXhvEhkSBQ3OQUx6IQAJ7HNjuc1w?alt=proto
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1699288392&target=OPTIMIZATION_TARGET_PAGE_ENTITIES
+2024-01-31 Wednesday 18:24:40 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSIAlM6bP33VfidxIFDXhvEhkSBQ3OQUx6IQAJ7HNjuc1w?alt=proto 200 
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/oauth/token
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/oauth/token 200 
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/ 200 OK
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/15.d47ca17f.chunk.css
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/main.f6980035.chunk.css
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/15.d47ca17f.chunk.css 200 OK
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/main.f6980035.chunk.css 200 OK
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1699288392&target=OPTIMIZATION_TARGET_PAGE_ENTITIES
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.css
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:24:41 seleniumwire.handler:INFO:Capturing request: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js 302 
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.css 200 
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing response: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap 200 
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs/dist/css/grapes.min.css 302 
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css 200 OK
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION 200 
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs@0.21.8/dist/css/grapes.min.css 200 
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/gsi/client
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/logoEmso.831a9179.png
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js 200 
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/logoEmso.831a9179.png 200 OK
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1701726572&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS
+2024-01-31 Wednesday 18:24:42 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/gsi/client 200 
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/account_settings
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/pages?limit=10
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: wss://cmc-sn.emso.vn/api/v1/streaming?access_token=-o6S7QpF2UUpYA-LdTCjyLu240DUFvjBW3cxBbVP6iw
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/streaming?access_token=-o6S7QpF2UUpYA-LdTCjyLu240DUFvjBW3cxBbVP6iw 101 Switching Protocols
+2024-01-31 Wednesday 18:24:43 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:53283 and cmc-sn.emso.vn:443
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/report_categories
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/account_settings 200 
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-solid-900.woff2
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-regular-400.woff2
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/account_settings
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/pages?limit=10 200 
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/report_categories 200 
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSGQmW4DaXKnf2XxIFDfkF5osh2k-SqTihtSQ=?alt=proto
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/account_settings 200 
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/notifications?limit=20
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-solid-900.woff2 200 OK
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/report_categories
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-regular-400.woff2 200 OK
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/Noti.5ec382a2.svg
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/LogoEmso.79893ace.svg
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/menuglobal.4d444770.png
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/markers?timeline[]=notifications
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/Noti.5ec382a2.svg 200 OK
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/report_categories 200 
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/LogoEmso.79893ace.svg 200 OK
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/menuglobal.4d444770.png 200 OK
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSGQmW4DaXKnf2XxIFDfkF5osh2k-SqTihtSQ=?alt=proto 200 
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/markers?timeline[]=notifications 200 
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=9
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION 200 
+2024-01-31 Wednesday 18:24:43 seleniumwire.server:INFO:127.0.0.1:53270: ProtocolException("Error in HTTP connection: Http2ZombieException('Connection or stream already dead: 1706700283.757394, False')")
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing request: wss://cmc-chat2.emso.vn/websocket
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/websocket 101 Switching Protocols
+2024-01-31 Wednesday 18:24:43 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:53289 and cmc-chat2.emso.vn:443
+2024-01-31 Wednesday 18:24:43 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=9 200 
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1701726572&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS 200 
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/uploads/menu/IconMenu.png
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/850/305/242/247/198/original/24a947afe97d678b.jpeg
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://cmc-notification-api.emso.vn/v1/widgets/session/initialize
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/uploads/menu/IconMenu.png 200 OK
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/users.info?userId=111340222342420143
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/users.info?userId=111340222342420143 200 
+2024-01-31 Wednesday 18:24:44 root:INFO:Đăng nhập bằng tài khoản emso/Gmail
+2024-01-31 Wednesday 18:24:44 root:INFO:True
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/850/305/242/247/198/original/24a947afe97d678b.jpeg 200 OK
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-api.emso.vn/v1/widgets/session/initialize 201 
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptionsPinned%3Aget 200 
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1699288392&target=OPTIMIZATION_TARGET_PAGE_ENTITIES
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/44.162ad8a8.chunk.js
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://cmc-chat2.emso.vn/api/v1/method.call/subscriptions%3Aget 200 
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen 200 
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/44.162ad8a8.chunk.js 200 OK
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/0.6e20774e.chunk.js
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/9.2ce94eb6.chunk.js
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/0.6e20774e.chunk.js 200 OK
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: wss://cmc-notification-ws.emso.vn/socket.io/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQzNmFlYjZmN2RlMWIwNWI0M2JiMGQiLCJvcmdhbml6YXRpb25JZCI6IjY0MWJmOTk1OTkzZjBjMzA2MWFlNGY1MiIsImVudmlyb25tZW50SWQiOiI2NDFiZjk5NTk5M2YwYzMwNjFhZTRmNTgiLCJzdWJzY3JpYmVySWQiOiIxMTEzNDAyMjIzNDI0MjAxNDMiLCJvcmdhbml6YXRpb25BZG1pbklkIjoiNjQxYmY5ODk4OTc1NTk5YmVhNzVlOTgwIiwiaWF0IjoxNzA2NzAwMjgzLCJleHAiOjE3MDc5OTYyODMsImF1ZCI6IndpZGdldF91c2VyIiwiaXNzIjoibm92dV9hcGkifQ.ma-159LplypdeWMcvH8pdtylM-l1lKG45drh5Tct4iw&EIO=3&transport=websocket
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/2.a7cfd7ab.chunk.js
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-ws.emso.vn/socket.io/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQzNmFlYjZmN2RlMWIwNWI0M2JiMGQiLCJvcmdhbml6YXRpb25JZCI6IjY0MWJmOTk1OTkzZjBjMzA2MWFlNGY1MiIsImVudmlyb25tZW50SWQiOiI2NDFiZjk5NTk5M2YwYzMwNjFhZTRmNTgiLCJzdWJzY3JpYmVySWQiOiIxMTEzNDAyMjIzNDI0MjAxNDMiLCJvcmdhbml6YXRpb25BZG1pbklkIjoiNjQxYmY5ODk4OTc1NTk5YmVhNzVlOTgwIiwiaWF0IjoxNzA2NzAwMjgzLCJleHAiOjE3MDc5OTYyODMsImF1ZCI6IndpZGdldF91c2VyIiwiaXNzIjoibm92dV9hcGkifQ.ma-159LplypdeWMcvH8pdtylM-l1lKG45drh5Tct4iw&EIO=3&transport=websocket 101 Switching Protocols
+2024-01-31 Wednesday 18:24:44 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:53302 and cmc-notification-ws.emso.vn:443
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/9.2ce94eb6.chunk.js 200 OK
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/28.593f2c8c.chunk.js
+2024-01-31 Wednesday 18:24:44 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/2.a7cfd7ab.chunk.js 200 OK
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing response: https://cmc-notification-api.emso.vn/v1/widgets/notifications/unseen 200 
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/notifications?limit=20 200 
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/28.593f2c8c.chunk.js 200 OK
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/988/748/559/036/original/3fbe2ad8cf7f156e.jpeg
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/988/748/559/036/original/3fbe2ad8cf7f156e.jpeg 200 OK
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/truongvck33
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/friend_suggestions?limit=25
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/avatars/original/missing.png
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/truongvck33 200 
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/avatars/original/missing.png 200 
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/1.fc419a55.chunk.js
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/32.afaeda8a.chunk.js
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/32.afaeda8a.chunk.js 200 OK
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/1.fc419a55.chunk.js 200 OK
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-light-300.woff2
+2024-01-31 Wednesday 18:24:45 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=9
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/featured_contents
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=9
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/social_categories
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/abouts
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/life_events
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/featured_contents 200 
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=9 200 
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/social_categories 200 
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/statuses?exclude_replies=true&limit=3
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/friend_suggestions?limit=25 200 
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/pin
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-light-300.woff2 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/611/835/039/687/067/small/70afac4c88c50781.png
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/pin 200 
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/611/835/039/687/067/small/70afac4c88c50781.png 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/504/662/450/147/495/original/c7a0bd2297a71b35.jpeg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=9 200 
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/504/662/450/147/495/original/c7a0bd2297a71b35.jpeg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/340/113/570/910/320/small/24f4d4db0ba774df.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/life_events 200 
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/340/113/570/910/320/small/24f4d4db0ba774df.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/679/909/098/333/728/small/8db2fe4ed8d8e327.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/679/909/098/333/728/small/8db2fe4ed8d8e327.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/abouts 200 
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/579/393/288/844/725/small/12c57843946cce57.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/579/393/288/844/725/small/12c57843946cce57.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/607/239/480/975/684/small/8839fa45a328b6f2.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/607/239/480/975/684/small/8839fa45a328b6f2.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/531/523/915/754/544/small/fd7c5c0af0e44ef5.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/531/523/915/754/544/small/fd7c5c0af0e44ef5.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/724/651/381/331/557/small/15512ac5d30f9bde.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/statuses?exclude_replies=true&limit=3 200 
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/724/651/381/331/557/small/15512ac5d30f9bde.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/666/518/182/637/308/small/1f0e75b012ad4158.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/108/666/518/182/637/308/small/1f0e75b012ad4158.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/786/107/377/995/790/small/1efcf0203a19558f.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/ImageVideo.86b29db6.svg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/moment.93313878.svg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/786/107/377/995/790/small/1efcf0203a19558f.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/238/074/625/619/099/small/35c79d7458f9d5c7.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/ImageVideo.86b29db6.svg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/moment.93313878.svg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/699/229/957/187/749/small/cfc10d8e29ee90f0.png
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/statuses?exclude_replies=true&limit=3
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/109/238/074/625/619/099/small/35c79d7458f9d5c7.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/850/305/206/406/526/small/8a2d587b4aac0397.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/110/699/229/957/187/749/small/cfc10d8e29ee90f0.png 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/791/088/363/869/small/a85d40c414867919.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/850/305/206/406/526/small/8a2d587b4aac0397.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/790/369/205/066/small/a6a077eec5f80f61.jpg
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/791/088/363/869/small/a85d40c414867919.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/790/369/205/066/small/a6a077eec5f80f61.jpg 200 OK
+2024-01-31 Wednesday 18:24:46 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/756/588/730/682/small/4c848be3b66af2e2.jpg
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/756/588/730/682/small/4c848be3b66af2e2.jpg 200 OK
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/984/681/806/583/small/b44372fd1cc8428e.jpg
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/755/793/505/430/small/5c4c2403ea66b33a.jpg
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/987/800/542/611/small/bb876c81a1941388.png
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/987/448/727/328/small/bdc9e7be64c9c166.jpg
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/983/840/415/815/small/ed7ad8b43be8f350.jpg
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/504/647/170/121/973/original/573295dc4691aba7.jpg
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/755/793/505/430/small/5c4c2403ea66b33a.jpg 200 OK
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/categories/choi_nhac.png
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/987/800/542/611/small/bb876c81a1941388.png 200 OK
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/images/frame/y%C3%AAu%20th%C6%B0%C6%A1ng%20vi%E1%BB%87t%20nam.png
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/984/681/806/583/small/b44372fd1cc8428e.jpg 200 OK
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/categories/choi_nhac.png 200 OK
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/791/113/176/914/original/a1635cda65c55569.jpeg
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/792/789/384/914/original/324c2a1c86b7ea3c.jpeg
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/983/840/415/815/small/ed7ad8b43be8f350.jpg 200 OK
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/statuses?exclude_replies=true&limit=3 200 
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/838/987/448/727/328/small/bdc9e7be64c9c166.jpg 200 OK
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/504/647/170/121/973/original/573295dc4691aba7.jpg 200 OK
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/images/frame/y%C3%AAu%20th%C6%B0%C6%A1ng%20vi%E1%BB%87t%20nam.png 200 OK
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/791/113/176/914/original/a1635cda65c55569.jpeg 200 OK
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/845/792/789/384/914/original/324c2a1c86b7ea3c.jpeg 200 OK
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143 200 
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://trial103.easyedu.vn/sites/default/files/easyschool/upload/2022/10/sed-12-256_1.jpg
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://trial103.easyedu.vn/sites/default/files/easyschool/upload/2022/10/sed-12-256_1.jpg 200 
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143 200 
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143
+2024-01-31 Wednesday 18:24:47 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=20
+2024-01-31 Wednesday 18:24:48 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=20 200 
+2024-01-31 Wednesday 18:24:48 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143 200 
+2024-01-31 Wednesday 18:24:49 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSIAnzW2TvzW8ObRIFDfkF5osSBQ0yJuiAIQgWIdlrjgkI?alt=proto
+2024-01-31 Wednesday 18:24:49 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIxLjAuNjE2Ny4xMzkSIAnzW2TvzW8ObRIFDfkF5osSBQ0yJuiAIQgWIdlrjgkI?alt=proto 200 
+2024-01-31 Wednesday 18:24:50 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/update_credentials
+2024-01-31 Wednesday 18:24:52 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/update_credentials 200 
+2024-01-31 Wednesday 18:24:52 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-01-31 Wednesday 18:24:52 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143
+2024-01-31 Wednesday 18:24:52 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-01-31 Wednesday 18:24:52 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143 200 
+2024-01-31 Wednesday 18:24:53 seleniumwire.handler:INFO:Capturing request: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/850/310/254/914/178/original/91af68ef527de95b.jpeg
+2024-01-31 Wednesday 18:24:53 seleniumwire.handler:INFO:Capturing response: https://s3-hn-2.cloud.cmctelecom.vn/sn-web/media_attachments/files/111/850/310/254/914/178/original/91af68ef527de95b.jpeg 200 OK
+2024-01-31 Wednesday 18:24:53 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY 200 
+2024-01-31 Wednesday 18:24:54 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY 200 
+2024-01-31 Wednesday 18:24:54 seleniumwire.server:INFO:127.0.0.1:53270: ProtocolException("Error in HTTP connection: Http2ZombieException('Connection or stream already dead: 1706700294.1125052, False')")
+2024-01-31 Wednesday 18:24:54 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=4&target=OPTIMIZATION_TARGET_PAGE_TOPICS_V2
+2024-01-31 Wednesday 18:24:56 seleniumwire.server:INFO:127.0.0.1:53283: Ping Received from server
+  -> 
+2024-01-31 Wednesday 18:24:56 seleniumwire.server:INFO:127.0.0.1:53283: Pong Received from client
+  -> 
+2024-01-31 Wednesday 18:25:00 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=20
+2024-01-31 Wednesday 18:25:00 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/media_attachments?media_type=image&limit=20 200 
+2024-02-22 Thursday 11:28:53 root:INFO:đây là info
+2024-02-22 Thursday 11:28:53 root:WARNING:đây là warning
+2024-02-22 Thursday 11:28:53 root:ERROR:đây là error
+2024-02-22 Thursday 11:28:53 root:CRITICAL:đây là critical
+2024-02-22 Thursday 11:29:08 root:INFO:Đăng nhập bằng tài khoản emso/Gmail
+2024-02-22 Thursday 11:29:08 root:INFO:True
+2024-02-22 Thursday 11:30:29 root:INFO:đây là info
+2024-02-22 Thursday 11:30:29 root:WARNING:đây là warning
+2024-02-22 Thursday 11:30:29 root:ERROR:đây là error
+2024-02-22 Thursday 11:30:29 root:CRITICAL:đây là critical
+2024-02-22 Thursday 11:30:38 root:INFO:Đăng nhập bằng tài khoản emso/Gmail
+2024-02-22 Thursday 11:30:38 root:INFO:True
+2024-02-22 Thursday 11:33:07 root:INFO:đây là info
+2024-02-22 Thursday 11:33:07 root:WARNING:đây là warning
+2024-02-22 Thursday 11:33:07 root:ERROR:đây là error
+2024-02-22 Thursday 11:33:07 root:CRITICAL:đây là critical
+2024-02-22 Thursday 11:33:16 root:INFO:Đăng nhập bằng tài khoản emso/Gmail
+2024-02-22 Thursday 11:33:16 root:INFO:True
+2024-02-22 Thursday 11:38:35 root:INFO:đây là info
+2024-02-22 Thursday 11:38:35 root:WARNING:đây là warning
+2024-02-22 Thursday 11:38:35 root:ERROR:đây là error
+2024-02-22 Thursday 11:38:35 root:CRITICAL:đây là critical
+2024-02-22 Thursday 11:38:44 root:INFO:Đăng nhập bằng tài khoản emso/Gmail
+2024-02-22 Thursday 11:38:44 root:INFO:True
+2024-02-22 Thursday 11:41:18 root:INFO:đây là info
+2024-02-22 Thursday 11:41:18 root:WARNING:đây là warning
+2024-02-22 Thursday 11:41:18 root:ERROR:đây là error
+2024-02-22 Thursday 11:41:18 root:CRITICAL:đây là critical
+2024-02-22 Thursday 11:41:29 root:INFO:Đăng nhập bằng tài khoản emso/Gmail
+2024-02-22 Thursday 11:41:29 root:INFO:True
+2024-03-25 Monday 11:18:09 root:INFO:đây là info
+2024-03-25 Monday 11:18:09 root:WARNING:đây là warning
+2024-03-25 Monday 11:18:09 root:ERROR:đây là error
+2024-03-25 Monday 11:18:09 root:CRITICAL:đây là critical
+2024-03-25 Monday 11:18:28 root:INFO:Đăng nhập bằng tài khoản emso/Gmail
+2024-03-25 Monday 11:18:28 root:INFO:True
+2024-03-25 Monday 16:03:17 root:INFO:đây là info
+2024-03-25 Monday 16:03:17 root:WARNING:đây là warning
+2024-03-25 Monday 16:03:17 root:ERROR:đây là error
+2024-03-25 Monday 16:03:17 root:CRITICAL:đây là critical
+2024-03-26 Tuesday 16:58:20 root:INFO:đây là info
+2024-03-26 Tuesday 16:58:20 root:WARNING:đây là warning
+2024-03-26 Tuesday 16:58:20 root:ERROR:đây là error
+2024-03-26 Tuesday 16:58:20 root:CRITICAL:đây là critical
+2024-03-26 Tuesday 17:05:24 root:INFO:đây là info
+2024-03-26 Tuesday 17:05:24 root:WARNING:đây là warning
+2024-03-26 Tuesday 17:05:24 root:ERROR:đây là error
+2024-03-26 Tuesday 17:05:24 root:CRITICAL:đây là critical
+2024-03-26 Tuesday 17:06:05 root:INFO:đây là info
+2024-03-26 Tuesday 17:06:05 root:WARNING:đây là warning
+2024-03-26 Tuesday 17:06:05 root:ERROR:đây là error
+2024-03-26 Tuesday 17:06:05 root:CRITICAL:đây là critical
+2024-03-26 Tuesday 17:06:05 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard
+2024-03-26 Tuesday 17:06:05 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard 200 
+2024-03-26 Tuesday 17:06:14 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+2024-03-26 Tuesday 17:06:14 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw 200 
+2024-03-26 Tuesday 17:06:15 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1709568210&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS
+2024-03-26 Tuesday 17:06:15 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+2024-03-26 Tuesday 17:06:15 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1709568210&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS 200 
+2024-03-26 Tuesday 17:06:15 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY
+2024-03-26 Tuesday 17:06:15 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION 200 
+2024-03-26 Tuesday 17:06:16 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=4&target=OPTIMIZATION_TARGET_PAGE_TOPICS_V2
+2024-03-26 Tuesday 17:06:46 root:INFO:đây là info
+2024-03-26 Tuesday 17:06:46 root:WARNING:đây là warning
+2024-03-26 Tuesday 17:06:46 root:ERROR:đây là error
+2024-03-26 Tuesday 17:06:46 root:CRITICAL:đây là critical
+2024-03-26 Tuesday 17:06:47 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard
+2024-03-26 Tuesday 17:06:47 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard 200 
+2024-03-26 Tuesday 17:06:50 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/login
+2024-03-26 Tuesday 17:06:50 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/login 200 
+2024-03-26 Tuesday 17:06:51 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css
+2024-03-26 Tuesday 17:06:51 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/14.d47ca17f.chunk.css
+2024-03-26 Tuesday 17:06:51 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/14.0b820d9a.chunk.js
+2024-03-26 Tuesday 17:06:51 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/main.ee27cbde.chunk.css
+2024-03-26 Tuesday 17:06:51 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/js/main.dbebb1dc.chunk.js
+2024-03-26 Tuesday 17:06:51 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/14.d47ca17f.chunk.css 200 
+2024-03-26 Tuesday 17:06:51 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/main.ee27cbde.chunk.css 200 
+2024-03-26 Tuesday 17:06:51 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css 200 
+2024-03-26 Tuesday 17:06:51 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.css
+2024-03-26 Tuesday 17:06:51 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.polyfilled.js
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs/dist/css/grapes.min.css
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing request: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs/dist/css/grapes.min.css 302 
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js 302 
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing response: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap 200 
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.css 200 
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.polyfilled.js 200 
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs@0.21.9/dist/css/grapes.min.css
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs@0.21.9/dist/css/grapes.min.css 200 
+2024-03-26 Tuesday 17:06:52 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js 200 
+2024-03-26 Tuesday 17:06:53 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/gsi/client
+2024-03-26 Tuesday 17:06:53 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/main.dbebb1dc.chunk.js 200 
+2024-03-26 Tuesday 17:06:53 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/gsi/client 200 
+2024-03-26 Tuesday 17:06:54 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/js/14.0b820d9a.chunk.js 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/logoFull.b1da0db0.png
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-brands-400.woff2
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-brands-400.woff2 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/logoFull.b1da0db0.png 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing response: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2 200 
+2024-03-26 Tuesday 17:06:55 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/favicon.svg
+2024-03-26 Tuesday 17:06:56 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/favicon.svg 200 
+2024-03-26 Tuesday 17:06:56 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/favicon.svg
+2024-03-26 Tuesday 17:06:56 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/favicon.svg 200 
+2024-03-26 Tuesday 17:06:56 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTIzLjAuNjMxMi41OBIgCUzps_fdV-J3EgUNeG8SGRIFDc5BTHohAAnsc2O5zXA=?alt=proto
+2024-03-26 Tuesday 17:06:56 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTIzLjAuNjMxMi41OBIgCUzps_fdV-J3EgUNeG8SGRIFDc5BTHohAAnsc2O5zXA=?alt=proto 200 
+2024-03-26 Tuesday 17:06:56 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+2024-03-26 Tuesday 17:06:56 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw 200 
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/oauth/token
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/oauth/token 200 
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1709568210&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1709568210&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS 200 
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1709568210&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/ 200 
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1709568210&target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS 200 
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=1673999601&target=OPTIMIZATION_TARGET_PAGE_VISIBILITY
+2024-03-26 Tuesday 17:06:57 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION 200 
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/14.d47ca17f.chunk.css
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/css/main.ee27cbde.chunk.css
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/main.ee27cbde.chunk.css 200 
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/css/14.d47ca17f.chunk.css 200 
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing request: https://optimizationguide-pa.googleapis.com/downloads?name=4&target=OPTIMIZATION_TARGET_PAGE_TOPICS_V2
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/css/all.css 200 
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing request: https://cdn.plyr.io/3.7.3/plyr.css
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs/dist/css/grapes.min.css
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing request: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing response: https://optimizationguide-pa.googleapis.com/downloads?name=1679317318&target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION 200 
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js 302 
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing response: https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap 200 
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs/dist/css/grapes.min.css 302 
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing response: https://cdn.plyr.io/3.7.3/plyr.css 200 
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js
+2024-03-26 Tuesday 17:06:58 seleniumwire.handler:INFO:Capturing request: https://unpkg.com/grapesjs@0.21.9/dist/css/grapes.min.css
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/grapesjs@0.21.9/dist/css/grapes.min.css 200 
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing response: https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js 200 
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/static/media/logoEmso.831a9179.png
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/static/media/logoEmso.831a9179.png 200 
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/me
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/me 200 
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/pages?limit=10
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/report_categories
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/report_categories 200 
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/account_settings
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/pages?limit=10 200 
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing request: https://accounts.google.com/gsi/client
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing request: wss://cmc-sn.emso.vn/api/v1/streaming?access_token=-o6S7QpF2UUpYA-LdTCjyLu240DUFvjBW3cxBbVP6iw
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/streaming?access_token=-o6S7QpF2UUpYA-LdTCjyLu240DUFvjBW3cxBbVP6iw 101 Switching Protocols
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-solid-900.woff2
+2024-03-26 Tuesday 17:06:59 seleniumwire.server:INFO:Streaming WebSocket messages between 127.0.0.1:2118 and cmc-sn.emso.vn:443
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing request: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-regular-400.woff2
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing request: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTIzLjAuNjMxMi41OBIZCZbgNpcqd_ZfEgUN-QXmiyHaT5KpOKG1JA==?alt=proto
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/report_categories
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/account_settings 200 
+2024-03-26 Tuesday 17:06:59 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/report_categories 200 
+2024-03-26 Tuesday 17:07:00 seleniumwire.handler:INFO:Capturing response: https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvMTIzLjAuNjMxMi41OBIZCZbgNpcqd_ZfEgUN-QXmiyHaT5KpOKG1JA==?alt=proto 200 
+2024-03-26 Tuesday 17:07:00 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/notifications?limit=20
+2024-03-26 Tuesday 17:07:00 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/markers?timeline[]=notifications
+2024-03-26 Tuesday 17:07:00 seleniumwire.handler:INFO:Capturing request: https://cmc-sn.emso.vn/api/v1/accounts/111340222342420143/friendships?limit=20
+2024-03-26 Tuesday 17:07:00 seleniumwire.handler:INFO:Capturing response: https://cmc-fe.emso.vn/assets/fontawesome/webfonts/fa-solid-900.woff2 200 
+2024-03-26 Tuesday 17:07:00 retry.api:WARNING:'NoneType' object has no attribute 'text', retrying in 2 seconds...
+2024-03-26 Tuesday 17:07:00 seleniumwire.handler:INFO:Capturing response: https://accounts.google.com/gsi/client 200 
+2024-03-26 Tuesday 17:07:00 seleniumwire.handler:INFO:Capturing response: https://cmc-sn.emso.vn/api/v1/markers?timeline[]=notifications 200 
+2024-03-26 Tuesday 17:07:00 seleniumwire.server:INFO:127.0.0.1:2099: ProtocolException("Error in HTTP connection: Http2ZombieException('Connection or stream already dead: 1711447620.2633529, False')")
+2024-03-26 Tuesday 17:07:00 seleniumwire.server:INFO:127.0.0.1:2099: ProtocolException("Error in HTTP connection: Http2ZombieException('Connection or stream already dead: 1711447620.258455, False')")
+2024-03-26 Tuesday 17:07:00 seleniumwire.server:INFO:127.0.0.1:2075: ProtocolException('Error in HTTP connection: TcpDisconnect("(10053, \'WSAECONNABORTED\')")')
+2024-03-26 Tuesday 17:07:00 seleniumwire.server:INFO:127.0.0.1:2116: ProtocolException("Error in HTTP connection: Http2ZombieException('Connection or stream already dead: 1711447620.2801878, False')")
+2024-03-26 Tuesday 17:07:00 seleniumwire.server:INFO:127.0.0.1:2097: ProtocolException("Error in HTTP connection: Http2ZombieException('Connection or stream already dead: 1711447620.2816947, False')")
+2024-03-26 Tuesday 17:07:00 seleniumwire.server:INFO:127.0.0.1:2097: ProtocolException("Error in HTTP connection: Http2ZombieException('Connection or stream already dead: 1711447620.2816947, False')")
+2024-03-26 Tuesday 17:07:00 seleniumwire.server:INFO:127.0.0.1:2075: ProtocolException("Error in HTTP connection: Http2ZombieException('Connection or stream already dead: 1711447620.3061922, False')")
+2024-03-26 Tuesday 17:07:02 retry.api:WARNING:Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.58)
+, retrying in 7 seconds...

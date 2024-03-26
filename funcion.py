@@ -13,7 +13,7 @@ from retry import retry
 
 
 
-logging.basicConfig(handlers=[logging.FileHandler(filename="C:/Users/Admin/PycharmProjects/pythonProject/emso.log",
+logging.basicConfig(handlers=[logging.FileHandler(filename="emso.log",
                                                  encoding='utf-8', mode='a+')],
                     format="%(asctime)s %(name)s:%(levelname)s:%(message)s",
                     datefmt="%F %A %T",

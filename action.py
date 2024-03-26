@@ -1,8 +1,5 @@
 import re
-from multiprocessing import Process
 import openpyxl
-import emso
-from threading import Thread
 import asyncio
 import requests
 from selenium import webdriver
@@ -20,7 +17,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import subprocess
 import pickle
-import threading
+
 from seleniumwire import webdriver
 from seleniumwire.utils import decode
 chrome_options = Options()
@@ -60,17 +57,14 @@ def writeData(file,sheetName,rowum,columnno,data):
 rows = getRowCount(var.path_baocao,'Sheet1')
 
 
-# file_name = 'data_emso.json'
-# with open(file_name, 'r', encoding='utf-8') as f:
-#     data = json.load(f, strict = False)
-
-
-file_name = 'C:/Users/Admin/PycharmProjects/pythonProject/data_emso.json'
+file_name = 'data_emso.json'
 with open(file_name, 'r', encoding='utf-8') as f:
     data = json.load(f, strict = False)
 
 
-logging.basicConfig(handlers=[logging.FileHandler(filename="C:/Users/Admin/PycharmProjects/pythonProject/emso.log",
+
+
+logging.basicConfig(handlers=[logging.FileHandler(filename="D:/automated-testing/emso.log",
                                                  encoding='utf-8', mode='a+')],
                     format="%(asctime)s %(name)s:%(levelname)s:%(message)s",
                     datefmt="%F %A %T",
@@ -84,6 +78,7 @@ logging.warning("đây là warning")
 logging.error("đây là error")
 logging.critical("đây là critical")
 
+@retry(tries=3, delay=2, backoff=1, jitter=5, )
 def logout():
     driver.implicitly_wait(15)
     time.sleep(2)
@@ -95,8 +90,9 @@ def logout():
 
 
 class login():
+    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login1(self, user, password):
-        driver.implicitly_wait(5)
+        driver.implicitly_wait(15)
         driver.get(var.url)
         driver.maximize_window()
         driver.find_element(By.XPATH, var.login_user).send_keys(user)
@@ -112,8 +108,9 @@ class login():
         print("mật khẩu login:", password)
         print("login vào phần mềm emso khong thành công")
 
+    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login2(self, user, password):
-        driver.implicitly_wait(3)
+        driver.implicitly_wait(15)
         driver.get(var.url)
         driver.maximize_window()
         driver.find_element(By.XPATH, var.login_user).send_keys(user)
@@ -121,32 +118,25 @@ class login():
         driver.find_element(By.XPATH, var.login_submit).click()
         time.sleep(1)
         # bỏ trống tài khoản
-        try:
-            message_bo_trong_tk = driver.find_element(By.XPATH, var.message_bo_trong_tk1).text
-            logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
-            logging.info("Message Email, Số điện thoại:Email hoặc số điện thoại không được để trống ")
-            logging.info(message_bo_trong_tk == "Email hoặc số điện thoại không được để trống")
-        except:
-            logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
-            logging.info("Message Email, Số điện thoại: Email hoặc số điện thoại không được để trống ")
-            logging.info("False")
-
+        message_bo_trong_tk = driver.find_element(By.XPATH, var.message_bo_trong_tk1).text
+        print(message_bo_trong_tk)
+        logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
+        logging.info("Message Email, Số điện thoại:Email hoặc số điện thoại không được để trống ")
+        logging.info(message_bo_trong_tk == "Email hoặc số điện thoại không được để trống")
         # bỏ trống mật khẩu
-        try:
-            message_bo_trong_mk = driver.find_element(By.XPATH, var.message_bo_trong_mk1).text
-            logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
-            logging.info("Message Mật khẩu: Mật khẩu không được để trống")
-            logging.info(message_bo_trong_mk == "Mật khẩu không được để trống")
-        except:
-            logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
-            logging.info("Message Mật khẩu: Mật khẩu không được để trống")
-            logging.info("False")
+        message_bo_trong_mk = driver.find_element(By.XPATH, var.message_bo_trong_mk1).text
+        print(message_bo_trong_mk)
+        logging.info("Đăng nhập bằng tài khoản emso-(Đăng nhập không thành công/Chuyển tài khoản không thành công): Không nhập tài khoản/mật khẩu")
+        logging.info("Message Mật khẩu: Mật khẩu không được để trống")
+        logging.info(message_bo_trong_mk == "Mật khẩu không được để trống")
+
         print("tên tài khoản login:", user)
         print("mật khẩu login:", password)
         print("login vào phần mềm emso khong thành công")
 
+    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login3(self, user, password):
-        driver.implicitly_wait(5)
+        driver.implicitly_wait(15)
         driver.get(var.url)
         driver.maximize_window()
         # driver.set_window_size(400, 600)
@@ -165,6 +155,7 @@ class login():
         driver.find_element(By.XPATH, var.trangcanhan).click()
         time.sleep(1)
 
+    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login4(self, user, password):
         driver.implicitly_wait(15)
         driver.get(var.url)
@@ -215,6 +206,7 @@ class login():
 
 
 
+    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login_google(self, user, passsword):
         driver.implicitly_wait(20)
         driver.get(var.url)
@@ -247,6 +239,7 @@ class login():
                 driver.close()
 
 
+    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login_chon_tk_dang_nhap_gan_day_nhap_sai_pass(self, password):
         driver.implicitly_wait(15)
         driver.get(var.url)
@@ -263,6 +256,7 @@ class login():
         logging.info("Message: Tài khoản hoặc mật khẩu không đúng, vui lòng kiểm tra lại.")
         logging.info( message_ganday_sai_mk == "Tài khoản hoặc mật khẩu không đúng, vui lòng kiểm tra lại.")
 
+    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login_chon_tk_dang_nhap_gan_day_khong_nhap_pass(self):
         driver.implicitly_wait(15)
         driver.get(var.url)
@@ -279,6 +273,7 @@ class login():
         logging.info("Message: Mật khẩu không được để trống")
         logging.info( message_ganday_khong_nhap_mk == "Mật khẩu không được để trống")
 
+    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login_chon_tk_dang_nhap_gan_day_chua_luu_mk(self, password):
         driver.implicitly_wait(15)
         driver.get(var.url)
@@ -294,6 +289,7 @@ class login():
         logging.info("Chọn tài khoản đăng nhập gần đây - (login thành công/Chuyển tài khoản thành công) - chưa lưu mật khẩu")
         logging.info( login_thanh_cong == "Khoảnh khắc")
 
+    @retry(tries=3, delay=2, backoff=1, jitter=5, )
     def login_chon_tk_dang_nhap_gan_day_da_luu_mk(self):
         driver.implicitly_wait(15)
         driver.get(var.url)
@@ -316,9 +312,9 @@ class anhdaidien():
         driver.find_element(By.XPATH, var.capnhatanhdaidien_taianhlen).click()
         driver.find_element(By.XPATH, var.capnhatanhdaidien_icon_taianhlen).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhdaidien1.exe")
         time.sleep(1)
-        del driver.requests
+        # del driver.requests
         driver.find_element(By.XPATH, var.capnhatanhdaidien_mota).send_keys(data['trangcanhan_anhdaidien_anhbia']['anhdaidien_mota'])
         driver.find_element(By.XPATH, var.capnhatanhdaidien_luu).click()
         writeData(var.path_baocao, "Sheet1", 52, 2, "x")
@@ -331,7 +327,7 @@ class anhdaidien():
         driver.find_element(By.XPATH, var.capnhatanhdaidien_taianhlen).click()
         driver.find_element(By.XPATH, var.capnhatanhdaidien_icon_taianhlen).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien3.exe")
+        subprocess.Popen("D:/automated-testing/import/anhdaidien3.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.capnhatanhdaidien_mota).send_keys(data['trangcanhan_anhdaidien_anhbia']['anhdaidienkhac_mota'])
         driver.find_element(By.XPATH, var.capnhatanhdaidien_luu).click()
@@ -408,7 +404,7 @@ class anhbia():
         driver.find_element(By.XPATH, var.trangcanhan_anhbia_taianhlen).click()
         time.sleep(1)
         del driver.requests
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia1.exe")
         time.sleep(1)
         button = driver.find_element(By.XPATH, var.capnhat)
         driver.execute_script("arguments[0].click();", button)
@@ -422,7 +418,7 @@ class anhbia():
         driver.find_element(By.XPATH, var.trangcanhan_iconchinhsua_anhbia).click()
         driver.find_element(By.XPATH, var.trangcanhan_anhbia_taianhlen).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia2.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia2.exe")
         time.sleep(1)
         button = driver.find_element(By.XPATH, var.capnhat)
         driver.execute_script("arguments[0].click();", button)
@@ -2243,7 +2239,7 @@ class sukientrongdoi():
         # Tạo sự kiện riêng
         driver.find_element(By.XPATH, var.taosukienrieng_tailenfile).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhdaidien1.exe")
         time.sleep(1)
         sukientrongdoi_clear = driver.find_element(By.XPATH, var.taosukienrieng_input)
         sukientrongdoi_clear.send_keys(Keys.CONTROL, "a")
@@ -2254,7 +2250,7 @@ class sukientrongdoi():
     def mau2(self, tieude, diachi):
         driver.find_element(By.XPATH, var.nhacuavadoisong_tailenfile).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhdaidien1.exe")
         time.sleep(1)
         sukientrongdoi_clear1 = driver.find_element(By.XPATH, var.nhacuavadoisong_tieude_input)
         sukientrongdoi_clear1.send_keys(Keys.CONTROL, "a")
@@ -2344,7 +2340,7 @@ class sukientrongdoi():
         dulich_add.click()
         driver.find_element(By.XPATH, var.nhacuavadoisong_tailenfile).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhdaidien1.exe")
         time.sleep(1)
         sukientrongdoi_clear1 = driver.find_element(By.XPATH, var.nhacuavadoisong_tieude_input)
         sukientrongdoi_clear1.send_keys(Keys.CONTROL, "a")
@@ -2749,7 +2745,7 @@ class anh_video:
         driver.find_element(By.XPATH, var.trangcanhan_anh_album_mota).send_keys(data['trangcanhan_anh_video']['trangcanhan_anh_mota'])
         driver.find_element(By.XPATH, var.trangcanhan_anh_album_tailen).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia1.exe")
         time.sleep(2)
         driver.find_element(By.XPATH, var.trangcanhan_anh_album_anhtailen_chuthich).send_keys(data['trangcanhan_anh_video']['chuthich'])
         driver.find_element(By.XPATH, var.trangcanhan_anh_album_dang).click()
@@ -3085,7 +3081,7 @@ class trangchu():
         driver.find_element(By.XPATH, var.taobaiviet_mota).send_keys(mota)
         driver.find_element(By.XPATH, var.taobaiviet_tailenanhvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia1.exe")
         time.sleep(2)
         driver.find_element(By.XPATH, var.chinhsua).click()
         time.sleep(1)
@@ -3105,7 +3101,7 @@ class trangchu():
         time.sleep(10)
         driver.find_element(By.XPATH, var.themanhvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia1.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.chinhsua).click()
         time.sleep(1)
@@ -3155,7 +3151,7 @@ class trangchu():
         driver.find_element(By.XPATH, var.khoanhkhac_nhapnoidung).send_keys(data['trangchu_taobaiviet']['khoanhkhac_noidung'])
         driver.find_element(By.XPATH, var.khoanhkhac_tailenvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/quangaygiongbao.exe")
+        subprocess.Popen("D:/automated-testing/import/quangaygiongbao.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.khoanhkhac_dangbai).click()
         time.sleep(23)
@@ -3469,7 +3465,7 @@ class trangchu():
         #Đính kèm file
         driver.find_element(By.XPATH, var.trangchu_tinnhanmoi_icontailenfile).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhdaidien1.exe")
         time.sleep(1)
 
         #Gif
@@ -4301,7 +4297,7 @@ class trangchu():
         driver.find_element(By.XPATH, var.nhom_caidathopthoai_tuychinhdoanchat).click()
         driver.find_element(By.XPATH, var.nhom_caidathopthoai_tuychinhdoanchat_thaydoidanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhmes1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhmes1.exe")
         time.sleep(1)
         try:
             check_nhom_thayanh = driver.find_element(By.XPATH, var.check_nhom_thayanh1).is_displayed()
@@ -5036,14 +5032,14 @@ class trangchu():
         # logging.info(check_xacminhdanhtinh == "Xác minh danh tính")
         # driver.find_element(By.XPATH, var.xacminhdanhtinh_cccdmattruoc).click()
         # time.sleep(1)
-        # subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
+        # subprocess.Popen("D:/automated-testing/import/anhbia1.exe")
         # time.sleep(1)
         # driver.find_element(By.XPATH, var.xacminhdanhtinh_cccdmatsau).click()
         # time.sleep(1)
-        # subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia2.exe")
+        # subprocess.Popen("D:/automated-testing/import/anhbia2.exe")
         # driver.find_element(By.XPATH, var.xacminhdanhtinh_video).click()
         # time.sleep(1)
-        # subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/quangaygiongbao.exe")
+        # subprocess.Popen("D:/automated-testing/import/quangaygiongbao.exe")
         # time.sleep(3)
         # driver.find_element(By.XPATH, var.x).click()
         # time.sleep(2)
@@ -5058,7 +5054,7 @@ class trangchu():
         driver.find_element(By.XPATH, var.batkiemtien_xacminhdanhtinh).click()
         driver.find_element(By.XPATH, var.xacminhdanhtinh_GPKDKD).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia1.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.xacminhdanhtinh_masothue).send_keys(data['trangchu_banthan']['masothue'])
         time.sleep(1)
@@ -5473,7 +5469,7 @@ class trangchu():
         button = driver.find_element(By.XPATH, var.chungtaycaithienemso_tailenfile1)
         driver.execute_script("arguments[0].click();", button)
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia2.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia2.exe")
         time.sleep(1)
         check_gui2 = driver.find_element(By.XPATH, var.donggopykien_chungtaycaithienemso_buttongui).is_enabled()
         logging.info("Trang chủ - Tài khoản - Đóng góp ý kiến - Chung tay cải thiện EMSO")
@@ -5509,7 +5505,7 @@ class trangchu():
         button = driver.find_element(By.XPATH, var.chungtaycaithienemso_tailenfile1)
         driver.execute_script("arguments[0].click();", button)
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia2.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia2.exe")
         time.sleep(2)
         check_gui2 = driver.find_element(By.XPATH, var.donggopykien_chungtaycaithienemso_buttongui).is_enabled()
         logging.info("Trang chủ - Tài khoản - Đóng góp ý kiến - Đã xảy ra lỗi")
@@ -5726,7 +5722,7 @@ def test2(self):
         assert True
         print("đã đúng title")
     else:
-        driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/"+"anh_title.png")
+        driver.save_screenshot("D:/automated-testing/anhchupmanhinh/"+"anh_title.png")
         print("sai title")
         # assert False, "sai title web roi"
         pass
@@ -5823,16 +5819,11 @@ class khoanhkhac():
         driver.find_element(By.XPATH, var.trangcanhan_baiviet_tuychon_chinhsuabaiviet).click()
         driver.find_element(By.XPATH, var.trangcanhan_baiviet_tuychon_chinhsuabaiviet_input).send_keys(data['khoanhkhac']['noidung2'])
         driver.find_element(By.XPATH, var.luu).click()
-        try:
-            check_tuychonbaiviet_chinhsuabaiviet = driver.find_element(By.XPATH,var.check_tuychonbaiviet_chinhsuabaiviet1).text
-            print(check_tuychonbaiviet_chinhsuabaiviet)
-            logging.info("Trang cá nhân - Tuỳ chọn bài viết - Chỉnh sửa bài viết")
-            logging.info("check font-end: Message - Chỉnh sửa bài viết thành công")
-            logging.info(check_tuychonbaiviet_chinhsuabaiviet == "Chỉnh sửa bài viết thành công")
-        except:
-            logging.info("Trang cá nhân - Tuỳ chọn bài viết - Chỉnh sửa bài viết")
-            logging.info("check font-end: Message - Chỉnh sửa bài viết thành công")
-            logging.info("False")
+        check_tuychonbaiviet_chinhsuabaiviet = driver.find_element(By.XPATH,var.check_tuychonbaiviet_chinhsuabaiviet1).text
+        print(check_tuychonbaiviet_chinhsuabaiviet)
+        logging.info("Trang cá nhân - Tuỳ chọn bài viết - Chỉnh sửa bài viết")
+        logging.info("check font-end: Message - Chỉnh sửa bài viết thành công")
+        logging.info(check_tuychonbaiviet_chinhsuabaiviet == "Chỉnh sửa bài viết thành công")
 
         #Ai có thể bình luận về bài viết này?
         driver.find_element(By.XPATH, var.trangcanhan_baiviet_tuychon).click()
@@ -5895,16 +5886,11 @@ class khoanhkhac():
         driver.find_element(By.XPATH, var.trangcanhan_baiviet_tuychon_xoabaiviet).click()
         time.sleep(1)
         driver.find_element(By.XPATH, var.xoa).click()
-        try:
-            check_tuychonbaiviet_xoa = driver.find_element(By.XPATH,var.check_tuychonbaiviet_xoa1).text
-            print(check_tuychonbaiviet_xoa)
-            logging.info("Trang cá nhân - Tuỳ chọn bài viết - Tắt thông báo về bài viết này")
-            logging.info("check font-end: Message - Bài viết của bạn đã bị xóa.")
-            logging.info(check_tuychonbaiviet_xoa == "Bài viết của bạn đã bị xóa.")
-        except:
-            logging.info("Trang cá nhân - Tuỳ chọn bài viết - Tắt thông báo về bài viết này")
-            logging.info("check font-end: Message - Bài viết của bạn đã bị xóa.")
-            logging.info("False")
+        check_tuychonbaiviet_xoa = driver.find_element(By.XPATH,var.check_tuychonbaiviet_xoa1).text
+        print(check_tuychonbaiviet_xoa)
+        logging.info("Trang cá nhân - Tuỳ chọn bài viết - Tắt thông báo về bài viết này")
+        logging.info("check font-end: Message - Bài viết của bạn đã bị xóa.")
+        logging.info(check_tuychonbaiviet_xoa == "Bài viết của bạn đã bị xóa.")
         time.sleep(1.5)
 
         # chia sẻ lên bảng tin
@@ -6229,7 +6215,7 @@ class khoanhkhac():
             driver.find_element(By.XPATH, var.khoanhkhac_nhapnoidung).send_keys(data['khoanhkhac']['taokhoanhkhac'])
         driver.find_element(By.XPATH, var.khoanhkhac_tailenvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/quangaygiongbao.exe")
+        subprocess.Popen("D:/automated-testing/import/quangaygiongbao.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.khoanhkhac_dangbai).click()
         time.sleep(15)
@@ -6447,7 +6433,7 @@ class watch():
         driver.find_element(By.XPATH, var.watch_xemvideo_binhluan).send_keys(data['watch']['mota1'])
         driver.find_element(By.XPATH, var.watch_xemvideo_binhluan).submit()
         wait = WebDriverWait(driver, 10)
-        time.sleep(4)
+        time.sleep(3)
         element = wait.until(EC.element_to_be_clickable((By.XPATH, var.binhluan_like)))
         time.sleep(3)
         element.click()
@@ -6484,13 +6470,13 @@ class watch():
         #phản hồi - ảnh
         driver.find_element(By.XPATH, var.binhluan_phanhoi_tailen).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhdaidien1.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.binhluan_phanhoi_tailen_x).click()
         time.sleep(1)
         driver.find_element(By.XPATH, var.binhluan_phanhoi_tailen).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhdaidien1.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.binhluan_phanhoi_input).submit()
         time.sleep(1.5)
@@ -6667,7 +6653,7 @@ class watch():
         #bình luận - tải lên ảnh
         driver.find_element(By.XPATH, var.binhluan_tailenanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia2.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia2.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.watch_xemvideo_binhluan).click()
         driver.find_element(By.XPATH, var.watch_xemvideo_binhluan).send_keys(data['watch']['mota4'])
@@ -7540,13 +7526,13 @@ class trang():
         button = driver.find_element(By.XPATH, var.taotrangmoi_tailenanhdaidien)
         driver.execute_script("arguments[0].click();", button)
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhmes1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhmes1.exe")
         time.sleep(1)
         #Ảnh bìaa
         button = driver.find_element(By.XPATH, var.taotrangmoi_tailenanhbia)
         driver.execute_script("arguments[0].click();", button)
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbiatrang.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbiatrang.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.taotrangmoi_taotrang).click()
         time.sleep(7)
@@ -8040,7 +8026,7 @@ class trang():
         driver.find_element(By.XPATH, var.trangcanhan_anh_album_mota).send_keys(data['trangcanhan_anh_video']['trangcanhan_anh_mota'])
         driver.find_element(By.XPATH, var.trangcanhan_anh_album_tailen).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia1.exe")
         time.sleep(2)
         #chọn vị trí
         driver.find_element(By.XPATH, var.trang_alum_chonvitri).click()
@@ -8229,7 +8215,7 @@ class trang():
         time.sleep(1)
         driver.find_element(By.XPATH, var.trang_video_taodanhsachphat_tailenanhbia).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia2.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia2.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.dang).click()
         time.sleep(3)
@@ -8335,15 +8321,7 @@ class trang():
         time.sleep(1)
         driver.find_element(By.XPATH, var.taosukien_ngaybatdau_chonnam_2025).click()
         time.sleep(1)
-        n = 0
-        while (n < 12):
-            n = n + 1
-            check_taosukienmoi_thang = driver.find_element(By.XPATH, var.check_taosukienmoi_thang).text
-            if check_taosukienmoi_thang == "January 2025":
-                driver.find_element(By.XPATH, var.taosukien_ngaybatdau_chonngay_20).click()
-                break
-            else:
-                driver.find_element(By.XPATH, var.check_taosukienmoi_iconchuyenthang).click()
+        driver.find_element(By.XPATH, var.taosukien_ngaybatdau_chonngay_20).click()
         #Giờ bắt đầu
         driver.find_element(By.XPATH, var.taosukien_giobatdau_input).send_keys(data['trang']['sukien_giobatdau'])
         wait = WebDriverWait(driver, 10)
@@ -8358,15 +8336,7 @@ class trang():
         time.sleep(1)
         driver.find_element(By.XPATH, var.taosukien_ngayketthuc_chonnam_2025).click()
         time.sleep(1)
-        n = 0
-        while (n < 12):
-            n = n + 1
-            check_taosukienmoi_thang = driver.find_element(By.XPATH, var.check_taosukienmoi_thang).text
-            if check_taosukienmoi_thang == "January 2025":
-                driver.find_element(By.XPATH, var.taosukien_ngayketthuc_chonngay_25).click()
-                break
-            else:
-                driver.find_element(By.XPATH, var.check_taosukienmoi_iconchuyenthang).click()
+        driver.find_element(By.XPATH, var.taosukien_ngayketthuc_chonngay_25).click()
         time.sleep(1)
         #Giờ Kết thúc
         driver.find_element(By.XPATH, var.taosukien_gioketthuc_input).send_keys(data['trang']['sukien_gioketthuc'])
@@ -8404,7 +8374,7 @@ class trang():
         button = driver.find_element(By.XPATH, var.sukien_tailenanhbia)
         driver.execute_script("arguments[0].click();", button)
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/tft.exe")
+        subprocess.Popen("D:/automated-testing/import/tft.exe")
         time.sleep(1)
         #Người đồng tổ chức
         driver.find_element(By.XPATH, var.sukien_nguoidongtochuc_input).send_keys(data['trang']['sukien_ngocmai'])
@@ -8417,7 +8387,6 @@ class trang():
         print(check_xemtruocsukien_thoigian)
         logging.info("Sự kiện - Tạo mới sự kiện")
         logging.info("check font-end: Thời gian - 08:00 Thứ hai, 20 tháng 1, 2025 - 15:30 Thứ bảy, 25 tháng 1, 2025")
-        logging.info(check_xemtruocsukien_thoigian)
         logging.info(check_xemtruocsukien_thoigian == "08:00 Thứ hai, 20 tháng 1, 2025 - 15:30 Thứ bảy, 25 tháng 1, 2025")
 
         check_xemtruocsukien_tensukien = driver.find_element(By.XPATH,var.check_xemtruocsukien_tensukien1).text
@@ -8607,19 +8576,19 @@ class trang():
         logging.info(check_trang_xemthem_danhgia1_binhluan1 == "4 sao thoy")
         time.sleep(2)
 
-        # #Cộng đồng
-        # driver.find_element(By.XPATH, var.trang_xemthem).click()
-        # driver.find_element(By.XPATH, var.trang_xemthem_congdong).click()
-        # time.sleep(1)
-        # logging.info("Trang - Xem thêm - Cộng đồng")
-        # logging.info("Chức năng chưa hoạt động")
-        #
-        # #Ưu đãi
-        # driver.find_element(By.XPATH, var.trang_xemthem).click()
-        # driver.find_element(By.XPATH, var.trang_xemthem_uudai).click()
-        # time.sleep(1)
-        # logging.info("Trang - Xem thêm - Ưu đãi")
-        # logging.info("Chức năng chưa hoạt động")
+        #Cộng đồng
+        driver.find_element(By.XPATH, var.trang_xemthem).click()
+        driver.find_element(By.XPATH, var.trang_xemthem_congdong).click()
+        time.sleep(1)
+        logging.info("Trang - Xem thêm - Cộng đồng")
+        logging.info("Chức năng chưa hoạt động")
+
+        #Ưu đãi
+        driver.find_element(By.XPATH, var.trang_xemthem).click()
+        driver.find_element(By.XPATH, var.trang_xemthem_uudai).click()
+        time.sleep(1)
+        logging.info("Trang - Xem thêm - Ưu đãi")
+        logging.info("Chức năng chưa hoạt động")
 
     def cuahang(self):
         driver.implicitly_wait(15)
@@ -8790,7 +8759,7 @@ class trang():
             driver.find_element(By.XPATH, var.trang_themmoi_khoanhkhac_nhapnoidung).send_keys(data['trang']['themoi_khoanhkhac'])
         driver.find_element(By.XPATH, var.chontaptin).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/bnldc.exe")
+        subprocess.Popen("D:/automated-testing/import/bnldc.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.dangbai).click()
         time.sleep(15)
@@ -8863,7 +8832,7 @@ class trang():
         time.sleep(2)
         #Thích
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham).click()
-        time.sleep(2)
+        time.sleep(1)
         check_trang_trangthai_thich = driver.find_element(By.XPATH, var.check_trang_trangthai_thich1).text
         logging.info("Trang - Trang của bạn - Dấu 3 chấm")
         logging.info("check font-end: Trạng thái thích trang - Đã thích")
@@ -8873,17 +8842,16 @@ class trang():
         time.sleep(5)
 
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham).click()
-        time.sleep(2)
         check_trang_trangthai_thich = driver.find_element(By.XPATH, var.check_trang_trangthai_thich1).text
         logging.info("Trang - Trang của bạn - Dấu 3 chấm")
         logging.info("check font-end: Trạng thái thích trang - Thích")
         logging.info(check_trang_trangthai_thich == "Thích")
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham_thichtrang).click()
-        time.sleep(5)
+        time.sleep(1)
 
         #theo dõi
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham).click()
-        time.sleep(2)
+        time.sleep(1)
         check_trang_trangthai_datheodoi = driver.find_element(By.XPATH, var.check_trang_trangthai_theodoi1).text
         logging.info("Trang - Trang của bạn - Dấu 3 chấm")
         logging.info("check font-end: Trạng thái Theo dõi trang - Đã theo dõi")
@@ -8892,13 +8860,13 @@ class trang():
         time.sleep(5)
 
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham).click()
-        time.sleep(2)
+        time.sleep(1)
         check_trang_trangthai_theodoi = driver.find_element(By.XPATH, var.check_trang_trangthai_theodoi1).text
         logging.info("Trang - Trang của bạn - Dấu 3 chấm")
         logging.info("check font-end: Trạng thái Theo dõi trang - Theo dõi")
         logging.info(check_trang_trangthai_theodoi == "Theo dõi")
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham_theodoi).click()
-        time.sleep(5)
+        time.sleep(1)
 
         #Tạo trang
         driver.find_element(By.XPATH, var.trang_truongtest_dau3cham).click()
@@ -8978,7 +8946,6 @@ class trang():
         button = driver.find_element(By.XPATH, var.trang_truongtest_choncachtuongtac)
         driver.execute_script("arguments[0].click();", button)
         driver.find_element(By.XPATH, var.choncachtuongtac_tranquangtruong).click()
-        time.sleep(2)
         driver.find_element(By.XPATH, var.trang_guitinnhan).click()
         time.sleep(1)
         driver.find_element(By.XPATH, var.trang_guitinnhan_input).send_keys("alo alo")
@@ -9080,7 +9047,7 @@ class trang():
         driver.find_element(By.XPATH, var.capnhatanhdaidien_taianhlen).click()
         driver.find_element(By.XPATH, var.capnhatanhdaidien_icon_taianhlen).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhmes1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhmes1.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.capnhatanhdaidien_mota).send_keys(data['trang']['anhdaidien_mota'])
         driver.find_element(By.XPATH, var.capnhatanhdaidien_luu).click()
@@ -9104,7 +9071,7 @@ class trang():
         time.sleep(1)
         driver.find_element(By.XPATH, var.tailentuthietbi).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbiatrang.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbiatrang.exe")
         time.sleep(1)
         cap_nhat = driver.find_element(By.XPATH, var.capnhat)
         cap_nhat.click()
@@ -9187,7 +9154,7 @@ class trang():
         driver.find_element(By.XPATH, var.trang_taobaiviet_mota).send_keys(data['trang']['taobaiviet_anh_mota'])
         driver.find_element(By.XPATH, var.taobaiviet_tailenanhvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/tothichcau.exe")
+        subprocess.Popen("D:/automated-testing/import/tothichcau.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.dang).click()
         time.sleep(1)
@@ -9578,7 +9545,7 @@ class trang():
         # Đính kèm file
         driver.find_element(By.XPATH, var.trangchu_tinnhanmoi_icontailenfile).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhmes1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhmes1.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trangchu_tinnhanmoi_input).send_keys(Keys.ENTER)
         # Gif
@@ -11145,7 +11112,7 @@ class nhom():
         driver.execute_script("arguments[0].click();", button)
         # driver.find_element(By.XPATH, var.nhom_taonhommoi_tailenanhbia).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/tft.exe")
+        subprocess.Popen("D:/automated-testing/import/tft.exe")
         time.sleep(6)
         driver.find_element(By.XPATH, var.nhom_taonhommoi_taonhom).click()
         time.sleep(3)
@@ -11259,7 +11226,7 @@ class nhom():
             driver.find_element(By.XPATH, var.trang_themmoi_khoanhkhac_nhapnoidung).send_keys(data['nhom']['themoi_khoanhkhac'])
         driver.find_element(By.XPATH, var.chontaptin).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/bnldc.exe")
+        subprocess.Popen("D:/automated-testing/import/bnldc.exe")
         time.sleep(3)
         driver.find_element(By.XPATH, var.dangbai).click()
         # driver.find_element(By.XPATH, var.taokhoanhkhac_x).click()      #đăng bài lâu quá 1p
@@ -11307,7 +11274,7 @@ class nhom():
         driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys(data['nhom']['taobaiviet_anh_mota'])
         driver.find_element(By.XPATH, var.taobaiviet_tailenanhvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/tothichcau.exe")
+        subprocess.Popen("D:/automated-testing/import/tothichcau.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.dang).click()
         wait = WebDriverWait(driver, 20)
@@ -11473,7 +11440,7 @@ class nhom():
         driver.find_element(By.XPATH, var.sothichvahoatdong).click()
         driver.find_element(By.XPATH, var.nhacuavadoisong_tailenfile).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhdaidien1.exe")
         time.sleep(1)
         sukientrongdoi_clear1 = driver.find_element(By.XPATH, var.sothichvahoatdong_tieude_input)
         sukientrongdoi_clear1.send_keys(Keys.CONTROL, "a")
@@ -12155,7 +12122,7 @@ class nhom():
         driver.find_element(By.XPATH, var.trangcanhan_anh_album_mota).send_keys(data['nhom']['album_mota'])
         driver.find_element(By.XPATH, var.trangcanhan_anh_album_tailen).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbiatrang1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbiatrang1.exe")
         time.sleep(2)
         #chọn vị trí
         driver.find_element(By.XPATH, var.trang_alum_chonvitri).click()
@@ -12779,7 +12746,7 @@ class nhom():
         driver.find_element(By.XPATH, var.nhom_taobaiviet_mota).send_keys(data['nhom']['taobaiviet_anh_mota'])
         driver.find_element(By.XPATH, var.taobaiviet_tailenanhvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien3.exe")
+        subprocess.Popen("D:/automated-testing/import/anhdaidien3.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.dang).click()
         wait = WebDriverWait(driver, 10)
@@ -14848,7 +14815,7 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.danhgiasanpham_input).send_keys(data['market']['danhgiasanpham'])
         driver.find_element(By.XPATH, var.danhgiasanpham_themanhvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhdaidien2.exe")
+        subprocess.Popen("D:/automated-testing/import/anhdaidien2.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.gui).click()
         driver.implicitly_wait(2)
@@ -15132,11 +15099,11 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.trahanghoantien_mota_input).send_keys(data['market']['trahanghoantien_mota'])
         driver.find_element(By.XPATH, var.trahanghoantien_themhinhanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhbia1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhbia1.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trahanghoantien_themvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/vay1.exe")
+        subprocess.Popen("D:/automated-testing/import/vay1.exe")
         time.sleep(2)
         driver.find_element(By.XPATH, var.tieptuc).click()
         time.sleep(1)
@@ -15169,7 +15136,7 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(data['market']['trahanghoantien_vietthaoluan1'])
         driver.find_element(By.XPATH, var.trahanghoantien_iconanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/iconbuon.exe")
+        subprocess.Popen("D:/automated-testing/import/iconbuon.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(Keys.ENTER)   #ko bình luận được
         time.sleep(3)
@@ -15226,7 +15193,7 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(data['market']['trahanghoantien_vietthaoluan_dongy'])
         driver.find_element(By.XPATH, var.trahanghoantien_iconanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/vay2.exe")
+        subprocess.Popen("D:/automated-testing/import/vay2.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(Keys.ENTER)   #Ko bình luận được
         time.sleep(3)
@@ -15331,11 +15298,11 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.trahanghoantien_mota_input).send_keys(data['market']['trahanghoantien_mota1'])
         driver.find_element(By.XPATH, var.trahanghoantien_themhinhanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/tft.exe")
+        subprocess.Popen("D:/automated-testing/import/tft.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trahanghoantien_themvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/ao2.exe")
+        subprocess.Popen("D:/automated-testing/import/ao2.exe")
         time.sleep(2)
         driver.find_element(By.XPATH, var.tieptuc).click()
         time.sleep(1)
@@ -15369,7 +15336,7 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(data['market']['trahanghoantien_vietthaoluan2'])
         driver.find_element(By.XPATH, var.trahanghoantien_iconanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/iconbuon.exe")
+        subprocess.Popen("D:/automated-testing/import/iconbuon.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(Keys.ENTER)  # ko bình luận được
         time.sleep(3)
@@ -15425,7 +15392,7 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(data['market']['trahanghoantien_vietthaoluan_khongdongy'])
         driver.find_element(By.XPATH, var.trahanghoantien_iconanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/vay2.exe")
+        subprocess.Popen("D:/automated-testing/import/vay2.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(Keys.ENTER)  # Ko bình luận được
         time.sleep(3)
@@ -15459,11 +15426,11 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.khieunaidonhang_mota).send_keys(data['market']['khieunaidonhang_mota'])
         driver.find_element(By.XPATH, var.khieunaidonhang_themhinhanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/donghang.exe")
+        subprocess.Popen("D:/automated-testing/import/donghang.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.khieunaidonhang_themvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/vay1.exe")
+        subprocess.Popen("D:/automated-testing/import/vay1.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.gui).click()      #6765 Không gửi được khiếu nại
 
@@ -15563,11 +15530,11 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.trahanghoantien_mota_input).send_keys(data['market']['trahanghoantien_mota1'])
         driver.find_element(By.XPATH, var.trahanghoantien_themhinhanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/tft.exe")
+        subprocess.Popen("D:/automated-testing/import/tft.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trahanghoantien_themvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/ao2.exe")
+        subprocess.Popen("D:/automated-testing/import/ao2.exe")
         time.sleep(2)
         driver.find_element(By.XPATH, var.tieptuc).click()
         time.sleep(1)
@@ -15601,7 +15568,7 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(data['market']['trahanghoantien_vietthaoluan2'])
         driver.find_element(By.XPATH, var.trahanghoantien_iconanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/iconbuon.exe")
+        subprocess.Popen("D:/automated-testing/import/iconbuon.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(Keys.ENTER)  # ko bình luận được
         time.sleep(3)
@@ -15657,7 +15624,7 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(data['market']['trahanghoantien_vietthaoluan_khongdongy'])
         driver.find_element(By.XPATH, var.trahanghoantien_iconanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/vay2.exe")
+        subprocess.Popen("D:/automated-testing/import/vay2.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trahanghoantien_vietthaoluan).send_keys(Keys.ENTER)  # Ko bình luận được
         time.sleep(3)
@@ -15691,11 +15658,11 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.khieunaidonhang_mota).send_keys(data['market']['khieunaidonhang_mota'])
         driver.find_element(By.XPATH, var.khieunaidonhang_themhinhanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/donghang.exe")
+        subprocess.Popen("D:/automated-testing/import/donghang.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.khieunaidonhang_themvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/vay1.exe")
+        subprocess.Popen("D:/automated-testing/import/vay1.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.gui).click()      #6765 Không gửi được khiếu nại
 
@@ -15741,11 +15708,11 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.khieunaidonhang_mota).send_keys("Từ tối ý kiến của shop ạ")
         driver.find_element(By.XPATH, var.khieunaidonhang_themhinhanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/anhmes1.exe")
+        subprocess.Popen("D:/automated-testing/import/anhmes1.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.khieunaidonhang_themvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/hoodie5.exe")
+        subprocess.Popen("D:/automated-testing/import/hoodie5.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.gui).click()
         time.sleep(3)
@@ -15888,11 +15855,11 @@ class quatrinhmuahang():
         driver.find_element(By.XPATH, var.trahanghoantien_mota_input).send_keys(data['market']['trahanghoantien_mota1'])
         driver.find_element(By.XPATH, var.trahanghoantien_themhinhanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/tft.exe")
+        subprocess.Popen("D:/automated-testing/import/tft.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.trahanghoantien_themvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/ao2.exe")
+        subprocess.Popen("D:/automated-testing/import/ao2.exe")
         time.sleep(2)
         driver.find_element(By.XPATH, var.tieptuc).click()
         time.sleep(1)
@@ -15963,11 +15930,11 @@ class quanlysanpham():
         time.sleep(1)
         driver.find_element(By.XPATH, var.themsanpham_themhinhanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/hoodie1.exe")
+        subprocess.Popen("D:/automated-testing/import/hoodie1.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.themsanpham_themvideo).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/hoodie5.exe")
+        subprocess.Popen("D:/automated-testing/import/hoodie5.exe")
         time.sleep(1)
         driver.find_element(By.XPATH, var.themsanpham_mota).send_keys(data['quanlysanpham']['themspmoi_tensanpham'])
         #Thông tin chi tiết
@@ -16054,7 +16021,7 @@ class quanlysanpham():
         #Xám
         driver.find_element(By.XPATH, var.dsphanloai_tailenanh_xam).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/hoodie1.exe")
+        subprocess.Popen("D:/automated-testing/import/hoodie1.exe")
         time.sleep(1)
         xoa = driver.find_element(By.XPATH, var.dsphanloai_xam_gia_l)
         xoa.send_keys(Keys.CONTROL, "a")
@@ -16065,7 +16032,7 @@ class quanlysanpham():
         #Lục
         driver.find_element(By.XPATH, var.dsphanloai_tailenanh_luc).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/hoodie3.exe")
+        subprocess.Popen("D:/automated-testing/import/hoodie3.exe")
         time.sleep(1)
         xoa = driver.find_element(By.XPATH, var.dsphanloai_luc_gia_l)
         xoa.send_keys(Keys.CONTROL, "a")
@@ -16076,7 +16043,7 @@ class quanlysanpham():
         #Xanh
         driver.find_element(By.XPATH, var.dsphanloai_tailenanh_xanh).click()
         time.sleep(1)
-        subprocess.Popen("C:/Users/Admin/PycharmProjects/pythonProject/import/hoodie4.exe")
+        subprocess.Popen("D:/automated-testing/import/hoodie4.exe")
         time.sleep(1)
         xoa = driver.find_element(By.XPATH, var.dsphanloai_xanh_gia_l)
         xoa.send_keys(Keys.CONTROL, "a")
@@ -18041,53 +18008,11 @@ class kenhmarketing():
         except:
             pass
 
-    def kenhmarketting_themsanpham1(self, chonnghanhhang, khuyenmai, soluongsanpham, gioihandathang):
-        driver.implicitly_wait(5)
-        time.sleep(1)
-        driver.find_element(By.XPATH, var.themsanpham).click()
-        time.sleep(2)
-        # Chọn sản phẩm
-        driver.find_element(By.XPATH, var.themsanpham_nghanhhang2).click()
-        time.sleep(1)
-        actions = ActionChains(driver)
-        themsanpham_hovernghanhhang = driver.find_element(By.XPATH, var.chonnghanhhang + chonnghanhhang)
-        actions.move_to_element(themsanpham_hovernghanhhang).perform()
-        time.sleep(2)
-        # driver.find_element(By.XPATH, var.chonnghanhhang + chonnghanhhang).click()
-        button = driver.find_element(By.XPATH, var.chonnghanhhang + chonnghanhhang)
-        driver.execute_script("arguments[0].click();", button)
-        time.sleep(2)
-        driver.find_element(By.XPATH, var.themsanpham_chonsotrang1).click()
-        time.sleep(0.5)
-        driver.find_element(By.XPATH, var.themsanpham_chonsotrang10).click()
-        time.sleep(3)
-        driver.find_element(By.XPATH, var.themsanpham_chontatcasanpham1).click()
-        time.sleep(1.5)
-        # driver.find_element(By.XPATH, var.themsanpham_chonsanpham1).click()
-        driver.find_element(By.XPATH, var.themsanpham_xacnhan1).click()
-        time.sleep(2)
-        # Chỉnh sửa sản phẩm
-        driver.find_element(By.XPATH, var.themsanpham_chinhsua_khuyenmai1).send_keys(khuyenmai)
-        driver.find_element(By.XPATH, var.themsanpham_chinhsua_soluongsanpham1).send_keys(soluongsanpham)
-        driver.find_element(By.XPATH, var.themsanpham_chinhsua_gioihandathang1).send_keys(gioihandathang)
-        driver.find_element(By.XPATH, var.themsanpham_chinhsua_chontatcasanpham1).click()
-        time.sleep(0.5)
-        driver.find_element(By.XPATH, var.themsanpham_chinhsua_capnhat1).click()
-        time.sleep(3)
-        button = driver.find_element(By.XPATH, var.themsanpham_chinhsua_xacnhan1)
-        driver.execute_script("arguments[0].click();", button)
-        check_message_chonspkhuyenmai = driver.find_element(By.XPATH, var.check_message_chonspkhuyenmai1)
-        time.sleep(2)
-
-
-
-
-
     def chuongtrinhkhuyenmai_flashsale(self):
         driver.implicitly_wait(15)
         login.login4(self, "emsomanagerhd@gmail.com", "khongnhomatkhaucu")
         time.sleep(1.5)
-        # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")  #a12
+                # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")  #a12
         # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419224061&type=all") #vnshop1
         driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419224196&type=all") #vnshop2
         time.sleep(2)
@@ -18316,9 +18241,9 @@ class kenhmarketing():
         driver.implicitly_wait(15)
         login.login4(self, "emsomanagerhd@gmail.com", "khongnhomatkhaucu")
         time.sleep(1.5)
-        # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")  #a12
+        driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419223806&type=all")  #a12
         # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419224061&type=all")  #vnshop1
-        driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419224196&type=all")  #vnshop2
+        # driver.get("https://cmc-fe.emso.vn/marketplace/shop/campaign?page_id=108277159419224196&type=all")  #vnshop2
         time.sleep(2)
         driver.find_element(By.XPATH, var.chuongtrinhkhuyenmai_emsocampaign).click()
         time.sleep(2)
@@ -18775,38 +18700,6 @@ class kenhmarketing():
                 break
 
 
-
-    def chuongtrinhkhuyenmai_duyet50(self):
-        driver.implicitly_wait(5)
-        try:
-            button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho)
-            driver.execute_script("arguments[0].click();", button)
-        except:
-            button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho1)
-            driver.execute_script("arguments[0].click();", button)
-        time.sleep(1)
-        try:
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang).click()
-        except:
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang1).click()
-        time.sleep(0.5)
-        driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang50).click()
-        time.sleep(2)
-        try:
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca).click()
-        except:
-            driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca1).click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, var.chiendich_duyetsp_action).click()
-        time.sleep(0.5)
-        driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet).click()
-        time.sleep(0.5)
-        driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet_pheduyet).click()
-        driver.find_element(By.XPATH, var.capnhatthanhcong).click()
-        time.sleep(2)
-
-
-
     def chuongtrinhkhuyenmai_pheduyetsp(self, tenkhuyenmai):
         driver.implicitly_wait(3)
         # Duyệt Flash Sale
@@ -18825,62 +18718,99 @@ class kenhmarketing():
             time.sleep(0.5)
             driver.find_element(By.XPATH, var.chiendich_sp1_dau3cham_chitiet).click()
             time.sleep(2)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-        else:
-            logging.info("Admin - Thương mại - Chiến dịch - Tìm kiếm")
-            logging.info("check font-end: Có tìm thấy"+tenkhuyenmai+" không?")
-            logging.info("False")
-
-
-    def chuongtrinhkhuyenmai_pheduyetsp1(self, tenkhuyenmai):
-        driver.implicitly_wait(5)
-        # Duyệt Flash Sale
-        login.login5(self, "thanghoa1420@gmail.com", "hoathang1420")
-        time.sleep(1.5)
-        driver.find_element(By.XPATH, var.admin_marketting).click()
-        time.sleep(0.5)
-        driver.find_element(By.XPATH, var.thuongmai_chiendich).click()
-        time.sleep(2)
-        driver.find_element(By.XPATH, var.chiendich_timkiem).send_keys(tenkhuyenmai)
-        driver.find_element(By.XPATH, var.chiendich_timkiem).send_keys(Keys.ENTER)
-        time.sleep(1)
-        check_chiendich_timkiem = driver.find_element(By.XPATH, var.check_chiendich_timkiem).text
-        if check_chiendich_timkiem == tenkhuyenmai:
-            driver.find_element(By.XPATH, var.chiendich_sp1_dau3cham).click()
+            #Lần 1
+            driver.implicitly_wait(2)
+            try:
+                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho)
+                driver.execute_script("arguments[0].click();", button)
+            except:
+                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho1)
+                driver.execute_script("arguments[0].click();", button)
+            time.sleep(1)
+            try:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang).click()
+            except:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang1).click()
             time.sleep(0.5)
-            driver.find_element(By.XPATH, var.chiendich_sp1_dau3cham_chitiet).click()
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang50).click()
             time.sleep(2)
-            driver.find_element(By.XPATH, var.dau3cham_chitiet_khunggio1).click()
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            time.sleep(2)
+            try:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca).click()
+            except:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca1).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet_pheduyet).click()
+            driver.find_element(By.XPATH, var.capnhatthanhcong).click()
+            time.sleep(1)
 
-            driver.find_element(By.XPATH, var.dau3cham_chitiet_khunggio2).click()
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            #Lần 2
+            driver.implicitly_wait(2)
+            try:
+                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho)
+                driver.execute_script("arguments[0].click();", button)
+            except:
+                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho1)
+                driver.execute_script("arguments[0].click();", button)
+            time.sleep(1)
+            try:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang).click()
+            except:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang1).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang50).click()
             time.sleep(2)
+            try:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca).click()
+            except:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca1).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet_pheduyet).click()
+            driver.find_element(By.XPATH, var.capnhatthanhcong).click()
+            time.sleep(1)
 
-            driver.find_element(By.XPATH, var.dau3cham_chitiet_khunggio3).click()
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
-            kenhmarketing.chuongtrinhkhuyenmai_duyet50(self)
+            # Lần 3
+            driver.implicitly_wait(2)
+            try:
+                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho)
+                driver.execute_script("arguments[0].click();", button)
+            except:
+                button = driver.find_element(By.XPATH, var.chiendich_duyetsp_dangcho1)
+                driver.execute_script("arguments[0].click();", button)
+            time.sleep(1)
+            try:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang).click()
+            except:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang1).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_chonsotrang50).click()
+            time.sleep(2)
+            try:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca).click()
+            except:
+                driver.find_element(By.XPATH, var.chiendich_duyetsp_chontatca1).click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet).click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, var.chiendich_duyetsp_action_pheduyet_pheduyet).click()
+            driver.find_element(By.XPATH, var.capnhatthanhcong).click()
+            time.sleep(1)
         else:
             logging.info("Admin - Thương mại - Chiến dịch - Tìm kiếm")
             logging.info("check font-end: Có tìm thấy"+tenkhuyenmai+" không?")
             logging.info("False")
-
-
 
     def chuongtrinhkhuyenmai_pheduyetsp_flashsale(self):
-        kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp1(self, var.flashsale_ten1)
+        kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp(self, var.flashsale_ten1)
 
     def chuongtrinhkhuyenmai_pheduyetsp_cambpaign(self):
         kenhmarketing.chuongtrinhkhuyenmai_pheduyetsp(self, var.campaign_ten_ttkm2)
@@ -19090,6 +19020,11 @@ class kenhmarketing():
         #Thêm mới sản phẩm
         driver.find_element(By.XPATH, var.themmoiflashsale).click()
         time.sleep(1.5)
+        # driver.find_element(By.XPATH, var.themmoiflashsale_iconchonnam).click()
+        # time.sleep(1)
+        # driver.find_element(By.XPATH, var.themmoiflashsale_iconchonnam_2026).click()
+        # time.sleep(1)
+        # driver.find_element(By.XPATH, var.themmoiflashsale_iconchonthang).click()
         driver.execute_script("window.scrollBy(0,700)", "")
         n = 0
         while (n < 3):
@@ -19175,7 +19110,7 @@ class kenhmarketing():
             logging.info("Người bán - Kênh Marketting - Flash sale của shop - Danh sách chương trình")
             logging.info("check font-end: Tìm kiếm - Có hiển thị dữ liệu không")
             logging.info("False")
-            driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "flashsalecuashop_timkiem.png")
+            driver.save_screenshot("D:/automated-testing/anhchupmanhinh/" + "flashsalecuashop_timkiem.png")
         driver.find_element(By.XPATH, var.danhsachchuongtrinh_xoa).click()
         time.sleep(1.5)
         #Đang diễn ra
@@ -19190,7 +19125,7 @@ class kenhmarketing():
             logging.info("Người bán - Kênh Marketting - Flash sale của shop - Danh sách chương trình")
             logging.info("check font-end: trạng thái chương trình -  Đang diễn ra")
             logging.info("False")
-            driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "flashsalecuashop_trangthai_dangdienra.png")
+            driver.save_screenshot("D:/automated-testing/anhchupmanhinh/" + "flashsalecuashop_trangthai_dangdienra.png")
 
         #Sắp diễn ra
         driver.find_element(By.XPATH, var.danhsachchuongtrinh_sapdienra).click()
@@ -19204,7 +19139,7 @@ class kenhmarketing():
             logging.info("Người bán - Kênh Marketting - Flash sale của shop - Danh sách chương trình")
             logging.info("check font-end: trạng thái chương trình -  Sắp diễn ra")
             logging.info("False")
-            driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "flashsalecuashop_trangthai_sapdienra.png")
+            driver.save_screenshot("D:/automated-testing/anhchupmanhinh/" + "flashsalecuashop_trangthai_sapdienra.png")
         driver.find_element(By.XPATH, var.danhsachchuongtrinh_battat).click()
         time.sleep(0.5)
         driver.find_element(By.XPATH, var.tat).click()
@@ -19228,7 +19163,7 @@ class kenhmarketing():
             logging.info("Người bán - Kênh Marketting - Flash sale của shop - Danh sách chương trình")
             logging.info("check font-end: Dấu 3 chấm - Cập nhật")
             logging.info("False")
-            driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "flashsalecuashop_capnhat.png")
+            driver.save_screenshot("D:/automated-testing/anhchupmanhinh/" + "flashsalecuashop_capnhat.png")
         driver.back()
         time.sleep(1.5)
         #Xóa chương trình
@@ -19248,7 +19183,8 @@ class kenhmarketing():
             logging.info("Người bán - Kênh Marketting - Flash sale của shop - Danh sách chương trình")
             logging.info("check font-end: Dấu 3 chấm - Xóa - Có xóa được chương trìmnh không")
             logging.info("False")
-            driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "flashsalecuashop_xoachuongtrinh.png")
+            driver.save_screenshot("D:/automated-testing/anhchupmanhinh/" + "flashsalecuashop_xoachuongtrinh.png")
+
 
         #Đã kết thúc
         driver.find_element(By.XPATH, var.danhsachchuongtrinh_daketthuc).click()
@@ -19262,188 +19198,13 @@ class kenhmarketing():
             logging.info("Người bán - Kênh Marketting - Flash sale của shop - Danh sách chương trình")
             logging.info("check font-end: trạng thái chương trình -  Đã kết thúc")
             logging.info("False")
-            driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "flashsalecuashop_trangthai_daketthuc.png")
+            driver.save_screenshot("D:/automated-testing/anhchupmanhinh/" + "flashsalecuashop_trangthai_daketthuc.png")
 
         # Đã kết thúc
         driver.find_element(By.XPATH, var.danhsachchuongtrinh_tatca).click()
         time.sleep(1.5)
 
 
-
-
-    def flashsalecuashop_chuongtrinhcuashop(self):
-        driver.implicitly_wait(15)
-        login.login4(self, "truongvck33@gmail.com", "voncamk22")
-        time.sleep(1.5)
-        driver.get("https://cmc-fe.emso.vn/marketplace/shop/product_hosting?page_id=108277159419223993&page=1&type=all")  #Bình thuận
-        time.sleep(2)
-        driver.find_element(By.XPATH, var.kenhmarketting).click()
-        time.sleep(0.5)
-        driver.find_element(By.XPATH, var.chuongtrinhcuashop).click()
-        time.sleep(2)
-        driver.find_element(By.XPATH, var.chuongtrinhcuashop_tao).click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, var.taochuongtrinh_ten).send_keys(data['chuongtrinhcuashop']['taochuongtrinhmoi_ten'])
-        #Ngày bắt đầu
-        driver.find_element(By.XPATH, var.taochuongtrinh_ngaybatdau).click()
-        time.sleep(1)
-        n = 0
-        m = 1
-        while (n < 31):
-            n = n + 1
-            m = m + 1
-            n = str(n)
-            m = str(m)
-            ngay_batdau = driver.find_element(By.XPATH,"//*[@role='grid']/div//*[text()='"+n+"']")
-            ngay_batdau1 = driver.find_element(By.XPATH,"//*[@role='grid']/div//*[text()='"+m+"']")
-            ngay_batdau1.click()
-            print(ngay_batdau.value_of_css_property("border"))
-            print(ngay_batdau.text)
-            if ngay_batdau.value_of_css_property("border") == "0.8px solid rgb(102, 102, 102)":
-                ngay_batdau.click()
-                time.sleep(1)
-                driver.find_element(By.XPATH, var.taochuongtrinh_ngaybatdau_gio19).click()
-                time.sleep(1)
-                driver.find_element(By.XPATH, var.taochuongtrinh_ngaybatdau_phut00).click()
-                time.sleep(1)
-                driver.find_element(By.XPATH, var.taochuongtrinh_thoigianbatdau_xacnhan).click()
-                time.sleep(1)
-                break
-            n = int(n)
-            m = int(m)
-        time.sleep(1.5)
-
-        # Thời gian kết thúc
-        driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc).click()
-        time.sleep(1)
-        n = 0
-        m = 1
-        while (n < 31):
-            n = n + 1
-            m = m + 1
-            n = str(n)
-            m = str(m)
-            ngay_ketthuc  = driver.find_element(By.XPATH,"//*[@role='grid']/div//*[text()='"+n+"']")
-            ngay_ketthuc1 = driver.find_element(By.XPATH,"//*[@role='grid']/div//*[text()='"+m+"']")
-            ngay_ketthuc1.click()
-            print(ngay_ketthuc.text)
-            print(ngay_ketthuc.value_of_css_property("border"))
-            if ngay_ketthuc.value_of_css_property("border") == "0.8px solid rgb(102, 102, 102)":
-                ngay_ketthuc.click()
-                time.sleep(1)
-                driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc_gio23).click()
-                time.sleep(1)
-                driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc_phut59).click()
-                time.sleep(1)
-                driver.find_element(By.XPATH, var.taochuongtrinh_ngayketthuc_phut59).send_keys(Keys.TAB)
-                time.sleep(1)
-                button = driver.find_element(By.XPATH, var.taochuongtrinh_thoigianketthuc_xacnhan)
-                driver.execute_script("arguments[0].click();", button)
-                break
-            n = int(n)
-            m = int(m)
-        time.sleep(2)
-        kenhmarketing.kenhmarketting_themsanpham1(self, var.thoitrangnam, "20", "10", "10")
-        #Chỉnh sửa chương trình
-        driver.find_element(By.XPATH, var.danhsachchuongtrinh_chinhsua).click()
-        time.sleep(2)
-        try:
-            check_chuongtrinhcuashop_chinhsua = driver.find_element(By.XPATH,var.check_chuongtrinhcuashop_chinhsua).text
-            logging.info("Người bán - Kênh marketting - Chương trình của shop")
-            logging.info("check font-end: Danh sách chương trình - Chỉnh sửa - Có chuyển tới trang chỉnh sửa danh sách chương trình không?")
-            logging.info(check_chuongtrinhcuashop_chinhsua)
-            logging.info(check_chuongtrinhcuashop_chinhsua == "Chi Tiết Chương Trình của Shop\nSắp diễn ra")
-        except:
-            logging.info("Người bán - Kênh marketting - Chương trình của shop")
-            logging.info("check font-end: Danh sách chương trình - Chỉnh sửa - Có chuyển tới trang chỉnh sửa danh sách chương trình không?")
-            logging.info("False")
-            driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "chuongtrinhcuashop_chinhsua.png")
-        driver.back()
-        time.sleep(2)
-        check_chuongtrinhcuashop_tenchuongtrinh1 = driver.find_element(By.XPATH, var.check_chuongtrinhcuashop_tenchuongtrinh1).text
-        driver.find_element(By.XPATH, var.danhsachchuongtrinh_xoa2).click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, var.danhsachchuongtrinh_xoa_xoa).click()
-        driver.find_element(By.XPATH, var.danhsachchuongtrinh_xoa_xoa_message)
-        time.sleep(1)
-        driver.implicitly_wait(3)
-        try:
-            check_chuongtrinhcuashop_tenchuongtrinh1 = driver.find_element(By.XPATH,var.check_chuongtrinhcuashop_tenchuongtrinh1).is_displayed()
-            logging.info("Người bán - Kênh marketting - Chương trình của shop")
-            logging.info("check font-end: Danh sách chương trình - Xóa - Có xóa được chương trình không")
-            logging.info("False")
-            driver.save_screenshot("C:/Users/Admin/PycharmProjects/pythonProject/anhchupmanhinh/" + "chuongtrinhcuashop_xoachuongtrinh.png")
-        except:
-            logging.info("Người bán - Kênh marketting - Chương trình của shop")
-            logging.info("check font-end: Danh sách chương trình - Xóa - Có xóa được chương trình không")
-            logging.info("True")
-        time.sleep(2)
-
-
-def runtest1():
-    driver.implicitly_wait(10)
-    driver.get("https://demo.automationtesting.in/Windows.html")
-    driver.maximize_window()
-    time.sleep(2)
-    driver.find_element(By.XPATH, "//*[@id='Tabbed']/a/button").click()
-    time.sleep(2)
-    tab_id = driver.window_handles
-    tab_1 = tab_id[0]
-    tab_2 = tab_id[1]
-    driver.switch_to_window(tab_1)
-    time.sleep(1)
-    driver.refresh()
-    time.sleep(2)
-    driver.find_element(By.XPATH, "//*[@id='Tabbed']/a/button").click()
-    time.sleep(2)
-    tab_id = driver.window_handles
-    tab_1 = tab_id[0]
-    tab_2 = tab_id[1]
-    tab_3 = tab_id[2]
-
-    # driver.switch_to_window(tab_1)
-    # thread1 = Thread(target=emso.trangcanhan(self=""))
-    # thread1.start()
-    #
-    # # driver.switch_to_window(tab_2)
-    # thread2 = Thread(target=emso.muahangthanhcong(self=""))
-    # thread2.start()
-    #
-    # # driver.switch_to_window(tab_3)
-    # thread3 = Thread(target=emso.add_dulieuemso(self=""))
-    # thread3.start()
-
-    driver.switch_to_window(tab_1)
-    # subprocess.Popen(emso.trangcanhan(self=""))
-    print("r1")
-
-    driver.switch_to_window(tab_2)
-    # subprocess.Popen(emso.muahangthanhcong(self=""))
-    print("r2")
-
-    driver.switch_to_window(tab_3)
-    # subprocess.Popen(emso.add_dulieuemso(self=""))
-    print("r3")
-
-
-
-def runtest(x):
-    print("đang chạy luồng,", x)
-    # Options = webdriver.ChromeOptions()
-    # Options.add_argument("https://www.youtube.com/watch?v=Iu8TK7crhSk")
-    # driver = webdriver.Chrome(options = Options)
-    chrome_options = Options()
-    driver = webdriver.Chrome(var.PATH, chrome_options=chrome_options)
-    driver.get("https://www.youtube.com/watch?v=Iu8TK7crhSk")
-    print("x= ",x)
-    driver.set_window_size(400, 600)
-    if x==0:
-        emso.trangchu(self="")
-    if x==1:
-        emso.chat(self="")
-    if x==2:
-        emso.add_dulieuemso(self="")
-    time.sleep(100)
 
 
 
